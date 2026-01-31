@@ -7,7 +7,7 @@ In this lab we will be looking at a backdoor through the lens of the the Linux C
 
 We will be using a large number of different basic commands to get a better understanding of what the backdoor is and what it does.
 
-For this lab we will be running **three** different Kali terminals.
+For this lab we will be running **three** different Linux terminals.
 
  > Terminal 1 is where the backdoor will be run.
 
@@ -19,47 +19,73 @@ For this lab we will be running **three** different Kali terminals.
 
 Let's get started by opening a terminal as **Administrator**
 
-You can do this by right clicking the icon on the desktop and selecting open...
+- Open **Command Prompt**
 
-![](attachments/OpeningKaliInstance.png)
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
 
-<b>Or...</b> you can simply click on the Kali logo in the taskbar.
+- Get the IP of the other VM
+```bash
+tailscale status
+```
 
-![](attachments/TaskbarKaliIcon.png)
+<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
 
-Once your **Kali** terminal opens, please run the following command:
+>[!IMPORTANT]
+>We are looking for the **linux** VM, so grab the IP from the **linux** line
+>
+>For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
 
-<pre>sudo su -</pre>
+- **SSH** into that machine
+```bash
+ssh ubuntu@100.116.161.87
+```
+
+Password is `metarange`
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
+```bash
+sudo su -
+```
 
 This will get us to a root prompt. We want to do this in order to have a backdoor running as root and a connection from a different user account on the system.
 
 Next, we will need to create a **FIFO** backpipe:
 
-<pre>mknod backpipe p</pre>
+```bash
+mknod backpipe p
+```
 
 Next, let's start the backdoor:
 
-<pre>/bin/bash backpipe 0&lt;backpipe | nc -l 2222 1>backpipe</pre>
+```bash
+mkfifo backpipe
+```
+
+```bash
+/bin/bash 0<backpipe | nc -l 2222 1>backpipe
+```
 
 In the above command, we are creating a **Netcat listener** that forwards all input through a backpipe and then into a bash session.  It then takes the output of the bash session and puts it back into the **Netcat listener**. 
 
 On a more basic level, this will create a backdoor listening on port 2222 of our **Linux** system.
 
-Now, let's open another **Kali** terminal.  This terminal will connect to the backdoor we just created.  
+Now, let's open another **Linux** terminal.  This terminal will connect to the backdoor we just created.  
 
 You can do this by right clicking the icon on the desktop and selecting open...
 
-![](attachments/OpeningKaliInstance.png)
+![](attachments/OpeningLinuxInstance.png)
 
-<b>Or...</b> you can simply click on the Kali logo in the taskbar.
+<b>Or...</b> you can simply click on the Linux logo in the taskbar.
 
-![](attachments/TaskbarKaliIcon.png)
+![](attachments/TaskbarLinuxIcon.png)
 
 Now we will need to know the IP address of our **Linux** system:
 
 <pre>ifconfig</pre>
 
-![](attachments/ifconfigKaliInstance.png)
+![](attachments/ifconfigLinuxInstance.png)
 
 >[!NOTE]
 >
@@ -82,19 +108,19 @@ Type a few commands to see if its working:
 
 <pre>whoami</pre>
 
-![](attachments/lswhoamiKaliInstance.png)
+![](attachments/lswhoamiLinuxInstance.png)
 
-At this point, we have created a backdoor with one terminal, and we have connected to this backdoor with another terminal.  Now, let's open yet another **Kali** terminal and use this use for the purpose of analysis.  
+At this point, we have created a backdoor with one terminal, and we have connected to this backdoor with another terminal.  Now, let's open yet another **Linux** terminal and use this use for the purpose of analysis.  
 
-Let's begin by using one of the two methods used earlier to open a new **Kali** Terminal.  
+Let's begin by using one of the two methods used earlier to open a new **Linux** Terminal.  
 
 You can do this by right clicking the icon on the desktop and selecting open...
 
-![](attachments/OpeningKaliInstance.png)
+![](attachments/OpeningLinuxInstance.png)
 
-<b>Or...</b> you can simply click on the Kali logo in the taskbar.
+<b>Or...</b> you can simply click on the Linux logo in the taskbar.
 
-![](attachments/TaskbarKaliIcon.png)
+![](attachments/TaskbarLinuxIcon.png)
 
 On your Linux terminal, please run the following command:
 
@@ -107,7 +133,7 @@ Let's start by looking at the network connections with **lsof**.  When we use **
 <pre>lsof -i -P</pre>
 
 
-![](attachments/lsof-i-pKaliInstance.png)
+![](attachments/lsof-i-pLinuxInstance.png)
 
 Now let's dig into the **netcat process ID**.  We can do this with the lowercase **-p** switch.  This will give us all the open files associated with the listed process ID.
 
@@ -117,7 +143,7 @@ Now let's dig into the **netcat process ID**.  We can do this with the lowercase
 >
 >**Your PID will be different!!!**
 
-![](attachments/lsof-pKaliInstance.png)
+![](attachments/lsof-pLinuxInstance.png)
 
 Let's look at the full processes.  We can do this with the **ps** command. We are also adding the **a**, **u**, and **x switches**.  
 
@@ -129,7 +155,7 @@ Type out this command.
 
 <pre>ps aux</pre>
 
-![](attachments/psauxKaliInstance.png)
+![](attachments/psauxLinuxInstance.png)
 
 Let's change directories into the **proc** directory for that **pid**.  Remember, **proc** is a directory that does not exist on the drive.  It allows us to see data associated with the various processes directly.   This can be very useful as it allows us to dig into the memory of a process that is currently running on a suspect system.
 
@@ -139,25 +165,25 @@ Let's change directories into the **proc** directory for that **pid**.  Remember
 >
 >**Your PID will be different!!!**
 
-![](attachments/procPIDKaliInstance.png)
+![](attachments/procPIDLinuxInstance.png)
 
 We can see a number of interesting directories here:
 
 <pre>ls</pre>
 
-![](attachments/lsKaliInstance.png)
+![](attachments/lsLinuxInstance.png)
 
 We can run the **strings** command on the executable in this directory.  When programs are created there may be usage information, mentions of system libraries, and possible code comments. We use this all the time to attempt to identify what exactly a program is doing.
 
 <pre>strings ./exe | less</pre>
 
-![](attachments/strings_exelessKaliInstance.png)
+![](attachments/strings_exelessLinuxInstance.png)
 
 If we scroll down, we can see the actual usage information for netcat.  We pulled it directly out of memory!
 
 To reveal more information in the output, press **"enter"**.
 
-![](attachments/netcatusageKaliInstance.png)
+![](attachments/netcatusageLinuxInstance.png)
 
 ***                                                                 
 
@@ -172,5 +198,6 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
