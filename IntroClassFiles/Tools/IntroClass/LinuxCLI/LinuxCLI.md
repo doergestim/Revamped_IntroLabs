@@ -111,6 +111,8 @@ ifconfig
 
 ![](attachments/ifconfigLinuxInstance.png)
 
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/ifconfigKaliInstance.png)
+
 
 >[!NOTE]
 >
@@ -223,6 +225,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
