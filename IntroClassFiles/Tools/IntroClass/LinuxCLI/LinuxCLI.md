@@ -109,7 +109,7 @@ Now we will need to know the IP address of our **Linux** system:
 ifconfig
 ```
 
-![](./attachments/ifconfigLinuxInstance.png)
+![](attachments/ifconfigLinuxInstance.png)
 
 >[!NOTE]
 >
@@ -222,6 +222,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
