@@ -109,8 +109,6 @@ Now we will need to know the IP address of our **Linux** system:
 ifconfig
 ```
 
-![](attachments/ifconfigLinuxInstance.png)
-
 ![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/ifconfigKaliInstance.png)
 
 
@@ -135,7 +133,7 @@ Type a few commands to see if its working:
 
 <pre>whoami</pre>
 
-![](attachments/lswhoamiLinuxInstance.png)
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lswhoamiLinuxInstance.png)
 
 At this point, we have created a backdoor with one terminal, and we have connected to this backdoor with another terminal.  Now, let's open yet another **Linux** terminal and use this use for the purpose of analysis.  
 
@@ -143,11 +141,11 @@ Let's begin by using one of the two methods used earlier to open a new **Linux**
 
 You can do this by right clicking the icon on the desktop and selecting open...
 
-![](attachments/OpeningLinuxInstance.png)
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/OpeningLinuxInstance.png)
 
 <b>Or...</b> you can simply click on the Linux logo in the taskbar.
 
-![](attachments/TaskbarLinuxIcon.png)
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/TaskbarLinuxIcon.png)
 
 On your Linux terminal, please run the following command:
 
@@ -160,7 +158,7 @@ Let's start by looking at the network connections with **lsof**.  When we use **
 <pre>lsof -i -P</pre>
 
 
-![](attachments/lsof-i-pLinuxInstance.png)
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lsof-i-pLinuxInstance.png)
 
 Now let's dig into the **netcat process ID**.  We can do this with the lowercase **-p** switch.  This will give us all the open files associated with the listed process ID.
 
@@ -170,7 +168,7 @@ Now let's dig into the **netcat process ID**.  We can do this with the lowercase
 >
 >**Your PID will be different!!!**
 
-![](attachments/lsof-pLinuxInstance.png)
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lsof-pLinuxInstance.png)
 
 Let's look at the full processes.  We can do this with the **ps** command. We are also adding the **a**, **u**, and **x switches**.  
 
@@ -182,7 +180,7 @@ Type out this command.
 
 <pre>ps aux</pre>
 
-![](attachments/psauxLinuxInstance.png)
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/psauxLinuxInstance.png)
 
 Let's change directories into the **proc** directory for that **pid**.  Remember, **proc** is a directory that does not exist on the drive.  It allows us to see data associated with the various processes directly.   This can be very useful as it allows us to dig into the memory of a process that is currently running on a suspect system.
 
@@ -192,25 +190,25 @@ Let's change directories into the **proc** directory for that **pid**.  Remember
 >
 >**Your PID will be different!!!**
 
-![](attachments/procPIDLinuxInstance.png)
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/procPIDLinuxInstance.png)
 
 We can see a number of interesting directories here:
 
 <pre>ls</pre>
 
-![](attachments/lsLinuxInstance.png)
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lsLinuxInstance.png)
 
 We can run the **strings** command on the executable in this directory.  When programs are created there may be usage information, mentions of system libraries, and possible code comments. We use this all the time to attempt to identify what exactly a program is doing.
 
 <pre>strings ./exe | less</pre>
 
-![](attachments/strings_exelessLinuxInstance.png)
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/strings_exelessLinuxInstance.png)
 
 If we scroll down, we can see the actual usage information for netcat.  We pulled it directly out of memory!
 
 To reveal more information in the output, press **"enter"**.
 
-![](attachments/netcatusageLinuxInstance.png)
+![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/netcatusageLinuxInstance.png)
 
 ***                                                                 
 
@@ -225,6 +223,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
