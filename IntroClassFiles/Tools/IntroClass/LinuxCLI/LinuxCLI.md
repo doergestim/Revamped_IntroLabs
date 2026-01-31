@@ -109,7 +109,7 @@ Now we will need to know the IP address of our **Linux** system:
 ifconfig
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/ifconfigKaliInstance.png)
+<img width="692" height="182" alt="image" src="https://github.com/user-attachments/assets/185a6c94-5f3b-4158-a0de-9d62977e47d5" />
 
 
 >[!NOTE]
@@ -118,7 +118,9 @@ ifconfig
 
 Now, let's connect:
 
-<pre>nc 10.10.104.64 2222</pre>
+```bash
+nc 172.31.90.102 2222
+```
 
 >[!NOTE]
 >
@@ -129,40 +131,70 @@ It can be confusing to tell whether or not you are connected to the backdoor.
 
 Type a few commands to see if its working:
 
-<pre>ls</pre>
+```bash
+ls
+```
 
-<pre>whoami</pre>
+```bash
+whoami
+```
 
 ![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lswhoamiKaliInstance.png)
 
 At this point, we have created a backdoor with one terminal, and we have connected to this backdoor with another terminal.  Now, let's open yet another **Linux** terminal and use this use for the purpose of analysis.  
 
-Let's begin by using one of the two methods used earlier to open a new **Linux** Terminal.  
 
-You can do this by right clicking the icon on the desktop and selecting open...
 
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/OpeningKaliInstance.png)
 
-<b>Or...</b> you can simply click on the Linux logo in the taskbar.
+- Open **Command Prompt**
 
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/TaskbarKaliIcon.png)
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
 
-On your Linux terminal, please run the following command:
+- Get the IP of the other VM
+```bash
+tailscale status
+```
 
-<pre>sudo su -</pre>
+<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
+
+>[!IMPORTANT]
+>We are looking for the **linux** VM, so grab the IP from the **linux** line
+>
+>For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
+
+- **SSH** into that machine
+```bash
+ssh ubuntu@100.116.161.87
+```
+
+Password is `metarange`
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
+
+
+
+```bash
+sudo su -
+```
 
 This will get us to a root prompt.  When we say root prompt we mean a terminal with the highest level of permission possible.  We want to be in a root prompt because looking at network connections and process information system wide requires root privileges (or the highest level of privileges).  
 
 Let's start by looking at the network connections with **lsof**.  When we use **lsof**, we are looking at open files.  When we use the **-i** flag we are looking at the open Internet connections.  When we use the **-P** flag we are telling **lsof** to not try and guess what the service is on the ports that are being used. Just give us the port number.
 
-<pre>lsof -i -P</pre>
+```bash
+lsof -i -P
+```
 
 
 ![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lsof-i-pKaliInstance.png)
 
 Now let's dig into the **netcat process ID**.  We can do this with the lowercase **-p** switch.  This will give us all the open files associated with the listed process ID.
 
-<pre>lsof -p [PID]</pre>
+```bash
+lsof -p [PID]
+```
 
 >[!NOTE]
 >
@@ -178,13 +210,17 @@ Let's look at the full processes.  We can do this with the **ps** command. We ar
 
 Type out this command.
 
-<pre>ps aux</pre>
+```bash
+ps aux
+```
 
 ![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/psauxKaliInstance.png)
 
 Let's change directories into the **proc** directory for that **pid**.  Remember, **proc** is a directory that does not exist on the drive.  It allows us to see data associated with the various processes directly.   This can be very useful as it allows us to dig into the memory of a process that is currently running on a suspect system.
 
-<pre>cd /proc/[pid]</pre>
+```bash
+cd /proc/[pid]
+```
 
 >[!NOTE]
 >
@@ -194,13 +230,17 @@ Let's change directories into the **proc** directory for that **pid**.  Remember
 
 We can see a number of interesting directories here:
 
-<pre>ls</pre>
+```bash
+ls
+```
 
 ![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lsKaliInstance.png)
 
 We can run the **strings** command on the executable in this directory.  When programs are created there may be usage information, mentions of system libraries, and possible code comments. We use this all the time to attempt to identify what exactly a program is doing.
 
-<pre>strings ./exe | less</pre>
+```bash
+strings ./exe | less
+```
 
 ![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/strings_exelessKaliInstance.png)
 
@@ -223,6 +263,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
