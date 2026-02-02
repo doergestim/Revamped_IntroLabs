@@ -51,7 +51,8 @@ docker run --rm -it -p 80:80 vulnerables/web-dvwa
 
 Now, let's start ZAP.
 
-![](attachments/Clipboard_2020-06-16-13-30-15.png)
+<img width="89" height="96" alt="image" src="https://github.com/user-attachments/assets/551b5e0b-1319-4c68-8619-02f6ae0a02e8" />
+
 
 
 ![](attachments/Clipboard_2020-06-16-13-30-46.png)
@@ -121,6 +122,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
