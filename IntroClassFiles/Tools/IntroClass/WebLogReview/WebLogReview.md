@@ -66,7 +66,8 @@ First, select the Automated Scan button:
 
 Then enter the URL of your Docker system.  It will be in `http://<LINUXIP>` syntax like below:
 
-![](attachments/Clipboard_2020-12-11-06-45-20.png)
+<img width="455" height="152" alt="image" src="https://github.com/user-attachments/assets/36a48d43-c0ff-4b65-97db-8e9fb845a00a" />
+
 
 Then select the Attack button:
 
@@ -122,6 +123,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
