@@ -6,14 +6,14 @@ In this lab we will be standing up a vulnerable web server called DVWA.  It is d
 
 While a full intro to web attacks is out of the scope of this class, it is great to show you how to use tools like ZAP to automatically look for some vulnerabilities, and to show you that automated tools do not always catch everything.
 
-Let’s get started by opening a Terminal as Administrator
+Let’s get started by opening a Terminal
 
-![](attachments/Clipboard_2020-06-12-10-36-44.png)
+<img width="79" height="96" alt="image" src="https://github.com/user-attachments/assets/8a95f2de-20f6-4abd-80f9-f72439b0320d" />
 
 
-When you get the User Account Control Prompt, select Yes.
-
-PS C:\Users\adhd> `docker run --rm -it -p 80:80 vulnerables/web-dvwa`
+```bash
+docker run --rm -it -p 80:80 vulnerables/web-dvwa
+```
 
 ![](attachments/Clipboard_2020-06-16-13-29-31.png)
 
@@ -96,6 +96,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
