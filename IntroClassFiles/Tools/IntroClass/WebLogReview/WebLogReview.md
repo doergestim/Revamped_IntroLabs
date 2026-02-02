@@ -46,13 +46,7 @@ sudo su -
 docker run --rm -it -p 80:80 vulnerables/web-dvwa
 ```
 
-![](attachments/Clipboard_2020-06-16-13-29-31.png)
-
-In another Command Prompt window run ipconfig and record your IP address.  Remember, your IP address may be different from mine.
-
-C:\Users\adhd>`ipconfig`
-
-![](attachments/Clipboard_2020-06-16-13-29-46.png)
+<img width="1102" height="317" alt="image" src="https://github.com/user-attachments/assets/bbb8b00e-1ae1-4896-8ce5-3c9affbc5c79" />
 
 
 Now, let's start ZAP.
@@ -127,6 +121,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
