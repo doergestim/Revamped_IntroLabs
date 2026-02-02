@@ -76,11 +76,13 @@ Then select the Attack button:
 This will start the scan.  You should be able to see the scan activity in the lower part of ZAP.
 
 
-![](attachments/Clipboard_2020-12-11-06-47-23.png)
+<img width="947" height="362" alt="image" src="https://github.com/user-attachments/assets/49633ae1-1b42-4664-9950-ca334152e08d" />
 
-Now, let's go back to the Powershell window and see the logs:
 
-![](attachments/Clipboard_2020-12-11-06-51-27.png)
+Now, let's go back to the **Command Prompt** window and see the logs:
+
+<img width="1106" height="622" alt="image" src="https://github.com/user-attachments/assets/0d8192d6-13b3-4b37-828f-f8b88d461a26" />
+
 
 What are some things to look for?
 
@@ -123,6 +125,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
