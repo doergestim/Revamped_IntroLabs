@@ -58,13 +58,13 @@ Now, let's start ZAP.
 ![](attachments/Clipboard_2020-06-16-13-30-46.png)
 
 
-Now, let's insert your IP address from the ipconfig command above and start the scan.
+Now, let's insert your **Linux IP address** from the **tailscale status** command
 
 First, select the Automated Scan button: 
 
 ![](attachments/Clipboard_2020-12-11-06-43-22.png)
 
-Then enter the URL of your Docker system.  It will be in http://<WINDOWSIP> syntax like below:
+Then enter the URL of your Docker system.  It will be in `http://<LINUXIP>` syntax like below:
 
 ![](attachments/Clipboard_2020-12-11-06-45-20.png)
 
@@ -122,6 +122,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
