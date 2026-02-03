@@ -56,9 +56,9 @@ Navigate into the proper directory:
 cd ~/Intro_To_SOC/Web_Testing
 ```
 
-![](attachments/navtodirectory.png)
-
 Please note your **Linux** IP address is shown by **tailscale status**. As shown at the start, ours is **"100.116.161.87"**
+
+<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
 
 >[!NOTE]
 >
@@ -70,7 +70,8 @@ Launch the python script.
 python3 ./dsvw.py
 ```
 
-![](attachments/pythonscriptran.png)
+<img width="618" height="141" alt="image" src="https://github.com/user-attachments/assets/2a40ac0a-ab9c-4fb0-a35d-9c56596031c4" />
+
 
 It's time to start **ZAP**! Go ahead and launch it from the desktop icon.
 
