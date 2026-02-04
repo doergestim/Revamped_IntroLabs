@@ -10,15 +10,21 @@ Let's get started by opening **Windows Powershell**.
 
 Next, we need to navigate to the **IntroLabs** directory:
 
-<pre>cd \IntroLabs</pre>
+```bash
+cd \IntroLabs
+```
 
 Then, continue into the **DeepBlueCLI-master** directory:
 
-<pre>cd .\DeepBlueCLI-master</pre>
+```bash
+cd .\DeepBlueCLI
+```
 
 Run the following command:
 
-<pre>Set-ExecutionPolicy Unrestricted</pre>
+```bash
+Set-ExecutionPolicy Unrestricted
+```
 
 Most likely, you will be prompted to confirm the change.
 
@@ -30,7 +36,9 @@ It is very common for attackers to add additional users on to a system they have
 
 Now, let’s run a check in the **.evtx** files for adding a new user:
 
-<pre>.\DeepBlue.ps1 .\evtx\new-user-security.evtx</pre>
+```bash
+.\DeepBlue.ps1 .\evtx\new-user-security.evtx
+```
 
 You should see the following:
 
@@ -42,19 +50,25 @@ This is the exact behavior that **UEBA** should be able to detect.
 
 Let's look at an event log with a password spray attack.  This is very much part of what a full **UEBA** solution does:
 
-<pre>.\DeepBlue.ps1 .\evtx\smb-password-guessing-security.evtx</pre>
+```bash
+.\DeepBlue.ps1 .\evtx\smb-password-guessing-security.evtx
+```
 
 ![](attachments/deepblue_passwordguessing.png)
 
 Same thing with detecting a password spraying attack:
 
-<pre>.\DeepBlue.ps1 .\evtx\password-spray.evtx</pre>
+```bash
+.\DeepBlue.ps1 .\evtx\password-spray.evtx
+```
 
 ![](attachments/deepblue_passwordspray.png)
 
 For fun, let’s look at how **DeepBlueCLI** detects various encoding tactics that attackers use to obfuscate their attacks.  It is very common for attackers to use a number of encoding techniques to bypass signature detection.  However, it is not something that normally happens with standard scripts.
 
-<pre>.\DeepBlue.ps1 .\evtx\Powershell-Invoke-Obfuscation-encoding-menu.evtx</pre>
+```bash
+.\DeepBlue.ps1 .\evtx\Powershell-Invoke-Obfuscation-encoding-menu.evtx
+```
 
 ![](attachments/deepblue_powershell-invokeobfuscation.png)
 
@@ -72,4 +86,5 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
