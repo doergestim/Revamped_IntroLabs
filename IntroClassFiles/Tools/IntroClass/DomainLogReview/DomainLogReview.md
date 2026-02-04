@@ -15,13 +15,17 @@ Let's start by opening **Windows Powershell**:
 
 Then, navigate to the \IntroLabs\DeepBlueCLI-master directory
 
-<pre>cd \IntroLabs\DeepBlueCLI-master\</pre>
+```bash
+cd \IntroLabs\DeepBlueCLI\
+```
 
 ![](attachments/dlr_directory.png)
 
 Now, let's start looking at the **DC2 Password spray** file:
 
-<pre>.\DeepBlue.ps1 .\EntLogs\DC2-secLogs-3-26-DomainPasswordSpray.evtx</pre>
+```bash
+.\DeepBlue.ps1 .\EntLogs\DC2-secLogs-3-26-DomainPasswordSpray.evtx
+```
 
 If a warning pops up, press **"R"**.  This will start the script by running it:
 When this runs, there is an alert that catches our attention right away:
@@ -92,4 +96,5 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
