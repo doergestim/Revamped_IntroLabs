@@ -40,10 +40,9 @@ To do this, open File Explorer and navigate to the C:\IntroLabs\DeepBlueCLI-mast
 
 ![](attachments/OpeningFileExplorer.png)
 
+![](attachments/Navintolabs.png)  
+
 <img width="658" height="66" alt="image" src="https://github.com/user-attachments/assets/7dfe1e7b-f655-493d-a51a-f6dabf13ffea" />
-
-
-![](attachments/NavtoDBMaster.png)
 
 ![](attachments/navtoent.png)
 
@@ -97,6 +96,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
