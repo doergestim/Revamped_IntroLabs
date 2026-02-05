@@ -89,7 +89,7 @@ We did the most basic level of attempted authentication to the share, and it gen
 
 However, the trap was triggered! 
 
-Go back to your Kali Linux terminal and see the log data. 
+Go back to your **Linux terminal** and see the log data. 
 
 It should look like this: 
 
@@ -120,6 +120,7 @@ Please be sure to destroy the lab environment!
  
 
  
+
 
 
 
