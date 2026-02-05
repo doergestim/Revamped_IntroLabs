@@ -3,41 +3,33 @@
 
 # Password Cracking
 
+# Ubuntu VM
+
 In this lab we will be getting started with the fundamentals of password cracking.  We will be using **Hashcat** to do this.
 
-To start, disable **Defender** and open **PowerShell** to run the following command:
-
-![](attachments/OpeningPowershell.png)
-
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
-
-This will disable **Defender** for this session.
-
-If you get angry red errors, that is Ok, it means **Defender** is not running.
-
-We need to launch a **Kali** terminal. Click the **Kali** icon in the taskbar.
-
-![](attachments/TaskbarKaliIcon.png)
-
-When the terminal opens, we need to gain root access by running the following:
-
-<pre>sudo su -</pre>
+After you open a terminal, we need to gain root access by running the following:
 
 Now, let's delete any old leftover pot files
 
-<pre> rm /root/.local/share/hashcat/hashcat.potfile</pre>
+```bash
+rm /root/.local/share/hashcat/hashcat.potfile
+```
 
 If you get an error that the file does not exist, that is fine.  It just means the file does not exist.  Carry on.
 
 We need to navigate to the appropriate directory. Run the following:
 
-<pre>cd /opt/Password_Cracking</pre>
+```bash
+cd ~/Intro_To_Security/Password_Cracking
+```
 
 Lets begin by attempting to crack some **MD5 hashes**. 
 
 Run the following command:
 
-<pre>hashcat -a 0 -m 0 -r /usr/share/hashcat/rules/Incisive-leetspeak.rule MD5.txt password.lst</pre>
+```bash
+hashcat -a 0 -m 0 -r /usr/share/hashcat/rules/Incisive-leetspeak.rule MD5.txt password.lst
+```
 
 The result will look like this:
 
@@ -53,7 +45,9 @@ Lets crack some NT hashes.  These are the hashes that almost all modern **Window
 
 Lets run the following command:
 
-<pre>hashcat -a 0 -m 1000 -r/usr/share/hashcat/rules/Incisive-leetspeak.rule sam.txt password.lst</pre>
+```bash
+hashcat -a 0 -m 1000 -r/usr/share/hashcat/rules/Incisive-leetspeak.rule sam.txt password.lst
+```
 
 When this command is complete, it should look like this:
 
@@ -78,5 +72,6 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
