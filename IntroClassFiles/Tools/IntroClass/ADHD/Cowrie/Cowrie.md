@@ -22,17 +22,17 @@ To begin, let's open a Kali terminal.
 
 You can do this by right clicking the icon on the desktop by selecting open...
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/OpeningKaliInstance.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/OpeningKaliInstance.png)
 
 Or by clicking the icon in the taskbar...
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/TaskbarKaliIcon.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/TaskbarKaliIcon.png)
 
 Then become root by running the following command:
 
 <pre>sudo su -</pre>
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/gettingroot.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/gettingroot.png)
 
 Getting Cowrie running is really easy if you have docker installed on your system.
 
@@ -51,9 +51,9 @@ This will take a few moments.
 
 When running for the first time, you will see an output like this:
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/runningprocessdocker.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/runningprocessdocker.png)
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/dockercowriecommand.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/dockercowriecommand.png)
 
 Once you see **"Ready to accept SSH connections"** in the command output, you are ready to continue.
 
@@ -61,7 +61,7 @@ Open another Kali terminal while keeping the first terminal open with the logs o
 
 You can do this by clicking the icon in the taskbar:
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/TaskbarKaliIcon.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/TaskbarKaliIcon.png)
 
 We need to delete any other previous `ssh known_hosts` connections to the honeypot.
 
@@ -73,7 +73,7 @@ This helps reduce any errors from starting and restarting the honeypot.
 
 <pre>rm .ssh/known_hosts</pre>
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/rmsshhosts.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/rmsshhosts.png)
 
 >[!IMPORTANT]
 >
@@ -85,11 +85,11 @@ Then, try to connect to the honeypot with the following command:
 
 When you get prompted to accept the key fingerprint, type `yes`:
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/rootlocalhost.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/rootlocalhost.png)
 
 For the password, try `12345`:
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/enterpassword.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/enterpassword.png)
 
 Now, run the following commands:
 
@@ -101,11 +101,11 @@ Now, run the following commands:
 
 `AAAAAAAAAAAAAAAAAAAAAAAAAA`
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/terminalcommands.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/terminalcommands.png)
 
 Notice, the commands and authentication are being tracked in the other terminal with the log info:
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/reflection.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/reflection.png)
 
 Take a few moments and notice that the results are always the same... for all Cowrie instances.
 
@@ -113,7 +113,7 @@ Let's change a few things about our Cowrie honeypot to make it unique.
 
 Did you notice the system name in the prompt?
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/systemname.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/systemname.png)
 
 It is the same for all default installations. Let's change that.
 
@@ -121,7 +121,7 @@ First, we need to kill our Cowrie session.
 
 To do this, click into the first terminal with our log output and press `ctrl + c` at the same time.
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/servershutdown.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/servershutdown.png)
 >[!TIP] 
 >
 >If done correctly, you should see **"Server Shut Down"**
@@ -148,7 +148,7 @@ As root, run the following:
 
 <pre>vim /var/lib/docker/overlay2/49cb1d1569dac74ee9793c9efb526ae1ba35b8e4a31b14a1a1c8c30bc70dc953/diff/cowrie/cowrie-git/etc/cowrie.cfg.dist</pre>
 
-![](/IntroClassFiles/Tools/IntroClass/Cowrie/attachments/vimfileedit.png)
+![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/vimfileedit.png)
 
 >[!TIP]
 >
