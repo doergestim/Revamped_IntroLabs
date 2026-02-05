@@ -55,7 +55,7 @@ python3 spidertrap.py
 - Then visit the following site in a web browser:
 
 ```
-http://[YOUR_LINUX_IP]:8000
+http://localhost:8000
 ``` 
 
 - You should see a page containing randomly generated links. If you click on a link it will take you to a page with more randomly generated links.
@@ -83,7 +83,7 @@ python3 spidertrap.py directory-list-2.3-big.txt
 - Then visit the following site in a web browser:
 
 ```bash
-http://[YOUR_LINUX_IP]:8000
+http://localhost:8000
 ```
  
 - You should see a page containing links taken from the file. If you click on a link it will take you to a page with more links from the file.
