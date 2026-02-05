@@ -78,7 +78,8 @@ python3 spidertrap.py directory-list-2.3-big.txt
 >
 >You may need to press `ctrl + c` to kill your existing Spidertrap session.
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/startwithoptions.png)
+<img width="851" height="67" alt="image" src="https://github.com/user-attachments/assets/78e53f09-e606-4067-8590-9a9d7b493b51" />
+
 
 - Then visit the following site in a web browser:
 
