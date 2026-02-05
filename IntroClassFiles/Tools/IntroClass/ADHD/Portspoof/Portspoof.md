@@ -52,25 +52,28 @@ Config File Location
 Usage
 -----
 
-<pre>portspoof -h</pre>
+```bash
+portspoof -h
+```
 
-        Usage: portspoof [OPTION]...
-        Portspoof - service emulator / frontend exploitation framework.
+```
+Usage: portspoof [OPTION]...
+Portspoof - service emulator / frontend exploitation framework.
 
-        -i			  ip : Bind to a particular  IP address
-        -p			  port : Bind to a particular PORT number
-        -s			  file_path : Portspoof service signature regex. file
-        -c			  file_path : Portspoof configuration file
-        -l			  file_path : Log port scanning alerts to a file
-        -f			  file_path : FUZZER_MODE - fuzzing payload file list
-        -n			  file_path : FUZZER_MODE - wrapping signatures file list
-        -1			  FUZZER_MODE - generate fuzzing payloads internally
-        -2			  switch to simple reply mode (doesn't work for Nmap)!
-        -D			  run as daemon process
-        -d			  disable syslog
-        -v			  be verbose
-        -h			  display this help and exit
-
+-i			  ip : Bind to a particular  IP address
+-p			  port : Bind to a particular PORT number
+-s			  file_path : Portspoof service signature regex. file
+-c			  file_path : Portspoof configuration file
+-l			  file_path : Log port scanning alerts to a file
+-f			  file_path : FUZZER_MODE - fuzzing payload file list
+-n			  file_path : FUZZER_MODE - wrapping signatures file list
+-1			  FUZZER_MODE - generate fuzzing payloads internally
+-2			  switch to simple reply mode (doesn't work for Nmap)!
+-D			  run as daemon process
+-d			  disable syslog
+-v			  be verbose
+-h			  display this help and exit
+```
 
 
 Example 1: Starting Portspoof
@@ -83,18 +86,6 @@ First, let's become root:
 ```bash
 sudo su -
 ```
-
-Now, let's install Portspoof:
-
-```bash
-apt-get update
-```
-
-<pre>apt-get install portspoof</pre>
-
->[!NOTE]
->
->This may take a moment
 
 ![image](https://github.com/user-attachments/assets/db0eeae1-d282-448d-b2e6-7b819a091971)
 
