@@ -184,7 +184,7 @@ This mode will generate and feed port scanners like Nmap bogus service signature
 Now running an Nmap service detection scan against the top 100 most common ports (a common hacker activity) will turn up some very interesting results.
 
 ```bash
-nmap -p 1-10 -sV 172.16.215.138
+nmap -p 1-10 -sV [Your Linux IP From Tailscale]
 ```
 
 ![image](https://github.com/user-attachments/assets/c4281e6f-4937-4477-b6a9-d2344d2a2699)
