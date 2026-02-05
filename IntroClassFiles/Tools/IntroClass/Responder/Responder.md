@@ -1,3 +1,9 @@
+![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
+
+
+
+
+
 # Responder
 
 In this lab we are going to walk through how quickly an attacker can take advantage of a common misconfiguration to gain access to a system via a **weak** password.
@@ -170,6 +176,7 @@ meterpreter >
 Now, you can see just how bad LLMNR is!!!!
 */
 -->
+
 
 
 
