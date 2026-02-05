@@ -87,15 +87,17 @@ First, let's become root:
 sudo su -
 ```
 
-![image](https://github.com/user-attachments/assets/db0eeae1-d282-448d-b2e6-7b819a091971)
+Let's add the firewall rules.
 
-Now, let's add the firewall rules.
-
-<pre>iptables -t nat -A PREROUTING -p tcp -m tcp --dport 1:20 -j REDIRECT --to-ports 4444</pre>
+```bash
+iptables -t nat -A PREROUTING -p tcp -m tcp --dport 1:20 -j REDIRECT --to-ports 4444
+```
 
 Then run Portspoof with no options, which defaults it to "open port" mode. This mode will just return OPEN state for every connection attempt.
 
-<pre>portspoof</pre>
+```bash
+portspoof
+```
 
 ![image](https://github.com/user-attachments/assets/1e2425d2-796a-4d20-8c05-393a551d1990)
 
