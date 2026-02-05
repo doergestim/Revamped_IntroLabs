@@ -115,7 +115,7 @@ As we said above, one of the ways that people have been detecting honeypots like
 
 Because the key fingerprint changes every time you restart Cowrie, we need to next focus on changing the hostname. 
 
-To do this we need to change the following file as root on our Kali system:
+To do this we need to change the following file as root on our linux system:
 
 <pre>/var/lib/docker/overlay2/49cb1d1569dac74ee9793c9efb526ae1ba35b8e4a31b14a1a1c8c30bc70dc953/diff/cowrie/cowrie-git/etc/cowrie.cfg.dist</pre>
 
@@ -168,9 +168,11 @@ docker run -p 2222:2222 cowrie/cowrie
 
 ![image](https://github.com/user-attachments/assets/9390fd7a-7468-44ef-aa70-d52160c6d005)
 
-Then, in another Kali terminal connect with a password of 12345:
+Then, in another terminal connect with a password of 12345:
 
-<pre>rm .ssh/known_hosts</pre>
+```bash
+rm ~/.ssh/known_hosts
+```
 
 ```bash
 ssh -p 2222 root@localhost
@@ -213,10 +215,10 @@ docker run -p 2222:2222 cowrie/cowrie
 
 ![image](https://github.com/user-attachments/assets/9390fd7a-7468-44ef-aa70-d52160c6d005)
 
-Then, in another Kali terminal connect with a password of 12345:
+Then, in another terminal connect with a password of 12345:
 
 ```bash
-rm .ssh/known_hosts
+rm ~/.ssh/known_hosts
 ```
 
 ```bash
