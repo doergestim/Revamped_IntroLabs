@@ -8,31 +8,57 @@ In this lab we will be standing up a simple **Python Web Server** and a vulnerab
 
 While a full intro to web attacks is out of the scope of this class, it is great to show you how to use tools like **ZAP** to automatically look for some vulnerabilities, and to show you that automated tools do not always catch everything.
 
-You will need to start an **Kali** terminal.
+You will need to start an **Linux** terminal.
 
-![](attachments/OpeningKaliInstance.png)
 
-Alternatively, you can click on the **Kali** icon in the taskbar.
 
-![](attachments/TaskbarKaliIcon.png)
+
+
+- Open **Command Prompt**
+
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+
+- Get the IP of the other VM
+```bash
+tailscale status
+```
+
+<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
+
+>[!IMPORTANT]
+>We are looking for the **linux** VM, so grab the IP from the **linux** line
+>
+>For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
+
+- **SSH** into that machine
+```bash
+ssh ubuntu@100.116.161.87
+```
+
+Password is `metarange`
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
+
+
+
 
 Before going further, gain root access by running the following:
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
 Navigate into the proper directory:
 
-<pre>cd /opt/Web_Testing</pre>
+```bash
+cd ~/Intro_To_SOC/Web_Testing
+```
 
-![](attachments/navtodirectory.png)
+Please note your **Linux** IP address is shown by **tailscale status**. As shown at the start, ours is **"100.116.161.87"**
 
-We need to get our **Linux** IP address for later, so let's run the following command:
-
-<pre>ifconfig</pre>
-
-![](attachments/ifconfig.png)
-
-Please note your **Linux** IP address. As shown above, ours is **"10.10.1.117"**
+<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
 
 >[!NOTE]
 >
@@ -40,9 +66,12 @@ Please note your **Linux** IP address. As shown above, ours is **"10.10.1.117"**
 
 Launch the python script.
 
-<pre>python3 ./dsvw.py</pre>
+```bash
+python3 ./dsvw.py
+```
 
-![](attachments/pythonscriptran.png)
+<img width="618" height="141" alt="image" src="https://github.com/user-attachments/assets/2a40ac0a-ab9c-4fb0-a35d-9c56596031c4" />
+
 
 It's time to start **ZAP**! Go ahead and launch it from the desktop icon.
 
@@ -73,11 +102,10 @@ When it gets done crawling and scanning, select **"Alerts"**:
 
 This shows that **ZAP** does a pretty good job of finding the easy to identify vulnerabilities.
 
-
 ***                                                                 
-<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/ACHCEIntroClass/ACHunterCE.md)</i></b>
+<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/deepbluecli/DeepBlueCLI.md)</i></b>
 
-<b><i>Want to go back? </br>[Previous Lab](/IntroClassFiles/Tools/IntroClass/Sysmon/Sysmon.md)</i></b>
+<b><i>Want to go back? </br>[Previous Lab](/IntroClassFiles/Tools/IntroClass/nessus/Nessus.md)</i></b>
 
 <b><i>Looking for a different lab? </br>[Lab Directory](/IntroClassFiles/navigation.md)</i></b>
 
