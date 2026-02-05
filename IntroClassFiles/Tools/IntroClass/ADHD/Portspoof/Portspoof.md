@@ -141,7 +141,9 @@ Open a Windows command prompt:
 
 Then, run nmap:
 
-<pre>nmap -p 1-10 [Your Linux IP]</pre>
+```bash
+nmap -p 1-10 [Your Linux IP From Tailscale]
+```
 
 
 ![image](https://github.com/user-attachments/assets/d51c7589-8fbf-4b0a-8c69-6c21629e588d)
@@ -151,7 +153,9 @@ All ports are reported as open! When run this way, Nmap reports the service that
 
 To get more accurate results, an attacker might run an Nmap service scan, which would actively try to detect the services running. But performing an Nmap service detection scan shows that something is amiss because all ports are reported as running the same type of service.
 
-<pre>nmap -p 1-10 -sV [Your Linux IP]</pre>
+```bash
+nmap -p 1-10 -sV [Your Linux IP From Tailscale]
+```
 
 ![image](https://github.com/user-attachments/assets/148e82e4-f8fb-4df5-8fef-6b758d1e05e1)
 
@@ -161,13 +165,17 @@ Example 2: Spoofing Service Signatures
 
 Showing all ports as open is all well and good, but the same thing could be accomplished with a simple netcat listener:
 
-<pre>nc -l -k 4444</pre>
+```bash
+nc -l -k 4444
+```
 
 To make things more interesting, how about we have Portspoof fool Nmap into actually detecting real services running?
 
 Let's kill the running version of Portspoof with `Ctrl + C` then restart it with signatures:
 
-<pre>portspoof -s /etc/portspoof/portspoof_signatures</pre>
+```bash
+portspoof -s /etc/portspoof/portspoof_signatures
+```
 
 ![image](https://github.com/user-attachments/assets/e1a2857a-7628-46d0-8808-b0af2add49f1)
 
@@ -175,7 +183,9 @@ This mode will generate and feed port scanners like Nmap bogus service signature
 
 Now running an Nmap service detection scan against the top 100 most common ports (a common hacker activity) will turn up some very interesting results.
 
-<pre>nmap -p 1-10 -sV 172.16.215.138</pre>
+```bash
+nmap -p 1-10 -sV 172.16.215.138
+```
 
 ![image](https://github.com/user-attachments/assets/c4281e6f-4937-4477-b6a9-d2344d2a2699)
 
@@ -192,7 +202,9 @@ To reset our VM, you can reboot (recommended) or:
 
 1. Kill Portspoof by pressing `Ctrl + C`.
 2. Flush all iptables rules by running the command (as root): 
-<pre>sudo iptables -t nat -F</pre>
+```bash
+sudo iptables -t nat -F
+```
 
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/ADHD/HoneyPorts/HoneyPorts.md)</i></b>
