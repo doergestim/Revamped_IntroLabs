@@ -24,7 +24,7 @@ What's new in HoneyBadger?
 
 Install Location
 ----------------
-`/opt/honeybadger/`
+`~/ADCD/honeybadger/`
 
 
 Usage
@@ -32,7 +32,11 @@ Usage
 - In order to use the latest version of **HoneyBadger**, **Python 3** must be installed, as well as **python3-pip**. These should both be installed on the **ADHD image**
 
 ```bash
-cd /opt/honeybadger/server
+cd ~/ADCD/honeybadger/server
+```
+
+```bash
+source venv/bin/activate
 ```
 
 - Finally, from the same directory, run the HoneyBadger server:
