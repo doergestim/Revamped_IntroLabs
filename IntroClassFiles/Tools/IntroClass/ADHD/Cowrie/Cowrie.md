@@ -2,6 +2,8 @@
 
 # Cowrie
 
+# Ubuntu VM
+
 Website
 -------
 
@@ -18,34 +20,23 @@ Cowrie is a medium interaction SSH honeypot designed to log brute force attacks 
 
 The first thing we need to do is instal and start Cowrie.
 
-To begin, let's open a Kali terminal. 
-
-You can do this by right clicking the icon on the desktop by selecting open...
-
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/OpeningKaliInstance.png)
-
-Or by clicking the icon in the taskbar...
-
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/TaskbarKaliIcon.png)
+To begin, let's open a terminal. 
 
 Then become root by running the following command:
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
 ![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/gettingroot.png)
 
 Getting Cowrie running is really easy if you have docker installed on your system.
 
->[!NOTE]
->
->If you don't have docker installed run the following command to get it set up:
-><pre>snap install docker</pre>
->
->Once you run this, you can continue!
-
 All you need to do is run the following:
 
-<pre>docker run -p 2222:2222 cowrie/cowrie</pre>
+```bash
+docker run -p 2222:2222 cowrie/cowrie
+```
 
 This will take a few moments.
 
@@ -71,7 +62,9 @@ This helps reduce any errors from starting and restarting the honeypot.
 >
 >You should run the following command in the `/home/kali` directory.
 
-<pre>rm .ssh/known_hosts</pre>
+```bash
+rm .ssh/known_hosts
+```
 
 ![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/rmsshhosts.png)
 
@@ -81,7 +74,9 @@ This helps reduce any errors from starting and restarting the honeypot.
 
 Then, try to connect to the honeypot with the following command:
 
-<pre>ssh -p 2222 root@localhost</pre>
+```bash
+ssh -p 2222 root@localhost
+```
 
 When you get prompted to accept the key fingerprint, type `yes`:
 
@@ -146,7 +141,9 @@ So let's edit this file using `vim`.
 
 As root, run the following:
 
-<pre>vim /var/lib/docker/overlay2/49cb1d1569dac74ee9793c9efb526ae1ba35b8e4a31b14a1a1c8c30bc70dc953/diff/cowrie/cowrie-git/etc/cowrie.cfg.dist</pre>
+```bash
+vim /var/lib/docker/overlay2/49cb1d1569dac74ee9793c9efb526ae1ba35b8e4a31b14a1a1c8c30bc70dc953/diff/cowrie/cowrie-git/etc/cowrie.cfg.dist
+```
 
 ![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/vimfileedit.png)
 
@@ -175,7 +172,9 @@ When done, hit the following keys in the following order
 
 Now, let's restart and connect:
 
-<pre>docker run -p 2222:2222 cowrie/cowrie</pre>
+```bash
+docker run -p 2222:2222 cowrie/cowrie
+```
 
 ![image](https://github.com/user-attachments/assets/9390fd7a-7468-44ef-aa70-d52160c6d005)
 
@@ -183,7 +182,9 @@ Then, in another Kali terminal connect with a password of 12345:
 
 <pre>rm .ssh/known_hosts</pre>
 
-<pre>ssh -p 2222 root@localhost</pre>
+```bash
+ssh -p 2222 root@localhost
+```
 
 Then type `yes` on the key fingerprint verification.
 
@@ -194,8 +195,9 @@ Your hostname should now be changed.
 
 Now, let’s edit the Message of the Day (MOTD).  Because the default one is not fun at all.
 
-
-<pre>vim /var/lib/docker/overlay2/49cb1d1569dac74ee9793c9efb526ae1ba35b8e4a31b14a1a1c8c30bc70dc953/diff/cowrie/cowrie-git/honeyfs/etc/motd</pre>
+```bash
+vim /var/lib/docker/overlay2/49cb1d1569dac74ee9793c9efb526ae1ba35b8e4a31b14a1a1c8c30bc70dc953/diff/cowrie/cowrie-git/honeyfs/etc/motd
+```
 
 ![image](https://github.com/user-attachments/assets/e60c8de7-1026-4507-9e03-fb0718799a4f)
 
@@ -215,15 +217,21 @@ When done, hit the following keys in the following order
 
 Now, let's restart and connect:
 
-<pre>docker run -p 2222:2222 cowrie/cowrie</pre>
+```bash
+docker run -p 2222:2222 cowrie/cowrie
+```
 
 ![image](https://github.com/user-attachments/assets/9390fd7a-7468-44ef-aa70-d52160c6d005)
 
 Then, in another Kali terminal connect with a password of 12345:
 
-<pre>rm .ssh/known_hosts</pre>
+```bash
+rm .ssh/known_hosts
+```
 
-<pre>ssh -p 2222 root@localhost</pre>
+```bash
+ssh -p 2222 root@localhost
+```
 
 Then type `yes` on the key fingerprint verification.
 
