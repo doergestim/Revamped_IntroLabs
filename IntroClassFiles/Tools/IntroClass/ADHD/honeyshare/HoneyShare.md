@@ -40,27 +40,21 @@ Password is `metarange`
 
 <img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
 
-  
-![image](https://github.com/user-attachments/assets/aed53ef8-6796-4897-ba51-c1a4a09f1b24)
+Next, we will navigate to the **Impacket** directory: 
 
-Next, we will become root and navigate to the Impacket directory: 
+```bash
+cd ~/ADCD/impacket/examples
+```
 
-  
+- Make sure you are in the right place
 
-`sudo su -` 
+```bash
+ls
+```
 
-  
+It should look like this:
 
-`cd /opt/impacket/examples` 
-
-  
-
-It should look like this: 
-
-  
-
-![image](https://github.com/user-attachments/assets/e5cbc8eb-b3a8-4fe6-84c2-569e6fed013c)
-
+<img width="1920" height="146" alt="image" src="https://github.com/user-attachments/assets/f28509be-1912-4be7-b79e-29b0932b5714" />
 
 Now, let's start the SMB server: 
 
@@ -84,10 +78,13 @@ Next, let's open a Windows Command Prompt: 
 
 Then, attempt to mount the share from your Windows system: 
 
+- Make sure to use the **Linux IP** from **tailscale**
 
-`net use * \\172.17.78.175\secret` 
+`net use * \\100.116.161.87\secret` 
 
-Remember!  Your IP address may be different!!! 
+>[!IMPORTANT]
+>
+>Your IP address may be different!!! 
   
 
 We did the most basic level of attempted authentication to the share, and it generated an error.  
@@ -131,6 +128,7 @@ Please be sure to destroy the lab environment!
  
 
  
+
 
 
 
