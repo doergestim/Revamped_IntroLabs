@@ -3,7 +3,7 @@
 
 # Honey Share 
 
-
+# Windows VM
 
 In this lab we will be creating and triggering a honey share.  The goal of this lab is to show how to set up a simple Impacket SMB server that can record attempted connections to it. 
 
@@ -58,29 +58,25 @@ It should look like this:
 
 Now, let's start the SMB server: 
 
-  
-
-`python3 ./smbserver.py -smb2support -comment 'secret' SECRET /secret` 
-
-  
+```bash
+python3 ./smbserver.py -smb2support -comment 'secret' SECRET /secret
+```
 
 It should look like this: 
 
- ![image](https://github.com/user-attachments/assets/d1268c27-a141-4a95-96ce-a9482d4b3e56)
+![image](https://github.com/user-attachments/assets/d1268c27-a141-4a95-96ce-a9482d4b3e56)
  
-
-
 Next, let's open a Windows Command Prompt: 
 
 ![image](https://github.com/user-attachments/assets/0ccc949d-32c3-4d7b-bb18-1bb39ee36dfc)
   
-
-
 Then, attempt to mount the share from your Windows system: 
 
 - Make sure to use the **Linux IP** from **tailscale**
 
-`net use * \\100.116.161.87\secret` 
+```bash
+net use * \\100.116.161.87\secret
+```
 
 >[!IMPORTANT]
 >
@@ -91,13 +87,9 @@ We did the most basic level of attempted authentication to the share, and it gen
 
 ![image](https://github.com/user-attachments/assets/8d861109-cd62-4231-946a-98f2284466a6)
 
-
 However, the trap was triggered! 
 
-  
-
 Go back to your Kali Linux terminal and see the log data. 
-
 
 It should look like this: 
 
@@ -128,6 +120,7 @@ Please be sure to destroy the lab environment!
  
 
  
+
 
 
 
