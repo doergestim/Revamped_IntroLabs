@@ -46,22 +46,14 @@ When running for the first time, you will see an output like this:
 
 Once you see **"Ready to accept SSH connections"** in the command output, you are ready to continue.
 
-Open another Kali terminal while keeping the first terminal open with the logs open as well. 
-
-You can do this by clicking the icon in the taskbar:
-
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/TaskbarKaliIcon.png)
+Open another terminal while keeping the first terminal open with the logs open as well. 
 
 We need to delete any other previous `ssh known_hosts` connections to the honeypot.
 
 This helps reduce any errors from starting and restarting the honeypot.
 
->[!TIP]
->
->You should run the following command in the `/home/kali` directory.
-
 ```bash
-rm .ssh/known_hosts
+rm ~/.ssh/known_hosts
 ```
 
 ![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/rmsshhosts.png)
