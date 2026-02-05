@@ -28,8 +28,6 @@ Then become root by running the following command:
 sudo su -
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/gettingroot.png)
-
 Getting Cowrie running is really easy if you have docker installed on your system.
 
 All you need to do is run the following:
