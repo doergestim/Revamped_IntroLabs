@@ -115,7 +115,8 @@ http://localhost:8000
 sudo wget -m http://127.0.0.1:8000
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/wgetcommand.png)
+<img width="717" height="897" alt="image" src="https://github.com/user-attachments/assets/04fb4d56-9724-4739-b432-c7049270c742" />
+
 
 - When finished, type `ctrl + c` to kill wget.
 
