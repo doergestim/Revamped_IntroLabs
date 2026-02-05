@@ -100,7 +100,8 @@ Then run Portspoof with no options, which defaults it to "open port" mode. This 
 portspoof
 ```
 
-![image](https://github.com/user-attachments/assets/1e2425d2-796a-4d20-8c05-393a551d1990)
+<img width="1007" height="67" alt="image" src="https://github.com/user-attachments/assets/3664f938-381c-4e12-969b-a482788fb47b" />
+
 
 
 If you were to scan using Nmap from another Windows command prompt. Now you would see something like this:
