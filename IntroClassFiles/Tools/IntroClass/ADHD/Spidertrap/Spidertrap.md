@@ -1,7 +1,8 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
-Spidertrap
-==========
+# Spidertrap
+
+# Ubuntu VM
 
 Website
 -------
@@ -97,7 +98,7 @@ http://localhost:8000
 
 - For this example, follow the instructions in [Example 1: Basic Usage](#example-1-basic-usage) or [Example 2: Providing a List of Links](#example-2-providing-a-list-of-links) to start Spidertrap. 
 
-- Once Spidertrap starts, open a new Kali Linux terminal. Do this by clicking the icon in the taskbar:
+- Once Spidertrap starts, open a new terminal
 
 ![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/TaskbarKaliIcon.png)
 
