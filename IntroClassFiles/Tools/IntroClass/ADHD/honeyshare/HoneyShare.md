@@ -3,11 +3,9 @@
 
 # Honey Share 
 
-  
+
 
 In this lab we will be creating and triggering a honey share.  The goal of this lab is to show how to set up a simple Impacket SMB server that can record attempted connections to it. 
-
-  
 
 This can be used for detecting lateral movement in a Windows environment.  
 
@@ -126,6 +124,7 @@ Please be sure to destroy the lab environment!
  
 
  
+
 
 
 
