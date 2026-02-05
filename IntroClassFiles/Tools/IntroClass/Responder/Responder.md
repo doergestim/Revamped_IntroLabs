@@ -6,25 +6,52 @@ Specifically, we are looking to take advantage of **"LLMNR"**.
 
 We will need to load our terminal and start responder.
 
-Let's get started by opening a **Kali** terminal.
 
-![](attachments/OpeningKaliInstance.png)
 
-Alternatively, you can click on the **Kali** icon in the taskbar.
+- Open **Command Prompt**
 
-![](attachments/TaskbarKaliIcon.png)
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+
+- Get the IP of the other VM
+```bash
+tailscale status
+```
+
+<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
+
+>[!IMPORTANT]
+>We are looking for the **linux** VM, so grab the IP from the **linux** line
+>
+>For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
+
+- **SSH** into that machine
+```bash
+ssh ubuntu@100.116.161.87
+```
+
+Password is `metarange`
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
 
 Let’s become root:
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
 Before we start, we need to remove the existing **Responder** database. Do so by running the following:
 
-<pre>rm /usr/share/responder/Responder.db</pre>
+```bash
+rm /usr/share/responder/Responder.db
+```
 
 Now let’s start **Responder**:
 
-<pre>responder -I eth0</pre>
+```bash
+responder -I eth0
+```
 
 You should see this:
 
@@ -36,7 +63,7 @@ Let's open **Windows File Explorer** and put in the string **"\\Noooo"** into th
 
 ![](attachments/noooaccessbar.png)
 
-Switch back to your **Kali** terminal window.
+Switch back to your **Linux** terminal window.
 
 After a few moments, you should see some captured data showing up.  
 
@@ -143,5 +170,6 @@ meterpreter >
 Now, you can see just how bad LLMNR is!!!!
 */
 -->
+
 
 
