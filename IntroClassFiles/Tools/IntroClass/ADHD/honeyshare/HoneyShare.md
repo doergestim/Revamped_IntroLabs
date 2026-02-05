@@ -9,29 +9,36 @@ In this lab we will be creating and triggering a honey share.  The goal of this
 
 This can be used for detecting lateral movement in a Windows environment.  
 
-  
-
 One of the cool things about this is it will track the compromised user, the system and the password hash of the compromised user account. 
-
-  
 
 Let's get started. 
 
-  
+First, we will need to open a Linux Terminal: 
 
+- Open **Command Prompt**
 
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
 
-First, we will need to open an Kali Linux Prompt: 
+- Get the IP of the other VM
+```bash
+tailscale status
+```
 
-![image](https://github.com/user-attachments/assets/4890f6f1-bea0-4419-a588-3e6594c9118f)
+<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
 
+>[!IMPORTANT]
+>We are looking for the **linux** VM, so grab the IP from the **linux** line
+>
+>For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
 
+- **SSH** into that machine
+```bash
+ssh ubuntu@100.116.161.87
+```
 
-Let's get our IP address. 
+Password is `metarange`
 
-  
-
-`ifconfig` 
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
 
   
 ![image](https://github.com/user-attachments/assets/aed53ef8-6796-4897-ba51-c1a4a09f1b24)
@@ -124,6 +131,7 @@ Please be sure to destroy the lab environment!
  
 
  
+
 
 
 
