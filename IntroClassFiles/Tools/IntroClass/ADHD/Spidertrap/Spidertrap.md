@@ -17,7 +17,7 @@ generated webpages.
 Install Location
 ----------------
 
-`/opt/spidertrap/`
+`~/ADCD/spidertrap`
 
 Usage
 -----
@@ -34,31 +34,14 @@ If no file is provided, random links will be generated.
 
 ## Example 1: Basic Usage
 
-- Let's get started by opening a Kali terminal. 
-
-- You can do this by right clicking the icon on the desktop by selecting open...
-
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/OpeningKaliInstance.png)
-
-- Or... you can simply click on the Kali logo in the taskbar.
-
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/TaskbarKaliIcon.png)
-
-- First, let's get your Kali Linux systems IP address by running the following command:
+- Let's get started by getting into the proper directory:
 
 ```bash
-ifconfig
+cd ~/ADCD/spidertrap
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/ifconfig.png)
+<img width="436" height="50" alt="image" src="https://github.com/user-attachments/assets/d7a0857e-79e1-47f4-a622-3b644b223c0e" />
 
-- Next, let's cd into the proper directory:
-
-```bash
-cd /opt/spidertrap
-```
-
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/cdoptspidertrap.png)
 
 - Now, lets start Spidertrap by running the following command:
 
@@ -66,7 +49,8 @@ cd /opt/spidertrap
 python3 spidertrap.py
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/startspidertrap.png)
+<img width="612" height="71" alt="image" src="https://github.com/user-attachments/assets/c16977ac-6f1d-47c0-8f08-69f1811f1593" />
+
 
 - Then visit the following site in a web browser:
 
