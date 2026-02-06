@@ -25,13 +25,17 @@ Open a **Windows command prompt**.
 
 When the terminal opens, navigate to the appropriate directory by using the following command:
 
-<pre>cd \IntroLabs</pre>
+```bash
+cd \IntroLabs
+```
 
 For this installation, we are going to set up **Velociraptor** as a standalone deployment.  This means the server and the client will be run on the same system.
 
 Within the command prompt, run the following command:
 
-<pre>velociraptor-v0.72.3-windows-amd64.exe config generate -i</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.exe config generate -i
+```
 
 When it asks about the OS, please choose **Windows**.  It should be the default.
 
@@ -84,7 +88,7 @@ When it asks where to write the server and client configs, **just hit enter** on
 
 Let’s add a **GUI** user.
 
-<pre>velociraptor-v0.72.3-windows-amd64.exe --config server.config.yaml user add root --role administrator</pre>
+<pre>velociraptor-v0.75.6-windows-amd64.exe --config server.config.yaml user add root --role administrator</pre>
 
 When it asks for the password, please choose a password you will remember.
 
@@ -94,11 +98,11 @@ When finished, it should look similar to
 
 Lets run the **msi** to load the proper files to the proper directories:
 
-<pre>velociraptor-v0.72.3-windows-amd64.msi</pre>
+<pre>velociraptor-v0.75.6-windows-amd64.msi</pre>
 
 Time to start the server.
 
-<pre>velociraptor-v0.72.3-windows-amd64.exe --config server.config.yaml frontend -v</pre>
+<pre>velociraptor-v0.75.6-windows-amd64.exe --config server.config.yaml frontend -v</pre>
 
 This will take some time, be patient.
 
@@ -138,13 +142,13 @@ Then Navigate to the **IntroLabs** directory.
 
 We will need to start the client.  To do this will need to run the **MSI** first.
 
-<pre>velociraptor-v0.72.3-windows-amd64.msi</pre>
+<pre>velociraptor-v0.75.6-windows-amd64.msi</pre>
 
 When you get the pop up, select Run.  This will install the proper libraries and files.
 
 Next, we will start the client.
 
-<pre>velociraptor-v0.72.3-windows-amd64.exe --config client.config.yaml client -v</pre>
+<pre>velociraptor-v0.75.6-windows-amd64.exe --config client.config.yaml client -v</pre>
 
 It will look something like this:
 
@@ -283,4 +287,5 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
