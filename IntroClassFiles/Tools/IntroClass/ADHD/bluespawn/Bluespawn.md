@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
+
 
 # Atomic Red Team And Bluespawn
 
@@ -11,11 +11,14 @@ In this lab, we will be starting BlueSpawn and then running Atomic Red Team to t
 First, we need to disable Defender. 
 Start by opening up <b>Windows Powershell</b>.
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/685d264c-661c-4dbf-aa79-54f925cefdb1" />
+
 
 Next, run the following command:
 
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
 ![](attachments/disableDefender.png)
 
@@ -26,16 +29,20 @@ This will disable Defender for this session.
 >If you get angry red errors, that is Ok, it means Defender is not running.
 
 
-Now, let's open a command prompt by clicking on the icon in the taskbar:
+Now, let's open a command prompt by **right-clicking** on the icon in the taskbar:
 
-![](attachments/openingcommandprompt.png)
+<img width="294" height="296" alt="2026-02-07_17-05" src="https://github.com/user-attachments/assets/8957ed22-91e0-4e05-903f-e93aefd6cb19" />
 
  
 Next, let’s change directories to tools and start Bluespawn:
 
-<pre>cd \IntroLabs</pre>
+```bash
+cd \IntroLabs
+```
 
-<pre>BLUESPAWN-client-x64.exe --monitor --level Cursory</pre>
+```bash
+BLUESPAWN-client-x64.exe --monitor --aggressiveness cursory
+```
  
 ![](attachments/cdandstartbluespawn.png)
 
@@ -49,16 +56,20 @@ Now, let’s use Atomic Red Team to test the monitoring with BlueSpawn:
 
 First, we need to open a PowerShell terminal. 
 
-You can do this by selecting the icon in the taskbar:
+You can do this by selecting the icon in the taskbar/desktop:
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/685d264c-661c-4dbf-aa79-54f925cefdb1" />
 
 Now we need to install and update Atomic Red Team. Run the following:
 
-<pre>cd \</pre>
+```bash
+cd \
+```
 
-<pre>IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
-Install-AtomicRedTeam -getAtomics -Force</pre>
+```ps
+IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+Install-AtomicRedTeam -getAtomics -Force
+```
 
 >[!NOTE]
 >
@@ -70,17 +81,23 @@ Once you see the following, you are set to move forward:
 
 Next, in the PowerShell Window we need to navigate to the Atomic Red Team directory and import the powershell modules:
 
-<pre>cd C:\AtomicRedTeam\invoke-atomicredteam\</pre>
+```ps
+cd C:\AtomicRedTeam\invoke-atomicredteam\
+```
 
 Then, install the proper `yaml` modules by running the following:
 
-<pre>Install-Module -Name powershell-yaml</pre>
+```ps
+Install-Module -Name powershell-yaml
+```
 
 >[!NOTE]
 >
 >When prompted, press Y to install the modules.
 
-<pre>Import-Module .\Invoke-AtomicRedTeam.psm1</pre>
+```ps
+Import-Module .\Invoke-AtomicRedTeam.psm1
+```
 
 
 Once we do this, we need to invoke all the Atomic Tests.
@@ -95,13 +112,21 @@ Once we do this, we need to invoke all the Atomic Tests.
 
 Run the following individually:
 
-<pre>Invoke-AtomicTest T1547.004</pre>
+```ps
+Invoke-AtomicTest T1547.004
+```
 
-<pre>Invoke-AtomicTest T1543.003</pre>
+```ps
+Invoke-AtomicTest T1543.003
+```
 
-<pre>Invoke-AtomicTest T1547.001</pre>
+```ps
+Invoke-AtomicTest T1547.001
+```
 
-<pre>Invoke-AtomicTest T1546.008</pre>
+```ps
+Invoke-AtomicTest T1546.008
+```
 
 
 >[!TIP]
@@ -134,7 +159,9 @@ You should be getting a lot of alerts with Bluespawn! Switch tabs in your Termin
 
 Now, let’s go back to the PowerShell window and clean up:
 
-<pre>Invoke-AtomicTest All -Cleanup</pre>
+```ps
+Invoke-AtomicTest All -Cleanup
+```
 
 It should look like this:
 
@@ -168,9 +195,9 @@ If you have more time, feel free to exploit system using the commands we went th
 
 ***                                                                 
 
-<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/ADHD/Caldera.md)</i></b>
+<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/deepbluecliIntroClass/DeepBlueCLI.md)</i></b>
 
-<b><i>Want to go back? </br>[Previous Lab](/IntroClassFiles/Tools/IntroClass/ADHD/Mailoney.md)</i></b>
+<b><i>Want to go back? </br>[Previous Lab](/IntroClassFiles/Tools/IntroClass/AppLocker/AppLocker.md)</i></b>
 
 <b><i>Looking for a different lab? </br>[Lab Directory](/IntroClassFiles/navigation.md)</i></b>
 
@@ -181,6 +208,9 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
+
+
 
 
 
