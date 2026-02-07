@@ -3,29 +3,37 @@
 
 # Password Spray
 
-First things first, disable **Defender**. Open an instance of **Windows PowerShell** by clicking on the icon in the taskbar. Then run the following:
+First things first, disable **Defender**. Open an instance of **Windows PowerShell** by clicking on the icon in the **desktop**. Then run the following:
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/5676575e-6ba5-4971-b1de-68d60234af47" />
 
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
+
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
 This will disable **Defender** for this session.
 
 If you get angry red errors, that is Ok, it means **Defender** is not running.
 
-Let's get started by opening a **Command Prompt** terminal by clicking on the icon in the taskbar.
+Let's get started by opening a **Command Prompt** terminal by clicking on the icon in the **desktop**.
 
-![](attachments/OpeningWindowsCommandPrompt.png)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/d7242bdb-1c7d-47fc-a214-26ab3d46af64" />
+
 
 Once the terminal opens, navigate into the appropriate directory by running the following command:
 
-<pre>cd \IntroLabs</pre>
+```bash
+cd \IntroLabs
+```
 
 We need to run the batch file named **200-user-gen** 
 
 Do so by typing the name of the batch file and hitting enter:
 
-<pre>200-user-gen.bat</pre>
+```bash
+200-user-gen.bat
+```
 
 It should look like this:
 
@@ -89,5 +97,6 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
