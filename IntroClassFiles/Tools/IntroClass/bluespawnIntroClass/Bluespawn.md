@@ -56,9 +56,9 @@ Now, let’s use Atomic Red Team to test the monitoring with BlueSpawn:
 
 First, we need to open a PowerShell terminal. 
 
-You can do this by selecting the icon in the taskbar:
+You can do this by selecting the icon in the taskbar/desktop:
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/685d264c-661c-4dbf-aa79-54f925cefdb1" />
 
 Now we need to install and update Atomic Red Team. Run the following:
 
@@ -81,17 +81,23 @@ Once you see the following, you are set to move forward:
 
 Next, in the PowerShell Window we need to navigate to the Atomic Red Team directory and import the powershell modules:
 
-<pre>cd C:\AtomicRedTeam\invoke-atomicredteam\</pre>
+```ps
+cd C:\AtomicRedTeam\invoke-atomicredteam\
+```
 
 Then, install the proper `yaml` modules by running the following:
 
-<pre>Install-Module -Name powershell-yaml</pre>
+```ps
+Install-Module -Name powershell-yaml
+```
 
 >[!NOTE]
 >
 >When prompted, press Y to install the modules.
 
-<pre>Import-Module .\Invoke-AtomicRedTeam.psm1</pre>
+```ps
+Import-Module .\Invoke-AtomicRedTeam.psm1
+```
 
 
 Once we do this, we need to invoke all the Atomic Tests.
@@ -106,13 +112,21 @@ Once we do this, we need to invoke all the Atomic Tests.
 
 Run the following individually:
 
-<pre>Invoke-AtomicTest T1547.004</pre>
+```ps
+Invoke-AtomicTest T1547.004
+```
 
-<pre>Invoke-AtomicTest T1543.003</pre>
+```ps
+Invoke-AtomicTest T1543.003
+```
 
-<pre>Invoke-AtomicTest T1547.001</pre>
+```ps
+Invoke-AtomicTest T1547.001
+```
 
-<pre>Invoke-AtomicTest T1546.008</pre>
+```ps
+Invoke-AtomicTest T1546.008
+```
 
 
 >[!TIP]
@@ -145,7 +159,9 @@ You should be getting a lot of alerts with Bluespawn! Switch tabs in your Termin
 
 Now, let’s go back to the PowerShell window and clean up:
 
-<pre>Invoke-AtomicTest All -Cleanup</pre>
+```ps
+Invoke-AtomicTest All -Cleanup
+```
 
 It should look like this:
 
@@ -192,6 +208,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
