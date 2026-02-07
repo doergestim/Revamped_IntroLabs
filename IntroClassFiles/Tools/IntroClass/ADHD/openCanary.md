@@ -15,7 +15,7 @@
 - Go to its directory
 
 ```bash
-cd ~/Desktop/openCanary
+cd ~/ADCD/openCanary
 ```
 
 - Activate the **Virtual Environment**
@@ -96,7 +96,7 @@ sudo nano /etc/opencanaryd/opencanary.conf
 - Run it
 
 >[!NOTE]
-> Make sure you are in **~/Desktop/openCanary** with **venv** activated
+> Make sure you are in **~/ADCD/openCanary** with **venv** activated
 
 ```bash
 opencanaryd --start
