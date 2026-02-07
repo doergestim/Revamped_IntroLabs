@@ -21,7 +21,8 @@ Let's get started.
 
 Open a **Windows command prompt**.
 
-![](attachment/openingcommandprompt%20-%20Copy.png)
+<img width="294" height="296" alt="2026-02-07_17-05" src="https://github.com/user-attachments/assets/8957ed22-91e0-4e05-903f-e93aefd6cb19" />
+
 
 When the terminal opens, navigate to the appropriate directory by using the following command:
 
@@ -287,5 +288,6 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
