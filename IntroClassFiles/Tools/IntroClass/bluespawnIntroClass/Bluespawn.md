@@ -36,9 +36,13 @@ Now, let's open a command prompt by **right-clicking** on the icon in the taskba
  
 Next, let’s change directories to tools and start Bluespawn:
 
-<pre>cd \IntroLabs</pre>
+```bash
+cd \IntroLabs
+```
 
-<pre>BLUESPAWN-client-x64.exe --monitor --level Cursory</pre>
+```bash
+BLUESPAWN-client-x64.exe --monitor --aggressiveness cursory
+```
  
 ![](attachments/cdandstartbluespawn.png)
 
@@ -58,10 +62,14 @@ You can do this by selecting the icon in the taskbar:
 
 Now we need to install and update Atomic Red Team. Run the following:
 
-<pre>cd \</pre>
+```bash
+cd \
+```
 
-<pre>IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
-Install-AtomicRedTeam -getAtomics -Force</pre>
+```ps
+IEX (IWR 'https://raw.githubusercontent.com/redcanaryco/invoke-atomicredteam/master/install-atomicredteam.ps1' -UseBasicParsing);
+Install-AtomicRedTeam -getAtomics -Force
+```
 
 >[!NOTE]
 >
@@ -184,6 +192,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
