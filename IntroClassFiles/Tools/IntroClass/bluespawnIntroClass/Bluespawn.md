@@ -11,11 +11,13 @@ In this lab, we will be starting BlueSpawn and then running Atomic Red Team to t
 First, we need to disable Defender. 
 Start by opening up <b>Windows Powershell</b>.
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/30609f9e-57ed-4708-9e40-579276887c93" />
 
 Next, run the following command:
 
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
 ![](attachments/disableDefender.png)
 
@@ -26,9 +28,9 @@ This will disable Defender for this session.
 >If you get angry red errors, that is Ok, it means Defender is not running.
 
 
-Now, let's open a command prompt by clicking on the icon in the taskbar:
+Now, let's open a command prompt by **right-clicking** on the icon in the taskbar:
 
-![](attachments/openingcommandprompt.png)
+<img width="294" height="296" alt="2026-02-07_17-05" src="https://github.com/user-attachments/assets/8957ed22-91e0-4e05-903f-e93aefd6cb19" />
 
  
 Next, let’s change directories to tools and start Bluespawn:
@@ -181,6 +183,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
