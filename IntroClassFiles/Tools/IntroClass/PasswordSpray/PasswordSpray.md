@@ -47,13 +47,19 @@ We will need to start **PowerShell** to run **"LocalPasswordSpray"**
 
 Launch it by typing the following and hitting enter:
 
-<pre>powershell</pre>
+```bash
+powershell
+```
 
 Run the following two commands:
 
-<pre>Set-ExecutionPolicy Unrestricted</pre>
+```ps
+Set-ExecutionPolicy Unrestricted
+```
 
-<pre>Import-Module .\LocalPasswordSpray.ps1</pre>
+```ps
+Import-Module .\LocalPasswordSpray.ps1
+```
 
 It should look like this:
 
@@ -61,7 +67,9 @@ It should look like this:
 
 Let’s try some password spraying against the local system!
 
-<pre>Invoke-LocalPasswordSpray -Password Winter2020</pre>
+```ps
+Invoke-LocalPasswordSpray -Password Winter2020
+```
 
 It should look like this:
 
@@ -71,9 +79,13 @@ We need to clean up and make sure the system is ready for the rest of the labs.
 
 Run the following two commands:
 
-<pre>exit</pre>
+```ps
+exit
+```
 
-<pre>user-remove.bat</pre>
+```bash
+user-remove.bat
+```
 
 ![](attachments/exit.png)
 
@@ -97,6 +109,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
