@@ -11,7 +11,8 @@ In this lab, we will be starting BlueSpawn and then running Atomic Red Team to t
 First, we need to disable Defender. 
 Start by opening up <b>Windows Powershell</b>.
 
-<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/30609f9e-57ed-4708-9e40-579276887c93" />
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/685d264c-661c-4dbf-aa79-54f925cefdb1" />
+
 
 Next, run the following command:
 
@@ -183,6 +184,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
