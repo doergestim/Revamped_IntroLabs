@@ -16,7 +16,8 @@ Let's get started!
 
 - Let's open a command prompt:
 
-![image](https://github.com/user-attachments/assets/1abaf0d9-e8ed-4bfb-afab-1de17ad0f081)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/5b960092-421b-4d78-bce6-a504cf4a0559" />
+
 
 - Now, we will need to navigate to the C:\Tool directory and add the example users and Frank. 
 
@@ -145,6 +146,7 @@ Please be sure to destroy the lab environment!
  
 
  
+
 
 
 
