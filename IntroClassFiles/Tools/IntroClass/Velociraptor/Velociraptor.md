@@ -89,7 +89,9 @@ When it asks where to write the server and client configs, **just hit enter** on
 
 Let’s add a **GUI** user.
 
-<pre>velociraptor-v0.75.6-windows-amd64.exe --config server.config.yaml user add root --role administrator</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.exe --config server.config.yaml user add root --role administrator
+```
 
 When it asks for the password, please choose a password you will remember.
 
@@ -99,11 +101,15 @@ When finished, it should look similar to
 
 Lets run the **msi** to load the proper files to the proper directories:
 
-<pre>velociraptor-v0.75.6-windows-amd64.msi</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.msi
+```
 
 Time to start the server.
 
-<pre>velociraptor-v0.75.6-windows-amd64.exe --config server.config.yaml frontend -v</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.exe --config server.config.yaml frontend -v
+```
 
 This will take some time, be patient.
 
@@ -135,21 +141,27 @@ Next, we need to start the client. Lucky for us, it is the same executable.
 
 We will need to open another **Windows Command Prompt**. Right click on the terminal icon in the task bar, and select **"command prompt"**:
 
-![](attachment/velociraptor_openanotherprompt.png)
+<img width="294" height="296" alt="2026-02-07_17-05" src="https://github.com/user-attachments/assets/8957ed22-91e0-4e05-903f-e93aefd6cb19" />
 
 Then Navigate to the **IntroLabs** directory.
 
-<pre>cd \IntroLabs</pre>
+```bash
+cd \IntroLabs
+```
 
 We will need to start the client.  To do this will need to run the **MSI** first.
 
-<pre>velociraptor-v0.75.6-windows-amd64.msi</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.msi
+```
 
 When you get the pop up, select Run.  This will install the proper libraries and files.
 
 Next, we will start the client.
 
-<pre>velociraptor-v0.75.6-windows-amd64.exe --config client.config.yaml client -v</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.exe --config client.config.yaml client -v
+```
 
 It will look something like this:
 
@@ -288,6 +300,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
