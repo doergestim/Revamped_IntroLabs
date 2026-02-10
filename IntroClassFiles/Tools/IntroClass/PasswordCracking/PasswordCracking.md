@@ -12,7 +12,7 @@ After you open a terminal, we need to gain root access by running the following:
 Now, let's delete any old leftover pot files
 
 ```bash
-rm /root/.local/share/hashcat/hashcat.potfile
+sudo rm /root/.local/share/hashcat/hashcat.potfile
 ```
 
 If you get an error that the file does not exist, that is fine.  It just means the file does not exist.  Carry on.
@@ -72,6 +72,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
