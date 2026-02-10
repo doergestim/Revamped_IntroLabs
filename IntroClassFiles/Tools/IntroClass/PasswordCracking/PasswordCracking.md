@@ -5,6 +5,7 @@
 
 # Ubuntu VM
 
+
 In this lab we will be getting started with the fundamentals of password cracking.  We will be using **Hashcat** to do this.
 
 After you open a terminal, we need to gain root access by running the following:
@@ -12,7 +13,7 @@ After you open a terminal, we need to gain root access by running the following:
 Now, let's delete any old leftover pot files
 
 ```bash
-sudo rm /root/.local/share/hashcat/hashcat.potfile
+rm ~/.local/share/hashcat/hashcat.potfile  
 ```
 
 If you get an error that the file does not exist, that is fine.  It just means the file does not exist.  Carry on.
@@ -33,13 +34,8 @@ hashcat -a 0 -m 0 -r /usr/share/hashcat/rules/Incisive-leetspeak.rule MD5.txt pa
 
 The result will look like this:
 
-![](attachments/md5run.png)
+<img width="1335" height="838" alt="2026-02-10_13-54" src="https://github.com/user-attachments/assets/65ce6739-e080-4861-93c8-2ff424d6c497" />
 
-Running this command will not show us the cracked hashes. As seen above, in order to see cracked hashes, we need to run our command again and add the **--show** option onto the end.
-
-After running the command again with the **--show** option, you should see something like this:
-
-![](attachments/md5hashes.png)
 
 Lets crack some NT hashes.  These are the hashes that almost all modern **Windows** systems store these days.  Older systems may store **LANMAN**, but that is very rare.
 
@@ -51,11 +47,7 @@ hashcat -a 0 -m 1000 -r/usr/share/hashcat/rules/Incisive-leetspeak.rule sam.txt 
 
 When this command is complete, it should look like this:
 
-![](attachments/nthashrun.png)
-
-We will not see the cracked hashes unless we append **--show** onto the end of the command. Lets do that.  Run it again to see the cracked hashes:
-
-![](attachments/ntcracked.png)
+<img width="1333" height="821" alt="image" src="https://github.com/user-attachments/assets/af468a02-3513-4705-ac6d-ceba91684ad2" />
 
 
 ***                                                                 
@@ -72,6 +64,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
