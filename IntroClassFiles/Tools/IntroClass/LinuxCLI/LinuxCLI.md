@@ -3,6 +3,8 @@
 
 # Linux CLI
 
+# For The Ubuntu VM
+
 In this lab we will be looking at a backdoor through the lens of the the Linux CLI.
 
 We will be using a large number of different basic commands to get a better understanding of what the backdoor is and what it does.
@@ -17,39 +19,13 @@ For this lab we will be running **three** different Linux terminals.
 
 ***
 
-Let's get started by opening a terminal as **Administrator**
-
-- Open **Command Prompt**
-
-<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
-
-- Get the IP of the other VM
-```bash
-tailscale status
-```
-
-<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
-
->[!IMPORTANT]
->We are looking for the **linux** VM, so grab the IP from the **linux** line
->
->For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
-
-- **SSH** into that machine
-```bash
-ssh ubuntu@100.116.161.87
-```
-
-Password is `metarange`
-
-<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
-
+- Open **Terminal 1**
 
 ```bash
 sudo su -
 ```
 
-This will get us to a root prompt. We want to do this in order to have a backdoor running as root and a connection from a different user account on the system.
+This will get us to a **root prompt**. We want to do this in order to have a **backdoor** running as **root** and a connection from a **different user account** on the system.
 
 Next, we will need to create a **FIFO** backpipe:
 
@@ -69,39 +45,7 @@ On a more basic level, this will create a backdoor listening on port 2222 of our
 
 Now, let's open another **Linux** terminal.  This terminal will connect to the backdoor we just created.  
 
-
-
-
-
-- Open **Command Prompt**
-
-<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
-
-- Get the IP of the other VM
-```bash
-tailscale status
-```
-
-<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
-
->[!IMPORTANT]
->We are looking for the **linux** VM, so grab the IP from the **linux** line
->
->For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
-
-- **SSH** into that machine
-```bash
-ssh ubuntu@100.116.161.87
-```
-
-Password is `metarange`
-
-<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
-
-
-
-
-
+- Open **Terminal 2**
 
 Now we will need to know the IP address of our **Linux** system:
 
@@ -146,34 +90,7 @@ At this point, we have created a backdoor with one terminal, and we have connect
 
 
 
-- Open **Command Prompt**
-
-<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
-
-- Get the IP of the other VM
-```bash
-tailscale status
-```
-
-<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
-
->[!IMPORTANT]
->We are looking for the **linux** VM, so grab the IP from the **linux** line
->
->For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
-
-- **SSH** into that machine
-```bash
-ssh ubuntu@100.116.161.87
-```
-
-Password is `metarange`
-
-<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
-
-
-
-
+- Open **Terminal 3**
 
 ```bash
 sudo su -
@@ -263,6 +180,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
