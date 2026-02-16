@@ -15,7 +15,9 @@ Let's get started by opening a command prompt terminal. You can do this by click
 
 From the command prompt we need to get the IP address of **your** Windows system:
 
-<pre>ipconfig</pre>
+```cmd
+ipconfig
+```
 
 ![](attachments/nmap_ipconfig.png)
 
@@ -23,21 +25,25 @@ Please note your IP for **your** system. Mine is **"10.10.1.209"**.
 
 **Yours will be different.**
 
-Let’s try and scan your Windows system from within a **Kali** terminal. Go ahead and open a **Kali** terminal up.
+Let’s try and scan your Windows system from within a **Linux** terminal. Go ahead and open a **Linux** terminal up.
 
-![](attachments/OpeningKaliInstance.png)
+![](attachments/OpeningLinuxInstance.png)
 
-Alternatively, you can click on the **Kali** logo in the taskbar.
+Alternatively, you can click on the **Linux** logo in the taskbar.
 
-![](attachments/TaskbarKaliIcon.png)
+![](attachments/TaskbarLinuxIcon.png)
 
-In the **Kali** terminal, let’s become root:
+In the **Linux** terminal, let’s become root:
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
 We will scan your Windows system:
 
-<pre>nmap 10.10.1.209</pre>
+```bash
+nmap 10.10.1.209
+```
 
 You can hit the spacebar to get status.
 
@@ -53,15 +59,19 @@ Go back to the **Windows** command prompt.
 
 Let’s enable the Windows firewall:
 
-<pre>netsh advfirewall set allprofiles state on</pre>
+```bash
+netsh advfirewall set allprofiles state on
+```
 
 ![](attachments/nmap_advfirewallon.png)
 
-Now, let’s rescan from the **Kali** terminal.
+Now, let’s rescan from the **Linux** terminal.
 
 Rerun the scan: 
 
-<pre>nmap 10.10.1.209</pre>
+```bash
+nmap 10.10.1.209
+```
 
 Please note, you can just hit the up arrow key to view previously run commands.  
 
@@ -73,7 +83,9 @@ It should look like this:
 
 Now, using the same process as before, let’s disable the **Windows** firewall to go back to the base state:
 
-<pre>netsh advfirewall set allprofiles state off</pre>
+```cmd
+netsh advfirewall set allprofiles state off
+```
 
 ![](attachments/nmap_turnbackon.png)
 
@@ -84,40 +96,58 @@ First lets configure the Windows system
 
 Let's disable AV.
 
-PS C:\Users\Administrator> `Set-MpPreference -DisableRealtimeMonitoring $true`
+- Open **Powershell**
+
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-15" src="https://github.com/user-attachments/assets/4bb73f73-82e2-419d-8f70-4f57c21cb3bf" />
+
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
 Next, let's make sure that firewall is off.
 
-PS C:\Users\Administrator> `netsh advfirewall set allprofiles state off`
+```ps
+netsh advfirewall set allprofiles state off
+```
 
 Now, let's set an easy password.  
 
-PS C:\Users\Administrator> `net user Administrator password1234`
+```ps
+net user Administrator password1234
+```
 
-PS C:\Users\Administrator> `ipconfig`
+```ps
+ipconfig
+```
 
 
 It should look like this:
 
 <img width="641" alt="image" src="https://github.com/user-attachments/assets/10ffe094-f254-451e-95eb-d830b044e9a6">
 
-Now, let's open a Kali terminal:
+Now, let's open a Linux terminal:
 
 <img width="42" alt="image" src="https://github.com/user-attachments/assets/c64ee4a9-a642-4128-bb84-9cbe016cc5ba">
 
 Become root:
 
-`sudo su -`
+```bash
+sudo su -
+```
 
 Start Metasploit
 
-`msfconsole -q`
+```bash
+msfconsole -q
+```
 
 <img width="770" alt="image" src="https://github.com/user-attachments/assets/d32ecb85-5873-478a-b270-fbaf33e11aec">
 
-In another Kali terminal, get your IP address
+In another Linux terminal, get your IP address
 
-`ifconfig`
+```bash
+ifconfig
+```
 
 <img width="661" alt="image" src="https://github.com/user-attachments/assets/44e622e5-34b6-4f0e-8547-769e891152e5">
 
@@ -164,26 +194,16 @@ meterpreter > `exit -y`
 
 
 
-Now, back at the Windows Powershell, re-enable your firewall
+Now, back at the **Windows Powershell**, re-enable your firewall
 
 
-PS C:\Users\Administrator> `netsh advfirewall set allprofiles state on`
+```ps
+netsh advfirewall set allprofiles state on
+```
 
 Then re-run the attack!!
 
 <img width="1142" alt="image" src="https://github.com/user-attachments/assets/0cf9fa38-e3e3-419c-a346-576c90f6074c">
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -204,5 +224,6 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
