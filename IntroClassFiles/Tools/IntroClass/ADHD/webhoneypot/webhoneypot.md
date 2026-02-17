@@ -9,9 +9,22 @@
 
 - Let's get started. 
 
-- First we will need to open a Kali Terminal:
+- First we will need to open a Linux Terminal:
 
-![image](https://github.com/user-attachments/assets/ef855265-729c-4054-ad3e-759c9ad3a3ec)
+
+
+- Open **Command Prompt**
+
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+
+- **SSH** into the **Linux** machine
+```bash
+ssh ubuntu@linux.cloudlab.lan
+```
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
 
 - Next, change directories to the /opt/owa-honeyport directory: 
 
@@ -31,17 +44,28 @@ sudo python3 owa_pot.py
 
 ![image](https://github.com/user-attachments/assets/c7e33623-5050-4772-8767-e22fe0da9259)
 
-- Now, let's start another Kali Terminal. 
+- Now, let's start another Linux Terminal. 
 
-![image](https://github.com/user-attachments/assets/ef855265-729c-4054-ad3e-759c9ad3a3ec)
 
-- Let's get your Kali IP address. 
+
+- Open **Command Prompt**
+
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+
+- **SSH** into the **Linux** machine
+```bash
+ssh ubuntu@linux.cloudlab.lan
+```
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
+
+- Let's get your Linux IP address. 
 
 ```bash
 ifconfig
 ```
-
-![image](https://github.com/user-attachments/assets/0f927bdf-a032-41a1-bd40-68fb41fd9959)
 
 - Then, navigate to the **owa-honeypot** directory.
 
@@ -133,6 +157,7 @@ Please be sure to destroy the lab environment!
  
 
  
+
 
 
 
