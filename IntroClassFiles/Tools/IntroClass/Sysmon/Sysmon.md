@@ -58,7 +58,7 @@ sudo su -
 ```
 
 
-Before we run the next commands, we need to get the **IP** of our **Linux System** (AKA our **Linux IP Adress**). Lets do so by running the following:
+Before we run the next commands, we need to get the **IP** of our **Linux System**. Lets do so by running the following:
 
 ```bash
 ifconfig
@@ -208,6 +208,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
