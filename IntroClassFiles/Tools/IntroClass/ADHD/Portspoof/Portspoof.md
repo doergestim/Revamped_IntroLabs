@@ -3,8 +3,6 @@
 
 # Portspoof
 
-# Windows VM
-
 Website
 -------
 
@@ -82,30 +80,22 @@ Example 1: Starting Portspoof
 
 When ran, Portspoof listens on a single port. By default this is port 4444. In order to fool a port scan, we have to allow Portspoof to listen on *every* port. To accomplish this we will use an `iptables` command that redirects every packet sent to any port to port 4444 where the Portspoof port will be listening. This allows Portspoof to respond on any port.
 
+
+
+
 - Open **Command Prompt**
 
 <img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
 
-- Get the IP of the other VM
+- **SSH** into the **Linux** machine
 ```bash
-tailscale status
+ssh ubuntu@linux.cloudlab.lan
 ```
-
-<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
-
->[!IMPORTANT]
->We are looking for the **linux** VM, so grab the IP from the **linux** line
->
->For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
-
-- **SSH** into that machine
-```bash
-ssh ubuntu@100.116.161.87
-```
-
-Password is `metarange`
 
 <img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
+
 
 Let's become root:
 
@@ -142,7 +132,7 @@ Open a Windows command prompt:
 Then, run nmap:
 
 ```bash
-nmap -p 1-10 [Your Linux IP From Tailscale]
+nmap -p 1-10 linux.cloudlab.lan
 ```
 
 
@@ -154,7 +144,7 @@ All ports are reported as open! When run this way, Nmap reports the service that
 To get more accurate results, an attacker might run an Nmap service scan, which would actively try to detect the services running. But performing an Nmap service detection scan shows that something is amiss because all ports are reported as running the same type of service.
 
 ```bash
-nmap -p 1-10 -sV [Your Linux IP From Tailscale]
+nmap -p 1-10 -sV linux.cloudlab.lan
 ```
 
 ![image](https://github.com/user-attachments/assets/148e82e4-f8fb-4df5-8fef-6b758d1e05e1)
@@ -184,7 +174,7 @@ This mode will generate and feed port scanners like Nmap bogus service signature
 Now running an Nmap service detection scan against the top 100 most common ports (a common hacker activity) will turn up some very interesting results.
 
 ```bash
-nmap -p 1-10 -sV [Your Linux IP From Tailscale]
+nmap -p 1-10 -sV linux.cloudlab.lan
 ```
 
 ![image](https://github.com/user-attachments/assets/c4281e6f-4937-4477-b6a9-d2344d2a2699)
