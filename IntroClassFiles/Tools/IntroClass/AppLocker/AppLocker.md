@@ -9,12 +9,13 @@ Let’s see what happens when we do not have **AppLocker** running.  We will set
 
 Before we begin, we need to disable **Defender**. Start by opening an instance of **Windows Powershell**. Do this by clicking on the **Powershell** icon in the taskbar.
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-15" src="https://github.com/user-attachments/assets/b51c10be-34d9-446a-be52-8ceb319815ac" />
+
 
 
 Next, run the following command in the **Powershell** terminal:
 
-```bash
+```ps
 Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 
@@ -26,16 +27,23 @@ If you get angry red errors, that is **Ok**, it means **Defender** is not runnin
 
 Next, lets ensure the firewall is disabled. In a Windows Command Prompt.
 
-```bash
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/3d9509ba-9139-4304-8f52-6854fee2b43c" />
+
+
+```cmd
 netsh advfirewall set allprofiles state off
 ```
 
 
 Next, set a password for the Administrator account that you can remember
 
-<pre>net user Administrator password1234</pre>
+```cmd
+net user Administrator password1234
+```
 
 Please note, that is a very bad password.  Come up with something better. But, please remember it.
+
+
 
 
 
@@ -43,26 +51,16 @@ Please note, that is a very bad password.  Come up with something better. But, p
 
 <img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
 
-- Get the IP of the other VM
+- **SSH** into the **Linux** machine
 ```bash
-tailscale status
+ssh ubuntu@linux.cloudlab.lan
 ```
-
-<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
-
->[!IMPORTANT]
->We are looking for the **linux** VM, so grab the IP from the **linux** line
->
->For us it is `100.116.161.87`, **YOUR IP MAY BE DIFFERENT, USE YOURS**
-
-- **SSH** into that machine
-```bash
-ssh ubuntu@100.116.161.87
-```
-
-Password is `metarange`
 
 <img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
+
+
 
 
 
@@ -224,6 +222,7 @@ As you can see, an error was generated, meaning that we were successful!
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
 
 
 
