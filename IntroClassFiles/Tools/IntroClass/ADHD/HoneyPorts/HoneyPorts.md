@@ -15,7 +15,7 @@ A Python based cross-platform HoneyPort solution, created by Paul Asadoorian.
 ## Install Location
 
 ```bash
-/opt/honeyports/
+~/ADCD/honeyports
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ A Python based cross-platform HoneyPort solution, created by Paul Asadoorian.
 Change to the Honeyports directory and execute the latest version of the script:
 
 ```bash
-cd /opt/honeyports
+cd ~/ADCD/honeyports
 ```
 
 ```bash
@@ -252,6 +252,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
