@@ -11,7 +11,10 @@ Remember, treat your internal network as hostile, because it is.
 
 Let's get started by opening a command prompt terminal. You can do this by clicking the icon in the taskbar.
 
-![](attachments/openingcommandprompt%20-%20Copy.png)
+
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/19ade57f-f3a3-4d2e-ad65-13251ee1cc35" />
+
+
 
 From the command prompt we need to get the IP address of **your** Windows system:
 
@@ -27,11 +30,22 @@ Please note your IP for **your** system. Mine is **"10.10.1.209"**.
 
 Let’s try and scan your Windows system from within a **Linux** terminal. Go ahead and open a **Linux** terminal up.
 
-![](attachments/OpeningLinuxInstance.png)
 
-Alternatively, you can click on the **Linux** logo in the taskbar.
 
-![](attachments/TaskbarLinuxIcon.png)
+
+- Open **Command Prompt**
+
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+
+- **SSH** into the **Linux** machine
+```bash
+ssh ubuntu@linux.cloudlab.lan
+```
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
+
 
 In the **Linux** terminal, let’s become root:
 
@@ -39,11 +53,14 @@ In the **Linux** terminal, let’s become root:
 sudo su -
 ```
 
-We will scan your Windows system:
+We will scan the Windows system:
 
 ```bash
 nmap 10.10.1.209
 ```
+
+>[!IMPORTANT]
+>Your IP will be different!!!!
 
 You can hit the spacebar to get status.
 
@@ -224,6 +241,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
