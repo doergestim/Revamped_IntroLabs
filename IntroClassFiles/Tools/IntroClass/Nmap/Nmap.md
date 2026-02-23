@@ -22,9 +22,9 @@ From the command prompt we need to get the IP address of **your** Windows system
 ipconfig
 ```
 
-![](attachments/nmap_ipconfig.png)
+<img width="697" height="288" alt="2026-02-23_12-46" src="https://github.com/user-attachments/assets/83c711b6-fa49-4384-8aa5-f429f6724776" />
 
-Please note your IP for **your** system. Mine is **"10.10.1.209"**. 
+Please note your IP for **your** system. Mine is **"10.10.86.77"**. 
 
 **Yours will be different.**
 
@@ -37,12 +37,10 @@ Let’s try and scan your Windows system from within a **Linux** terminal. Go ah
 
 <img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
 
-- **SSH** into the **Linux** machine
-```bash
-ssh ubuntu@linux.cloudlab.lan
-```
 
-<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+- **Double-click** `Ubuntu Shell` on Desktop
+
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
 
 
@@ -56,7 +54,7 @@ sudo su -
 We will scan the Windows system:
 
 ```bash
-nmap 10.10.1.209
+nmap 10.10.86.77
 ```
 
 >[!IMPORTANT]
@@ -87,7 +85,7 @@ Now, let’s rescan from the **Linux** terminal.
 Rerun the scan: 
 
 ```bash
-nmap 10.10.1.209
+nmap 10.10.86.77
 ```
 
 Please note, you can just hit the up arrow key to view previously run commands.  
@@ -254,6 +252,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
