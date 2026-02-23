@@ -22,12 +22,6 @@ We will need to load our **linux terminal** and start responder.
 
 
 
-Let’s become root:
-
-```bash
-sudo su -
-```
-
 Before we start, we need to remove the existing **Responder** database. Do so by running the following:
 
 ```bash
@@ -37,7 +31,7 @@ rm /usr/share/responder/Responder.db
 Now let’s start **Responder**:
 
 ```bash
-responder -I eth0
+responder -I ens5
 ```
 
 You should see this:
@@ -157,6 +151,7 @@ meterpreter >
 Now, you can see just how bad LLMNR is!!!!
 */
 -->
+
 
 
 
