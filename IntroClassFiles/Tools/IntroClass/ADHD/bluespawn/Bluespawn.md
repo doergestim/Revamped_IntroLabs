@@ -20,6 +20,10 @@ Next, run the following command:
 Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 
+```ps
+Set-MpPreference -DisableBehaviorMonitoring $true
+```
+
 ![](attachments/disableDefender.png)
 
 This will disable Defender for this session.
@@ -208,6 +212,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
