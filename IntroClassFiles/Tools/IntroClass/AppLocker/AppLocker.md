@@ -245,7 +245,7 @@ cd /IntroLabs
 ```
 
 ```cmd
-runas /user:whitelist "nc"
+runas /user:whitelist "C:\Tools\ncat.exe"
 ```
 
 The password is **adhd**
@@ -267,6 +267,7 @@ As you can see, an error was generated, meaning that we were successful!
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
 
 
 
