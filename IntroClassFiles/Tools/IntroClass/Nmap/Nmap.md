@@ -77,8 +77,11 @@ Now, using the same process as before, let’s disable the **Windows** firewall 
 netsh advfirewall set allprofiles state off
 ```
 
-![](attachments/nmap_turnbackon.png)
+<img width="620" height="463" alt="2026-02-23_13-04" src="https://github.com/user-attachments/assets/dc9909ed-8732-496b-8876-c20c19df8416" />
 
+- As we can see, there is one more service shown open on port **5357** and also, the other **985** ports are shown as directly as **closed**, not **filtered**
+
+---
 
 Now, lets see why this is important with pass the hash.
 
@@ -227,6 +230,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
