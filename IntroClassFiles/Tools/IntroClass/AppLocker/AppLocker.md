@@ -250,7 +250,7 @@ runas /user:whitelist "C:\Tools\ncat.exe"
 
 The password is **adhd**
 
-![](attachments/runas.png)
+<img width="943" height="111" alt="2026-02-23_11-42" src="https://github.com/user-attachments/assets/c6e06507-fb1c-4e49-8f09-20f44f1ec5c0" />
 
 As you can see, an error was generated, meaning that we were successful!
 
@@ -267,6 +267,7 @@ As you can see, an error was generated, meaning that we were successful!
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
 
 
 
