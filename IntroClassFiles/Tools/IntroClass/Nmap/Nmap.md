@@ -57,7 +57,8 @@ You can hit the spacebar to get status.
 
 It should look like this:
 
-![](attachments/nmap_nmap.png)
+<img width="604" height="443" alt="2026-02-23_12-50" src="https://github.com/user-attachments/assets/e3cfa5e0-5130-496f-bddc-bcf6c2853857" />
+
 
 Please note the open ports. These are ports and services that an attacker could use to authenticate to your system or attack if an exploit is available. 
 
@@ -245,6 +246,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
