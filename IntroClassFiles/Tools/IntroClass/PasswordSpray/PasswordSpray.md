@@ -73,7 +73,8 @@ Invoke-LocalPasswordSpray -Password Winter2025
 
 It should look like this:
 
-![](attachments/localpasswordspray.png)
+<img width="598" height="256" alt="2026-02-23_14-55" src="https://github.com/user-attachments/assets/0e299d08-daa9-498a-bb1b-2b95dd8d5c1e" />
+
 
 We need to clean up and make sure the system is ready for the rest of the labs.
 
@@ -109,6 +110,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
