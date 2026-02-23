@@ -20,7 +20,7 @@ Then, select the IntroLabs directory:
 
 Then, select rita-html-report:
 
-![](attachments/rita_navhtmlreport.png)
+<img width="1116" height="535" alt="2026-02-23_15-18" src="https://github.com/user-attachments/assets/8a35fc63-ff0f-4cda-92fe-2d658131d050" />
 
 Then, select **index.html**:
 
@@ -132,6 +132,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
