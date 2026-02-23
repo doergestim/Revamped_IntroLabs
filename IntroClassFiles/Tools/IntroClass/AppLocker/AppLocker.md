@@ -48,9 +48,10 @@ Please note, that is a very bad password.  Come up with something better. But, p
 
 - To open a **Linux Shell**, either **double-click** `Ubuntu Shell` on Desktop
 
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
 
-- Open **Command Prompt**
+- Or open **Command Prompt**
 
 <img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
 
@@ -261,6 +262,7 @@ As you can see, an error was generated, meaning that we were successful!
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
 
 
 
