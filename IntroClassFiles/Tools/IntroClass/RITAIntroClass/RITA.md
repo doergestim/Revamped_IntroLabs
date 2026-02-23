@@ -11,7 +11,8 @@ To start we first need to open Windows File Explorer and navigate to the tools d
 
 First, open File Explorer:
 
-![](attachments/OpeningFileExplorer.png)
+<img width="534" height="48" alt="OpenFileExplorer" src="https://github.com/user-attachments/assets/bd5ac519-825a-4921-bed6-3b8baf52a4b7" />
+
 
 Then, select the IntroLabs directory:
 
@@ -131,6 +132,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
