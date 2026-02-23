@@ -28,6 +28,12 @@ Please note your IP for **your** system. Mine is **"10.10.86.77"**.
 
 **Yours will be different.**
 
+Let’s enable the Windows firewall:
+
+```bash
+netsh advfirewall set allprofiles state on
+```
+
 Let’s try and scan your Windows system from within a **Linux** terminal. Go ahead and open a **Linux** terminal up.
 
 
@@ -35,16 +41,17 @@ Let’s try and scan your Windows system from within a **Linux** terminal. Go ah
 
 <img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
-
-
-
 In the **Linux** terminal, let’s become root:
 
 ```bash
 sudo su -
 ```
 
-We will scan the Windows system:
+![](attachments/nmap_advfirewallon.png)
+
+Now, let’s rescan from the **Linux** terminal.
+
+Run the scan: 
 
 ```bash
 nmap 10.10.86.77
@@ -53,42 +60,15 @@ nmap 10.10.86.77
 >[!IMPORTANT]
 >Your IP will be different!!!!
 
-You can hit the spacebar to get status.
-
-It should look like this:
-
-<img width="604" height="443" alt="2026-02-23_12-50" src="https://github.com/user-attachments/assets/e3cfa5e0-5130-496f-bddc-bcf6c2853857" />
-
-
-Please note the open ports. These are ports and services that an attacker could use to authenticate to your system or attack if an exploit is available. 
-
-Go back to the **Windows** command prompt.  
-
-<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/d7c9a7e3-dee5-46f5-a4ea-98ef98edd5aa" />
-
-Let’s enable the Windows firewall:
-
-```bash
-netsh advfirewall set allprofiles state on
-```
-
-![](attachments/nmap_advfirewallon.png)
-
-Now, let’s rescan from the **Linux** terminal.
-
-Rerun the scan: 
-
-```bash
-nmap 10.10.86.77
-```
-
 Please note, you can just hit the up arrow key to view previously run commands.  
 
 You can hit the spacebar to see status.
 
 It should look like this:
 
-![](attachments/nmap_nmapscanwfirewall.png)
+<img width="604" height="443" alt="2026-02-23_12-50" src="https://github.com/user-attachments/assets/e3cfa5e0-5130-496f-bddc-bcf6c2853857" />
+
+Please note the open ports. These are ports and services that an attacker could use to authenticate to your system or attack if an exploit is available. 
 
 Now, using the same process as before, let’s disable the **Windows** firewall to go back to the base state:
 
@@ -246,6 +226,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
