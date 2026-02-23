@@ -46,6 +46,9 @@ Please note, that is a very bad password.  Come up with something better. But, p
 
 
 
+- To open a **Linux Shell**, either **double-click** `Ubuntu Shell` on Desktop
+
+
 
 - Open **Command Prompt**
 
@@ -258,6 +261,7 @@ As you can see, an error was generated, meaning that we were successful!
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
 
 
 
