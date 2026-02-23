@@ -141,7 +141,8 @@ exploit
 
 It should look like this:
 
-![](attachments/msf6commands.png)
+<img width="671" height="192" alt="2026-02-23_10-54" src="https://github.com/user-attachments/assets/4c40211d-7f95-48df-bff5-4a62c261d620" />
+
 
 Let’s download the malware and run it!
 
@@ -260,6 +261,7 @@ As you can see, an error was generated, meaning that we were successful!
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
 
 
 
