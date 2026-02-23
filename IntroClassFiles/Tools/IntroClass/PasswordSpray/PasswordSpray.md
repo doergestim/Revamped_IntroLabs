@@ -68,7 +68,7 @@ It should look like this:
 Let’s try some password spraying against the local system!
 
 ```ps
-Invoke-LocalPasswordSpray -Password Winter2020
+Invoke-LocalPasswordSpray -Password Winter2025
 ```
 
 It should look like this:
@@ -109,6 +109,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
