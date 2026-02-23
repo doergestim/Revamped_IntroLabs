@@ -11,7 +11,7 @@ Specifically, look at service headers and files.
 
 To open this lab, start file explorer:
 
-![](attachments/OpeningFileExplorer.png)
+<img width="534" height="48" alt="OpenFileExplorer" src="https://github.com/user-attachments/assets/e185c888-7dfb-4add-ae73-55c4c9b4278f" />
 
 Then, navigate to the tools folder and open the **NessusLab** file:
 
@@ -125,5 +125,6 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
