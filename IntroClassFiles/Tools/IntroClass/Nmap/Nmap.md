@@ -34,6 +34,9 @@ Let’s enable the Windows firewall:
 netsh advfirewall set allprofiles state on
 ```
 
+
+![](attachments/nmap_advfirewallon.png)
+
 Let’s try and scan your Windows system from within a **Linux** terminal. Go ahead and open a **Linux** terminal up.
 
 
@@ -46,8 +49,6 @@ In the **Linux** terminal, let’s become root:
 ```bash
 sudo su -
 ```
-
-![](attachments/nmap_advfirewallon.png)
 
 Now, let’s rescan from the **Linux** terminal.
 
@@ -226,6 +227,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
