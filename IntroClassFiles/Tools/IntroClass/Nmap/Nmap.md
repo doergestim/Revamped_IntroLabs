@@ -195,23 +195,6 @@ Kill it
 meterpreter > `exit -y`
 
 
-
-Now, back at the **Windows Powershell**, re-enable your firewall
-
-
-```ps
-netsh advfirewall set allprofiles state on
-```
-
-Then re-run the attack!!
-
-<img width="1142" alt="image" src="https://github.com/user-attachments/assets/0cf9fa38-e3e3-419c-a346-576c90f6074c">
-
-
-
-
-
-
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/PasswordCracking/PasswordCracking.md)</i></b>
 
@@ -226,6 +209,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
