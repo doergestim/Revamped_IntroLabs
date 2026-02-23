@@ -113,8 +113,7 @@ exploit
 
 It should look like this:
 
-![](attachments/msfconsole.png)
-
+<img width="687" height="206" alt="2026-02-23_15-38" src="https://github.com/user-attachments/assets/71226123-2163-4237-8173-c7586de81ee7" />
 
 Going back to our **Powershell** terminal, copy the file over from **Linux**
 
@@ -198,6 +197,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
