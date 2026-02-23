@@ -88,7 +88,7 @@ exit
 user-remove.bat
 ```
 
-![](attachments/exit.png)
+<img width="380" height="282" alt="2026-02-23_15-02" src="https://github.com/user-attachments/assets/d6ea2119-17e3-41a3-b41c-c0dbb9c4b613" />
 
 Let this run all the way through. 
 
@@ -110,6 +110,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
