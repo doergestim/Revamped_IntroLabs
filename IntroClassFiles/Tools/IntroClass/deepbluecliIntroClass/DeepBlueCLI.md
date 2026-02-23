@@ -17,7 +17,7 @@ cd \IntroLabs
 Then, continue into the **DeepBlueCLI-master** directory:
 
 ```ps
-cd .\DeepBlueCLI-master
+cd .\DeepBlueCLI
 ```
 
 Run the following command:
@@ -86,6 +86,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
