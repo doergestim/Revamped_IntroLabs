@@ -18,7 +18,8 @@ This next section will walk through how to launch the **AC Hunter VM** using **V
 
 - Start by opening **file explorer** and navigating to your downloads directory.
 
-![](attachments/OpeningFileExplorer.png)
+<img width="534" height="48" alt="OpenFileExplorer" src="https://github.com/user-attachments/assets/76e4cb56-e92f-43b7-9f45-677fb0eccf93" />
+
 
 ![](attachments/navigatetodownloads.png)
 
