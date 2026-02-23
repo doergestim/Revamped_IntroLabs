@@ -10,21 +10,14 @@ In this lab we are going to walk through how quickly an attacker can take advant
 
 Specifically, we are looking to take advantage of **"LLMNR"**.  
 
-We will need to load our terminal and start responder.
+We will need to load our **linux terminal** and start responder.
 
 
 
 
-- Open **Command Prompt**
+- **Double-click** `Ubuntu Shell` on Desktop
 
-<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
-
-- **SSH** into the **Linux** machine
-```bash
-ssh ubuntu@linux.cloudlab.lan
-```
-
-<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
 
 
@@ -164,6 +157,7 @@ meterpreter >
 Now, you can see just how bad LLMNR is!!!!
 */
 -->
+
 
 
 
