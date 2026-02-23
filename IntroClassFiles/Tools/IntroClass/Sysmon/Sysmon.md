@@ -57,7 +57,7 @@ Before we run the next commands, we need to get the **IP** of our **Linux System
 ifconfig
 ```
 
-![](attachments/ifconfig.png)
+<img width="716" height="175" alt="Get_IPLinux" src="https://github.com/user-attachments/assets/55ffa0a2-0502-4331-ad4e-720b1c1f4205" />
 
 **REMEMBER: YOUR IP WILL BE DIFFERENT**
 
@@ -194,6 +194,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
