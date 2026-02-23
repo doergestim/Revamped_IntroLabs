@@ -176,11 +176,13 @@ Then run it with the following:
 TrustMe.exe
 ```
 
-![](attachments/runtrustme.png)
+<img width="407" height="85" alt="Screenshot From 2026-02-23 11-05-02" src="https://github.com/user-attachments/assets/d49eec4b-9798-4069-8728-2b5373fbd569" />
+
 
 Back at your **Linux** terminal, you should now have a **metasploit** session!
 
-![](attachments/meterpretersession.png)
+<img width="985" height="391" alt="2026-02-23_11-06" src="https://github.com/user-attachments/assets/1cc56b49-784c-4160-b042-7aacda9a5f75" />
+
 
 Let’s stop this from happening!
 
@@ -265,6 +267,7 @@ As you can see, an error was generated, meaning that we were successful!
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
 
 
 
