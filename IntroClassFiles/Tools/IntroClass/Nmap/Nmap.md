@@ -31,13 +31,6 @@ Please note your IP for **your** system. Mine is **"10.10.86.77"**.
 Let’s try and scan your Windows system from within a **Linux** terminal. Go ahead and open a **Linux** terminal up.
 
 
-
-
-- Open **Command Prompt**
-
-<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
-
-
 - **Double-click** `Ubuntu Shell` on Desktop
 
 <img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
@@ -252,6 +245,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
