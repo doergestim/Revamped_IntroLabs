@@ -171,7 +171,8 @@ msf6 exploit(windows/smb/psexec) > `exploit`
 
 It should look lie this:
 
-<img width="1139" alt="image" src="https://github.com/user-attachments/assets/9eb2b530-b318-4636-a111-5d6cbe73a906">
+<img width="947" height="377" alt="2026-02-23_13-46" src="https://github.com/user-attachments/assets/63165ac9-d530-48f4-bc56-665c17ace0d1" />
+
 
 Now dump the password hashes:
 
@@ -228,6 +229,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
