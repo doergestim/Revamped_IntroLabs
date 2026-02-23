@@ -6,23 +6,23 @@ DeepBlueCLI is a free tool by **Eric Conrad** that demonstrates some amazing det
 
 Let's get started by opening **Windows Powershell**.
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-15" src="https://github.com/user-attachments/assets/49dc1b10-56f2-411a-b27e-37668bbb805a" />
 
 Next, we need to navigate to the **IntroLabs** directory:
 
-```bash
+```ps
 cd \IntroLabs
 ```
 
 Then, continue into the **DeepBlueCLI-master** directory:
 
-```bash
+```ps
 cd .\DeepBlueCLI
 ```
 
 Run the following command:
 
-```bash
+```ps
 Set-ExecutionPolicy Unrestricted
 ```
 
@@ -36,7 +36,7 @@ It is very common for attackers to add additional users on to a system they have
 
 Now, let’s run a check in the **.evtx** files for adding a new user:
 
-```bash
+```ps
 .\DeepBlue.ps1 .\evtx\new-user-security.evtx
 ```
 
@@ -50,7 +50,7 @@ This is the exact behavior that **UEBA** should be able to detect.
 
 Let's look at an event log with a password spray attack.  This is very much part of what a full **UEBA** solution does:
 
-```bash
+```ps
 .\DeepBlue.ps1 .\evtx\smb-password-guessing-security.evtx
 ```
 
@@ -58,7 +58,7 @@ Let's look at an event log with a password spray attack.  This is very much part
 
 Same thing with detecting a password spraying attack:
 
-```bash
+```ps
 .\DeepBlue.ps1 .\evtx\password-spray.evtx
 ```
 
@@ -66,11 +66,12 @@ Same thing with detecting a password spraying attack:
 
 For fun, let’s look at how **DeepBlueCLI** detects various encoding tactics that attackers use to obfuscate their attacks.  It is very common for attackers to use a number of encoding techniques to bypass signature detection.  However, it is not something that normally happens with standard scripts.
 
-```bash
+```ps
 .\DeepBlue.ps1 .\evtx\Powershell-Invoke-Obfuscation-encoding-menu.evtx
 ```
 
 ![](attachments/deepblue_powershell-invokeobfuscation.png)
+
 
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/DomainLogReview/DomainLogReview.md)</i></b>
@@ -86,5 +87,6 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
