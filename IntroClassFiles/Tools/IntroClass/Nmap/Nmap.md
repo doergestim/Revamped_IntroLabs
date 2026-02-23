@@ -64,7 +64,7 @@ Please note the open ports. These are ports and services that an attacker could 
 
 Go back to the **Windows** command prompt.  
 
-![](attachments/openingcommandprompt%20-%20Copy.png)
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/d7c9a7e3-dee5-46f5-a4ea-98ef98edd5aa" />
 
 Let’s enable the Windows firewall:
 
@@ -246,6 +246,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
