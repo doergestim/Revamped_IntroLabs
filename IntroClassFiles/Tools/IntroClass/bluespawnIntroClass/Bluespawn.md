@@ -29,9 +29,9 @@ This will disable Defender for this session.
 >If you get angry red errors, that is Ok, it means Defender is not running.
 
 
-Now, let's open a command prompt by **right-clicking** on the icon in the taskbar:
+Now, let's open a **command prompt**:
 
-<img width="294" height="296" alt="2026-02-07_17-05" src="https://github.com/user-attachments/assets/8957ed22-91e0-4e05-903f-e93aefd6cb19" />
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/f62f8205-8828-4a2b-97f0-e7137ec466e5" />
 
  
 Next, let’s change directories to tools and start Bluespawn:
@@ -208,6 +208,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
