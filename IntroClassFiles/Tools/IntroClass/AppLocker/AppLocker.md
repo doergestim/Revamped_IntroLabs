@@ -80,7 +80,8 @@ Before we run the next commands, we need to get the **IP** of our **Linux System
 ifconfig
 ```
 
-![](attachments/applocker_ifconfig.png)
+<img width="716" height="175" alt="2026-02-23_10-33" src="https://github.com/user-attachments/assets/eb5b0547-6da5-4f35-8ce4-43580c8a97d7" />
+
 
 **REMEMBER: YOUR IP WILL BE DIFFERENT**
 
@@ -262,6 +263,7 @@ As you can see, an error was generated, meaning that we were successful!
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
 
 
 
