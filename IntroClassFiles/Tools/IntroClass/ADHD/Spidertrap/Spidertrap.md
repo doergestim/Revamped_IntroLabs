@@ -101,7 +101,7 @@ http://localhost:8000
 
 - Once Spidertrap starts, open a new terminal
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/TaskbarKaliIcon.png)
+<img width="311" height="52" alt="GetUbuntuTerminalFromUbuntuVM" src="https://github.com/user-attachments/assets/65df2abb-03ca-4f8f-b0db-172de6aaf990" />
 
 - We are going to use `wget` to mirror the website. 
 
@@ -116,10 +116,11 @@ http://localhost:8000
 sudo wget -m http://127.0.0.1:8000
 ```
 
-<img width="717" height="897" alt="image" src="https://github.com/user-attachments/assets/04fb4d56-9724-4739-b432-c7049270c742" />
+
+<img width="863" height="985" alt="2026-03-07_11-47" src="https://github.com/user-attachments/assets/08551cbe-44fb-4e41-96f5-ca2435dcab41" />
 
 
-- When finished, type `ctrl + c` to kill wget.
+- When finished, type `ctrl + c` to kill wget
 
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/Cowrie.md)</i></b>
