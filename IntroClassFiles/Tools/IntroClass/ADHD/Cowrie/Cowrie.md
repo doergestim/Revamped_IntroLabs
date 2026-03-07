@@ -109,7 +109,8 @@ First, we need to kill our Cowrie session.
 
 To do this, click into the first terminal with our log output and press `ctrl + c` at the same time.
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/servershutdown.png)
+<img width="1007" height="138" alt="2026-03-07_12-08" src="https://github.com/user-attachments/assets/d0f242bb-4819-4743-a9a3-1216c8ab339e" />
+
 >[!TIP] 
 >
 >If done correctly, you should see **"Server Shut Down"**
