@@ -41,8 +41,7 @@ If no file is provided, random links will be generated.
 cd ~/ADCD/spidertrap
 ```
 
-<img width="436" height="50" alt="image" src="https://github.com/user-attachments/assets/d7a0857e-79e1-47f4-a622-3b644b223c0e" />
-
+<img width="470" height="46" alt="Screenshot From 2026-03-07 11-35-46" src="https://github.com/user-attachments/assets/5eb14d5e-b9fa-49f0-96ef-8f69caaeba78" />
 
 - Now, lets start Spidertrap by running the following command:
 
@@ -50,7 +49,7 @@ cd ~/ADCD/spidertrap
 python3 spidertrap.py
 ```
 
-<img width="612" height="71" alt="image" src="https://github.com/user-attachments/assets/c16977ac-6f1d-47c0-8f08-69f1811f1593" />
+<img width="645" height="68" alt="Screenshot From 2026-03-07 11-36-38" src="https://github.com/user-attachments/assets/2a5d40ff-a8be-42b9-8bb1-75d1013a8b00" />
 
 
 - Then visit the following site in a web browser:
@@ -61,9 +60,10 @@ http://localhost:8000
 
 - You should see a page containing randomly generated links. If you click on a link it will take you to a page with more randomly generated links.
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/links.png)
+<img width="587" height="291" alt="2026-03-07_11-38" src="https://github.com/user-attachments/assets/f255a713-0cb0-483a-abe0-60e6de7311a8" />
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/morelinks.png)
+<img width="599" height="363" alt="2" src="https://github.com/user-attachments/assets/ef0d15bb-070d-48b0-96b4-cbcb03b1be8b" />
+
 
 ## Example 2: Providing a List of Links
 
@@ -79,7 +79,8 @@ python3 spidertrap.py directory-list-2.3-big.txt
 >
 >You may need to press `ctrl + c` to kill your existing Spidertrap session.
 
-<img width="851" height="67" alt="image" src="https://github.com/user-attachments/assets/78e53f09-e606-4067-8590-9a9d7b493b51" />
+
+<img width="908" height="76" alt="2026-03-07_11-40" src="https://github.com/user-attachments/assets/6c1ee1ea-cd52-4db5-9421-7bd7fdf18abc" />
 
 
 - Then visit the following site in a web browser:
@@ -90,9 +91,9 @@ http://localhost:8000
  
 - You should see a page containing links taken from the file. If you click on a link it will take you to a page with more links from the file.
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/links2.png)
+<img width="607" height="281" alt="1" src="https://github.com/user-attachments/assets/f3c4370a-6158-41ab-95e0-ce868ce407c9" />
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Spidertrap/morelinks2.png)
+<img width="617" height="250" alt="2" src="https://github.com/user-attachments/assets/ba81eb09-dfd3-408e-8fd0-47fc7c1ccb1b" />
 
 ## Example 3: Trapping a Wget Spider
 
