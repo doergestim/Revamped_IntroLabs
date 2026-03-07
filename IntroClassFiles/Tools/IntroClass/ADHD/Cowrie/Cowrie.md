@@ -38,15 +38,16 @@ docker run -p 2222:2222 cowrie/cowrie
 
 This will take a few moments.
 
-When running for the first time, you will see an output like this:
+You will see an output like this:
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/runningprocessdocker.png)
+<img width="994" height="408" alt="2026-03-07_11-56" src="https://github.com/user-attachments/assets/2412a478-f227-4992-8a91-c08810057a68" />
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/dockercowriecommand.png)
 
 Once you see **"Ready to accept SSH connections"** in the command output, you are ready to continue.
 
 Open another terminal while keeping the first terminal open with the logs open as well. 
+
+<img width="311" height="52" alt="GetUbuntuTerminalFromUbuntuVM" src="https://github.com/user-attachments/assets/7860eaaa-bb6b-48b8-b5a0-7e1248684363" />
 
 We need to delete any other previous `ssh known_hosts` connections to the honeypot.
 
@@ -56,9 +57,8 @@ This helps reduce any errors from starting and restarting the honeypot.
 rm ~/.ssh/known_hosts
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/rmsshhosts.png)
-
 >[!IMPORTANT]
+>You mgiht not even have any `known_hosts` file, but:
 >
 >The above command is critical because the key fingerprint for Cowrie changes every time you restart it!
 
@@ -70,11 +70,11 @@ ssh -p 2222 root@localhost
 
 When you get prompted to accept the key fingerprint, type `yes`:
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/rootlocalhost.png)
+<img width="872" height="114" alt="2026-03-07_11-59" src="https://github.com/user-attachments/assets/2289320f-7e10-42dc-8581-59692c9c2a72" />
 
 For the password, try `12345`:
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/enterpassword.png)
+<img width="853" height="330" alt="2026-03-07_12-01" src="https://github.com/user-attachments/assets/1c4657d6-43dc-4f5d-8963-6011b6e09edd" />
 
 Now, run the following commands:
 
@@ -86,11 +86,13 @@ Now, run the following commands:
 
 `AAAAAAAAAAAAAAAAAAAAAAAAAA`
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/terminalcommands.png)
+<img width="524" height="242" alt="2026-03-07_12-05" src="https://github.com/user-attachments/assets/6bdb9f45-758c-400f-a68c-935d81daf5e7" />
+
 
 Notice, the commands and authentication are being tracked in the other terminal with the log info:
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/reflection.png)
+<img width="1085" height="270" alt="2026-03-07_12-04" src="https://github.com/user-attachments/assets/0b41858f-cfec-4146-b56c-774d87a5c8d2" />
+
 
 Take a few moments and notice that the results are always the same... for all Cowrie instances.
 
@@ -98,7 +100,8 @@ Let's change a few things about our Cowrie honeypot to make it unique.
 
 Did you notice the system name in the prompt?
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/systemname.png)
+<img width="756" height="167" alt="2026-03-07_12-06" src="https://github.com/user-attachments/assets/c8b6784e-7f9a-4b1c-821d-0eb0d441df63" />
+
 
 It is the same for all default installations. Let's change that.
 
