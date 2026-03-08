@@ -52,14 +52,10 @@ sudo nano /etc/opencanaryd/opencanary.conf
 
 1. Locate the `"device.node_id"` and set a friendly name  
 
-<img width="330" height="30" alt="image" src="https://github.com/user-attachments/assets/a6c1293c-c846-40dd-a163-622f4b9d39b7" />
 
+<img width="346" height="30" alt="2026-03-08_12-12" src="https://github.com/user-attachments/assets/b502f101-cb18-488b-9568-1f64adacf8c1" />
 
-2. In the `"logger"` section make sure there is a `file` part under `handlers` and set a path like `/var/log/opencanary.log`
-
-<img width="426" height="193" alt="image" src="https://github.com/user-attachments/assets/cddf72a1-c116-498a-85a2-0641a672052b" />
-
-3. In the `"modules"` (or top-level service entries) enable the following:
+2. In the `"modules"` (or top-level service entries) enable the following:
 
 ```json
 "ssh": {"enabled": true},
@@ -71,19 +67,12 @@ sudo nano /etc/opencanaryd/opencanary.conf
 "portscan": {"enabled": true}
 ```
 
-<img width="214" height="28" alt="image" src="https://github.com/user-attachments/assets/f117736a-64b7-4015-a3d7-d31cff4cc54e" />
+<img width="259" height="23" alt="2026-03-08_12-18" src="https://github.com/user-attachments/assets/f2a95943-cf22-45b8-96f8-5003d42d7389" />
+<img width="210" height="26" alt="2026-03-08_12-17" src="https://github.com/user-attachments/assets/1c3bbda9-f8e2-40b5-add3-ae09339a4de1" />
+<img width="219" height="27" alt="2026-03-08_12-16" src="https://github.com/user-attachments/assets/9b6f28ac-280b-47d6-a163-f933bd971d14" />
+<img width="219" height="42" alt="2026-03-08_12-15" src="https://github.com/user-attachments/assets/b720a41d-0c3f-43f3-96ec-486baa07bf8a" />
+<img width="204" height="49" alt="2026-03-08_12-14" src="https://github.com/user-attachments/assets/2831c467-4c46-4716-aa9c-005c144becd1" />
 
-<img width="166" height="24" alt="image" src="https://github.com/user-attachments/assets/ad2623c3-d977-4263-a284-3f663d20f62d" />
-
-<img width="214" height="30" alt="image" src="https://github.com/user-attachments/assets/44f81b20-b793-4396-8d94-12ec76e7bf89" />
-
-<img width="231" height="28" alt="image" src="https://github.com/user-attachments/assets/7249cdca-f315-474b-af08-b21c3e54f568" />
-
-<img width="231" height="28" alt="image" src="https://github.com/user-attachments/assets/35cfb47e-e3ee-49a8-9ac8-3f7889bfc955" />
-
-<img width="214" height="28" alt="image" src="https://github.com/user-attachments/assets/c535dde2-fd4e-4a70-91c9-6afe0c04b4b7" />
-
-<img width="231" height="28" alt="image" src="https://github.com/user-attachments/assets/bc2a9520-e551-44a8-9bdd-f0d5d64782f7" />
 
 
 - Save and exit with `Ctrl + x` and `y` and `Enter`
