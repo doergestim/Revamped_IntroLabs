@@ -3,6 +3,7 @@
 
 # Honey Ports
 
+# Windows VM
 
 ### Website
 
@@ -20,6 +21,9 @@ A Python based cross-platform HoneyPort solution, created by Paul Asadoorian.
 
 ## Usage
 
+- Open an **Ubuntu Shell**
+
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/a5f0310b-d0bf-4ed6-9e0d-5514b6c98641" />
 
 Change to the Honeyports directory and execute the latest version of the script:
 
@@ -252,6 +256,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
