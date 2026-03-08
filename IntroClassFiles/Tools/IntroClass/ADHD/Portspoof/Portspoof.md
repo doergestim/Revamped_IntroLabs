@@ -122,7 +122,7 @@ If you were to scan using Nmap from another Windows command prompt. Now you woul
 
 Open a Windows command prompt:
 
-![image](https://github.com/user-attachments/assets/6f8f69a2-ff07-4deb-9f67-52f1fa5842a6)
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/c2a1f12a-b377-478d-9416-ff4c8291dc01" />
 
 Then, run nmap:
 
