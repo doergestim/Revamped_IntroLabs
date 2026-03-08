@@ -19,7 +19,7 @@ A Python based cross-platform HoneyPort solution, created by Paul Asadoorian.
 ~/ADCD/honeyports
 ```
 
-## Usage
+## Example 1: Monitoring A Port With HoneyPorts
 
 - Open an **Ubuntu Shell**
 
@@ -30,15 +30,6 @@ Change to the Honeyports directory and execute the latest version of the script:
 ```bash
 cd ~/ADCD/honeyports
 ```
-
-```bash
-python3 ./honeyports.py
-```
-        
-
-### Example 1: Monitoring A Port With HoneyPorts
-
-- From the honeyports directory, run:
 
 ```bash
 sudo python3 ./honeyports.py -p 3389 -h localhost
@@ -256,6 +247,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
