@@ -31,7 +31,8 @@ Still inside your virtualenv:
 opencanaryd --copyconfig
 ```
 
-<img width="1920" height="105" alt="image" src="https://github.com/user-attachments/assets/63632a27-543b-44e9-92c9-7752d08d8cd5" />
+<img width="812" height="108" alt="2026-03-08_12-09" src="https://github.com/user-attachments/assets/1b9299b7-4184-4c67-ad61-f64a406002a8" />
+
 
 - Make sure it is there
 
@@ -39,8 +40,7 @@ opencanaryd --copyconfig
 sudo ls -l /etc/opencanaryd/opencanary.conf
 ```
 
-<img width="676" height="28" alt="image" src="https://github.com/user-attachments/assets/02663032-15a1-4636-8bf4-f47d013dd317" />
-
+<img width="753" height="26" alt="2026-03-08_12-10" src="https://github.com/user-attachments/assets/f6a107e2-d44c-47da-b86f-2a706cd71489" />
 
 - Now open the config and make small edits. Example uses `nano` (or `vi`):
 
