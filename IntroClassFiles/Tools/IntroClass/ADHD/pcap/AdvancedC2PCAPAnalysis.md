@@ -66,7 +66,7 @@ sudo tcpdump -nA -r vsagent_c2.pcap | grep "GET /beacon"
 
 - It should look like this:
 
-![image](screenshot_placeholder.png)
+<img width="1323" height="264" alt="2026-03-12_12-05" src="https://github.com/user-attachments/assets/80d51d0a-6696-441b-a472-a6537fbf2245" />
 
 - Notice the fixed URI path `/beacon` across every request, the absence of `Referer` and `Accept-Encoding` headers, and no cookies - all hallmarks of an implant rather than a browser
 
@@ -103,47 +103,34 @@ sudo tcpdump -nA -r vsagent_c2.pcap | grep "POST"
 sudo tcpdump -nA -r vsagent_c2.pcap | grep "output="
 ```
 
-* It should look like this:
+- It should look like this:
+
 ![image](screenshot_placeholder.png)
 
-* You should see `output=` followed by a Base64 encoded blob - larger than the `cmd=` strings, because task output is typically much longer than the command that produced it
+- You should see `output=` followed by a Base64 encoded blob - larger than the `cmd=` strings, because task output is typically much longer than the command that produced it
 
-* Now for the fun part. Let's decode the C2 command. Take the Base64 string you found after `cmd=` in the tasked response and run:
+- Now for the fun part. Let's decode the C2 command. Take the Base64 string you found after `cmd=` in the tasked response and run:
 
 ```bash
 python3 -c "import base64; print(base64.b64decode('<paste_base64_here>').decode())"
 ```
 
-* It should look like this:
+- It should look like this:
 ![image](screenshot_placeholder.png)
 
-* When you do this, you will quickly see that the **Base64** encoded data is a PowerShell command to download and execute a remote script - a classic stager that pulls a second-stage payload into memory without writing it to disk
+- When you do this, you will quickly see that the **Base64** encoded data is a PowerShell command to download and execute a remote script - a classic stager that pulls a second-stage payload into memory without writing it to disk
 
-* Now decode the exfiltrated output blob the same way. Take the Base64 string after `output=` and run:
+- Now decode the exfiltrated output blob the same way. Take the Base64 string after `output=` and run:
 
 ```bash
 python3 -c "import base64; print(base64.b64decode('<paste_base64_here>').decode())"
 ```
 
-* It should look like this:
+- It should look like this:
 ![image](screenshot_placeholder.png)
 
-* You can now see exactly what data the implant shipped to the operator - in this case a `whoami` result and a directory listing of the user's Documents folder
+- You can now see exactly what data the implant shipped to the operator - in this case a `whoami` result and a directory listing of the user's Documents folder
 
----
-
-Continuing the course? [Next Lab]()
-
-Want to go back? [Previous Lab]()
-
-Looking for a different lab? [Lab Directory]()
-
-Finished with the Labs?
-Please be sure to destroy the lab environment!
-
-```bash
-cd ~ && sudo rm -rf /opt/c2lab
-```
 
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/ADHD/webhoneypot/webhoneypot.md)</i></b>
@@ -159,24 +146,5 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
- 
-
- 
-
-
-
 
 
