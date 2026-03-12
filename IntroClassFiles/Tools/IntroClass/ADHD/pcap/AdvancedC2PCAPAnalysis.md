@@ -1,97 +1,149 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
  
 
-# Advanced C2 PCAP Analysis 
+# Advanced C2 PCAP Analysis - vsagent HTTP Beaconing
 
 # Ubuntu VM
 
-- First, we will need to open the Kali Terminal. 
+- First, we will need to open the Ubuntu Terminal
 
-![image](https://github.com/user-attachments/assets/5e926625-9b95-4c77-9398-819b30f84051)
-
-
-- Now, we should move to the proper directory.
-  
+- Now, we should move to the proper directory
 
 ```bash
-cd /opt/covert
+cd /ADCD/advancedC2
 ```
 
-- It should look like this: 
-
-![image](https://github.com/user-attachments/assets/bb84eda1-86bf-411a-8d38-45be7ac587eb)
-
-- Next, we will run some tcpdump commands to analyze the pcap file. 
+- Let's run a tcpdump command to do an initial review of the capture
 
 ```bash
-sudo tcpdump -nA -r covertC2.pcap | less
+sudo tcpdump -nA -r vsagent_c2.pcap | less
 ```
 
-![image](https://github.com/user-attachments/assets/4e6077f3-1c27-4b57-8aad-3f199737b303)
+- The `-nA` option tells tcpdump not to resolve names (`n`) and print the ASCII text of the packet (`A`). You are reading in a file with the `-r` option and piping the data (`|`) through `less` so you can view it section by section
 
-- The `–nA` option tells tcpdump not to resolve **names** (n) and print the **ASCII text** of the **packet** (A). You are reading in a file with the (`-r`) option and piping the data ( | ) through less so you can view it **section by section**.  
+<img width="1291" height="836" alt="2026-03-12_11-43" src="https://github.com/user-attachments/assets/9bde375a-2e1a-4378-9c93-97f1e62f8812" />
 
-- It should look like this: 
 
-![image](https://github.com/user-attachments/assets/523443ca-8f56-47df-81d7-b9d112c49157)
+- Hit spacebar to page through the output. Look for HTTP traffic - you will see `GET /beacon`, `POST /beacon`, and response bodies mixed in with ARP, DNS, and NTP background noise
 
-- Hit spacebar till you see a line with VIEWSTATE in it. 
+- Press `q` to close the tcpdump session
 
-- It should look like this: 
+- One of the interesting things about many malware specimens we review is how they "wait" for the attacker to communicate with them. In this sample, the **vsagent** backdoor **beacons** out every 30 seconds
 
-![image](https://github.com/user-attachments/assets/ae1ae54e-2f90-4c58-89c1-3c920f719a1e)
+- This is for two reasons. One is because the attacker might not be at a system waiting for a command shell. Secondly, because long-term established sessions tend to attract attention - with HTTP, sessions are generally short burst connections. vsagent is designed to mimic that behaviour
 
-- Press `q` to close the tcpdump session. 
+- In the capture, the **SYN** packets are roughly 30 seconds apart for the beacon traffic
 
-- One of the interesting things about many **malware** specimens we review these days is how they “wait” for the attacker to **communicate** with them. For example, in the sample malware traffic we are reviewing, the backdoor “**beacons**” out every **30 seconds**.
-
-- This is for **two** reasons. One is because the attacker might not be at a system waiting for a command shell on a **compromised target** and. Secondly, because long-term established sessions tend to attract attention. This is because with protocols such as **HTTP**, the sessions are generally **short burst sessions** for multiple objects. When this **backdoor** was created, we wanted it to act like real **HTTP**. So, it had to have an asynchronous component to it.  
-
-- In the capture, the **SYN** packets are roughly **30 seconds** apart for the **beacon traffic**.  
-
-- To see the **SYN packets**, simply run the following command:  
+- To see the SYN packets, simply run the following command:
 
 ```bash
-sudo tcpdump -r covertC2.pcap 'tcp[13] = 0x02' | less
+sudo tcpdump -r vsagent_c2.pcap 'tcp[13] = 0x02'
 ```
 
-- It should look like this: 
+<img width="1019" height="195" alt="2026-03-12_11-45" src="https://github.com/user-attachments/assets/83857c94-a957-4357-9722-32fc6052b6c4" />
 
-![image](https://github.com/user-attachments/assets/13a5ca2e-49de-473d-b322-8a930115781c)
 
-- This filter shows all packets with the **SYN** bit (**0x02**) set in the **13th byte offset** in the **TCP/IP header** (tcp[13]).  
+- This filter shows all packets with the SYN bit (`0x02`) set in the 13th byte offset of the TCP header (`tcp[13]`)
 
-- Note the time difference between the packets. You can see at the beginning that they are **30 seconds** apart.  
+- Note the time difference between packets. You can see they are almost all 30 seconds apart for each beacon cycle
 
-- Run the following command to grep any other instances of “hidden”:  
+- Now, let's identify the **User-Agent** string the implant is using
 
 ```bash
-sudo tcpdump -nA -r covertC2.pcap | grep "hidden"
+sudo tcpdump -nA -r vsagent_c2.pcap | grep -i "user-agent"
 ```
 
-- It should look like this: 
+<img width="1006" height="176" alt="2026-03-12_11-47" src="https://github.com/user-attachments/assets/508c947b-a1e1-412b-a1da-0db06e2b7fb0" />
 
-![image](https://github.com/user-attachments/assets/d0c3b58f-94b6-4bf8-93a8-8564257be69b)
 
-- You should see a number of returned lines. If you look at these values, you see what appears to be random data followed by an **=** sign. This could mean it is **Base64 encoded** data. Does this mean it is evil? Not necessarily. It just means it is interesting.  
+- You will see two kinds of User-Agent strings - one long `Mozilla/5.0` string from background noise, and the short `vsagent/1.0` string repeating on every beacon connection. A hardcoded, non-browser User-Agent appearing every 30 seconds is a strong indicator of implant traffic
 
-- However, you can quickly prove or disprove this hypothesis by using **Python** to decode the data. If it is **Base64**, it will decode, and you will see **ASCII** characters. If not, you will keep looking.  
+- Run the following command to isolate all HTTP GET beacons:
 
-- Either way, it is a fun opportunity to play with **Python**. 
+```bash
+sudo tcpdump -nA -r vsagent_c2.pcap | grep "GET /beacon"
+```
 
-- Well now, when you look at the **VIEWSTATE** parameters, you can see they are not consistent.  
+- It should look like this:
 
-- You can also see that it appears to be **Base64 encoded**.  
+![image](screenshot_placeholder.png)
 
-- Now for a **challenge**. What is this **Base64 encoded** data? 
+- Notice the fixed URI path `/beacon` across every request, the absence of `Referer` and `Accept-Encoding` headers, and no cookies - all hallmarks of an implant rather than a browser
 
-- Here is one **solution**, 
+- Now let's look for commands delivered by the C2 server:
 
-![](attachment/Clipboard_2021-03-12-08-46-15.png) 
+```bash
+sudo tcpdump -nA -r vsagent_c2.pcap | grep -i "cmd="
+```
 
-- When you do this, you can quickly see that the **Base64 encoded** data is a **PowerShell** command to download and execute **Powersploit**, which then invokes a **Metasploit Meterpreter** on the system.  
+- It should look like this:
+![image](screenshot_placeholder.png)
 
-- Attackers can also **pseudo-randomly** include extra characters designed to break automated decoding. This is a remarkably simple, yet effective, technique that then requires a responder to manually find and remove the ever-changing characters in order to decode the communications. 
+- You should see a number of returned lines. Some will show just `cmd=` with nothing after it - those are idle check-ins. At least one will show `cmd=` followed by what appears to be random data ending with an `=` sign. That trailing `=` padding is a strong indicator the data is **Base64** encoded
+
+- Does this mean it is evil? Not necessarily. It just means it is interesting
+
+- You can quickly prove or disprove this by using Python to decode the data. If it is Base64, it will decode cleanly to ASCII. If not, you will keep looking
+
+- Next, look for the exfiltration traffic:
+
+```bash
+sudo tcpdump -nA -r vsagent_c2.pcap | grep "POST"
+```
+
+- It should look like this:
+
+![image](screenshot_placeholder.png)
+
+- You will see a `POST /beacon` request - the implant shipping stolen data back to the operator using the same URI path it uses for check-ins
+
+- Run the following to see the exfiltrated data blob:
+
+```bash
+sudo tcpdump -nA -r vsagent_c2.pcap | grep "output="
+```
+
+* It should look like this:
+![image](screenshot_placeholder.png)
+
+* You should see `output=` followed by a Base64 encoded blob - larger than the `cmd=` strings, because task output is typically much longer than the command that produced it
+
+* Now for the fun part. Let's decode the C2 command. Take the Base64 string you found after `cmd=` in the tasked response and run:
+
+```bash
+python3 -c "import base64; print(base64.b64decode('<paste_base64_here>').decode())"
+```
+
+* It should look like this:
+![image](screenshot_placeholder.png)
+
+* When you do this, you will quickly see that the **Base64** encoded data is a PowerShell command to download and execute a remote script - a classic stager that pulls a second-stage payload into memory without writing it to disk
+
+* Now decode the exfiltrated output blob the same way. Take the Base64 string after `output=` and run:
+
+```bash
+python3 -c "import base64; print(base64.b64decode('<paste_base64_here>').decode())"
+```
+
+* It should look like this:
+![image](screenshot_placeholder.png)
+
+* You can now see exactly what data the implant shipped to the operator - in this case a `whoami` result and a directory listing of the user's Documents folder
+
+---
+
+Continuing the course? [Next Lab]()
+
+Want to go back? [Previous Lab]()
+
+Looking for a different lab? [Lab Directory]()
+
+Finished with the Labs?
+Please be sure to destroy the lab environment!
+
+```bash
+cd ~ && sudo rm -rf /opt/c2lab
+```
 
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/ADHD/webhoneypot/webhoneypot.md)</i></b>
@@ -123,6 +175,7 @@ Please be sure to destroy the lab environment!
  
 
  
+
 
 
 
