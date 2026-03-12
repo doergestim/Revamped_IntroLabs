@@ -76,8 +76,8 @@ sudo tcpdump -nA -r vsagent_c2.pcap | grep "GET /beacon"
 sudo tcpdump -nA -r vsagent_c2.pcap | grep -i "cmd="
 ```
 
-- It should look like this:
-![image](screenshot_placeholder.png)
+<img width="1129" height="154" alt="2026-03-12_12-21" src="https://github.com/user-attachments/assets/a81307a3-1b9f-4e2b-8223-530a5d778378" />
+
 
 - You should see a number of returned lines. Some will show just `cmd=` with nothing after it - those are idle check-ins. At least one will show `cmd=` followed by what appears to be random data ending with an `=` sign. That trailing `=` padding is a strong indicator the data is **Base64** encoded
 
@@ -91,9 +91,8 @@ sudo tcpdump -nA -r vsagent_c2.pcap | grep -i "cmd="
 sudo tcpdump -nA -r vsagent_c2.pcap | grep "POST"
 ```
 
-- It should look like this:
+<img width="1335" height="88" alt="2026-03-12_12-22" src="https://github.com/user-attachments/assets/837b9fcf-dfd9-4408-b8ca-a93910870ac2" />
 
-![image](screenshot_placeholder.png)
 
 - You will see a `POST /beacon` request - the implant shipping stolen data back to the operator using the same URI path it uses for check-ins
 
@@ -103,9 +102,8 @@ sudo tcpdump -nA -r vsagent_c2.pcap | grep "POST"
 sudo tcpdump -nA -r vsagent_c2.pcap | grep "output="
 ```
 
-- It should look like this:
+<img width="1903" height="112" alt="2026-03-12_12-23" src="https://github.com/user-attachments/assets/aa7638b6-10d8-4b76-8300-499e7ff025d5" />
 
-![image](screenshot_placeholder.png)
 
 - You should see `output=` followed by a Base64 encoded blob - larger than the `cmd=` strings, because task output is typically much longer than the command that produced it
 
@@ -115,8 +113,8 @@ sudo tcpdump -nA -r vsagent_c2.pcap | grep "output="
 python3 -c "import base64; print(base64.b64decode('<paste_base64_here>').decode())"
 ```
 
-- It should look like this:
-![image](screenshot_placeholder.png)
+<img width="1904" height="290" alt="2026-03-12_12-27" src="https://github.com/user-attachments/assets/5bc0a493-fe8c-4dba-8cc1-e74c51e289e1" />
+
 
 - When you do this, you will quickly see that the **Base64** encoded data is a PowerShell command to download and execute a remote script - a classic stager that pulls a second-stage payload into memory without writing it to disk
 
@@ -127,7 +125,8 @@ python3 -c "import base64; print(base64.b64decode('<paste_base64_here>').decode(
 ```
 
 - It should look like this:
-![image](screenshot_placeholder.png)
+
+<img width="1901" height="315" alt="2026-03-12_12-25" src="https://github.com/user-attachments/assets/52d6caf0-07bc-461e-81cc-7bb90ec79fa5" />
 
 - You can now see exactly what data the implant shipped to the operator - in this case a `whoami` result and a directory listing of the user's Documents folder
 
@@ -146,5 +145,3 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
-
-
