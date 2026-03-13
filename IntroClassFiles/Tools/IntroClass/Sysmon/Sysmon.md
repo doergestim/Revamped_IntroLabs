@@ -3,6 +3,8 @@
 
 # Sysmon
 
+# Windows VM
+
 Let’s begin by disabling **Defender**. Simply run the following from an **Administrator PowerShell** prompt:
 
 <img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-15" src="https://github.com/user-attachments/assets/bb7c958d-9879-44d3-a6e2-441139a94caa" />
@@ -197,6 +199,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
