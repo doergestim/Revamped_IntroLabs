@@ -16,6 +16,7 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 
 ![](attachments/applocker_disabledefender.png)
+
 This will disable **Defender** for this session.
 
 If you get angry red errors, that is **Ok**, it means **Defender** is not running.
@@ -199,6 +200,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
