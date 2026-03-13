@@ -144,7 +144,8 @@ Sysmon64.exe -accepteula -i sysmonconfig-export.xml
 
 It should look like this:
 
-![](attachments/sysmonexe.png)
+<img width="598" height="354" alt="2026-03-13_16-37" src="https://github.com/user-attachments/assets/d8175d3c-e72a-4d57-bdd6-65409afb838a" />
+
 
 let's run the following commands to run the **"TrustMe.exe"** file.
 
@@ -160,7 +161,7 @@ TrustMe.exe
 
 Back at your **Linux terminal**, you should have a metasploit session!
 
-![](attachments/meterpretersession.png)
+<img width="920" height="136" alt="2026-03-13_16-38" src="https://github.com/user-attachments/assets/35c77cf6-ec9a-4379-a359-c1984f221b72" />
 
 Now, we need to view the Sysmon events for this malware:
 
@@ -200,6 +201,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 
