@@ -268,7 +268,7 @@ swaks --server localhost:2525 --from attacker@evil.test --to victim@localhost --
 hello"
 ```
 
-<img width="718" height="326" alt="image" src="https://github.com/user-attachments/assets/22685b83-0e6e-42ff-bc21-bc3011a4dfc6" />
+<img width="781" height="350" alt="2026-03-14_23-07" src="https://github.com/user-attachments/assets/cd936150-f10b-4028-9810-5660de1ca436" />
 
 ```bash
 # rapid loop to show tarpit effect
@@ -295,7 +295,7 @@ nano config/plugins
 
 - Put a `#` in before `tarpit_demo`
 
-<img width="178" height="164" alt="image" src="https://github.com/user-attachments/assets/84d62a1d-6c07-4fad-aae3-05b06e6d557c" />
+<img width="209" height="199" alt="0" src="https://github.com/user-attachments/assets/f322e329-dada-4a48-b3b1-819838b478c7" />
 
 - To exit and save the file do `Ctrl + x` and `y` and `Enter`
 
@@ -309,13 +309,11 @@ time bash -c 'for i in {1..8}; do swaks --server localhost:2525 --from t$i@x.tes
 ok" & done; wait'
 ```
 
-<img width="163" height="68" alt="image" src="https://github.com/user-attachments/assets/723ac43f-b3b5-4e36-91ff-694414f9c65b" />
+<img width="177" height="72" alt="1" src="https://github.com/user-attachments/assets/5ff4c22e-2e22-4d6d-a671-33a267f10321" />
 
 3. Re-enable tarpit (set delays back) and run the same `time` command again. The second run should take longer - this demonstrates the deceptive slowdown.
 
-<img width="163" height="68" alt="image" src="https://github.com/user-attachments/assets/c01dd74e-05f0-4053-a9ce-bd377ea660be" />
-
-
+<img width="180" height="74" alt="2" src="https://github.com/user-attachments/assets/d37f194c-7478-444a-985d-80259993bce2" />
 
 
 
