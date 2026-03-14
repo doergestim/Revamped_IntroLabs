@@ -13,7 +13,7 @@ While a full intro to web attacks is out of the scope of this class, it is great
 You will need to start an **Linux** terminal.
 
 
-
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/f69afd46-c006-4854-b166-cd4b538eee49" />
 
 
 
