@@ -22,8 +22,6 @@ You will need to start an **Linux** terminal.
 
 
 
-a
-
 
 Gain root access by running the following:
 
