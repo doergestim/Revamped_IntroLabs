@@ -44,7 +44,7 @@ git clone https://github.com/mariocandela/beelzebub.git
 - Make sure you are into **/opt/beelzebub/**
 
 ```bash
-cd /ADCD/beelzebub/
+cd /opt/beelzebub/
 ```
 
 ```bash
