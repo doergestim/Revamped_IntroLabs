@@ -168,7 +168,7 @@ To reveal more information in the output, press **"enter"**.
 
 <img width="894" height="725" alt="2" src="https://github.com/user-attachments/assets/258402b5-c5a4-4b1d-a172-0643ae0f1ad4" />
 
-- Press **q** to 
+- Press **q** to go back
 
 ***                                                                 
 
