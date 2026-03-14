@@ -37,13 +37,17 @@ cd ~/Intro_To_SOC/Web_Testing
 
 Please note your **Linux** IP:
 
+```bash
+ifconfig
+```
+
 ![Get_IPLinux.png](https://github.zendesk.com/attachments/token/n6uvR4jpusDEqeTL91GtzfodH/?name=Get_IPLinux.png)
 
 >[!NOTE]
 >
 >**YOUR IP WILL BE DIFFERENT!**
 
-Launch the python script.
+Launch the python script
 
 ```bash
 python3 ./dsvw.py
@@ -54,7 +58,7 @@ python3 ./dsvw.py
 
 It's time to start **ZAP**! Go ahead and launch it from the desktop icon.
 
-![](attachments/OpeningZAP.png)
+<img width="77" height="97" alt="2026-03-14_14-26" src="https://github.com/user-attachments/assets/29673ac5-f788-453c-8f79-e7291bf7b329" />
 
 Once **ZAP** loads, you will see this pop-up on your screen. Ensure that **No, I do not want to persist this session at this moment in time** option is selected, and hit **"Start"**
 
