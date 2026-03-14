@@ -53,7 +53,7 @@ Launch the python script
 python3 ./dsvw.py
 ```
 
-<img width="618" height="141" alt="image" src="https://github.com/user-attachments/assets/2a40ac0a-ab9c-4fb0-a35d-9c56596031c4" />
+<img width="696" height="141" alt="2026-03-14_14-38" src="https://github.com/user-attachments/assets/a74a0640-3091-4182-89d8-e595141f31e7" />
 
 
 It's time to start **ZAP**! Go ahead and launch it from the desktop icon.
