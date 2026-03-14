@@ -106,7 +106,7 @@ Let's start by looking at the network connections with **lsof**.  When we use **
 lsof -i -P
 ```
 
-<img width="1138" height="69" alt="2026-03-14_14-54" src="https://github.com/user-attachments/assets/0d5d17d8-868f-4309-b233-5675125d440b" />
+<img width="1264" height="553" alt="1" src="https://github.com/user-attachments/assets/3b60e298-d0d3-4ac0-91cf-2bf5c1180655" />
 
 
 Now let's dig into the **netcat process ID**.  We can do this with the lowercase **-p** switch.  This will give us all the open files associated with the listed process ID.
@@ -119,7 +119,7 @@ lsof -p [PID]
 >
 >**Your PID will be different!!!**
 
-<img width="1514" height="603" alt="2026-03-14_14-56" src="https://github.com/user-attachments/assets/4b35d186-c8ea-4977-af20-6aad16f4bcba" />
+<img width="1177" height="515" alt="2" src="https://github.com/user-attachments/assets/ddb23944-81ac-451f-9a56-584acf830179" />
 
 Let's look at the full processes.  We can do this with the **ps** command. We are also adding the **a**, **u**, and **x switches**.  
 
@@ -145,8 +145,6 @@ cd /proc/[pid]
 >[!NOTE]
 >
 >**Your PID will be different!!!**
-
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/procPIDKaliInstance.png)
 
 We can see a number of interesting directories here:
 
