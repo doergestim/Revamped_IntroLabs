@@ -208,22 +208,19 @@ enabled=1
 ## Start Haraka and confirm it is listening
 
 ```bash
-cd ~/Desktop/haraka
-```
-
-```bash
 haraka -c .
 ```
 
-<img width="1128" height="907" alt="image" src="https://github.com/user-attachments/assets/7f498c8f-cffb-40c3-a4a5-a18d81d71a28" />
+<img width="1156" height="1008" alt="2026-03-14_22-58" src="https://github.com/user-attachments/assets/7574f4f4-0417-440d-b536-29da11c23c2d" />
 
+- Open another **Terminal**
 
 ```bash
 # check listen port
 ss -ltnp | grep 2525
 ```
 
-<img width="895" height="31" alt="image" src="https://github.com/user-attachments/assets/43ec1c86-02ca-4a10-83e6-72f79ed14726" />
+<img width="970" height="48" alt="2026-03-14_23-00" src="https://github.com/user-attachments/assets/fba65ea7-b81f-4748-97bb-cbc373b1742a" />
 
 
 ---
