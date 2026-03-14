@@ -53,7 +53,8 @@ Now we will need to know the IP address of our **Linux** system:
 ifconfig
 ```
 
-<img width="716" height="175" alt="Get_IPLinux" src="https://github.com/user-attachments/assets/d16dcab3-b561-422d-81a3-2b459caf08fa" />
+<img width="780" height="193" alt="Get_IPLinux" src="https://github.com/user-attachments/assets/212a2c89-6027-426a-bfde-0e459f995991" />
+
 
 
 >[!NOTE]
@@ -83,7 +84,8 @@ ls
 whoami
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lswhoamiKaliInstance.png)
+<img width="497" height="135" alt="2026-03-14_14-52" src="https://github.com/user-attachments/assets/12fe76e1-088c-4391-a31d-8e05256ff569" />
+
 
 At this point, we have created a backdoor with one terminal, and we have connected to this backdoor with another terminal.  Now, let's open yet another **Linux** terminal and use this use for the purpose of analysis.  
 
