@@ -53,7 +53,7 @@ Now we will need to know the IP address of our **Linux** system:
 ifconfig
 ```
 
-<img width="692" height="182" alt="image" src="https://github.com/user-attachments/assets/185a6c94-5f3b-4158-a0de-9d62977e47d5" />
+<img width="716" height="175" alt="Get_IPLinux" src="https://github.com/user-attachments/assets/d16dcab3-b561-422d-81a3-2b459caf08fa" />
 
 
 >[!NOTE]
