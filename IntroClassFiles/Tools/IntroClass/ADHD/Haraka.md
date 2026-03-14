@@ -27,7 +27,8 @@ haraka -i .
 ls -la
 ```
 
-<img width="531" height="185" alt="image" src="https://github.com/user-attachments/assets/cde6a428-b452-4f14-a59f-efdf6bbc5edb" />
+<img width="598" height="201" alt="Screenshot From 2026-03-14 22-10-01" src="https://github.com/user-attachments/assets/9d02f1f3-e767-4ac9-ab5a-6d17c135ebb9" />
+
 
 
 - You now have a **Haraka** instance with `config/`, `plugins/`, etc.
