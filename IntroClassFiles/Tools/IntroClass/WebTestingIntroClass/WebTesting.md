@@ -35,9 +35,9 @@ Navigate into the proper directory:
 cd ~/Intro_To_SOC/Web_Testing
 ```
 
-Please note your **Linux** IP address is shown by **tailscale status**. As shown at the start, ours is **"100.116.161.87"**
+Please note your **Linux** IP:
 
-<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
+![Get_IPLinux.png](https://github.zendesk.com/attachments/token/n6uvR4jpusDEqeTL91GtzfodH/?name=Get_IPLinux.png)
 
 >[!NOTE]
 >
