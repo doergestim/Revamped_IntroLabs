@@ -243,19 +243,21 @@ HELO attacker.example.com
 MAIL FROM:<evil@attacker.test>
 ```
 
-<img width="977" height="44" alt="image" src="https://github.com/user-attachments/assets/2560f4c0-1865-4dfc-b5c2-85446c36ccea" />
-
 ```bash
 RCPT TO:<victim@localhost>
 ```
 
-<img width="1146" height="32" alt="image" src="https://github.com/user-attachments/assets/1b1e4336-9c6b-4dd0-a2b4-74aee49c0e0b" />
+- Check the logs on the **Haraka** Terminal
+
+<img width="1281" height="136" alt="2026-03-14_23-04" src="https://github.com/user-attachments/assets/bf980f25-1574-411c-b92f-4707d093cecb" />
+
+- Now back at the **Attacker** Termianl
 
 ```bash
 QUIT
 ```
 
-- Watch the **logs** on the first **terminal**. Connections will be slower depending on `tarpit.ini` settings.
+- Watch the **logs** on the first **terminal**. Connections will be slower depending on `tarpit.ini` settings
 
 ### b) Scripted load with `swaks`
 
