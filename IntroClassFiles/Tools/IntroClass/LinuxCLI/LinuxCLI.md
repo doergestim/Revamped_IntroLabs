@@ -152,7 +152,7 @@ We can see a number of interesting directories here:
 ls
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lsKaliInstance.png)
+<img width="1416" height="180" alt="2026-03-14_15-05" src="https://github.com/user-attachments/assets/9b6cf660-6977-42b3-a9f7-abb6cf6589ac" />
 
 We can run the **strings** command on the executable in this directory.  When programs are created there may be usage information, mentions of system libraries, and possible code comments. We use this all the time to attempt to identify what exactly a program is doing.
 
@@ -160,13 +160,15 @@ We can run the **strings** command on the executable in this directory.  When pr
 strings ./exe | less
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/strings_exelessKaliInstance.png)
+<img width="289" height="334" alt="1" src="https://github.com/user-attachments/assets/f495288b-e184-42aa-85fd-cc4736c35471" />
 
 If we scroll down, we can see the actual usage information for netcat.  We pulled it directly out of memory!
 
 To reveal more information in the output, press **"enter"**.
 
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/netcatusageKaliInstance.png)
+<img width="894" height="725" alt="2" src="https://github.com/user-attachments/assets/258402b5-c5a4-4b1d-a172-0643ae0f1ad4" />
+
+- Press **q** to 
 
 ***                                                                 
 
