@@ -78,6 +78,14 @@ Then, select **"Use traditional spider"** and then select **"Attack"**:
 
 ![](attachments/AutomatedScanSetup.png)
 
+
+>[!IMPORTANT]
+>The scan will probably break **DSVW**, you might have to start it again during during the scan:
+
+<img width="697" height="426" alt="2026-03-14_14-41" src="https://github.com/user-attachments/assets/f155ab76-3722-445a-9f4b-0cb18ea0e37c" />
+
+
+
 Scan progress will be shown by the progress bar in the center of your screen.
 When it gets done crawling and scanning, select **"Alerts"**:
 
