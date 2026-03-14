@@ -106,8 +106,8 @@ Let's start by looking at the network connections with **lsof**.  When we use **
 lsof -i -P
 ```
 
+<img width="1138" height="69" alt="2026-03-14_14-54" src="https://github.com/user-attachments/assets/0d5d17d8-868f-4309-b233-5675125d440b" />
 
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lsof-i-pKaliInstance.png)
 
 Now let's dig into the **netcat process ID**.  We can do this with the lowercase **-p** switch.  This will give us all the open files associated with the listed process ID.
 
@@ -119,7 +119,7 @@ lsof -p [PID]
 >
 >**Your PID will be different!!!**
 
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/lsof-pKaliInstance.png)
+<img width="1514" height="603" alt="2026-03-14_14-56" src="https://github.com/user-attachments/assets/4b35d186-c8ea-4977-af20-6aad16f4bcba" />
 
 Let's look at the full processes.  We can do this with the **ps** command. We are also adding the **a**, **u**, and **x switches**.  
 
@@ -133,7 +133,8 @@ Type out this command.
 ps aux
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/LinuxCLI/attachments/psauxKaliInstance.png)
+<img width="1061" height="377" alt="2026-03-14_14-57" src="https://github.com/user-attachments/assets/4a8691de-eeba-4c23-9fd6-b10b6312056e" />
+
 
 Let's change directories into the **proc** directory for that **pid**.  Remember, **proc** is a directory that does not exist on the drive.  It allows us to see data associated with the various processes directly.   This can be very useful as it allows us to dig into the memory of a process that is currently running on a suspect system.
 
