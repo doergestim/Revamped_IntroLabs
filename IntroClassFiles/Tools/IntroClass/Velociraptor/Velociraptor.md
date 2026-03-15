@@ -172,7 +172,7 @@ Now, let’s go back to the Velociraptor GUI and select the Home button in the u
 
 You should see **one** connected client.
 
-![](attachment/velociraptor_connectedclients.png)
+<img width="910" height="664" alt="2026-03-15_11-56" src="https://github.com/user-attachments/assets/e86d04c8-64a1-4ff4-9380-33e5f79ade88" />
 
 Now let’s look at what we can do with this.
 
@@ -202,7 +202,7 @@ Please click on the **PowerShell** box and select **Cmd**.
 
 ![](attachment/velociraptor_powershelldropdown.png)
 
-Now, enter **netstat -naob** in the cmd box and select **"Launch"**.
+Now, enter `netstat -naob` in the cmd box and select **"Launch"**.
 
 
 This will not display the results right away. To see the results, select the **"Eye"** icon:
@@ -211,7 +211,7 @@ This will not display the results right away. To see the results, select the **"
 
 Now you can see the results:
 
-![](attachment/velociraptor_seeresults.png)
+<img width="453" height="259" alt="2026-03-15_11-56" src="https://github.com/user-attachments/assets/8f3e9ae5-9eb5-491a-aa8b-435692cde8e8" />
 
 Let’s do a Hunt.   Please select the Hunt icon.
 
