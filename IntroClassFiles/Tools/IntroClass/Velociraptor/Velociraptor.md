@@ -78,9 +78,13 @@ For the **default ports**, once again, **just hit enter** twice to accept 8000 a
 
 <img width="399" height="114" alt="2026-03-15_11-19" src="https://github.com/user-attachments/assets/fc2b01b0-e371-4866-b672-8dcc193b6bd8" />
 
-When it asks about the ****, **just hit enter**.  It will choose the default of Self Signed SSL.
+When it asks about the **Username and Password**, **just hit enter** twice to leave them empty.
 
 <img width="435" height="143" alt="2026-03-15_11-19" src="https://github.com/user-attachments/assets/d01aaf37-bd18-4e19-b5b5-e6983fb741eb" />
+
+When it asks about the **Name of file** of the config file, **just hit enter** to accept the default.
+
+<img width="325" height="75" alt="2026-03-15_11-24" src="https://github.com/user-attachments/assets/b4bfd136-550c-4e14-9275-d227566984d0" />
 
 When it asks about the **SSL certs**, **just hit enter**.  It will choose the default of Self Signed SSL.
 
