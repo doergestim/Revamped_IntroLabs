@@ -202,7 +202,7 @@ We can see the loaded **DLL's** above.  As we can see, there is not a whole lot 
 Let's keep digging with **wmic**:
 
 ```bash
-(Get-WmiObject Win32_Process -Filter "ProcessId=7916").CommandLine
+(Get-WmiObject Win32_Process -Filter "ProcessId=[PID]").CommandLine
 ```
 
 <img width="858" height="44" alt="2026-03-16_00-24" src="https://github.com/user-attachments/assets/b8ccc4ee-3b90-4aaa-a4e4-b83e501aed71" />
@@ -234,13 +234,13 @@ HA!! An outbound connection to the **attacker**!!!
 
 Lets go through the steps we took to hunt for a malicious process
 
-1. We found its parent process ID.  
+1. We looked for **ESTABLISHED** connections
 
-2. We did a search on that process ID.  
+2. We did a search on that **process ID**
 
-3. As you can see above, it was launched by the cmd.exe process.  
+3. We saw the connection was made by a **Trusted Windows Process**
 
-4. Note that the search we just did may turn up some other things launched by the command line as well.
+4. We dug deeper to see all processes making connections, and confirmed our suspicions that the **process** was used **maliciously**, because `rundll32.exe` should never be making outbound **TCP connections**
 
 ***                                                                 
 
