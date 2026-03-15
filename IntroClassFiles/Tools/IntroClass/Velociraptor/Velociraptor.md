@@ -249,7 +249,7 @@ Please select our Hunt.  Now, we can run it.  Press the **Play** button above.
 
 ![](attachment/velociraptor_play.png)
 
-When you get the pop-up, select **Run it!**
+When you get the pop-up, select **Run them all!**
 
 >[!NOTE]
 >
@@ -277,7 +277,7 @@ Go ahead and open the **zip file**, navigate into the results folder.
 
 ![](attachment/velociraptor_opencsv.png)
 
-Then, open the csv file with **WordPad**.
+Then, open the csv file with **NotePad**.
 
 ![](attachment/velociraptor_wordpad.png)
 
