@@ -54,6 +54,10 @@ When it asks about the path to the **logs directory**, **just hit enter** to acc
 
 <img width="643" height="94" alt="2026-03-15_11-09" src="https://github.com/user-attachments/assets/2189706f-bc81-4734-afdf-f468a488964a" />
 
+When it asks about the **PKI Certificate Expiration**, **just hit enter** to accept the default.
+
+<img width="606" height="171" alt="2026-03-15_11-10" src="https://github.com/user-attachments/assets/8acc7f0f-eb75-4c0e-b8f8-cd2b53d6d384" />
+
 When it asks about the **SSL certs**, **just hit enter**.  It will choose the default of Self Signed SSL.
 
 ![](attachment/velociraptor_sslcert.png)
