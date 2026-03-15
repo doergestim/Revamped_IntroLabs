@@ -42,9 +42,9 @@ When it asks about the **Deployment Type**, choose **Self Signed SSL**
 
 <img width="610" height="111" alt="2026-03-15_11-02" src="https://github.com/user-attachments/assets/e34c0e98-6fec-4b14-9d29-2a1abd949cd2" />
 
-When it asks about the **OS**, please choose **Windows**.  It should be the default.
+When it asks about the **OS**, please choose **Windows**.
 
-![](attachment/velociraptor_chooseos.png)
+<img width="557" height="120" alt="2026-03-15_11-04" src="https://github.com/user-attachments/assets/567ec56e-7ed2-403d-9d2c-10babf2d2661" />
 
 When it asks about the **Path to the datastore**, **just hit enter**.  This will keep the default.
 
