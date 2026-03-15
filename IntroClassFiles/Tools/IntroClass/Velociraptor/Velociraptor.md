@@ -48,7 +48,11 @@ When it asks about the **OS**, please choose **Windows**.
 
 When it asks about the **Path to the datastore**, **just hit enter**.  This will keep the default.
 
-![](attachment/velociraptor_datastorepath.png)
+<img width="906" height="111" alt="2026-03-15_11-06" src="https://github.com/user-attachments/assets/c5a2adcf-6a82-43aa-a593-1826c4f536e4" />
+
+When it asks about the path to the **logs directory**, **just hit enter** to accept the default.
+
+<img width="643" height="94" alt="2026-03-15_11-09" src="https://github.com/user-attachments/assets/2189706f-bc81-4734-afdf-f468a488964a" />
 
 When it asks about the **SSL certs**, **just hit enter**.  It will choose the default of Self Signed SSL.
 
@@ -79,9 +83,7 @@ For the **GUI username**, please **just hit enter** to end.
 
 ![](attachment/velociraptor_guiusername.png)
 
-When it asks about the path to the **logs directory**, **just hit enter** to accept the default.
 
-![](attachment/velociraptor_pathtologs.png)
 
 If it asks if you would to **"restrict VQL"** functionality on the server, please enter **"N"**
 
