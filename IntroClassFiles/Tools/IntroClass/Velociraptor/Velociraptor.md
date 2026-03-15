@@ -74,27 +74,25 @@ If prompted about using **Experimental Websocket**, enter **"No"**
 
 <img width="729" height="153" alt="2026-03-15_11-17" src="https://github.com/user-attachments/assets/db146be1-8ec6-4c29-bf86-ac1591dd12b3" />
 
+For the **default ports**, once again, **just hit enter** twice to accept 8000 and 8889 as the defaults.
+
+<img width="399" height="114" alt="2026-03-15_11-19" src="https://github.com/user-attachments/assets/fc2b01b0-e371-4866-b672-8dcc193b6bd8" />
+
+When it asks about the ****, **just hit enter**.  It will choose the default of Self Signed SSL.
+
+<img width="435" height="143" alt="2026-03-15_11-19" src="https://github.com/user-attachments/assets/d01aaf37-bd18-4e19-b5b5-e6983fb741eb" />
+
 When it asks about the **SSL certs**, **just hit enter**.  It will choose the default of Self Signed SSL.
 
 ![](attachment/velociraptor_sslcert.png)
-
-For the **default ports**, once again, **just hit enter** to accept 8000 and 8889 as the defaults.
-
-![](attachment/velociraptor_frontendport.png)
-
-
 
 If prompted about using the registry to store writeback files, please enter **"N"**
 
 ![](attachment/velociraptor_registrywriteback.png)
 
-
-
 For the **GUI username**, please **just hit enter** to end.
 
 ![](attachment/velociraptor_guiusername.png)
-
-
 
 If it asks if you would to **"restrict VQL"** functionality on the server, please enter **"N"**
 
