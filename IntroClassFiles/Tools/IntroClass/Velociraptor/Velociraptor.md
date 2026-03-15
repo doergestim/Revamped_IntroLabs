@@ -86,26 +86,6 @@ When it asks about the **Name of file** of the config file, **just hit enter** t
 
 <img width="325" height="75" alt="2026-03-15_11-24" src="https://github.com/user-attachments/assets/b4bfd136-550c-4e14-9275-d227566984d0" />
 
-When it asks about the **SSL certs**, **just hit enter**.  It will choose the default of Self Signed SSL.
-
-![](attachment/velociraptor_sslcert.png)
-
-If prompted about using the registry to store writeback files, please enter **"N"**
-
-![](attachment/velociraptor_registrywriteback.png)
-
-For the **GUI username**, please **just hit enter** to end.
-
-![](attachment/velociraptor_guiusername.png)
-
-If it asks if you would to **"restrict VQL"** functionality on the server, please enter **"N"**
-
-![](attachment/velociraptor_vqlfunct.png)
-
-When it asks where to write the **server** and **client configs**, **just hit enter** on both prompts to accept the defaults.
-
-![](attachment/velociraptor_configs.png)
-
 Let’s add a **GUI** user.
 
 ```bash
@@ -116,7 +96,7 @@ When it asks for the password, please choose a password you will remember.
 
 When finished, it should look similar to 
 
-![](attachment/velociraptor_entergui.png)
+<img width="1063" height="239" alt="2026-03-15_11-24" src="https://github.com/user-attachments/assets/76c803ea-dc16-4f10-8184-385d1f121968" />
 
 Lets run the **msi** to load the proper files to the proper directories:
 
