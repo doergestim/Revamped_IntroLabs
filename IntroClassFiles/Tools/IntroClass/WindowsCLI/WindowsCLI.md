@@ -129,13 +129,25 @@ It should look like this:
 
 <img width="556" height="81" alt="2026-03-15_23-40" src="https://github.com/user-attachments/assets/293e8c74-5e42-4108-b52e-b94f48536cdb" />
 
+Now let's set the target to upload a **Raw Executable** instead of a **PowerShell Script**
+
+```bash
+show targets
+```
+
+```bash
+set TARGET 2
+```
+
+<img width="456" height="344" alt="2026-03-15_23-56" src="https://github.com/user-attachments/assets/1554429f-fa6a-43e9-b202-bc32c8356223" />
+
 Now, we can run the exploit command
 
 ```bash
 exploit
 ```
 
-![](attachments/windowscli_exploit.png)
+<img width="964" height="262" alt="2026-03-15_23-57" src="https://github.com/user-attachments/assets/d49e2fb2-0a0d-4cb3-a4a8-1771dd4f70c4" />
 
 While there is not much here for this lab, it is key to remember that these two commands would help us detect an attacker that is mounting shares on other computers (net view).  It would also tell us if an attacker had mounted a share on this system (net session). 
 
@@ -143,7 +155,7 @@ We are not done with network connections yet.  Lets try looking at our malware!
 
 Go ahead an open an instance of **Windows PowerShell**.
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-15" src="https://github.com/user-attachments/assets/be17e180-e1a4-4b42-b537-9b2931ac0284" />
 
 Run the following command:
 
@@ -151,12 +163,17 @@ Run the following command:
 netstat -naob
 ```
 
-![](attachments/windowscli_netstat.png)
+<img width="743" height="578" alt="2026-03-16_00-02" src="https://github.com/user-attachments/assets/a30004d5-0d95-4800-93a3-8debde52f3a2" />
+
 
 Well, that is a lot of data. This is showing us which ports are open on this system **(0.0.0.0:portnumber)** or **(LISTENING)**.
 As well as the remote connections that are made to other systems **(ESTABLISHED)**.  In this example, we are really interested in the **ESTABLISHED** connections:
 
-![](attachments/windowscli_established.png)
+```bash
+netstat -naob | findstr ESTABLISHED
+```
+
+<img width="945" height="387" alt="2026-03-16_00-01" src="https://github.com/user-attachments/assets/4bb6bd11-5df0-4d05-8120-1a80c4c2bdf8" />
 
 Specificly, we are interested in the connection on port 4444 as we know this is the port we used for our malware.
 
