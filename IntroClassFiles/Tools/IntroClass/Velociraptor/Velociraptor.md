@@ -70,6 +70,10 @@ When asked about which **DNS Type** is used, select **None** and press enter.
 
 <img width="827" height="113" alt="2026-03-15_11-14" src="https://github.com/user-attachments/assets/12fa7d6c-4bfb-4f6f-ad32-eb9bd035a387" />
 
+If prompted about using **Experimental Websocket**, enter **"No"**
+
+<img width="729" height="153" alt="2026-03-15_11-17" src="https://github.com/user-attachments/assets/db146be1-8ec6-4c29-bf86-ac1591dd12b3" />
+
 When it asks about the **SSL certs**, **just hit enter**.  It will choose the default of Self Signed SSL.
 
 ![](attachment/velociraptor_sslcert.png)
@@ -78,9 +82,7 @@ For the **default ports**, once again, **just hit enter** to accept 8000 and 888
 
 ![](attachment/velociraptor_frontendport.png)
 
-If prompted about using **Websocket**, enter **"No"**
 
-![](attachment/velociraptor_websocket.png)
 
 If prompted about using the registry to store writeback files, please enter **"N"**
 
