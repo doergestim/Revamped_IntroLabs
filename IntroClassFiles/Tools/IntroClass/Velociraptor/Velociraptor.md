@@ -209,9 +209,13 @@ This will not display the results right away. To see the results, select the **"
 
 ![](attachment/velociraptor_eye.png)
 
-Now you can see the results:
+Now you can see the results, click **Active Connections**:
 
 <img width="453" height="259" alt="2026-03-15_11-56" src="https://github.com/user-attachments/assets/8f3e9ae5-9eb5-491a-aa8b-435692cde8e8" />
+
+Now click the **Text** tab
+
+<img width="862" height="802" alt="2026-03-15_12-03" src="https://github.com/user-attachments/assets/4d9f5fb0-1aa6-4ab0-89b9-c1669ab93af4" />
 
 Let’s do a Hunt.   Please select the Hunt icon.
 
