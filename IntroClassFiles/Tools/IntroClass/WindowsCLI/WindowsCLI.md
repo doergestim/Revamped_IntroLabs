@@ -78,7 +78,7 @@ It will take a second to connect, be patient!
 
 When connected, our terminal will look like this.
 
-![](attachments/windowscli_msfconnected.png)
+<img width="62" height="41" alt="2026-03-15_23-29" src="https://github.com/user-attachments/assets/1595387c-029b-462c-90dd-4430c0856bed" />
 
 Next, run the following command:
 
