@@ -38,7 +38,7 @@ Lets dig into the actual logs and see if we can see a pattern.
 
 To do this, open File Explorer and navigate to the C:\IntroLabs\DeepBlueCLI-master\EntLogs directory:
 
-![](attachments/OpeningFileExplorer.png)
+<img width="534" height="48" alt="OpenFileExplorer" src="https://github.com/user-attachments/assets/bd5ac519-825a-4921-bed6-3b8baf52a4b7" />
 
 ![](attachments/Navintolabs.png)  
 
