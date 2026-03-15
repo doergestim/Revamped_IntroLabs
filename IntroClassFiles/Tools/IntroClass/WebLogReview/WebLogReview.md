@@ -37,9 +37,6 @@ Now, let's start ZAP.
 
 ![](attachments/Clipboard_2020-06-16-13-30-46.png)
 
-
-Now, let's insert your **Linux IP address** from the **tailscale status** command
-
 First, select the Automated Scan button: 
 
 ![](attachments/Clipboard_2020-12-11-06-43-22.png)
