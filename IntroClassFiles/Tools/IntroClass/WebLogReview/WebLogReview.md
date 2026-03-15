@@ -21,6 +21,14 @@ While a full intro to web attacks is out of the scope of this class, it is great
 sudo su -
 ```
 
+Get your **Linux IP address**
+
+```bash
+ifconfig
+```
+
+<img width="716" height="175" alt="Get_IP" src="https://github.com/user-attachments/assets/cc1893c9-3a96-4ddb-a16a-45f0bdad0e10" />
+
 
 ```bash
 docker run --rm -it -p 80:80 vulnerables/web-dvwa
