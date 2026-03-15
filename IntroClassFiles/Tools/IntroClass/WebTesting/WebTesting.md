@@ -4,6 +4,8 @@
 
 # Web Testing
 
+# Windows VM
+
 In this lab we will be standing up a simple **Python Web Server** and a vulnerable web server called **DVWA**.  These are designed from the ground up to teach people about a number of web application attacks.
 
 While a full intro to web attacks is out of the scope of this class, it is great to show you how to use tools like **ZAP** to automatically look for some vulnerabilities, and to show you that automated tools do not always catch everything.
@@ -13,24 +15,15 @@ You will need to start an **Linux** terminal.
 
 
 
+- **Double-click** `Ubuntu Shell` on Desktop
 
-- Open **Command Prompt**
-
-<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
-
-- **SSH** into the **Linux** machine
-```bash
-ssh ubuntu@linux.cloudlab.lan
-```
-
-<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
 
 
 
 
-
-Before going further, gain root access by running the following:
+Gain root access by running the following:
 
 ```bash
 sudo su -
@@ -42,26 +35,30 @@ Navigate into the proper directory:
 cd ~/Intro_To_SOC/Web_Testing
 ```
 
-Please note your **Linux** IP address is shown by **tailscale status**. As shown at the start, ours is **"100.116.161.87"**
+Please note your **Linux** IP:
 
-<img width="740" height="75" alt="image" src="https://github.com/user-attachments/assets/8ec3aa43-15fc-4a2c-a1e4-5e0caa219ef5" />
+```bash
+ifconfig
+```
+
+![Get_IPLinux.png](https://github.zendesk.com/attachments/token/n6uvR4jpusDEqeTL91GtzfodH/?name=Get_IPLinux.png)
 
 >[!NOTE]
 >
 >**YOUR IP WILL BE DIFFERENT!**
 
-Launch the python script.
+Launch the python script
 
 ```bash
 python3 ./dsvw.py
 ```
 
-<img width="618" height="141" alt="image" src="https://github.com/user-attachments/assets/2a40ac0a-ab9c-4fb0-a35d-9c56596031c4" />
+<img width="696" height="141" alt="2026-03-14_14-38" src="https://github.com/user-attachments/assets/a74a0640-3091-4182-89d8-e595141f31e7" />
 
 
 It's time to start **ZAP**! Go ahead and launch it from the desktop icon.
 
-![](attachments/OpeningZAP.png)
+<img width="77" height="97" alt="2026-03-14_14-26" src="https://github.com/user-attachments/assets/29673ac5-f788-453c-8f79-e7291bf7b329" />
 
 Once **ZAP** loads, you will see this pop-up on your screen. Ensure that **No, I do not want to persist this session at this moment in time** option is selected, and hit **"Start"**
 
@@ -81,12 +78,21 @@ Then, select **"Use traditional spider"** and then select **"Attack"**:
 
 ![](attachments/AutomatedScanSetup.png)
 
+
+>[!IMPORTANT]
+>The scan will probably break **DSVW**, you might have to start it again during during the scan:
+
+<img width="697" height="426" alt="2026-03-14_14-41" src="https://github.com/user-attachments/assets/f155ab76-3722-445a-9f4b-0cb18ea0e37c" />
+
+
+
 Scan progress will be shown by the progress bar in the center of your screen.
 When it gets done crawling and scanning, select **"Alerts"**:
 
 ![](attachments/Alerts.png)
 
 This shows that **ZAP** does a pretty good job of finding the easy to identify vulnerabilities.
+
 
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/deepbluecli/DeepBlueCLI.md)</i></b>
