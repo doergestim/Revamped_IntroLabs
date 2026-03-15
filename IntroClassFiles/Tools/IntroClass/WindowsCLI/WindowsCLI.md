@@ -60,6 +60,14 @@ net user Administrator password1234
 >
 >That is a very bad password. </br> Come up with something better. But, please remember it.
 
+Let's get our **Windows IP**:
+
+```ps
+ipconfig
+```
+
+<img width="629" height="253" alt="2026-03-15_23-42" src="https://github.com/user-attachments/assets/6a8b012f-cd92-47fd-8f0d-eac30d124877" />
+
 Now head back to your **Linux** terminal.
 
 We need to gain root access. To do that, run the following command:
