@@ -58,14 +58,17 @@ When it asks about the **PKI Certificate Expiration**, **just hit enter** to acc
 
 <img width="606" height="171" alt="2026-03-15_11-10" src="https://github.com/user-attachments/assets/8acc7f0f-eb75-4c0e-b8f8-cd2b53d6d384" />
 
-When it asks about the **SSL certs**, **just hit enter**.  It will choose the default of Self Signed SSL.
+When it asks about the **Registry for Client Writeback**, **just hit enter** to accept the default.
 
-![](attachment/velociraptor_sslcert.png)
-
+<img width="803" height="164" alt="2026-03-15_11-10" src="https://github.com/user-attachments/assets/930e3b8b-986c-42d1-8741-cc4d015169a7" />
 
 When it asks about the **DNS name**, **just hit enter**.  It will set the default to localhost.  This will work fine as we are just running this locally.
 
-![](attachment/velociraptor_publicdns.png)
+<img width="581" height="77" alt="2026-03-15_11-14" src="https://github.com/user-attachments/assets/6a718c5c-e7a6-49b8-a42f-1c0162939c21" />
+
+When it asks about the **SSL certs**, **just hit enter**.  It will choose the default of Self Signed SSL.
+
+![](attachment/velociraptor_sslcert.png)
 
 For the **default ports**, once again, **just hit enter** to accept 8000 and 8889 as the defaults.
 
