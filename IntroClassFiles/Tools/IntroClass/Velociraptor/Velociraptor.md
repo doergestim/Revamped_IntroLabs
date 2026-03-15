@@ -159,7 +159,7 @@ When you get the pop up, select Run.  This will install the proper libraries and
 Next, we will start the client.
 
 ```bash
-velociraptor-v0.75.6-windows-amd64.exe --config client.config.yaml client -v
+velociraptor-v0.75.6-windows-amd64.exe --config server.config.yaml client -v
 ```
 
 It will look something like this:
