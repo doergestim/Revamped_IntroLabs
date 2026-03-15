@@ -66,6 +66,10 @@ When it asks about the **DNS name**, **just hit enter**.  It will set the defaul
 
 <img width="581" height="77" alt="2026-03-15_11-14" src="https://github.com/user-attachments/assets/6a718c5c-e7a6-49b8-a42f-1c0162939c21" />
 
+When asked about which **DNS Type** is used, select **None** and press enter.
+
+<img width="827" height="113" alt="2026-03-15_11-14" src="https://github.com/user-attachments/assets/12fa7d6c-4bfb-4f6f-ad32-eb9bd035a387" />
+
 When it asks about the **SSL certs**, **just hit enter**.  It will choose the default of Self Signed SSL.
 
 ![](attachment/velociraptor_sslcert.png)
@@ -82,9 +86,7 @@ If prompted about using the registry to store writeback files, please enter **"N
 
 ![](attachment/velociraptor_registrywriteback.png)
 
-When asked about which **DynDNS** provider is used, select **None** and press enter.
 
-![](attachment/velociraptor_dyndns.png)
 
 For the **GUI username**, please **just hit enter** to end.
 
