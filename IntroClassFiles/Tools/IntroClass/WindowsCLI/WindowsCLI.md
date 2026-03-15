@@ -159,7 +159,7 @@ Go ahead an open an instance of **Windows PowerShell**.
 
 Run the following command:
 
-```bash
+```ps
 netstat -naob
 ```
 
@@ -169,37 +169,25 @@ netstat -naob
 Well, that is a lot of data. This is showing us which ports are open on this system **(0.0.0.0:portnumber)** or **(LISTENING)**.
 As well as the remote connections that are made to other systems **(ESTABLISHED)**.  In this example, we are really interested in the **ESTABLISHED** connections:
 
-```bash
+```ps
 netstat -naob | findstr ESTABLISHED
 ```
 
 <img width="945" height="387" alt="2026-03-16_00-01" src="https://github.com/user-attachments/assets/4bb6bd11-5df0-4d05-8120-1a80c4c2bdf8" />
 
-Specificly, we are interested in the connection on port 4444 as we know this is the port we used for our malware.
+Specificly, we are interested in the connection on **port 4444** as we know this is the port we used for our malware.
 
-Now, let's drill down on that connection with some more data:
 
-```bash
-netstat -f
-```
-
-I like to run **"-f"** with netstat to see if there are any systems with fully qualified domains that we may be able to ignore. 
-
-![](attachments/windowscli_-f.png)
-
-Now we see our last connection with the **port 4444**.
 
 Let's get the Process ID **(PID)** from the output of our **"netstat -naob"** command that we ran earlier so we can dig a little deeper.
 
 >[!TIP]
 >
->Look for port **4444** and **[powershell.exe]**
-
-![](attachments/windowscli_pid.png)
+>Look for port **4444**, it is the number right after `ESTABLISHED`
 
 We will start with tasklist  
 
-```bash
+```ps
 tasklist /m /fi "pid eq [PID]"
 ```
 
