@@ -11,9 +11,9 @@ We are going to use **DeepBlueCLI** to see if there are any odd logon patterns i
 
 Let's start by opening **Windows Powershell**:
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/5676575e-6ba5-4971-b1de-68d60234af47" />
 
-Then, navigate to the \IntroLabs\DeepBlueCLI-master directory
+Then, navigate to the `\IntroLabs\DeepBlueCLI` directory
 
 ```bash
 cd \IntroLabs\DeepBlueCLI\
