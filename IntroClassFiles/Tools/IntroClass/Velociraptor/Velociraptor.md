@@ -38,28 +38,32 @@ Within the command prompt, run the following command:
 velociraptor-v0.75.6-windows-amd64.exe config generate -i
 ```
 
-When it asks about the OS, please choose **Windows**.  It should be the default.
+When it asks about the **Deployment Type**, choose **Self Signed SSL**
+
+<img width="610" height="111" alt="2026-03-15_11-02" src="https://github.com/user-attachments/assets/e34c0e98-6fec-4b14-9d29-2a1abd949cd2" />
+
+When it asks about the **OS**, please choose **Windows**.  It should be the default.
 
 ![](attachment/velociraptor_chooseos.png)
 
-When it asks about the Path to the datastore, **just hit enter**.  This will keep the default.
+When it asks about the **Path to the datastore**, **just hit enter**.  This will keep the default.
 
 ![](attachment/velociraptor_datastorepath.png)
 
-When it asks about the SSL certs, **just hit enter**.  It will choose the default of Self Signed SSL.
+When it asks about the **SSL certs**, **just hit enter**.  It will choose the default of Self Signed SSL.
 
 ![](attachment/velociraptor_sslcert.png)
 
 
-When it asks about the DNS name, **just hit enter**.  It will set the default to localhost.  This will work fine as we are just running this locally.
+When it asks about the **DNS name**, **just hit enter**.  It will set the default to localhost.  This will work fine as we are just running this locally.
 
 ![](attachment/velociraptor_publicdns.png)
 
-For the default ports, once again, **just hit enter** to accept 8000 and 8889 as the defaults.
+For the **default ports**, once again, **just hit enter** to accept 8000 and 8889 as the defaults.
 
 ![](attachment/velociraptor_frontendport.png)
 
-If prompted about using Websocket, enter **"No"**
+If prompted about using **Websocket**, enter **"No"**
 
 ![](attachment/velociraptor_websocket.png)
 
@@ -71,11 +75,11 @@ When asked about which **DynDNS** provider is used, select **None** and press en
 
 ![](attachment/velociraptor_dyndns.png)
 
-For the GUI username, please **just hit enter** to end.
+For the **GUI username**, please **just hit enter** to end.
 
 ![](attachment/velociraptor_guiusername.png)
 
-When it asks about the path to the logs directory, **just hit enter** to accept the default.
+When it asks about the path to the **logs directory**, **just hit enter** to accept the default.
 
 ![](attachment/velociraptor_pathtologs.png)
 
@@ -83,7 +87,7 @@ If it asks if you would to **"restrict VQL"** functionality on the server, pleas
 
 ![](attachment/velociraptor_vqlfunct.png)
 
-When it asks where to write the server and client configs, **just hit enter** on both prompts to accept the defaults.
+When it asks where to write the **server** and **client configs**, **just hit enter** on both prompts to accept the defaults.
 
 ![](attachment/velociraptor_configs.png)
 
