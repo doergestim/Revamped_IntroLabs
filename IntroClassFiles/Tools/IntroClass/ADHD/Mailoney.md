@@ -64,7 +64,7 @@ Check the listening port:
 ss -lntp | grep 2525
 ```
 
-<img width="851" height="21" alt="image" src="https://github.com/user-attachments/assets/6e2ac1a2-54f2-4ea9-99a9-4b97922402f0" />
+<img width="924" height="49" alt="2026-03-16_12-57" src="https://github.com/user-attachments/assets/cc17d320-9c7a-4cd4-8cc3-948f3b2798ac" />
 
 
 You should see something listening on `127.0.0.1:2525`
@@ -88,7 +88,7 @@ swaks \
 
 - Back in the **Mailoney Terminal**, we can see the hit
 
-<img width="341" height="23" alt="image" src="https://github.com/user-attachments/assets/29b9e1dd-7198-4654-8ef2-787af84b0fa4" />
+<img width="546" height="29" alt="2026-03-16_12-58" src="https://github.com/user-attachments/assets/34bdde8e-264a-4d13-83d0-50eea8f03cab" />
 
 - Go back to the **Second Terminal** and do this to get the data received by the honeypot from the last hit
 ```bash
@@ -99,7 +99,8 @@ sqlite3 -header -column mailoney.db \
  LIMIT 1;"
 ```
 
-<img width="1920" height="442" alt="image" src="https://github.com/user-attachments/assets/8388b757-aa83-4975-8346-a2046715a6cc" />
+<img width="1904" height="510" alt="2026-03-16_13-00" src="https://github.com/user-attachments/assets/01273dfd-e8ae-4dbf-926d-8c35b90b2caa" />
+
 
 
 ---
