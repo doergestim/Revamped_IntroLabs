@@ -215,7 +215,7 @@ In the UI:
 <img width="151" height="60" alt="image" src="https://github.com/user-attachments/assets/16e007c3-9b21-4d4d-b2e1-be6d11333fbc" />
 
 - Create a new operation:
-  - **Operation Name:** 
+  - **Operation Name:** `CalderaBlueLab`
   - **Group:** `blue`
   - **Adversary:** `Incident responder`
   - **Autonomous** `Require manual approval` - we use this to have more control and see in real time everything that happens
