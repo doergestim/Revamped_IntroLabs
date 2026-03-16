@@ -84,7 +84,7 @@ Copy the password from the terminal and log in
    - From: `IT Support <it@company.local>`
 4. Click **Save**
 
->[!NOTES]
+>[!NOTE]
 >We are using port `1025` because that's the port where **MailHog** will be serving and listening
 
 ---
