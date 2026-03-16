@@ -3,6 +3,7 @@
 
 # Canarytokens 
 
+# Any VM
 
 First, we will need to navigate to the canarytokens server from a system with Microsoft Word on it: 
 
@@ -10,12 +11,8 @@ https://www.canarytokens.org/generate# 
 
 ![image](https://github.com/user-attachments/assets/7ca0b2ac-9072-4336-9ea8-347797f9b74d)
 
-
-
 Now, let's create a token Word Document: 
 
-
-  
 
 ![image](https://github.com/user-attachments/assets/ce30b266-57d9-4f8b-8dc2-82783a7a3599)
 
