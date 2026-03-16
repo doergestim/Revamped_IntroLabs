@@ -38,7 +38,7 @@ python main.py \
   --log-level INFO
 ```
 
-<img width="955" height="361" alt="image" src="https://github.com/user-attachments/assets/9e3d0da7-a64e-477d-9ce4-21b3acb0a5c6" />
+<img width="1197" height="565" alt="2026-03-16_12-56" src="https://github.com/user-attachments/assets/105789a4-c49e-41e3-a811-0b35dcaba586" />
 
 
 Leave this terminal open (it will show logs)
