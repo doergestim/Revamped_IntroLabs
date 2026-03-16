@@ -11,6 +11,8 @@ https://www.canarytokens.org/generate# 
 
 ![image](https://github.com/user-attachments/assets/7ca0b2ac-9072-4336-9ea8-347797f9b74d)
 
+
+   
 Now, let's create a token Word Document: 
 
 
