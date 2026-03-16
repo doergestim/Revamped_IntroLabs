@@ -79,8 +79,8 @@ chmod +x sandcat
 
 You should see the agent running and “beaconing” (calling back to CALDERA)
 
-<img width="805" height="322" alt="image" src="https://github.com/user-attachments/assets/4bdab989-edff-4735-b240-5afeb9c81112" />
 
+<img width="953" height="401" alt="2026-03-16_12-26" src="https://github.com/user-attachments/assets/3cdcf4e1-5d45-4bf9-9386-58cfd3cb20c2" />
 
 ## 2) Confirm the agent shows up in the UI
 
