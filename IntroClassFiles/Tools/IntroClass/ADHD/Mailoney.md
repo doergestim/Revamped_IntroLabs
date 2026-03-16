@@ -135,7 +135,7 @@ sqlite3 -header -column mailoney.db \
 ```
 
 
-<img width="1920" height="261" alt="image" src="https://github.com/user-attachments/assets/7358e436-5529-4b0a-8bc5-2ab7235025e4" />
+<img width="1902" height="375" alt="2026-03-16_13-09" src="https://github.com/user-attachments/assets/cf8fcce6-3932-4307-9b69-c91b6ebf9186" />
 
 
 
