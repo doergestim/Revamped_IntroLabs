@@ -175,7 +175,8 @@ Copy the password from the terminal and log in
 MailHog
 ```
 
-<img width="550" height="124" alt="image" src="https://github.com/user-attachments/assets/bcdf9d65-2312-4e3c-b30d-38d4fe31305e" />
+
+<img width="609" height="162" alt="2026-03-17_22-53" src="https://github.com/user-attachments/assets/825f0fe2-54cf-4f3d-878f-083d104cfbb5" />
 
 
 # Step 10 – Launch a Phishing Campaign
@@ -202,7 +203,8 @@ MailHog
 
 - You should see the new mail
 
-<img width="1920" height="1050" alt="image" src="https://github.com/user-attachments/assets/7b0ce4c1-81a8-4d99-bc26-3f2a3e578461" />
+<img width="1898" height="1005" alt="2026-03-17_23-06" src="https://github.com/user-attachments/assets/7766f585-34b3-4e3b-bb58-698dc8fbc071" />
+
 
 - What we get out of it?
 
