@@ -80,7 +80,10 @@ curl http://totally-not-evil-c2.com/ --resolve totally-not-evil-c2.com:80:127.0.
 Watch **terminal 1** (FakeNet-NG window):
 
 - You should see an HTTP request logged by FakeNet-NG
-- FakeNet-NG will return some default HTML content
+- FakeNet-NG will return some default HTML content in terminal 2:
+
+<img width="1422" height="727" alt="2026-03-17_22-13" src="https://github.com/user-attachments/assets/d693ec6f-6486-4319-9246-05a6a796d22f" />
+
 
 ### HTTPS request (FakeNet as fake TLS server)
 
