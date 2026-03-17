@@ -50,9 +50,12 @@ sudo nano /etc/opencanaryd/opencanary.conf
 
 - Inside the JSON config make these **minimal** changes to enable a few services and a log file:
 
-1. Locate the `"device.node_id"` and set a friendly name  
+1. Locate the `"device.node_id"` and set a friendly name like `"opencanary-lab"`
 
-<img width="346" height="30" alt="2026-03-08_12-12" src="https://github.com/user-attachments/assets/b502f101-cb18-488b-9568-1f64adacf8c1" />
+<!-- <img width="346" height="30" alt="2026-03-08_12-12" src="https://github.com/user-attachments/assets/b502f101-cb18-488b-9568-1f64adacf8c1" /> -->
+```
+"device.node_id": "opencanary-lab"
+```
 
 2. In the `"modules"` (or top-level service entries) enable the following:
 
@@ -66,12 +69,14 @@ sudo nano /etc/opencanaryd/opencanary.conf
 "portscan": {"enabled": true}
 ```
 
-<img width="259" height="23" alt="2026-03-08_12-18" src="https://github.com/user-attachments/assets/f2a95943-cf22-45b8-96f8-5003d42d7389" />
-<img width="210" height="26" alt="2026-03-08_12-17" src="https://github.com/user-attachments/assets/1c3bbda9-f8e2-40b5-add3-ae09339a4de1" />
-<img width="219" height="27" alt="2026-03-08_12-16" src="https://github.com/user-attachments/assets/9b6f28ac-280b-47d6-a163-f933bd971d14" />
-<img width="219" height="42" alt="2026-03-08_12-15" src="https://github.com/user-attachments/assets/b720a41d-0c3f-43f3-96ec-486baa07bf8a" />
-<img width="204" height="49" alt="2026-03-08_12-14" src="https://github.com/user-attachments/assets/2831c467-4c46-4716-aa9c-005c144becd1" />
+<!-- <img width="259" height="23" alt="2026-03-08_12-18" src="https://github.com/user-attachments/assets/f2a95943-cf22-45b8-96f8-5003d42d7389" /> -->
+<!-- <img width="210" height="26" alt="2026-03-08_12-17" src="https://github.com/user-attachments/assets/1c3bbda9-f8e2-40b5-add3-ae09339a4de1" /> -->
+<!-- <img width="219" height="27" alt="2026-03-08_12-16" src="https://github.com/user-attachments/assets/9b6f28ac-280b-47d6-a163-f933bd971d14" /> -->
+<!-- <img width="219" height="42" alt="2026-03-08_12-15" src="https://github.com/user-attachments/assets/b720a41d-0c3f-43f3-96ec-486baa07bf8a" /> -->
+<!-- <img width="204" height="49" alt="2026-03-08_12-14" src="https://github.com/user-attachments/assets/2831c467-4c46-4716-aa9c-005c144becd1" /> -->
 
+<img width="1192" height="695" alt="img1" src="https://github.com/user-attachments/assets/7b99515d-bbd2-4585-bb94-53fea67e7a3c" />
+<img width="1185" height="492" alt="img2" src="https://github.com/user-attachments/assets/8775b8f4-f84a-42f7-a72e-0ea7a2810d86" />
 
 
 - Save and exit with `Ctrl + x` and `y` and `Enter`
