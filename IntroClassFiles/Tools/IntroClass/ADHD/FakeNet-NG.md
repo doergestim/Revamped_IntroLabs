@@ -46,18 +46,19 @@ Open a **second terminal**.
 sudo ss -tulnp | grep -i fakenet
 ```
 
-<img width="979" height="250" alt="image" src="https://github.com/user-attachments/assets/6fbfb6fc-8cda-48fb-9e82-f1bb80680697" />
+<img width="1022" height="247" alt="2026-03-17_11-48" src="https://github.com/user-attachments/assets/a29d299f-daa5-4cf3-81bb-e18d07e5d1fa" />
+
 
 
 You should see FakeNet-NG listening on multiple ports, for example:
-- 53 (**DNS**)
+
 - 80 (**HTTP**)
 - 443 (**HTTPS/SSL**)
 - 21 (**FTP**)
 - 25 (**SMTP**)
 - Others depending on your version/config
 
-> This is the **deception**: FakeNet-NG pretends to be many services at once,
+> FakeNet-NG pretends to be many services at once,
 > so “**malware**” thinks it is talking to the real **Internet**
 
 ---
