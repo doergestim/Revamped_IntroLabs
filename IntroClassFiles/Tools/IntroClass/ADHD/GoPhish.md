@@ -23,7 +23,7 @@ In this lab you will:
 # Start GoPhish
 
 ```
-cd ~/Desktop/gophish
+cd ~/BnB/gophish
 ```
 
 ```bash
