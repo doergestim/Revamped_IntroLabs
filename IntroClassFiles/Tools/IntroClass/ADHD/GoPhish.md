@@ -5,7 +5,7 @@
 # GoPhish
 
 This lab demonstrates **what GoPhish can do** from both an attacker and defender perspective
-You will **install GoPhish**, **launch a phishing campaign**, and **observe captured credentials and events**
+You will **launch a phishing campaign**, and **observe captured credentials and events**
 
 ---
 
