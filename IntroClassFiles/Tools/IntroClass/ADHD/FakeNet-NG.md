@@ -63,39 +63,36 @@ You should see FakeNet-NG listening on multiple ports, for example:
 
 ---
 
-## Simulate simple web “malware” traffic
+## Simulate simple web "malware" traffic
 
 - FakeNet-NG is still running in **terminal 1**.  
+- In **terminal 2**, we'll play the role of the "malware" sending traffic.
 
-- In **terminal 2**, we’ll play the role of the “malware” sending traffic.
+> [!NOTE]
+> Since the DNS listener is disabled in `lab.ini`, we use `--resolve` to bypass DNS lookup and connect directly to FakeNet-NG on `127.0.0.1`.
 
 ### HTTP request to a domain
 
 ```bash
-curl http://totally-not-evil-c2.com/
+curl http://totally-not-evil-c2.com/ --resolve totally-not-evil-c2.com:80:127.0.0.1
 ```
 
 Watch **terminal 1** (FakeNet-NG window):
 
-- You should see a DNS query for `totally-not-evil-c2.com`
-- Then an HTTP request logged by FakeNet-NG
+- You should see an HTTP request logged by FakeNet-NG
 - FakeNet-NG will return some default HTML content
-
-<img width="938" height="40" alt="image" src="https://github.com/user-attachments/assets/5312dd38-41f0-45c7-9893-ca29679db31d" />
 
 ### HTTPS request (FakeNet as fake TLS server)
 
 ```bash
-curl https://really-bad-c2.example/ -k
+curl https://really-bad-c2.example/ -k --resolve really-bad-c2.example:443:127.0.0.1
 ```
-
-<img width="938" height="40" alt="image" src="https://github.com/user-attachments/assets/5abfe875-eb52-46a4-b483-3dc85026129e" />
 
 ---
 
 ## Simulate DNS beaconing
 
-Let’s imitate beaconing behavior where malware repeatedly talks to random domains.
+Let's imitate beaconing behavior where malware repeatedly talks to random domains.
 
 Now run:
 
@@ -111,35 +108,30 @@ Watch **terminal 1**:
 - You should see multiple DNS queries for the fake `c2*.super-evil-botnet.com` domains
 - FakeNet-NG will respond with fake IP addresses
 
-<img width="916" height="62" alt="image" src="https://github.com/user-attachments/assets/69ef8600-3069-4cd3-b62c-73148f0fa186" />
-
 > In a real analysis, these logs help you extract **network IOCs**
 > (domains, IPs, URIs) from malware safely.
 
 ---
 
-## Simulate a port-scanning “malware”
+## Simulate a port-scanning "malware"
 
-Now we’ll pretend the malware is scanning common service ports.
+Now we'll pretend the malware is scanning common service ports.
 
 ### Scan common ports on localhost
 
 ```bash
-nmap -Pn -p 211,25,53,8086,1337,443,110 127.0.0.1
+nmap -Pn -p 21,25,53,80,443,110,1337 127.0.0.1
 ```
 
-- From **nmap’s perspective** (attacker view), it will look like these ports are open
+- From **nmap's perspective** (attacker view), it will look like these ports are open
   and responding on `127.0.0.1`.
 
->[!Note]
-> When FakeNet is active on Linux, **SYN** scans often show ports as **filtered**
-> This happens because **FakeNet** intercepts packets using **iptables**/**NFQUEUE**
+> [!NOTE]
+> When FakeNet is active on Linux, **SYN** scans often show ports as **filtered**.
+> This happens because **FakeNet** intercepts packets using **iptables**/**NFQUEUE**.
 
-- In **terminal 1** (FakeNet-NG), you’ll see many connection attempts logged
+- In **terminal 1** (FakeNet-NG), you'll see many connection attempts logged
   against the emulated services.
-
-<img width="503" height="144" alt="image" src="https://github.com/user-attachments/assets/bb612132-ceb7-42ed-9953-d62a6c937ab6" />
-
 
 You can push it further with a more aggressive scan (optional, but noisy):
 
