@@ -27,7 +27,8 @@
 cat /etc/resolv.conf
 ```
 
-<img width="228" height="71" alt="image" src="https://github.com/user-attachments/assets/5445c7a8-1490-468f-b654-b8b9bb60e9a6" />
+<img width="225" height="72" alt="2026-03-17_11-27" src="https://github.com/user-attachments/assets/9e2eefc7-8435-4d26-aaee-6791ace9da4c" />
+
 
 - That’s your current **DNS resolver**
 
@@ -37,7 +38,8 @@ cat /etc/resolv.conf
 dig example.com +short
 ```
 
-<img width="134" height="127" alt="image" src="https://github.com/user-attachments/assets/48867827-ad17-4da0-9b4b-2137e21b559f" />
+<img width="470" height="68" alt="2026-03-17_11-28" src="https://github.com/user-attachments/assets/60e8a224-eef2-43eb-afd1-bde3855e43ef" />
+
 
 - Note the IP address you get
 - This is the **legitimate** DNS answer from your normal resolver
@@ -69,7 +71,8 @@ Explanation:
 
 You should see DNSChef starting and waiting for queries. Keep this terminal open
 
-<img width="666" height="250" alt="image" src="https://github.com/user-attachments/assets/c9b338be-e84d-4e98-a6c4-15a8c784c70f" />
+<img width="730" height="280" alt="2026-03-17_11-29" src="https://github.com/user-attachments/assets/9ee71875-4703-4326-8796-74f7d5ea7f9c" />
+
 
 ### Send queries to DNSChef
 
@@ -88,7 +91,8 @@ Watch **Terminal 1** (DNSChef):
 - You should see **logs** of each **query** being made and the response from **upstream**
 - This is what a defender/analyst would see when monitoring DNS traffic
 
-<img width="762" height="71" alt="image" src="https://github.com/user-attachments/assets/7cf04e29-5851-4d84-8fa0-50b314c21ba7" />
+<img width="820" height="88" alt="2026-03-17_11-31" src="https://github.com/user-attachments/assets/a8bc528d-ef65-49bf-9bd9-5b2b960aceb6" />
+
 
 
 - You can stop **DNSChef** with `Ctrl + C` in **Terminal 1**
