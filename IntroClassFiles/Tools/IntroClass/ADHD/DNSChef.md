@@ -211,20 +211,6 @@ dig @127.0.0.1 -p 53530 www.google.com +short
 
 
 
----
-
-
-## Clean up
-
-Stop all components:
-
-- In **Terminal 1**: press `Ctrl + C` to stop DNSChef.
-- In **Terminal 2**: press `Ctrl + C` to stop the Python web server.
-
-
-
-
-
 
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/ADHD/FakeNet-NG.md)</i></b>
