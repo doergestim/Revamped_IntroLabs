@@ -93,26 +93,48 @@ curl https://really-bad-c2.example/ -k --resolve really-bad-c2.example:443:127.0
 
 ---
 
-## Simulate DNS beaconing
+## Simulate FTP "malware" traffic
 
-Let's imitate beaconing behavior where malware repeatedly talks to random domains.
+Some malware uses **FTP** to exfiltrate data or download additional payloads.
+FakeNet-NG has a fully emulated FTP server listening on port **21**.
 
-Now run:
+### Connect to the fake FTP server
 
 ```bash
-for i in {1..5}; do
-  dig @127.0.0.1 +short c2$i.super-evil-botnet.com
-  sleep 1
-done
+ftp 127.0.0.1
+```
+
+When prompted, enter any username and password — FakeNet-NG will accept them:
+
+```
+Name: malware
+Password: infected
+```
+
+Watch **terminal 1** (FakeNet-NG window):
+
+- You should see the FTP connection logged with the banner FakeNet-NG presents
+- The fake credentials you entered will be captured in the logs
+
+### Try some FTP commands
+
+Once connected, try a few commands to generate more traffic:
+
+```ftp
+ls
+pwd
+get secret-data.txt
+quit
 ```
 
 Watch **terminal 1**:
 
-- You should see multiple DNS queries for the fake `c2*.super-evil-botnet.com` domains
-- FakeNet-NG will respond with fake IP addresses
+- Each command will be logged by FakeNet-NG
+- FakeNet-NG will respond as if it were a real FTP server
+- File requests will be served from the `defaultFiles/` webroot defined in `lab.ini`
 
-> In a real analysis, these logs help you extract **network IOCs**
-> (domains, IPs, URIs) from malware safely.
+> In a real investigation, captured FTP credentials and filenames are valuable **IOCs**
+> that reveal what data the malware was trying to steal or download.
 
 ---
 
@@ -128,6 +150,9 @@ nmap -Pn -p 21,25,53,80,443,110,1337 127.0.0.1
 
 - From **nmap's perspective** (attacker view), it will look like these ports are open
   and responding on `127.0.0.1`.
+
+<img width="739" height="333" alt="2026-03-17_22-24" src="https://github.com/user-attachments/assets/0e535802-6d03-41e1-a64e-a63e67cc1093" />
+
 
 > [!NOTE]
 > When FakeNet is active on Linux, **SYN** scans often show ports as **filtered**.
