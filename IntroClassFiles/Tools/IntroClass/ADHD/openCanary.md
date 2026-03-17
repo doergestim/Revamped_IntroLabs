@@ -31,7 +31,8 @@ Still inside your virtualenv:
 opencanaryd --copyconfig
 ```
 
-<img width="812" height="108" alt="2026-03-08_12-09" src="https://github.com/user-attachments/assets/1b9299b7-4184-4c67-ad61-f64a406002a8" />
+<!-- <img width="812" height="108" alt="2026-03-08_12-09" src="https://github.com/user-attachments/assets/1b9299b7-4184-4c67-ad61-f64a406002a8" /> -->
+<img width="1627" height="138" alt="img0" src="https://github.com/user-attachments/assets/927fb7d9-526f-4099-aee4-2b1aa0a254f7" />
 
 
 - Make sure it is there
