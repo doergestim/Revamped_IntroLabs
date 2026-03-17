@@ -130,7 +130,8 @@ dig @127.0.0.1 -p 53530 www.google.com +short
 dig @127.0.0.1 -p 53530 anyrandomdomainthatdoesnotexist123.com +short
 ```
 
-<img width="1039" height="71" alt="image" src="https://github.com/user-attachments/assets/f95e2c4f-d5f6-431c-a85d-19bd175fa631" />
+<img width="1156" height="172" alt="2026-03-17_11-33" src="https://github.com/user-attachments/assets/0eee9628-45bb-4c55-bbf1-2d353a513a6c" />
+
 
 
 You should see that all of them return:
@@ -175,6 +176,9 @@ sudo python3 dnschef.py \
   --fakedomains login.badbank.test
 ```
 
+<img width="876" height="282" alt="2026-03-17_11-34" src="https://github.com/user-attachments/assets/4c845001-ca6f-4e03-b1b8-07172b78cdf6" />
+
+
 Explanation:
 
 - `--fakeip 127.0.0.1` – fake IP to return
@@ -202,13 +206,9 @@ dig @127.0.0.1 -p 53530 www.google.com +short
 - `login.badbank.test` should resolve to `127.0.0.1`.
 - Other domains should resolve to their **real IP addresses** (similar to your earlier tests).
 
-<img width="1039" height="71" alt="image" src="https://github.com/user-attachments/assets/1c6e8d78-b8c1-4f64-bbab-0249c4b1d0f1" />
 
+<img width="955" height="84" alt="2026-03-17_11-36" src="https://github.com/user-attachments/assets/7ad81fbc-2522-4019-bb09-13e056408013" />
 
-This demonstrates:
-
-- A precise **phishing/MitM** scenario (attacker view).
-- A **controlled redirection** to a decoy/sinkhole (defender/deception view).
 
 
 ---
