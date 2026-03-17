@@ -104,17 +104,22 @@ FakeNet-NG has a fully emulated FTP server listening on port **21**.
 ftp 127.0.0.1
 ```
 
-When prompted, enter any username and password — FakeNet-NG will accept them:
+When prompted, enter any username and password - FakeNet-NG will accept them:
 
 ```
 Name: malware
 Password: infected
 ```
 
+<img width="477" height="227" alt="2026-03-17_22-28" src="https://github.com/user-attachments/assets/7ac5ae8d-02a7-4eee-9eca-a8840e3cc6ae" />
+
 Watch **terminal 1** (FakeNet-NG window):
 
 - You should see the FTP connection logged with the banner FakeNet-NG presents
 - The fake credentials you entered will be captured in the logs
+
+<img width="1202" height="180" alt="2026-03-17_22-27" src="https://github.com/user-attachments/assets/ee19fad5-11d4-4414-9538-b23c9ebb8568" />
+
 
 ### Try some FTP commands
 
@@ -126,6 +131,9 @@ pwd
 get secret-data.txt
 quit
 ```
+
+<img width="761" height="551" alt="2026-03-17_22-28" src="https://github.com/user-attachments/assets/b7e3dc00-79c5-4a76-a453-a5b4bf3d7435" />
+
 
 Watch **terminal 1**:
 
