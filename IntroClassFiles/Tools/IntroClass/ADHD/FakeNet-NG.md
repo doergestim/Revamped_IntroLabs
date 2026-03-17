@@ -27,15 +27,12 @@ sudo fakenet -c lab.ini
 
 You should see something like:
 
-- A banner
-- The path to the configuration file (e.g. `default.ini`)
-- Log messages about listeners starting (DNS, HTTP, SSL, etc.)
-
-<img width="835" height="422" alt="image" src="https://github.com/user-attachments/assets/e35ab7f9-4fbf-4d0a-adae-9da28fcc8b7b" />
+<img width="948" height="512" alt="2026-03-17_11-39" src="https://github.com/user-attachments/assets/fbae2273-cdd7-4a7e-9fc3-28640bdd2faf" />
 
 
-FakeNet-NG will **keep running in the foreground**.  
-Leave this terminal window open. This is your **“Deception / Analyst” view**.
+**FakeNet-NG** will **keep running in the foreground**
+
+Leave this terminal window open. This is your **“Deception / Analyst” view**
 
 ---
 
