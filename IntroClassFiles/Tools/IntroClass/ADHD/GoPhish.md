@@ -35,7 +35,8 @@ You should see output similar to:
 Starting admin server at http://0.0.0.0:3333
 ```
 
-<img width="1063" height="192" alt="image" src="https://github.com/user-attachments/assets/0918fd4f-78ca-46ec-b3c9-37aa941b016e" />
+<img width="1165" height="276" alt="2026-03-17_22-40" src="https://github.com/user-attachments/assets/b530c26d-c4a6-4d4d-945a-3ecfa4a14419" />
+
 
 >[!IMPORTANT]
 >Leave this terminal open
@@ -47,7 +48,7 @@ Starting admin server at http://0.0.0.0:3333
 Open a browser and go to:
 
 ```
-http://localhost:3333
+https://localhost:3333
 ```
 
 <img width="563" height="536" alt="image" src="https://github.com/user-attachments/assets/949def60-dbea-431b-affd-1ad2c58d330e" />
@@ -57,7 +58,8 @@ http://localhost:3333
 - **Username:** admin
 - **Password:** (shown in terminal output)
 
-<img width="1094" height="21" alt="image" src="https://github.com/user-attachments/assets/140130ae-9237-4f9b-92a2-a547dfc36353" />
+
+<img width="1189" height="177" alt="2026-03-17_22-43" src="https://github.com/user-attachments/assets/193cc5bd-35a5-4ca9-a602-a69a1064b24b" />
 
 
 Copy the password from the terminal and log in
