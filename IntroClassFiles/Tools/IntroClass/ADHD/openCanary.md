@@ -31,9 +31,7 @@ Still inside your virtualenv:
 opencanaryd --copyconfig
 ```
 
-<!-- <img width="812" height="108" alt="2026-03-08_12-09" src="https://github.com/user-attachments/assets/1b9299b7-4184-4c67-ad61-f64a406002a8" /> -->
 <img width="1627" height="138" alt="img0" src="https://github.com/user-attachments/assets/927fb7d9-526f-4099-aee4-2b1aa0a254f7" />
-
 
 - Make sure it is there
 
@@ -41,7 +39,8 @@ opencanaryd --copyconfig
 sudo ls -l /etc/opencanaryd/opencanary.conf
 ```
 
-<img width="753" height="26" alt="2026-03-08_12-10" src="https://github.com/user-attachments/assets/f6a107e2-d44c-47da-b86f-2a706cd71489" />
+<!-- <img width="753" height="26" alt="2026-03-08_12-10" src="https://github.com/user-attachments/assets/f6a107e2-d44c-47da-b86f-2a706cd71489" /> -->
+<img width="1146" height="55" alt="img0_1" src="https://github.com/user-attachments/assets/7a4c4ad5-98ef-4fcc-b678-08f5d5352808" />
 
 - Now open the config and make small edits. Example uses `nano` (or `vi`):
 
@@ -52,7 +51,6 @@ sudo nano /etc/opencanaryd/opencanary.conf
 - Inside the JSON config make these **minimal** changes to enable a few services and a log file:
 
 1. Locate the `"device.node_id"` and set a friendly name  
-
 
 <img width="346" height="30" alt="2026-03-08_12-12" src="https://github.com/user-attachments/assets/b502f101-cb18-488b-9568-1f64adacf8c1" />
 
