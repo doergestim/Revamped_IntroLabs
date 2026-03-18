@@ -112,7 +112,7 @@ Perform these actions from a second terminal (or another device on the same netw
 
 1. Port scan (nmap)
 ```bash
-sudo nmap -sS -Pn -p 222,8082 localhost
+sudo nmap -sS -Pn -p 222,445,8082 localhost
 ```
 
 <img width="139" height="74" alt="image" src="https://github.com/user-attachments/assets/303a017f-520f-4032-94bf-5a34548067f5" />
