@@ -137,14 +137,16 @@ sudo ls -l /var/log/apache2/modsec_audit.log || ls -l /var/log/modsec_audit.log
 curl -v "http://localhost:8083/?q=<script>alert(1)</script>" -s -o /dev/null
 ```
 
-<img width="520" height="382" alt="image" src="https://github.com/user-attachments/assets/5abea418-3dbf-4b08-9a38-0e1e09732f79" />
+<img width="1037" height="508" alt="2026-03-18_13-33" src="https://github.com/user-attachments/assets/40b8e6e6-4153-445f-ae5a-3e206e336d0a" />
 
-- Now tail the **audit log** (open another terminal or background `tail -f`):
+
+- Now tail the **audit log** (open another terminal):
 ```bash
 sudo tail -n 120 /var/log/apache2/modsec_audit.log
 ```
 
-<img width="1920" height="787" alt="image" src="https://github.com/user-attachments/assets/a32dc4a8-30d1-4ac4-8c68-2e95ee522b9a" />
+<img width="1906" height="323" alt="2026-03-18_13-35" src="https://github.com/user-attachments/assets/0ac5400b-c83a-476f-b65c-721eede6f7ef" />
+
 
 - **BOOM!** What is cool about **ModSecurity** is that not only does it detect attacks really well, but it also logs them extensively, as you can see, giving details about everything
 
@@ -158,7 +160,8 @@ curl -v "http://localhost:8083/?id=1%20OR%201=1" -s -o /dev/null
 sudo tail -n 120 /var/log/apache2/modsec_audit.log
 ```
 
-<img width="1920" height="467" alt="image" src="https://github.com/user-attachments/assets/68fd8beb-4557-4d85-bf12-2f365c0334e0" />
+<img width="1905" height="509" alt="2026-03-18_13-39" src="https://github.com/user-attachments/assets/123bada1-631d-4152-9ba0-627c85dc62c6" />
+
 
 ### Command injection-like input
 ```bash
@@ -168,7 +171,8 @@ curl -v "http://localhost:8083/?cmd=|ls" -s -o /dev/null
 sudo tail -n 120 /var/log/apache2/modsec_audit.log
 ```
 
-<img width="1920" height="524" alt="image" src="https://github.com/user-attachments/assets/513e8ad9-4f3b-4c8a-836c-b6f7b5de84ee" />
+<img width="1908" height="600" alt="2026-03-18_13-40" src="https://github.com/user-attachments/assets/b2a81860-cd09-4ca8-9f75-9c98d59f1e8a" />
+
 
 
 - Each **curl** should create **ModSecurity** audit events. Study the audit log format: it is split into sections (`--A--`, `--B--`) with **request**, **response**, and **matched rule details**
