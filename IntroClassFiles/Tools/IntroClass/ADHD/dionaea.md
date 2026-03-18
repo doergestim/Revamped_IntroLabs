@@ -84,11 +84,6 @@ hydra -l root -P ~/Desktop/rockyou.txt localhost mysql
 
 <br><br>
 
-You can also try to insert malware, **Dionaea** saves it at `/usr/local/var/lib/dionaea/binaries/`
-
-```bash
-curl -T sample.exe ftp://localhost --user admin:123456
-```
 
 What about **Command Injection**?
 ```bash
