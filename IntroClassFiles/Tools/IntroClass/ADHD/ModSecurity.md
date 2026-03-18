@@ -199,7 +199,8 @@ curl -v "http://localhost:8083/?q=<script>alert(1)</script>" -s -o /dev/null -w 
 # Expected: 403 (or another non-200)
 ```
 
-<img width="435" height="387" alt="image" src="https://github.com/user-attachments/assets/176ceeb5-26dd-4911-956b-4e833dfa0b8d" />
+
+<img width="1218" height="468" alt="2026-03-18_13-41" src="https://github.com/user-attachments/assets/de19f4a5-1acc-4739-9db7-a2ca9b22396c" />
 
 
 ```bash
@@ -215,7 +216,8 @@ sudo tail -n 120 /var/log/apache2/modsec_audit.log
 sudo tail -n 200 /var/log/apache2/error.log
 ```
 
-<img width="1920" height="66" alt="image" src="https://github.com/user-attachments/assets/47d2e0ff-d324-4ec7-9964-bc611d258e01" />
+<img width="1906" height="94" alt="2026-03-18_13-42" src="https://github.com/user-attachments/assets/3b507553-cd47-4a5f-a92a-f9b55a12222f" />
+
 
 ---
 
