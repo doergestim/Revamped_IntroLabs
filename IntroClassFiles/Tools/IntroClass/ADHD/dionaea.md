@@ -1,6 +1,8 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
-# For the Ubuntu VM
+# Dionaea
+
+# Ubuntu VM
 
 ### In this lab we will
 - Observe how it captures malicious connection attempts
@@ -40,21 +42,21 @@ sudo netstat -tulnp | grep dionaea
 We can see it's listening on lots of ports (FTP, HTTP, SMB, MONGO, MSSQL, SIP, and more)
 
 Let's simulate and FTP bruteforce attack
-```bash
-sudo apt install -y hydra
-```
-```bash
-curl -LO https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
-```
+
 - On another terminal tail the logs:
 ```bash
 sudo tail -f /usr/local/var/log/dionaea/dionaea.log
 ```
 
-- Then on the first terminal
+>[!NOTE]
+>We have rockyou.txt on **~/Desktop**
+
+- Then on a **third** terminal
+
+
 
 ```bash
-hydra -l admin -P rockyou.txt localhost ftp -V
+hydra -l admin -P ~/Desktop/rockyou.txt localhost ftp -V
 ```
 We can see all perspectives, the one of the attacker, it is saying that it found passwords, despite it being false to simulate a vulnerable service
 <img width="1141" height="900" alt="image" src="https://github.com/user-attachments/assets/8cfc1445-67d6-456d-ae6b-a2d21ff03c95" />
