@@ -1,10 +1,10 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
-# For the Ubuntu VM
-
 # ModSecurity 
 
-**Goal:** Install **ModSecurity** (with Apache) and perform simple hands‑on detections and blocks (XSS, SQLi, command injection), view logs, and write a simple custom rule
+# Ubuntu VM
+
+**Goal:** With **ModSecurity**,perform simple detections and blocks (XSS, SQLi, command injection), view logs, and write a simple custom rule
 
 
 >[!NOTE]
