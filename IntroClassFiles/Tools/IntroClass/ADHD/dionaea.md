@@ -22,16 +22,20 @@ cd ~/SOC_Analyst_Labs/dionaea/
 sudo dionaea
 ```
 
-<img width="1526" height="472" alt="image" src="https://github.com/user-attachments/assets/2aa46b95-be12-4086-8efd-f4721b27861b" />
+<img width="1506" height="491" alt="2026-03-18_11-37" src="https://github.com/user-attachments/assets/4cf4bb02-0c36-4bc8-b475-a10f07146c96" />
+
 
 <br>
+
+Open another terminal!
 
 Let's see it's true power, see what ports it is listening on:
 ```bash
 sudo netstat -tulnp | grep dionaea
 ```
 
-<img width="1023" height="772" alt="image" src="https://github.com/user-attachments/assets/8e01732a-c6d4-4ee9-8fdb-123875bab14f" />
+<img width="941" height="729" alt="2026-03-18_11-39" src="https://github.com/user-attachments/assets/17a98b45-21f5-42ad-8c45-5e97e6f369aa" />
+
 
 We can see it's listening on lots of ports (FTP, HTTP, SMB, MONGO, MSSQL, SIP, and more)
 
