@@ -35,17 +35,19 @@ sudo systemctl status apache2 --no-pager
 curl -I http://localhost:8083
 ```
 
-<img width="410" height="186" alt="image" src="https://github.com/user-attachments/assets/6959fa36-fbfe-47e0-873e-fa373aa89ef4" />
+<img width="555" height="226" alt="2026-03-18_13-05" src="https://github.com/user-attachments/assets/dedfa3da-3e1f-409b-be46-5b4185984ab5" />
+
 
 >[!IMPORTANT]
 >ModSecurity is already installed for this lab
 
 - Confirm module installed:
 ```bash
-apachectl -M | grep security
+sudo apachectl -M | grep security
 ```
 
-<img width="256" height="27" alt="image" src="https://github.com/user-attachments/assets/02f79861-bb5b-49dd-9a04-f1d8f3609177" />
+<img width="603" height="74" alt="2026-03-18_13-22" src="https://github.com/user-attachments/assets/2273b948-722d-4747-a2f7-17794e676b70" />
+
 
 
 - The default configuration file lives at: `/etc/modsecurity/modsecurity.conf-recommended`
