@@ -68,15 +68,9 @@ sudo cat /etc/modsecurity/modsecurity.conf
 
 <img width="462" height="28" alt="2026-03-18_13-24" src="https://github.com/user-attachments/assets/4379616a-eaf4-4038-9d74-a7ba30297a10" />
 
-
-- Restart Apache:
-```bash
-sudo systemctl restart apache2
-```
-
 ---
 
-## Install OWASP Core Rule Set (v3.3.5)
+## Install OWASP Core Rule Set (v3.3.5) - Copy-Paste is your friend
 ```bash
 cd /tmp
 sudo rm -rf /usr/share/modsecurity-crs
@@ -109,7 +103,8 @@ Test:
 curl -I http://localhost:8083
 ```
 
-<img width="466" height="191" alt="image" src="https://github.com/user-attachments/assets/6785f37a-1d51-49de-9111-c72790530d5f" />
+<img width="602" height="223" alt="2026-03-18_13-28" src="https://github.com/user-attachments/assets/364a8926-2a08-444c-81e9-202c9fdc1a72" />
+
 
 ---
 
@@ -119,15 +114,17 @@ curl -I http://localhost:8083
 sudo tail -n 200 /var/log/apache2/error.log
 ```
 
-<img width="1615" height="188" alt="image" src="https://github.com/user-attachments/assets/81192191-4706-4e7d-b61d-27ddde842119" />
+<img width="1754" height="224" alt="2026-03-18_13-29" src="https://github.com/user-attachments/assets/1bc6da59-91f6-48eb-a4a3-60a7e0abb558" />
+
 
 
 Check the audit log file exists (may be empty initially):
 ```bash
-ls -l /var/log/apache2/modsec_audit.log || ls -l /var/log/modsec_audit.log
+sudo ls -l /var/log/apache2/modsec_audit.log || ls -l /var/log/modsec_audit.log
 ```
 
-<img width="663" height="25" alt="image" src="https://github.com/user-attachments/assets/57d65f40-3d62-47d4-8425-3c9d5efe73d5" />
+
+<img width="1070" height="50" alt="2026-03-18_13-30" src="https://github.com/user-attachments/assets/9efcf029-2fc1-4e9e-a338-0990abadc394" />
 
 
 ---
