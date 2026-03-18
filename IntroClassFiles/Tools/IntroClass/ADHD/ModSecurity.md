@@ -54,20 +54,19 @@ sudo apachectl -M | grep security
 
 - We are using the basic config: `/etc/modsecurity/modsecurity.conf`
 
-- Edit the config to **enable** the **engine** and set **log** locations (we'll use defaults). Ensure `SecRuleEngine` is set to `DetectionOnly` initially:
+- Ensure `SecRuleEngine` is set to `DetectionOnly` initially:
 ```bash
-sudo sed -i "s/SecRuleEngine DetectionOnly/SecRuleEngine DetectionOnly/" /etc/modsecurity/modsecurity.conf
-# (if it was set to 'On' change as needed). Open to inspect:
-sudo nano /etc/modsecurity/modsecurity.conf
+sudo cat /etc/modsecurity/modsecurity.conf
 ```
 
 - Important lines to check:
-- `SecRuleEngine DetectionOnly` — detects but does not block
-- `SecAuditLog` — path to the audit log (usually `/var/log/apache2/modsec_audit.log`)
+- `SecRuleEngine DetectionOnly` - detects but does not block
+- `SecAuditLog` - path to the audit log (usually `/var/log/apache2/modsec_audit.log`)
 
-<img width="260" height="32" alt="image" src="https://github.com/user-attachments/assets/cfe24f08-0857-4790-9b10-1e0d96431e18" />
+<img width="279" height="31" alt="2026-03-18_13-25" src="https://github.com/user-attachments/assets/7eaaf190-a8ad-4df2-924f-b21287db6c93" />
 
-<img width="426" height="27" alt="image" src="https://github.com/user-attachments/assets/719fcdbc-69d9-4a60-9490-7903687253ad" />
+
+<img width="462" height="28" alt="2026-03-18_13-24" src="https://github.com/user-attachments/assets/4379616a-eaf4-4038-9d74-a7ba30297a10" />
 
 
 - Restart Apache:
@@ -182,7 +181,7 @@ sudo tail -n 120 /var/log/apache2/modsec_audit.log
 ## Switch to prevention mode (blocking)
 - Now turn ModSecurity into blocking mode.
 
-**Important:** On some rules and setups enabling blocking will return `403` for many requests. This is expected — we want to see blocking.
+**Important:** On some rules and setups enabling blocking will return `403` for many requests. This is expected - we want to see blocking.
 
 Edit the config:
 ```bash
