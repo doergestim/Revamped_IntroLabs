@@ -1,8 +1,8 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
-# For the Ubuntu VM
-
 # Glastopf
+
+# Ubuntu VM
 
 **Goal:** Run a working Glastopf web-application honeypot, generate simple attacks against it, and inspect captured requests and payloads
 
