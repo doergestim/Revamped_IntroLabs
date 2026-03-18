@@ -100,7 +100,7 @@ opencanaryd --stop
 - If you configured file logging as above, check the log:
 
 ```bash
-sudo tail -n 50 /var/log/opencanary.log
+sudo tail -n 50 /var/tmp/opencanary.log
 ```
 
 <img width="1920" height="804" alt="image" src="https://github.com/user-attachments/assets/d2cf3738-0bd5-483f-9355-17d5b261a086" />
@@ -121,7 +121,7 @@ sudo nmap -sS -Pn -p 222,8082 localhost
 - **OpenCanary's** `portscan` module should flag the scan, so let's check!
 
 ```bash
-sudo tail -n 50 /var/log/opencanary.log
+sudo tail -n 50 /var/tmp/opencanary.log
 ```
 
 <img width="1920" height="126" alt="image" src="https://github.com/user-attachments/assets/f07186ed-337b-4f92-b620-abaed7a41aab" />
@@ -148,7 +148,7 @@ smbclient -L localhost -N
 - After each action, check the canary log or journal on the honeypot host to see alerts:
 
 ```bash
-sudo tail -n 50 /var/log/opencanary.log
+sudo tail -n 50 /var/tmp/opencanary.log
 ```
 
 
