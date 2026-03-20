@@ -12,6 +12,12 @@
 
 # Setup
 
+- Install mysql client for the use in the lab
+
+```bash
+sudo apt install mysql-client-core-8.0
+```
+
 - Go to its directory
 
 ```bash
