@@ -131,10 +131,11 @@ Perform these actions from a second terminal (or another device on the same netw
 
 1. Port scan (nmap)
 ```bash
-sudo nmap -sS -Pn -p 222,445,8082 localhost
+sudo nmap -sV -sC -Pn -p 21,23,222,3306,8082 localhost
 ```
 
-<img width="139" height="74" alt="image" src="https://github.com/user-attachments/assets/303a017f-520f-4032-94bf-5a34548067f5" />
+<!-- <img width="139" height="74" alt="image" src="https://github.com/user-attachments/assets/303a017f-520f-4032-94bf-5a34548067f5" /> -->
+<img width="1897" height="721" alt="img_08" src="https://github.com/user-attachments/assets/be1e0a45-96b4-4eb5-aa50-46fee364392e" />
 
 
 - **OpenCanary's** `portscan` module should flag the scan, so let's check!
@@ -143,25 +144,37 @@ sudo nmap -sS -Pn -p 222,445,8082 localhost
 sudo tail -n 50 /var/tmp/opencanary.log
 ```
 
-<img width="1920" height="126" alt="image" src="https://github.com/user-attachments/assets/f07186ed-337b-4f92-b620-abaed7a41aab" />
+<!-- <img width="1920" height="126" alt="image" src="https://github.com/user-attachments/assets/f07186ed-337b-4f92-b620-abaed7a41aab" /> -->
+<img width="1901" height="773" alt="img_09" src="https://github.com/user-attachments/assets/3168032c-c6f3-43c0-a010-b4248dfb0297" />
+
 
 BOOM!
 
 2. SSH probe (attempt to connect)
 ```bash
-ssh -o ConnectTimeout=5 fakeuser@localhost
+ssh fakeuser@localhost -p 222
 ```
 This triggers the `ssh` canary
 
 3. HTTP request
 ```bash
-curl -I http://localhost/
+curl http://127.0.0.1:8082/index.html
 ```
 This triggers the `http` canary logs
 
-4. SMB enum
+4. MySQL login attempt
 ```bash
-smbclient -L localhost -N
+mysql -h 127.0.0.1 -u root -p
+```
+
+5. FTP login attempt
+```bash
+ftp 127.0.0.1
+```
+
+6. TELNET login attempt
+```bash
+telnet 127.0.0.1
 ```
 
 - After each action, check the canary log or journal on the honeypot host to see alerts:
@@ -170,6 +183,7 @@ smbclient -L localhost -N
 sudo tail -n 50 /var/tmp/opencanary.log
 ```
 
+<img width="1897" height="452" alt="img_10" src="https://github.com/user-attachments/assets/e7c925b3-2e28-4b7b-80a8-2a493e94078e" />
 
 
 ***                                                                 
