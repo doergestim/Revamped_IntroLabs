@@ -111,13 +111,18 @@ opencanaryd --start
 opencanaryd --stop
 ```
 
+<img width="1898" height="541" alt="img_06" src="https://github.com/user-attachments/assets/9ad67aff-2d3f-429f-aebd-805a0e682931" />
+
+
 - If you configured file logging as above, check the log:
 
 ```bash
 sudo tail -n 50 /var/tmp/opencanary.log
 ```
 
-<img width="1920" height="804" alt="image" src="https://github.com/user-attachments/assets/d2cf3738-0bd5-483f-9355-17d5b261a086" />
+<!-- <img width="1920" height="804" alt="image" src="https://github.com/user-attachments/assets/d2cf3738-0bd5-483f-9355-17d5b261a086" /> -->
+<img width="1900" height="337" alt="img_07" src="https://github.com/user-attachments/assets/71514b52-d90a-4bd4-a1ed-c7a28429274a" />
+
 
 ---
 
