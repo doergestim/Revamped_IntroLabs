@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
+<img width="1238" height="333" alt="2026-03-23_12-19" src="https://github.com/user-attachments/assets/3e3311ce-f3f4-4bf5-9c4d-bbced5b24aef" />![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
 
 # Firewall Log Review
@@ -25,7 +25,8 @@ Let's look into the logs.  The logs file is quite extensive, so in order to narr
 grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | less
 ```
 
-![](attachments/fwlr_lessasa.png)
+<img width="1919" height="1061" alt="2026-03-23_12-17" src="https://github.com/user-attachments/assets/ad255b73-60b0-4bbb-92c1-e33039d56e19" />
+
 
 **That is a nightmare...**
 
@@ -43,7 +44,8 @@ This command focuses on the closed connections **(FIN)** and pull just specific 
 
 When it is all put together, our output looks something like this:
 
-![](attachments/fwlr_grepFIN.png)
+<img width="1238" height="333" alt="2026-03-23_12-19" src="https://github.com/user-attachments/assets/bcb1a577-46f5-4d17-9f17-e479075f5f37" />
+
 
 It's looking a lot better, but I think we can do better. But how?
 
@@ -56,7 +58,9 @@ So why don't we look at just the connections made to **"13.107.237.38"** by runn
 grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 13.107.237.38 | cut -d ' ' -f 1,3,4,5,7,8,9,10,11,12,13,14
 ```
 
-![](attachments/fwlr_grep13107.png)
+<img width="1850" height="865" alt="2026-03-23_12-21" src="https://github.com/user-attachments/assets/a91d273b-fff1-4a99-b6ff-91b4d2f7ec71" />
+
+
 
 This output shows us all of the data coming from **"13.107.237.38"**
 
