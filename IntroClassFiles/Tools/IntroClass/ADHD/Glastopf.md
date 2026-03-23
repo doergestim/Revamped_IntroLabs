@@ -57,20 +57,21 @@ sudo docker logs -f glastopf
 ```bash
 curl -v "http://localhost:8080/index.php?page=../../etc/passwd"
 ```
+
+<img width="1059" height="976" alt="2026-03-23_14-19" src="https://github.com/user-attachments/assets/1c0fa528-eaee-4b27-a3f5-1d91c0321ebf" />
+
 ```bash
 curl -v "http://localhost:8080/?file=../boot.ini"
 ```
 
-- This is how it looks from a **hacker**'s perspective(**fake information**)
-
-<img width="1100" height="1051" alt="image" src="https://github.com/user-attachments/assets/f19f992e-2178-4c52-889c-c6e11d3fd629" />
+<img width="1904" height="944" alt="2026-03-23_14-22" src="https://github.com/user-attachments/assets/0de57c7c-9c69-4cca-a2b8-39bea7173798" />
 
 
-<img width="1100" height="943" alt="image" src="https://github.com/user-attachments/assets/e87529c9-9bc6-4edd-b6ca-82ceb4db22be" />
+- That is how it looks from a **hacker**'s perspective(**fake information**)
 
 - When in reality, all that is **fake** and it is being logged on the **defender**'s side:
 
-<img width="1165" height="46" alt="image" src="https://github.com/user-attachments/assets/e2975e19-3c0e-4f63-9582-69a712fab5c1" />
+<img width="1193" height="57" alt="2026-03-23_14-23" src="https://github.com/user-attachments/assets/81a6f433-fa7b-45b3-9239-4362269c3c42" />
 
 ### SQL injection-like payloads
 
