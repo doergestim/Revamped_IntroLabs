@@ -13,16 +13,10 @@
 
 
 
-- Open **Command Prompt**
 
-<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+- Open **Ubuntu Shell**
 
-- **SSH** into the **Linux** machine
-```bash
-ssh ubuntu@linux.cloudlab.lan
-```
-
-<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/ae6d408b-7622-4545-b849-aef3d8fa0cb4" />
 
 
 
@@ -48,16 +42,10 @@ sudo python3 owa_pot.py
 
 
 
-- Open **Command Prompt**
 
-<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
+- Open **Ubuntu Shell**
 
-- **SSH** into the **Linux** machine
-```bash
-ssh ubuntu@linux.cloudlab.lan
-```
-
-<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/ae6d408b-7622-4545-b849-aef3d8fa0cb4" />
 
 
 
