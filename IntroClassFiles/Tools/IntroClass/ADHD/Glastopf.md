@@ -29,14 +29,13 @@ sudo docker run -d --rm \
 
 ### Verify Glastopf is running and listening
 
-Open a new terminal on the same machine and run:
+- Check process or Docker container, run:
 
 ```bash
-# Check process or Docker container
 ps aux | grep glastopf
 ```
 
-<img width="1100" height="42" alt="image" src="https://github.com/user-attachments/assets/ca94b522-4f94-420d-b6f0-f481d89b32c5" />
+<img width="1199" height="67" alt="2026-03-23_14-12" src="https://github.com/user-attachments/assets/d782b8fa-8680-4de1-86da-9c5aa1afc750" />
 
 
 - Tail the main **log**
@@ -45,7 +44,7 @@ ps aux | grep glastopf
 sudo docker logs -f glastopf
 ```
 
-<img width="1141" height="93" alt="image" src="https://github.com/user-attachments/assets/7193287c-5001-4b00-8035-ea5882c804c4" />
+<img width="1247" height="208" alt="2026-03-23_14-14" src="https://github.com/user-attachments/assets/3c969171-b913-4890-a1c3-1048b126ca0e" />
 
 ---
 
