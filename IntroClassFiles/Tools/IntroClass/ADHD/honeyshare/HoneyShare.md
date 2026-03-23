@@ -47,11 +47,11 @@ python3 ./smbserver.py -smb2support -comment 'secret' SECRET /secret
 It should look like this: 
 
 ![image](https://github.com/user-attachments/assets/d1268c27-a141-4a95-96ce-a9482d4b3e56)
- 
+
 Next, let's open a Windows Command Prompt: 
 
 ![image](https://github.com/user-attachments/assets/0ccc949d-32c3-4d7b-bb18-1bb39ee36dfc)
-  
+
 Then, attempt to mount the share from your Windows system: 
 
 - Make sure to use the **Linux IP** from **tailscale**
