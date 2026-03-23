@@ -77,7 +77,7 @@ Install-AtomicRedTeam -getAtomics -Force
 
 >[!NOTE]
 >
-> This can take a bit. Be patient!
+> This can take a bit. After about 120 seconds, try hitting enter to get your prompt back.
 
 Once you see the following, you are set to move forward:
 
@@ -120,17 +120,33 @@ Run the following individually:
 Invoke-AtomicTest T1547.004
 ```
 
+More information here:
+
+https://attack.mitre.org/techniques/T1547/004/
+
 ```ps
 Invoke-AtomicTest T1543.003
 ```
+
+More information here:
+
+https://attack.mitre.org/techniques/T1543/003/
 
 ```ps
 Invoke-AtomicTest T1547.001
 ```
 
+More information here:
+
+https://attack.mitre.org/techniques/T1547/001/
+
 ```ps
 Invoke-AtomicTest T1546.008
 ```
+
+More information here:
+
+https://attack.mitre.org/techniques/T1546/008/
 
 
 >[!TIP]
