@@ -36,7 +36,8 @@ ls
 
 It should look like this:
 
-<img width="1920" height="146" alt="image" src="https://github.com/user-attachments/assets/f28509be-1912-4be7-b79e-29b0932b5714" />
+<img width="1007" height="255" alt="2026-03-23_14-55" src="https://github.com/user-attachments/assets/b6a5fca6-2627-4ae6-af72-a097e1a0cc4e" />
+
 
 Now, let's start the SMB server: 
 
