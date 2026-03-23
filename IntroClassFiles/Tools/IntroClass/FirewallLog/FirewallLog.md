@@ -1,4 +1,4 @@
-<img width="1238" height="333" alt="2026-03-23_12-19" src="https://github.com/user-attachments/assets/3e3311ce-f3f4-4bf5-9c4d-bbced5b24aef" />![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
+![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
 
 # Firewall Log Review
@@ -70,7 +70,8 @@ Don't forget, there were also a lot of connections from **"18.160.185.174"**.  H
 grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 18.160.185.174 | cut -d ' ' -f 1,3,4,5,7,8,9,10,11,12,13,14
 ```
 
-![](attachments/fwlr_grep18160.png)
+<img width="1248" height="754" alt="2026-03-23_12-24" src="https://github.com/user-attachments/assets/37716c89-26bf-4ebe-ad70-1aca4872042a" />
+
 
 Look at the last field.  See a pattern?  Is there one?  Let's see just that field!
 
@@ -80,7 +81,8 @@ grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 18.160.
 
 All we should see now is this:
 
-![](attachments/fwlr_f14.png)
+<img width="1594" height="901" alt="2026-03-23_12-24_1" src="https://github.com/user-attachments/assets/1ed40f1f-2518-4955-b374-f4d1215f8389" />
+
 
 Now let's do some math in that field!
 
@@ -90,7 +92,8 @@ grep 192.168.1.6 ASA-syslogs.txt | grep -v 24.230.56.6 | grep FIN | grep 18.160.
  
 Your output should look something like this:
 
-![](attachments/fwlr_math.png)
+<img width="660" height="158" alt="2026-03-23_12-26" src="https://github.com/user-attachments/assets/87f020f7-c0fe-4987-913e-1c96ef9761d1" />
+
 
 There are a lot of commands you can use to alter your view of the logs.  
 
