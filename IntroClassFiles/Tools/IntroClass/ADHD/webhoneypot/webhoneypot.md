@@ -19,15 +19,6 @@
 <img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/ae6d408b-7622-4545-b849-aef3d8fa0cb4" />
 
 
-
-- Next, change directories to the /opt/owa-honeyport directory: 
-
-```bash
-cd ~/ADCD/webHoneypot
-```
-
-<img width="610" height="60" alt="cd_webhoney_dir" src="https://github.com/user-attachments/assets/1fd0da4d-2c6f-44d8-923b-82004bf5177a" />
-
 - Now, let's start the honeypot: 
 
 ```bash
@@ -55,21 +46,22 @@ sudo docker run --rm -it -p 8080:80 owa-honeypot
 ifconfig
 ```
 
-- Then, navigate to the **owa-honeypot** directory.
+- Then, gain a shell to the **owa-container** container. Take its container ID with the following command.
 
 ```bash
-cd /opt/owa-honeypot/
+sudo docker ps
 ```
 
-![image](https://github.com/user-attachments/assets/ec61ff20-6aae-44fa-b920-fcb723f3c3aa)
+<img width="1860" height="138" alt="container_id" src="https://github.com/user-attachments/assets/6a804ae5-6a6d-4548-b852-5da180485d95" />
 
-Now, lets tail the **dumppass log**. 
+- Take shell at the container.
 
 ```bash
-tail -f dumpass.log
-``` 
+sudo docker exec -it <CONTAINER-ID> bash
+```
 
-![image](https://github.com/user-attachments/assets/1877a55c-9717-4428-a08b-38c6ea40af2f)
+<img width="1862" height="165" alt="docker_shell" src="https://github.com/user-attachments/assets/ac1bd2e7-5ad7-4692-8624-cd2cfaeec576" />
+
 
 - Now, let's open a browser window and surf to the **honeypot**: 
 
@@ -77,11 +69,15 @@ tail -f dumpass.log
 http://YOURLINUXIP
 ```
 
+<img width="1280" height="826" alt="web_portal" src="https://github.com/user-attachments/assets/c1073b63-d0f9-49c9-bbed-adaea177e39d" />
+
+
 - Now, try a bunch of **User IDs** and **passwords**. 
 
-- Now, go back to the Kali **Terminal** with the log and you should see the **IP address** and **UserID/Password** of the attempts. 
+- Now, go back to the Ubuntu **Terminal** with the log and you should see the **IP address** and **UserID/Password** of the attempts. 
 
-![image](https://github.com/user-attachments/assets/71dbd425-29d1-46b1-9ed1-dc32d05fd595)
+<img width="1371" height="283" alt="web_logs" src="https://github.com/user-attachments/assets/2fe787e3-3f2d-4e35-b17f-18f1b7b7a6de" />
+
 
 - Now, let's attack it. 
 
@@ -101,7 +97,8 @@ http://YOURLINUXIP
 
 - After a while, you should see some attack strings in your Logs.
 
-![image](https://github.com/user-attachments/assets/00bb3500-361f-4d28-9bb5-c5769d50cc53)
+<img width="1372" height="768" alt="requests_logs" src="https://github.com/user-attachments/assets/5f9c35ed-921b-42c8-b0e2-02c779cabca3" />
+
 
 Yes...  Some attack tools are as obvious as **ZAP:ZAP**. 
 
