@@ -37,7 +37,8 @@ Do so by typing the name of the batch file and hitting enter:
 
 It should look like this:
 
-![](attachments/200bat.png)
+<img width="980" height="410" alt="image" src="https://github.com/user-attachments/assets/a77f162f-2521-4de8-8f97-b091d9caca30" />
+
 
 Let this run all the way through. 
 
@@ -110,11 +111,6 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
-
-
-
-
-
 
 
 

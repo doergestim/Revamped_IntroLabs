@@ -5,13 +5,15 @@
 
 # Ubuntu VM
 
-In this lab we will be looking at a log from an **ASA firewall** from Cisco.
+In this lab we will be looking at a log with r-base-core from an **ASA firewall** from Cisco. 
 
 **And wow....  They are bad to work with.**
 
 With the power of **Bash scripting** we can get some useful information.
 
 Next, let's get your **Linux** system to do some math!
+
+Open a terminal
 
 We need to navigate to the correct directory with the following command:
 

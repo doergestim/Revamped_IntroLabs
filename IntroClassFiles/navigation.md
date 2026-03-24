@@ -7,15 +7,22 @@
   - [Web Log Review](Tools/IntroClass/WebLogReview/WebLogReview.md)
   - [WindowsCLI](Tools/IntroClass/WindowsCLI/WindowsCLI.md)
   - [Wireshark](Tools/IntroClass/Wireshark/Wireshark.md)
-  - [RITA](Tools/IntroClass/RITA/RITA.md)
+ <!-- - [RITA And AC Hunter](Tools/IntroClass/RITA/RITA.md) -->
   - [Nessus](Tools/IntroClass/nessus/Nessus.md)
-  - [Web Testing](Tools/IntroClass/WebTesting/WebTesting.md)
   - [DeepBlueCLI](Tools/IntroClass/deepbluecli/DeepBlueCLI.md)
   - [Domain Log Review](Tools/IntroClass/DomainLogReview/DomainLogReview.md)
+  - [Understanding ASNs](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/asn.md)
   - [Velociraptor](Tools/IntroClass/Velociraptor/Velociraptor.md)
   - [Firewall Log Review](Tools/IntroClass/FirewallLog/FirewallLog.md)
   - [AC Hunter CE](Tools/IntroClass/ACHCE/ACHunterCE.md)
   - [Hunting DCSync, Sharepoint and Kerberoasting](https://github.com/strandjs/IntroLabs/tree/master/IntroClassFiles/Tools/IntroClass/PoisoningtheWellIR-main)
+  - [Scapy](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/scapy.md)
+<!--  - [Temp](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/temp.md) -->
+  - [Hayabusa](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/hayabusa.md)
+  - [RITA2](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/rita_Part2.md)
+  - [Email Analysis](https://github.com/doergestim/SOC_Analyst_Labs/blob/main/courseFiles/Section_10-emailFundamentals/phishing_email_lab.md)
+
+  - [ACHunter2](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/RITA/ACHunter2.md)
 
 <br><br>
 ## [Intro To Security]()
@@ -27,6 +34,7 @@
  - [Host Firewalls and Nmap](Tools/IntroClass/Nmap/Nmap.md)
  - [Password Cracking](Tools/IntroClass/PasswordCracking/PasswordCracking.md)
  - [Password Spraying](Tools/IntroClass/PasswordSpray/PasswordSpray.md)
+ - [External Password Spraying](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/Tools/IntroClass/ExternalPasswordSpray.md)
  - [Responder](Tools/IntroClass/Responder/Responder.md)
  - [RITA and AC Hunter](Tools/IntroClass/RITAIntroClass/RITA.md)
  - [Sysmon](Tools/IntroClass/Sysmon/Sysmon.md)
@@ -70,6 +78,7 @@
 
 ### Phishing / Social-engineering  
   - [Canarytokens](Tools/IntroClass/ADHD/canarytokens/Canarytokens.md)
+  - [Canary Token Cloner](https://github.com/strandjs/SOC_Analyst_Labs/blob/main/courseFiles/Section_08-deceptionSystems/CanaryToken_lab/CanaryToken_lab.md)
   - [GoPhish](Tools/IntroClass/ADHD/GoPhish.md)
   - [Mailoney](Tools/IntroClass/ADHD/Mailoney.md)
   
@@ -84,16 +93,6 @@
 
 *** 
 [How to Destroy the Cloud Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
-
-
-
-
-
-
-
-
-
-
 
 
 
