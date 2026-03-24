@@ -23,20 +23,20 @@
 - Next, change directories to the /opt/owa-honeyport directory: 
 
 ```bash
-cd /opt/owa-honeypot/
+cd ~/ADCD/webHoneypot
 ```
 
-![image](https://github.com/user-attachments/assets/85d0b4c0-b933-459f-8ca6-45ec5687acc6)
+<img width="610" height="60" alt="cd_webhoney_dir" src="https://github.com/user-attachments/assets/1fd0da4d-2c6f-44d8-923b-82004bf5177a" />
 
 - Now, let's start the honeypot: 
 
 ```bash
-sudo python3 owa_pot.py
+sudo docker run --rm -it -p 8080:80 owa-honeypot
 ```
 
 - It should look like this: 
 
-![image](https://github.com/user-attachments/assets/c7e33623-5050-4772-8767-e22fe0da9259)
+<img width="1047" height="273" alt="docker_run" src="https://github.com/user-attachments/assets/bed618fa-177a-4f02-b3b0-0613f9df2a03" />
 
 - Now, let's start another Linux Terminal. 
 
