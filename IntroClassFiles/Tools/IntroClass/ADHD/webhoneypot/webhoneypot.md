@@ -22,7 +22,7 @@
 - Now, let's start the honeypot: 
 
 ```bash
-sudo docker run --rm -it -p 8080:80 owa-honeypot
+sudo docker run --rm -it -p 80:80 owa-honeypot
 ```
 
 - It should look like this: 
@@ -46,7 +46,7 @@ sudo docker run --rm -it -p 8080:80 owa-honeypot
 ifconfig
 ```
 
-- Then, gain a shell to the **owa-container** container. Take its container ID with the following command.
+- Then, gain a shell to the **owa-container** container. Take its CONTAINER ID with the following command.
 
 ```bash
 sudo docker ps
@@ -62,6 +62,14 @@ sudo docker exec -it <CONTAINER-ID> bash
 
 <img width="1862" height="165" alt="docker_shell" src="https://github.com/user-attachments/assets/ac1bd2e7-5ad7-4692-8624-cd2cfaeec576" />
 
+
+Now, lets tail the **dumppass log**. 
+
+```bash
+tail -f dumpass.log
+``` 
+
+![image](https://github.com/user-attachments/assets/1877a55c-9717-4428-a08b-38c6ea40af2f)
 
 - Now, let's open a browser window and surf to the **honeypot**: 
 
