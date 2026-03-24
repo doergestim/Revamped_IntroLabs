@@ -10,30 +10,6 @@ Beelzebub is an advanced honeypot framework designed to provide a highly secure 
 >
 >You can find the original GitHub of at [Beelzebub Repo](https://github.com/mariocandela/beelzebub)
 
-# Setup
-Participants will deploy and monitor an AI-powered SSH honeypot (Beelzebub) to detect and analyze attacker behavior in real time
-
-```bash
-sudo su -
-```
-```bash
-apt update && apt upgrade -y
-```
-```bash
-systemctl enable --now docker
-```
-- Enter the password for all the **authentications**
-
-<img width="1066" height="521" alt="image" src="https://github.com/user-attachments/assets/86180983-e24d-496d-80e1-a4d9eac995ac" />
-
-
-```bash
-cd /opt
-```
-```bash
-git clone https://github.com/mariocandela/beelzebub.git
-```
-
 ### Get the ChatGPT Api Key
 - Go to [ChatGPT](https://chatgpt.com/) and create an account if you don’t have one
 - Make sure you have credits or a payment method at [Billing Setting](https://platform.openai.com/settings/organization/billing/overview)
@@ -41,10 +17,10 @@ git clone https://github.com/mariocandela/beelzebub.git
 - Save this key as you will only see it once!
 
 ### Deployment
-- Make sure you are into **/opt/beelzebub/**
+- Make sure you are into **~/ADCD/beelzebub/**
 
 ```bash
-cd /opt/beelzebub/
+cd ~/ADCD/beelzebub/
 ```
 
 ```bash
@@ -75,7 +51,7 @@ nano ./ssh-2222.yaml
  - Save and leave the editor with `Ctrl + X` + `Y` + `Enter`
 
 ```bash
-cd /opt/beelzebub/
+cd ~/ADCD/beelzebub/
 ```
 ```bash
 docker-compose build
@@ -114,7 +90,7 @@ id
 Now exit the session to export the logs
 
 ```bash
-cd /opt/beelzebub/
+cd ~/ADCD/beelzebub/
 ```
 ```bash
 docker-compose logs -f
