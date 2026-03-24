@@ -41,7 +41,8 @@ Please note your **Linux** IP:
 ifconfig
 ```
 
-![Get_IPLinux.png](https://github.zendesk.com/attachments/token/n6uvR4jpusDEqeTL91GtzfodH/?name=Get_IPLinux.png)
+<img width="1534" height="372" alt="Get_IPLinuxFromWindows" src="https://github.com/user-attachments/assets/03a424b9-3dcd-4d64-a2eb-4f9e2282b1e2" />
+
 
 >[!NOTE]
 >
