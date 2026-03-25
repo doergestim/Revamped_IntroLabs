@@ -37,7 +37,7 @@ You should see this:
 <img width="313" height="541" alt="resp" src="https://github.com/user-attachments/assets/ca8c62ef-e845-4ad2-8a2a-59102a1e5d6d" />
 
 
-Let's open **Windows File Explorer** and put in the string ```"\\Linux-IP\Noooo"``` into the address bar at the top.
+Let's open **Windows File Explorer** and put in the string ```\\Linux-IP\Noooo``` into the address bar at the top.
 
 <img width="502" height="55" alt="OpeningFileExplorer" src="https://github.com/user-attachments/assets/2de27ae0-5e58-4488-b7f3-ee6b313bec1e" />
 
