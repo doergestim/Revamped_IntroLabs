@@ -25,8 +25,21 @@ First, we will need to open a **Linux Terminal**: 
 Next, we will navigate to the **Impacket** directory: 
 
 ```bash
-cd ~/ADCD/impacket/examples
+cd ~/ADCD/impacket
 ```
+
+```bash
+source venv/bin/activate
+```
+
+- Then navigate to the **examples** directory:
+
+```bash
+cd ./examples
+```
+
+<img width="742" height="75" alt="cd_venv" src="https://github.com/user-attachments/assets/6e41042c-9a51-4f18-b09a-5ca534101e5a" />
+
 
 - Make sure you are in the right place
 
@@ -36,18 +49,19 @@ ls
 
 It should look like this:
 
-<img width="1007" height="255" alt="2026-03-23_14-55" src="https://github.com/user-attachments/assets/b6a5fca6-2627-4ae6-af72-a097e1a0cc4e" />
+<img width="1238" height="338" alt="ls_impacket" src="https://github.com/user-attachments/assets/095399cd-7fe5-42e0-a547-fa673aa1616b" />
 
 
 Now, let's start the SMB server: 
 
 ```bash
-python3 ./smbserver.py -smb2support -comment 'secret' SECRET /secret
+sudo ~/ADCD/impacket/venv/bin/python smbserver.py -debug -smb2support -comment 'secret' SECRET /secret
 ```
 
 It should look like this: 
 
-![image](https://github.com/user-attachments/assets/d1268c27-a141-4a95-96ce-a9482d4b3e56)
+<img width="1806" height="327" alt="impacket_server" src="https://github.com/user-attachments/assets/eed970c8-7ccc-4e09-bec9-056317d8f292" />
+
 
 Next, let's open a Windows Command Prompt: 
 
