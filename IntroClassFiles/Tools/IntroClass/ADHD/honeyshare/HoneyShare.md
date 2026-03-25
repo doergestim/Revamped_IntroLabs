@@ -72,7 +72,7 @@ Then, attempt to mount the share from your Windows system: 
 - Make sure to use the **Linux IP** from **tailscale**
 
 ```bash
-net use * \\100.116.161.87\secret
+net use * \\10.10.115.101\secret
 ```
 
 >[!IMPORTANT]
@@ -82,7 +82,8 @@ net use * \\100.116.161.87\secret
 
 We did the most basic level of attempted authentication to the share, and it generated an error.  
 
-![image](https://github.com/user-attachments/assets/8d861109-cd62-4231-946a-98f2284466a6)
+<img width="1365" height="412" alt="admin_error" src="https://github.com/user-attachments/assets/e80960fb-3044-42b0-999b-34b2d0c9568a" />
+
 
 However, the trap was triggered! 
 
@@ -90,7 +91,8 @@ Go back to your **Linux terminal** and see the log data. 
 
 It should look like this: 
 
-![image](https://github.com/user-attachments/assets/4b3291a4-fbd1-49a6-968f-f72caefc403a)
+<img width="1375" height="752" alt="logs" src="https://github.com/user-attachments/assets/071e0e2c-c261-41c6-9066-3b49510a0c15" />
+
 
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/ADHD/honeyuser/honeyuser.md)</i></b>
