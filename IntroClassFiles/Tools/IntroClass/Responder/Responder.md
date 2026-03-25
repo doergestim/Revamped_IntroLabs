@@ -34,25 +34,27 @@ responder -I ens5
 
 You should see this:
 
-<img width="462" height="808" alt="responderrunning" src="https://github.com/user-attachments/assets/ffd6b7ec-072c-4614-abd7-d1f0a26c66af" />
+<img width="313" height="541" alt="resp" src="https://github.com/user-attachments/assets/ca8c62ef-e845-4ad2-8a2a-59102a1e5d6d" />
 
 
-Let's open **Windows File Explorer** and put in the string **"\\Linux-IP\Noooo"** into the address bar at the top.
+Let's open **Windows File Explorer** and put in the string ```"\\Linux-IP\Noooo"``` into the address bar at the top.
 
 <img width="502" height="55" alt="OpeningFileExplorer" src="https://github.com/user-attachments/assets/2de27ae0-5e58-4488-b7f3-ee6b313bec1e" />
 
+<img width="929" height="488" alt="file_exp" src="https://github.com/user-attachments/assets/002bd08e-5d6a-4b31-9593-1feb0d979d47" />
 
-![](attachments/noooaccessbar.png)
 
 It will pop up a windows to write the credentials. Fill them and switch back to your **Linux** terminal window.
 
+<img width="374" height="337" alt="creds" src="https://github.com/user-attachments/assets/27799627-9ed3-4313-bd39-e7c6a0f841b7" />
 
 
 After a few moments, you should see some captured data showing up.  
 
 **Please note there may be an error.  That is OK.**
 
-![](attachments/captureddata.png)
+<img width="911" height="323" alt="file_exp_logs" src="https://github.com/user-attachments/assets/d2e3df52-44a3-4d6f-9ae0-af49c87e3898" />
+
 
 We can do the same thing from the Windows Terminal by running the following command:
 
@@ -60,6 +62,11 @@ We can do the same thing from the Windows Terminal by running the following comm
 net use * \\10.10.102.57\share
 ```
 
+<img width="420" height="225" alt="term_attempt" src="https://github.com/user-attachments/assets/7caad37f-ad48-4bfe-9c01-83f456f3c98f" />
+
+As we can see we have the new captured data showing up.
+
+<img width="910" height="160" alt="testing_log" src="https://github.com/user-attachments/assets/19ba8e38-f46d-4e32-a402-1b036d9aee23" />
 
 
 ***                                                                 
