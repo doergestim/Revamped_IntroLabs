@@ -20,12 +20,10 @@ We will need to load our **linux terminal** and start responder.
 <img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
 
-
-
-Before we start, we need to remove the existing **Responder** database. Do so by running the following:
+Next, we will navigate to the **Responder** directory:
 
 ```bash
-rm /usr/share/responder/Responder.db
+cd ~/Intro_To_Security/Responder/
 ```
 
 Now let’s start **Responder**:
