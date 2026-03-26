@@ -37,7 +37,8 @@ Do so by typing the name of the batch file and hitting enter:
 
 It should look like this:
 
-<img width="980" height="410" alt="image" src="https://github.com/user-attachments/assets/a77f162f-2521-4de8-8f97-b091d9caca30" />
+<img width="385" height="482" alt="2026-03-26_09-21" src="https://github.com/user-attachments/assets/61c73044-6992-4bf9-b5af-2fe3ca08bab2" />
+
 
 
 Let this run all the way through. 
@@ -64,7 +65,8 @@ Import-Module .\LocalPasswordSpray.ps1
 
 It should look like this:
 
-![](attachments/powershellcommands.png)
+<img width="815" height="179" alt="2026-03-26_09-22" src="https://github.com/user-attachments/assets/6cf93e86-6168-4c76-9512-c8f69352104f" />
+
 
 Let’s try some password spraying against the local system!
 
