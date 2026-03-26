@@ -164,7 +164,7 @@ It should look like this:
 >There might be some errors when this runs. This is 
 normal.
 
->[!NOTICE]
+>[!IMPORTANT]
 >
 >We had to cross reference the old numbering with the new.
 >
