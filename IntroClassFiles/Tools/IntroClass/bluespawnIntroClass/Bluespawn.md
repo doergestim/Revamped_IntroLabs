@@ -187,13 +187,14 @@ Invoke-AtomicTest All -Cleanup
 
 It should look like this:
 
-![](attachments/Clipboard_2020-06-23-13-36-10.png)
+<img width="1093" height="444" alt="2026-03-26_10-06" src="https://github.com/user-attachments/assets/2dd53a33-3c40-4cf8-9d86-bb18c3bb7ec5" />
+
 
 # If you have more time
 
 Let’s begin by disabling **Defender**. Simply run the following from an **Administrator PowerShell** prompt:
 
-<img width="54" height="39" alt="image" src="https://github.com/user-attachments/assets/a0e67fe8-d42a-4795-b566-98dc7a82daa8" />
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/685d264c-661c-4dbf-aa79-54f925cefdb1" />
 
 
 Next, run the following command in the **Powershell** terminal:
