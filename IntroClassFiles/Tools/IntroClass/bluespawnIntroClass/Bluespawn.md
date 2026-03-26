@@ -177,7 +177,8 @@ normal.
 
 You should be getting a lot of alerts with Bluespawn! Switch tabs in your Terminal to see them:
 
-![](attachments/bluespawndetections.png)
+<img width="1096" height="631" alt="2026-03-26_10-09" src="https://github.com/user-attachments/assets/135ce716-47fb-4840-b6a2-1c00c999bc87" />
+
 
 Now, let’s go back to the PowerShell window and clean up:
 
