@@ -60,7 +60,7 @@ Next we will nee to click on Select a principal in the Auditing Entry for Secret
 
 ![](attachment/SelectPrincipal.png)
 
-In the Select USer or Group window please type "Everyone" then select OK.
+In the Select User or Group window please type "Everyone" then select OK.
 
 ![](attachment/SelectUserOrGroup.png)
 
