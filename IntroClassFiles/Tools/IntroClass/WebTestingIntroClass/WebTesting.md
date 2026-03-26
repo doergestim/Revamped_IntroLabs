@@ -23,11 +23,6 @@ You will need to start an **Linux** terminal.
 
 
 
-Gain root access by running the following:
-
-```bash
-sudo su -
-```
 
 Navigate into the proper directory:
 
