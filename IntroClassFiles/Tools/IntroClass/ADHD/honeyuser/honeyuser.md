@@ -31,7 +31,7 @@ cd \IntroLabs
 
 - It should look like this: 
 
-![image](https://github.com/user-attachments/assets/d659078e-4504-4e8e-9800-b15db7aebb64)
+<img width="385" height="482" alt="2026-03-26_09-21" src="https://github.com/user-attachments/assets/61c73044-6992-4bf9-b5af-2fe3ca08bab2" />
 
 - Now, we need to create the Custom View in **event viewer** to capture anytime someone logs in as Frank. 
 
