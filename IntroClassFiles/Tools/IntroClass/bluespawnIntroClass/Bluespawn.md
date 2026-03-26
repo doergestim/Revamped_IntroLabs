@@ -156,7 +156,8 @@ https://attack.mitre.org/techniques/T1546/008/
 
 It should look like this:
 
-![](attachments/invokeatomicv1.png)
+<img width="633" height="264" alt="2026-03-26_10-00" src="https://github.com/user-attachments/assets/3cc66d66-4156-45be-b149-e81145a1a920" />
+
 
 >[!NOTE]
 >
