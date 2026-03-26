@@ -96,7 +96,7 @@ Import-Module .\LocalPasswordSpray.ps1
 
 - It should look like this: 
 
-![image](https://github.com/user-attachments/assets/04441fb8-95ba-441c-8ccd-a18027b064da)
+<img width="815" height="179" alt="2026-03-26_09-22" src="https://github.com/user-attachments/assets/6cf93e86-6168-4c76-9512-c8f69352104f" />
 
 - Now, let’s try some **password spraying** against the local system! 
 
