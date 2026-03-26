@@ -206,15 +206,16 @@ To do this you will need to select **AppLocker** on the far left pane.  You will
 
 We will need to start the **"Application Identity service"**.  This is done through this **cmd** command, open **Command Prompt**:
 
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/50e871b5-a3ec-4c55-92dd-db5fd4a1e1d4" />
+
+
 ```cmd
 powershell sc start AppIDSvc
 ```
 
 
-
 Run **"gpupdate"** to force the policy change.
 
-<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/50e871b5-a3ec-4c55-92dd-db5fd4a1e1d4" />
 
 ```bash
 gpupdate /force
