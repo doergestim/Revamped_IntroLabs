@@ -101,12 +101,12 @@ Import-Module .\LocalPasswordSpray.ps1
 - Now, let’s try some **password spraying** against the local system! 
 
 ```bash
-Invoke-LocalPasswordSpray -Password Winter2020
+Invoke-LocalPasswordSpray -Password Winter2025
 ```
 
 - It should look like this: 
 
-![image](https://github.com/user-attachments/assets/42e83694-5305-411e-bae8-b28f4cbb7598)
+<img width="598" height="256" alt="2026-02-23_14-55" src="https://github.com/user-attachments/assets/0e299d08-daa9-498a-bb1b-2b95dd8d5c1e" />
 
 - Now we need to clean up and make sure the system is ready for the rest of the labs: 
 
@@ -114,7 +114,7 @@ PS C:\Tools> `exit` 
 
 C:\Tools> `user-remove.bat` 
 
-![](attachment/Clipboard_2021-03-12-11-30-08.png) 
+<img width="365" height="285" alt="2026-02-23_15-02_1" src="https://github.com/user-attachments/assets/c82559fb-6c47-4c76-a306-498c572da9fb" />
 
 - Now, let's see if any **alerts** were generated. 
 
