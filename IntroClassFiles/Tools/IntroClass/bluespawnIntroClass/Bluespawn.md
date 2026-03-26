@@ -24,7 +24,8 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 Set-MpPreference -DisableBehaviorMonitoring $true
 ```
 
-![](attachments/disableDefender.png)
+<img width="824" height="155" alt="2026-03-26_09-47" src="https://github.com/user-attachments/assets/d83571b4-0a39-4e4b-a9ef-cf6763954e2c" />
+
 
 This will disable Defender for this session.
 
