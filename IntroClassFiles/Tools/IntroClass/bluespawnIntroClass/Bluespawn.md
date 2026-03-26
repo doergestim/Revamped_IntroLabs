@@ -81,7 +81,8 @@ Install-AtomicRedTeam -getAtomics -Force
 
 Once you see the following, you are set to move forward:
 
-![](attachments/installationconfirmation.png)
+<img width="1100" height="292" alt="2026-03-26_09-54" src="https://github.com/user-attachments/assets/41cb6202-0911-480c-bb68-0953bf66a213" />
+
 
 Next, in the PowerShell Window we need to navigate to the Atomic Red Team directory and import the powershell modules:
 
