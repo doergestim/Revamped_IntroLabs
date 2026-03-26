@@ -204,19 +204,15 @@ To do this you will need to select **AppLocker** on the far left pane.  You will
 
 ![](attachments/ruleenforcement.png)
 
-We will need to start the **"Application Identity service"**.  This is done through pressing the Windows key and typing **"Services"**.  
+We will need to start the **"Application Identity service"**.  This is done through this **cmd** command, open **Command Prompt**:
 
-![](attachments/services.png)
+```cmd
+powershell sc start AppIDSvc
+```
 
-This will bring up the **Services App**.  Double-click **“Application Identity”**.
 
-![](attachments/applicationidentity.png)
 
-Once the **"Application Identity Properties"** dialog is open, please press the **Start** button.  This will start the service.
-
-![](attachments/startservice.png)
-
-Open a command prompt and run **"gpupdate"** to force the policy change.
+Run **"gpupdate"** to force the policy change.
 
 <img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/50e871b5-a3ec-4c55-92dd-db5fd4a1e1d4" />
 
