@@ -11,17 +11,21 @@ We are going to use **DeepBlueCLI** to see if there are any odd logon patterns i
 
 Let's start by opening **Windows Powershell**:
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/5676575e-6ba5-4971-b1de-68d60234af47" />
 
-Then, navigate to the \IntroLabs\DeepBlueCLI-master directory
+Then, navigate to the `\IntroLabs\DeepBlueCLI` directory
 
-<pre>cd \IntroLabs\DeepBlueCLI-master\</pre>
+```bash
+cd \IntroLabs\DeepBlueCLI\
+```
 
 ![](attachments/dlr_directory.png)
 
 Now, let's start looking at the **DC2 Password spray** file:
 
-<pre>.\DeepBlue.ps1 .\EntLogs\DC2-secLogs-3-26-DomainPasswordSpray.evtx</pre>
+```bash
+.\DeepBlue.ps1 .\EntLogs\DC2-secLogs-3-26-DomainPasswordSpray.evtx
+```
 
 If a warning pops up, press **"R"**.  This will start the script by running it:
 When this runs, there is an alert that catches our attention right away:
@@ -34,11 +38,11 @@ Lets dig into the actual logs and see if we can see a pattern.
 
 To do this, open File Explorer and navigate to the C:\IntroLabs\DeepBlueCLI-master\EntLogs directory:
 
-![](attachments/OpeningFileExplorer.png)
+<img width="534" height="48" alt="OpenFileExplorer" src="https://github.com/user-attachments/assets/bd5ac519-825a-4921-bed6-3b8baf52a4b7" />
 
-![](attachments/Navintolabs.png)
+![](attachments/Navintolabs.png)  
 
-![](attachments/NavtoDBMaster.png)
+<img width="658" height="66" alt="image" src="https://github.com/user-attachments/assets/7dfe1e7b-f655-493d-a51a-f6dabf13ffea" />
 
 ![](attachments/navtoent.png)
 
@@ -92,4 +96,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
+
+
 

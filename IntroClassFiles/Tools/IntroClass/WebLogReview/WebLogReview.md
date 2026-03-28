@@ -2,45 +2,57 @@
 
 # Web Log Review
 
+# Windows VM
+
 In this lab we will be standing up a vulnerable web server called DVWA.  It is designed from the ground up to teach people about a number of web application attacks.
 
 While a full intro to web attacks is out of the scope of this class, it is great to show you how to use tools like ZAP to automatically look for some vulnerabilities, and to show you that automated tools do not always catch everything.
 
-Let’s get started by opening a Terminal as Administrator
-
-![](attachments/Clipboard_2020-06-12-10-36-44.png)
 
 
-When you get the User Account Control Prompt, select Yes.
 
-PS C:\Users\adhd> `docker run --rm -it -p 80:80 vulnerables/web-dvwa`
+- Open **Ubuntu Shell**
 
-![](attachments/Clipboard_2020-06-16-13-29-31.png)
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/ae6d408b-7622-4545-b849-aef3d8fa0cb4" />
 
-In another Command Prompt window run ipconfig and record your IP address.  Remember, your IP address may be different from mine.
 
-C:\Users\adhd>`ipconfig`
 
-![](attachments/Clipboard_2020-06-16-13-29-46.png)
+```bash
+sudo su -
+```
+
+Get your **Linux IP address**
+
+```bash
+ifconfig
+```
+
+<img width="716" height="175" alt="Get_IP" src="https://github.com/user-attachments/assets/cc1893c9-3a96-4ddb-a16a-45f0bdad0e10" />
+
+
+```bash
+docker run --rm -it -p 80:80 vulnerables/web-dvwa
+```
+
+<img width="1102" height="317" alt="image" src="https://github.com/user-attachments/assets/bbb8b00e-1ae1-4896-8ce5-3c9affbc5c79" />
 
 
 Now, let's start ZAP.
 
-![](attachments/Clipboard_2020-06-16-13-30-15.png)
+<img width="89" height="96" alt="image" src="https://github.com/user-attachments/assets/551b5e0b-1319-4c68-8619-02f6ae0a02e8" />
+
 
 
 ![](attachments/Clipboard_2020-06-16-13-30-46.png)
-
-
-Now, let's insert your IP address from the ipconfig command above and start the scan.
 
 First, select the Automated Scan button: 
 
 ![](attachments/Clipboard_2020-12-11-06-43-22.png)
 
-Then enter the URL of your Docker system.  It will be in http://<WINDOWSIP> syntax like below:
+Then enter the URL of your Docker system.  It will be in `http://<LINUXIP>` syntax like below:
 
-![](attachments/Clipboard_2020-12-11-06-45-20.png)
+<img width="455" height="152" alt="image" src="https://github.com/user-attachments/assets/36a48d43-c0ff-4b65-97db-8e9fb845a00a" />
+
 
 Then select the Attack button:
 
@@ -49,11 +61,13 @@ Then select the Attack button:
 This will start the scan.  You should be able to see the scan activity in the lower part of ZAP.
 
 
-![](attachments/Clipboard_2020-12-11-06-47-23.png)
+<img width="947" height="362" alt="image" src="https://github.com/user-attachments/assets/49633ae1-1b42-4664-9950-ca334152e08d" />
 
-Now, let's go back to the Powershell window and see the logs:
 
-![](attachments/Clipboard_2020-12-11-06-51-27.png)
+Now, let's go back to the **Command Prompt** window and see the logs:
+
+<img width="1106" height="622" alt="image" src="https://github.com/user-attachments/assets/0d8192d6-13b3-4b37-828f-f8b88d461a26" />
+
 
 What are some things to look for?
 
@@ -73,7 +87,7 @@ Then attack.
 
 It is all about knowing our networks ad apps.
 
-# Going further
+### Going further
 
 https://owasp.org/
 
@@ -81,7 +95,31 @@ https://www.zaproxy.org/
 
 https://cirt.net/Nikto2
 
-[Return To Lab List](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/navigation.md)
+***                                                                 
+
+<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/WindowsCLI/WindowsCLI.md)</i></b>
+
+<b><i>Want to go back? </br>[Previous Lab](/IntroClassFiles/Tools/IntroClass/TCPDump/TCPDump.md)</i></b>
+
+<b><i>Looking for a different lab? </br>[Lab Directory](/IntroClassFiles/navigation.md)</i></b>
+
+***Finished with the Labs?***
+
+Please be sure to destroy the lab environment!
+
+[Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
+---
+
+
+
+
+
+
+
+
+
+
 
 
 
