@@ -67,21 +67,45 @@ Now we will need to copy the JavaScript and put it somewhere so it triggers:
 <img width="572" height="604" alt="web_generated_token" src="https://github.com/user-attachments/assets/cadba2ee-abce-4ee7-8a74-6092c6f80034" />
 
 
-Now, let's surf to https://scriptasylum.com/tutorials/encode-decode.html
+Now, let's test out the JavaScript Canary token. Open a Linux terminal and execute the following command:
 
-  
+```bash
+cd ~/ADCD/canaryToken
+```
 
-Then, simply paste your JavaScript into the first two boxes as you scroll down then click the right arrow to encode: 
+In this directory, we have an ```index.html``` file. In this file, we will write the generated JavaScript token.
 
-  
+Open the HTML file with a text editor and at the very bottom of the file inside the ```<script> </script>``` tags write the generated JavaScript token.
 
-![](attachment/Clipboard_2021-03-12-10-18-39.png) 
+Then, save it and close it.
 
-  
+Now we have a fake page that has the role of a cloned site. In order to test the functionality of the canary token through this page, we must add a domain to the ```/etc/hosts```.
+
+>[!IMPORTANT]
+>
+>The domain we will add must be completely different from the domain we gave at the token creation!!
+>(e.g. If we gave ```yourorg.com``` as a domain at the token creation, we must give a completely different domain at the new /etc/hosts record like ```clonedsite.com```)
+
+For this purpose, execute the following:
+
+```bash
+echo "127.0.0.1 clonedsite.com" | sudo tee -a /etc/hosts
+```
+
+Now everything is ready. Time for action!
+
+First things first, we must run a server in order to be able to access our page.
+
+```bash
+sudo python3 -m http.server 80
+```
+
+Then open a browser and access the domain you just added in the ```/etc/hosts```. In our case:
+```
+http://clonedsite.com
+```
 
 In a few moments you should get an email alert: 
-
-  
 
 ![](attachment/Clipboard_2021-03-12-10-19-36.png) 
 
