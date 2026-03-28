@@ -40,8 +40,8 @@ Now, check your email. 
 
 You should have gotten an alert: 
 
-![token_log](https://github.com/user-attachments/assets/a0514a8c-a253-4294-a3dc-fa0ecfba5fcc)
-  
+<img width="612" height="1161" alt="ms_token_triggered" src="https://github.com/user-attachments/assets/20591922-35bc-4daa-9c15-cd9b73b6a4e8" />
+
 
 Now, let's play with the site cloner: 
 
