@@ -79,7 +79,7 @@ Open the HTML file with a text editor and at the very bottom of the file inside 
 
 Then, save it and close it.
 
-Now we have a fake page that has the role of a cloned site. In order to test the functionality of the canary token through this page, we must add a domain to the ```/etc/hosts```.
+Now we have a page that has the role of a cloned site. In order to test the functionality of the canary token through this page, we must add a domain to the ```/etc/hosts```.
 
 >[!IMPORTANT]
 >
