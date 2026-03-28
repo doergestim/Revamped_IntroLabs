@@ -92,6 +92,9 @@ For this purpose, execute the following:
 echo "127.0.0.1 clonedsite.com" | sudo tee -a /etc/hosts
 ```
 
+<img width="743" height="284" alt="echo_domain" src="https://github.com/user-attachments/assets/9c5c4bf2-42f5-4412-a1ee-b20cdd67e84a" />
+
+
 Now everything is ready. Time for action!
 
 First things first, we must run a server in order to be able to access our page.
@@ -104,6 +107,9 @@ Then open a browser and access the domain you just added in the ```/etc/hosts```
 ```
 http://clonedsite.com
 ```
+
+<img width="1276" height="558" alt="test_page" src="https://github.com/user-attachments/assets/0cdf5e00-db1f-4e8b-9a54-9742c7a366d8" />
+
 
 In a few moments you should get an email alert: 
 
