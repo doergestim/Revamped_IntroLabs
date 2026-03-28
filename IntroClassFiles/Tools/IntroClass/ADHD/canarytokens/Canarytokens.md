@@ -64,8 +64,8 @@ Now, select Create my Canarytoken. 
 
 Now we will need to copy the JavaScript and put it somewhere so it triggers: 
 
-<img width="510" height="538" alt="web_generated_token" src="https://github.com/user-attachments/assets/47d44339-1ae8-42ac-afc6-213d50910d99" />
-  
+<img width="572" height="604" alt="web_generated_token" src="https://github.com/user-attachments/assets/cadba2ee-abce-4ee7-8a74-6092c6f80034" />
+
 
 Now, let's surf to https://scriptasylum.com/tutorials/encode-decode.html
 
