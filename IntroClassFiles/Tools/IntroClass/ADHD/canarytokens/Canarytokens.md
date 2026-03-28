@@ -40,10 +40,7 @@ Now, check your email. 
 
 You should have gotten an alert: 
 
-  
-
-![](attachment/Clipboard_2021-03-12-10-04-16.png) 
-
+![token_log](https://github.com/user-attachments/assets/a0514a8c-a253-4294-a3dc-fa0ecfba5fcc)
   
 
 Now, let's play with the site cloner: 
