@@ -9,16 +9,12 @@ First, we will need to navigate to the canarytokens server from a system with Mi
 
 https://www.canarytokens.org/generate# 
 
-![image](https://github.com/user-attachments/assets/7ca0b2ac-9072-4336-9ea8-347797f9b74d)
-
+<img width="1034" height="608" alt="canarytokens_site" src="https://github.com/user-attachments/assets/6601eba1-4dab-4b56-a5d6-7284ac54981b" />
 
    
 Now, let's create a token Word Document: 
 
-
-![image](https://github.com/user-attachments/assets/ce30b266-57d9-4f8b-8dc2-82783a7a3599)
-
-
+<img width="638" height="430" alt="word_token" src="https://github.com/user-attachments/assets/145c6b7c-4aa2-4a36-8d39-3d431962196d" />
   
 
 Then select Create Token. 
@@ -31,11 +27,8 @@ When you get the next screen, select Download your MS Word File.  
 
 Then, download it and open it. 
 
-  
+<img width="640" height="514" alt="MS_word_token" src="https://github.com/user-attachments/assets/cd3f4c7f-ea4a-42ce-8d2f-48a03cca0480" />
 
-![](attachment/Clipboard_2021-03-12-10-03-10.png) 
-
-  
 
 Notice that it is just an empty Word document. You can add whatever you want in it. 
 
