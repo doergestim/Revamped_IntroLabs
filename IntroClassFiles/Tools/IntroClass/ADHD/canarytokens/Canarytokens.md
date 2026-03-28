@@ -47,31 +47,16 @@ You should have gotten an alert: 
 
 Now, let's play with the site cloner: 
 
-  
 
-Please select New Token in the upper right corner. 
+Search for ```JS cloned website```
 
-  
-
-![](attachment/Clipboard_2021-03-12-10-07-48.png) 
-
-  
-
-Then, select Cloned Website from the dropdown: 
-
-  
-
-![](attachment/Clipboard_2021-03-12-10-08-21.png) 
-
+<img width="140" height="144" alt="web_clone" src="https://github.com/user-attachments/assets/966e4f1d-9e09-4f98-912f-32c5fbed5f89" />
   
 
 Next, fill in the appropriate fields: 
 
-  
+<img width="606" height="500" alt="web_clone_fields" src="https://github.com/user-attachments/assets/e85a0e4c-7d41-4c95-bb1d-07f2f730897f" />
 
-![](attachment/Clipboard_2021-03-12-10-09-19.png) 
-
-  
 
 Now, select Create my Canarytoken. 
 
@@ -79,13 +64,10 @@ Now, select Create my Canarytoken. 
 
 Now we will need to copy the JavaScript and put it somewhere so it triggers: 
 
+<img width="510" height="538" alt="web_generated_token" src="https://github.com/user-attachments/assets/47d44339-1ae8-42ac-afc6-213d50910d99" />
   
 
-![](attachment/Clipboard_2021-03-12-10-11-06.png) 
-
-  
-
-Now, let's surf to https://scriptasylum.com/tutorials/encode-decode.html 
+Now, let's surf to https://scriptasylum.com/tutorials/encode-decode.html
 
   
 
