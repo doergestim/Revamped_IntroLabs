@@ -7,7 +7,9 @@
 
 First, we will need to navigate to the canarytokens server from a system with Microsoft Word on it: 
 
-https://www.canarytokens.org/generate# 
+https://www.canarytokens.org/generate#
+
+Search for ```Microsoft Word```
 
 <img width="1034" height="608" alt="canarytokens_site" src="https://github.com/user-attachments/assets/6601eba1-4dab-4b56-a5d6-7284ac54981b" />
 
