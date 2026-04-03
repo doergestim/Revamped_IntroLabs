@@ -32,12 +32,14 @@ cd ~/ADCD/honeyports
 ```
 
 ```bash
-sudo python3 ./honeyports.py -p 3389 -h localhost
+sudo python3 ./honeyports.py -p 3389 -h 0.0.0.0
 ```
 
 Output:
 <pre>
-Listening on  0.0.0.0 IP:  0.0.0.0  :  3389
+Honeyports Version: 0.5
+I will listen on TCP port number:  3389
+Honeyports detected you are running on:  Linux
 </pre>
         
 - We can confirm that the listening is taking place with lsof:
@@ -48,7 +50,7 @@ sudo lsof -i -P | grep python
 
 Output:
 <pre>
-python   26560     root    3r  IPv4 493595      0t0  TCP *:3389 (LISTEN)
+python3   11076            root    3u  IPv4  48131      0t0  TCP *:3389 (LISTEN)
 </pre>
 
 Looks like we're good.
