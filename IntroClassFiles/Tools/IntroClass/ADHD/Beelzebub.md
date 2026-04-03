@@ -95,9 +95,19 @@ id
 ```
 Now exit the session by typing **exit** and hitting **enter** to export the logs
 
+- Save Logs
+
 ```bash
 sudo docker-compose logs > honeypot.log
 ```
+
+- Stop **Beelzebub**
+
+```bash
+sudo docker stop beelzebub
+```
+
+- Read the Logs
 
 ```bash
 cat honeypot.log
