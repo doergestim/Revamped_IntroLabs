@@ -169,7 +169,7 @@ sudo iptables -F
 - This protection mechanism is found in `/proc/sys/net/ipv4/conf/all/arp_accept`. A **1** in this file means that **ADHD** is configured to **accept** unsolicited **ARP response**s.  You can set this value by running the following command
 
 ```bash
-echo 1 > /proc/sys/net/ipv4/conf/all/arp_accept
+echo 1 | sudo tee /proc/sys/net/ipv4/conf/all/arp_accept
 ```
 
 - If our **ADHD machine** (running the **Honeyports**) is at 192.168.1.144 and we want to spoof 192.168.1.1
