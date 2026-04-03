@@ -43,7 +43,7 @@ We can see it's listening on lots of ports (FTP, HTTP, SMB, MONGO, MSSQL, SIP, a
 
 Let's simulate and FTP bruteforce attack
 
-- On another terminal tail the logs:
+- Tail the logs:
 ```bash
 sudo tail -f /usr/local/var/log/dionaea/dionaea.log
 ```
