@@ -106,7 +106,8 @@ Output:
 
 - Next simply tell RDP to connect to your machine's **IP address**.
 
-![](HoneyPorts_files/Image_002.png)
+<img width="302" height="178" alt="Image_002" src="https://github.com/user-attachments/assets/fac3592f-cb1c-4957-891b-db4e55c11119" />
+
 
 - We get an almost immediate error, this is a great sign that **Honeyports** is doing its job.
 
