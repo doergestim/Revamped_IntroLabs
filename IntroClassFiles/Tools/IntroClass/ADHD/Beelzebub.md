@@ -27,11 +27,14 @@ cd ~/ADCD/beelzebub/
 nano docker-compose.yml
 ```
  - Put your key here at `OPEN_AI_SECRET_KEY: `
-<img width="295" height="53" alt="image" src="https://github.com/user-attachments/assets/eca9345f-c69c-45f2-8a00-5cf389e42b3b" />
+
+<img width="334" height="72" alt="2026-04-03_15-49" src="https://github.com/user-attachments/assets/c04fdc85-78f3-4e5c-81f2-bca9ad0e329f" />
 
 
 - Also comment the **Default SSH Mapping**(ssh 22 port) by putting a `#` anywhere before it in the same line
-<img width="176" height="81" alt="image" src="https://github.com/user-attachments/assets/f02190d4-36ec-4638-8817-aae8a33ece43" />
+
+<img width="270" height="114" alt="2026-04-03_15-56" src="https://github.com/user-attachments/assets/d0f49b7c-1c5f-4e11-bbd1-26c340c58e70" />
+
 
 - Save and leave the editor with `Ctrl + X` + `Y` + `Enter`
 
@@ -44,9 +47,10 @@ mv ./ssh-22.yaml ~
 ```bash
 nano ./ssh-2222.yaml
 ```
- - Add your key with double quotes around it like `OPENAI_API_KEY: "your_api_key_here"`
+ - Add your key with double quotes around it like `openAISecretKey: "your_api_key_here"`
 
-<img width="329" height="26" alt="image" src="https://github.com/user-attachments/assets/97cf551d-f9c8-4d7a-b575-b423e8c1b74e" />
+![2026-04-03_15-59](https://github.com/user-attachments/assets/461c4622-063b-474d-83de-5a1c45a88fb2)
+
 
  - Save and leave the editor with `Ctrl + X` + `Y` + `Enter`
 
