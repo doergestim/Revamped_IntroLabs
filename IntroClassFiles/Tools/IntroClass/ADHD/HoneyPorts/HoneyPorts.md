@@ -32,13 +32,13 @@ cd ~/ADCD/honeyports
 ```
 
 ```bash
-sudo python3 ./honeyports.py -p 3389 -h 0.0.0.0
+sudo python3 ./honeyports.py -p 3390 -h 0.0.0.0
 ```
 
 Output:
 <pre>
 Honeyports Version: 0.5
-I will listen on TCP port number:  3389
+I will listen on TCP port number:  3390
 Honeyports detected you are running on:  Linux
 </pre>
         
@@ -50,7 +50,7 @@ sudo lsof -i -P | grep python
 
 Output:
 <pre>
-python3   11076            root    3u  IPv4  48131      0t0  TCP *:3389 (LISTEN)
+python3   36984            root    3u  IPv4 154353      0t0  TCP *:3390 (LISTEN)
 </pre>
 
 Looks like we're good.
