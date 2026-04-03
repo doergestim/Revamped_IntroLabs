@@ -60,7 +60,7 @@ Let's simulate this next.
 
 ### Example 2: Blacklisting In Action
 
-- If Honeyports is not listening on 3389 please follow the instructions in **[Example 1: Monitoring A Port With HoneyPorts]**.
+- If Honeyports is not listening on 3390 please follow the instructions in **[Example 1: Monitoring A Port With HoneyPorts]**.
 
 - Once you have Honeyports online and a backup Windows machine to connect to Honeyports from, let's proceed.
 
@@ -72,31 +72,31 @@ ifconfig
 
 Output:
 ```
-        eth0      Link encap:Ethernet  HWaddr 08:00:27:65:3c:64
-                  inet addr:192.168.1.109  Bcast:192.168.1.255  Mask:255.255.255.0
-                  inet6 addr: fe80::a00:27ff:fe65:3c64/64 Scope:Link
-                  UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-                  RX packets:46622 errors:0 dropped:0 overruns:0 frame:0
-                  TX packets:8298 errors:0 dropped:0 overruns:0 carrier:0
-                  collisions:0 txqueuelen:1000
-                  RX bytes:14057203 (14.0 MB)  TX bytes:2659309 (2.6 MB)
+        ens5:     flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+                  inet 10.10.64.184  netmask 255.255.192.0  broadcast 10.10.127.255
+                  inet6 fe80::ca8:12ff:fe81:2927  prefixlen 64  scopeid 0x20<link>
+                  ether 0e:a8:12:81:29:27  txqueuelen 1000  (Ethernet)
+                  RX packets 35441  bytes 21695180 (21.6 MB)
+                  RX errors 0  dropped 0  overruns 0  frame 0
+                  TX packets 13288  bytes 1360882 (1.3 MB)
+                  TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-        lo        Link encap:Local Loopback
-                  inet addr:127.0.0.1  Mask:255.0.0.0
-                  inet6 addr: ::1/128 Scope:Host
-                  UP LOOPBACK RUNNING  MTU:16436  Metric:1
-                  RX packets:94405 errors:0 dropped:0 overruns:0 frame:0
-                   TX packets:94405 errors:0 dropped:0 overruns:0 carrier:0
-                     collisions:0 txqueuelen:0
-                  RX bytes:37127292 (37.1 MB)  TX bytes:37127292 (37.1 MB)
+        lo:       flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+                  inet 127.0.0.1  netmask 255.0.0.0
+                  inet6 ::1  prefixlen 128  scopeid 0x10<host>
+                  loop  txqueuelen 1000  (Local Loopback)
+                  RX packets 581  bytes 59729 (59.7 KB)
+                  RX errors 0  dropped 0  overruns 0  frame 0
+                  TX packets 581  bytes 59729 (59.7 KB)
+                  TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 >[!IMPORTANT]
 >
 > Your IP will be **different**, use **yours**
 
-- We can see from the `ifconfig` output that my **ADHD instance** has an IP of **192.168.1.109**
+- We can see from the `ifconfig` output that my **ADHD instance** has an IP of **10.10.64.184**
 
-- I will connect to that IP on **port 3389** from a box on the same network segment in order to test the functionality of **Honeyports**.
+- I will connect to that IP on **port 3390** from a box on the same network segment in order to test the functionality of **Honeyports**.
 
 - I will be using RDP to make the connection.
 
@@ -126,16 +126,13 @@ sudo iptables -L
 Output:
 ```
 Chain INPUT (policy ACCEPT)
-target     prot opt source               destination
-REJECT     all  --  192.168.1.149        anywhere             reject-with icmp-port-unreachable
+target     prot opt source               destination         
+REJECT     all  --  10.10.66.204         anywhere             reject-with icmp-port-unreachable
 
 Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination
+target     prot opt source               destination         
 
 Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination
-
-Chain ARTILLERY (0 references)
 target     prot opt source               destination
 ```
 
