@@ -90,8 +90,6 @@ When ran, Portspoof listens on a single port. By default this is port 4444. In o
 <img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/ae6d408b-7622-4545-b849-aef3d8fa0cb4" />
 
 
-
-
 Let's become root:
 
 ```bash
@@ -130,8 +128,7 @@ Then, run nmap:
 nmap -p 1-10 linux.cloudlab.lan
 ```
 
-
-![image](https://github.com/user-attachments/assets/d51c7589-8fbf-4b0a-8c69-6c21629e588d)
+<img width="456" height="326" alt="example_1_nmap" src="https://github.com/user-attachments/assets/ff637541-be82-408d-b121-7ff378ef7ba9" />
 
 
 All ports are reported as open! When run this way, Nmap reports the service that typically runs on each port.
@@ -142,7 +139,7 @@ To get more accurate results, an attacker might run an Nmap service scan, which 
 nmap -p 1-10 -sV linux.cloudlab.lan
 ```
 
-![image](https://github.com/user-attachments/assets/148e82e4-f8fb-4df5-8fef-6b758d1e05e1)
+<img width="646" height="340" alt="example_1_nmap_2" src="https://github.com/user-attachments/assets/2919c008-df2c-416e-8997-3e6a49eef32c" />
 
 
 Example 2: Spoofing Service Signatures
@@ -162,7 +159,8 @@ Let's kill the running version of Portspoof with `Ctrl + C` then restart it with
 portspoof -s /etc/portspoof/portspoof_signatures
 ```
 
-![image](https://github.com/user-attachments/assets/e1a2857a-7628-46d0-8808-b0af2add49f1)
+<img width="506" height="130" alt="example_2_portspoof_s" src="https://github.com/user-attachments/assets/4db6053f-4070-4fd8-8fee-d5bd69a4d990" />
+
 
 This mode will generate and feed port scanners like Nmap bogus service signatures.
 
@@ -172,7 +170,8 @@ Now running an Nmap service detection scan against the top 100 most common ports
 nmap -p 1-10 -sV linux.cloudlab.lan
 ```
 
-![image](https://github.com/user-attachments/assets/c4281e6f-4937-4477-b6a9-d2344d2a2699)
+<img width="1190" height="581" alt="example_2_nmap" src="https://github.com/user-attachments/assets/9916a35c-9a60-420d-a2ef-4a25446ec4bb" />
+
 
 Notice how all of the ports are still reported as open, but now Nmap reports a unique service on each port. 
 
