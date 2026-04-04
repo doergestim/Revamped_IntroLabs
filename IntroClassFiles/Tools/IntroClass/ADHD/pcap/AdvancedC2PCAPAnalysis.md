@@ -10,7 +10,7 @@
 - Now, we should move to the proper directory
 
 ```bash
-cd /ADCD/advancedC2
+cd ~/ADCD/advancedC2
 ```
 
 - Let's run a tcpdump command to do an initial review of the capture
