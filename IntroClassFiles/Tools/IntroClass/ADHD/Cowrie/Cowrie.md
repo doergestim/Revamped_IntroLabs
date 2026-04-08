@@ -18,7 +18,7 @@ Cowrie is a medium interaction SSH honeypot designed to log brute force attacks 
 >
 >Cowrie is developed by <b>Michel Oosterhof</b> and is based on <i>Kippo</i> by <b>Upi Tamminen</b> (desaster).
 
-The first thing we need to do is instal and start Cowrie.
+The first thing we need to do is install and start Cowrie.
 
 To begin, let's open a terminal. 
 
