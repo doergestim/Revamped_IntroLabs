@@ -58,7 +58,7 @@ rm ~/.ssh/known_hosts
 ```
 
 >[!IMPORTANT]
->You mgiht not even have any `known_hosts` file, but:
+>You might not even have any `known_hosts` file, but:
 >
 >The above command is critical because the key fingerprint for Cowrie changes every time you restart it!
 
