@@ -110,6 +110,9 @@ http://YOURLINUXIP
 
 Yes...  Some attack tools are as obvious as **ZAP:ZAP**. 
 
+<img width="830" height="464" alt="zap_logs" src="https://github.com/user-attachments/assets/d1cc6395-685d-4dd3-b825-f955c73dfe4b" />
+
+
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/ADHD/Glastopf.md)</i></b>
 
