@@ -119,24 +119,30 @@ As we said above, one of the ways that people have been detecting honeypots like
 
 Because the key fingerprint changes every time you restart Cowrie, we need to next focus on changing the hostname. 
 
-To do this we need to change the following file as root on our linux system:
+To do this we need to change the following file as root on our cowrie container:
 
-<pre>/var/lib/docker/overlay2/49cb1d1569dac74ee9793c9efb526ae1ba35b8e4a31b14a1a1c8c30bc70dc953/diff/cowrie/cowrie-git/etc/cowrie.cfg.dist</pre>
+<pre>/cowrie/cowrie-git/etc/cowrie.cfg.dist</pre>
 
 >[!NOTE]
 >
 >This is not a command, just the directory of the file we will be changing.
 
-Ok, that path is just horrid.  The long number is a unique ID for our Cowrie system. Apparently, Docker <i>reaaaaalllly</i> does not like collisions.  
-
-However, `overlay2` denotes this a a writeable layer for our container. Basically, this means we can edit our Docker container system within this directory.
-
-So let's edit this file using `vim`.
-
-As root, run the following:
+Before editing the container file, we must find the container ID of the cowrie. As root, run the following:
 
 ```bash
-vim /var/lib/docker/overlay2/49cb1d1569dac74ee9793c9efb526ae1ba35b8e4a31b14a1a1c8c30bc70dc953/diff/cowrie/cowrie-git/etc/cowrie.cfg.dist
+docker ps -a
+```
+
+So now that we have the container ID, let's edit this file using `vim`.
+
+As root, run the following (with your own container ID):
+
+```bash
+docker cp <container ID>:/cowrie/cowrie-git/etc/cowrie.cfg.dist .
+```
+
+```bash
+vim cowrie.cfg.dist
 ```
 
 ![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/vimfileedit.png)
@@ -163,11 +169,16 @@ When done, hit the following keys in the following order
 
 `return`
 
+Then update `cowrie.cfg.dist` file in the docker with the adjusted one.
+
+```bash
+docker cp cowrie.cfg.dist <container ID>:/cowrie/cowrie-git/etc/cowrie.cfg.dist
+```
 
 Now, let's restart and connect:
 
 ```bash
-docker run -p 2222:2222 cowrie/cowrie
+docker start -a <container ID>
 ```
 
 ![image](https://github.com/user-attachments/assets/9390fd7a-7468-44ef-aa70-d52160c6d005)
@@ -191,13 +202,41 @@ Your hostname should now be changed.
 
 Now, let’s edit the Message of the Day (MOTD).  Because the default one is not fun at all.
 
+As before, we must download the file `/cowrie/cowrie-git/honeyfs/etc/motd` from the docker, adjust it and then update it in the docker.
+
+As root, run the following (with your own container ID):
+
 ```bash
-vim /var/lib/docker/overlay2/49cb1d1569dac74ee9793c9efb526ae1ba35b8e4a31b14a1a1c8c30bc70dc953/diff/cowrie/cowrie-git/honeyfs/etc/motd
+docker cp <container ID>:/cowrie/cowrie-git/honeyfs/etc/motd .
 ```
 
+```bash
+vim motd
+```
 ![image](https://github.com/user-attachments/assets/e60c8de7-1026-4507-9e03-fb0718799a4f)
 
-Change it to something better!
+In the `motd` file, erase the previous message and change it to something better!
+
+```
+WARNING WARNING WARNING!
+
+Oh freddled gruntbuggly,
+Thy micturitions are to me, with big yawning
+As plurdled gabbleblotchits,
+On a lurgid bee,
+That mordiously hath blurted out,
+Its earted jurtles, grumbling
+Into a rancid festering confectious organ squealer, drowned out by moaning and screaming.
+Now the jurpling slayjid agrocrustles,
+Are slurping hagrilly up the axlegrurts,
+And living glupules frart and stipulate,
+Like jowling meated liverslime,
+Groop, I implore thee, my foonting turlingdromes,
+And hooptiously drangle me,
+With crinkly bindlewurdles.
+Or else I shall rend thee in the gobberwarts with my blurglecruncheon,
+See if I don’t
+```
 
 ![image](https://github.com/user-attachments/assets/a99a4447-c2a7-4eb5-bb6c-0bf2861abf8e)
 
@@ -211,10 +250,16 @@ When done, hit the following keys in the following order
 
 `return`
 
+Then update `motd` file in the docker with the adjusted one.
+
+```bash
+docker cp motd <container ID>:/cowrie/cowrie-git/honeyfs/etc/motd
+```
+
 Now, let's restart and connect:
 
 ```bash
-docker run -p 2222:2222 cowrie/cowrie
+docker start -a <container ID>
 ```
 
 ![image](https://github.com/user-attachments/assets/9390fd7a-7468-44ef-aa70-d52160c6d005)
