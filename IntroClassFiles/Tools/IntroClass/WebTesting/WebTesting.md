@@ -4,49 +4,54 @@
 
 # Web Testing
 
+# Windows VM
+
 In this lab we will be standing up a simple **Python Web Server** and a vulnerable web server called **DVWA**.  These are designed from the ground up to teach people about a number of web application attacks.
 
 While a full intro to web attacks is out of the scope of this class, it is great to show you how to use tools like **ZAP** to automatically look for some vulnerabilities, and to show you that automated tools do not always catch everything.
 
-You will need to start an **Kali** terminal.
+You will need to start an **Linux** terminal.
 
-![](attachments/OpeningKaliInstance.png)
 
-Alternatively, you can click on the **Kali** icon in the taskbar.
 
-![](attachments/TaskbarKaliIcon.png)
 
-Before going further, gain root access by running the following:
+- **Double-click** `Ubuntu Shell` on Desktop
 
-<pre>sudo su -</pre>
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
+
+
+
 
 Navigate into the proper directory:
 
-<pre>cd /opt/Web_Testing</pre>
+```bash
+cd ~/Intro_To_SOC/Web_Testing
+```
 
-![](attachments/navtodirectory.png)
+Please note your **Linux** IP:
 
-We need to get our **Linux** IP address for later, so let's run the following command:
+```bash
+ifconfig
+```
 
-<pre>ifconfig</pre>
-
-![](attachments/ifconfig.png)
-
-Please note your **Linux** IP address. As shown above, ours is **"10.10.1.117"**
+![Get_IPLinux.png](https://github.zendesk.com/attachments/token/n6uvR4jpusDEqeTL91GtzfodH/?name=Get_IPLinux.png)
 
 >[!NOTE]
 >
 >**YOUR IP WILL BE DIFFERENT!**
 
-Launch the python script.
+Launch the python script
 
-<pre>python3 ./dsvw.py</pre>
+```bash
+python3 ./dsvw.py
+```
 
-![](attachments/pythonscriptran.png)
+<img width="696" height="141" alt="2026-03-14_14-38" src="https://github.com/user-attachments/assets/a74a0640-3091-4182-89d8-e595141f31e7" />
+
 
 It's time to start **ZAP**! Go ahead and launch it from the desktop icon.
 
-![](attachments/OpeningZAP.png)
+<img width="77" height="97" alt="2026-03-14_14-26" src="https://github.com/user-attachments/assets/29673ac5-f788-453c-8f79-e7291bf7b329" />
 
 Once **ZAP** loads, you will see this pop-up on your screen. Ensure that **No, I do not want to persist this session at this moment in time** option is selected, and hit **"Start"**
 
@@ -66,12 +71,21 @@ Then, select **"Use traditional spider"** and then select **"Attack"**:
 
 ![](attachments/AutomatedScanSetup.png)
 
+
+>[!IMPORTANT]
+>The scan will probably break **DSVW**, you might have to start it again during during the scan:
+
+<img width="697" height="426" alt="2026-03-14_14-41" src="https://github.com/user-attachments/assets/f155ab76-3722-445a-9f4b-0cb18ea0e37c" />
+
+
+
 Scan progress will be shown by the progress bar in the center of your screen.
 When it gets done crawling and scanning, select **"Alerts"**:
 
 ![](attachments/Alerts.png)
 
 This shows that **ZAP** does a pretty good job of finding the easy to identify vulnerabilities.
+
 
 ***                                                                 
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/deepbluecli/DeepBlueCLI.md)</i></b>
