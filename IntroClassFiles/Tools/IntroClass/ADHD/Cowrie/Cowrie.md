@@ -40,8 +40,7 @@ This will take a few moments.
 
 You will see an output like this:
 
-<img width="994" height="408" alt="2026-03-07_11-56" src="https://github.com/user-attachments/assets/2412a478-f227-4992-8a91-c08810057a68" />
-
+<img width="1265" height="317" alt="docker_cowrie_run" src="https://github.com/user-attachments/assets/8f92440c-721d-41fa-85a9-7006336a8db5" />
 
 Once you see **"Ready to accept SSH connections"** in the command output, you are ready to continue.
 
@@ -91,8 +90,7 @@ Now, run the following commands:
 
 Notice, the commands and authentication are being tracked in the other terminal with the log info:
 
-<img width="1085" height="270" alt="2026-03-07_12-04" src="https://github.com/user-attachments/assets/0b41858f-cfec-4146-b56c-774d87a5c8d2" />
-
+<img width="805" height="152" alt="shell_logs" src="https://github.com/user-attachments/assets/85705716-0145-4eb1-9795-82061370b207" />
 
 Take a few moments and notice that the results are always the same... for all Cowrie instances.
 
@@ -109,7 +107,7 @@ First, we need to kill our Cowrie session.
 
 To do this, click into the first terminal with our log output and press `ctrl + c` at the same time.
 
-<img width="1007" height="138" alt="2026-03-07_12-08" src="https://github.com/user-attachments/assets/d0f242bb-4819-4743-a9a3-1216c8ab339e" />
+<img width="1262" height="167" alt="docker_shut_down" src="https://github.com/user-attachments/assets/71075ed1-ef82-42c7-9ce9-64319aaf9a4f" />
 
 >[!TIP] 
 >
@@ -133,6 +131,8 @@ Before editing the container file, we must find the container ID of the cowrie. 
 docker ps -a
 ```
 
+<img width="1059" height="124" alt="docker_ps" src="https://github.com/user-attachments/assets/060fafe5-6955-4fb8-ae14-3cd19409c1ef" />
+
 So now that we have the container ID, let's edit this file using `vim`.
 
 As root, run the following (with your own container ID):
@@ -141,11 +141,13 @@ As root, run the following (with your own container ID):
 docker cp <container ID>:/cowrie/cowrie-git/etc/cowrie.cfg.dist .
 ```
 
+<img width="524" height="29" alt="docker_copy_file" src="https://github.com/user-attachments/assets/58740da5-d035-4f06-982d-53193a0136da" />
+
 ```bash
 vim cowrie.cfg.dist
 ```
 
-![](/IntroClassFiles/Tools/IntroClass/ADHD/Cowrie/attachments/vimfileedit.png)
+<img width="263" height="16" alt="vim_cowrie" src="https://github.com/user-attachments/assets/ea38c352-353f-44ea-92a3-5c68600ef96a" />
 
 >[!TIP]
 >
@@ -153,11 +155,11 @@ vim cowrie.cfg.dist
 
 Once in the file, use the down arrow and go to roughly line 30 and change the hostname
 
-![image](https://github.com/user-attachments/assets/36c901de-1a3e-45b1-b24c-3c07666884c5)
+<img width="446" height="74" alt="vim_hostname" src="https://github.com/user-attachments/assets/b1b7de00-530f-42c3-9322-4f3eb4248a57" />
 
 To do this in vim, press `a` then make the change.
 
-![image](https://github.com/user-attachments/assets/d3d7a3d4-99e6-48cd-ad07-c20489974802)
+<img width="443" height="71" alt="vim_hostname_adjust" src="https://github.com/user-attachments/assets/02bd30ce-c86c-4fdb-91e4-3005f384a6cc" />
 
 When done, hit the following keys in the following order
 
@@ -175,13 +177,15 @@ Then update `cowrie.cfg.dist` file in the docker with the adjusted one.
 docker cp cowrie.cfg.dist <container ID>:/cowrie/cowrie-git/etc/cowrie.cfg.dist
 ```
 
+<img width="614" height="29" alt="docker_copy_adjusted" src="https://github.com/user-attachments/assets/90d87966-e741-4182-8e9b-43adcf66c304" />
+
 Now, let's restart and connect:
 
 ```bash
 docker start -a <container ID>
 ```
 
-![image](https://github.com/user-attachments/assets/9390fd7a-7468-44ef-aa70-d52160c6d005)
+<img width="1266" height="249" alt="docker_run_1" src="https://github.com/user-attachments/assets/62152236-93d0-41c4-ad2f-ead2099cc068" />
 
 Then, in another terminal connect with a password of 12345:
 
@@ -195,7 +199,8 @@ ssh -p 2222 root@localhost
 
 Then type `yes` on the key fingerprint verification.
 
-![image](https://github.com/user-attachments/assets/485efdb7-7cf9-4ee5-a59a-fc0375db817c)
+<img width="644" height="251" alt="docker_changed_hostname" src="https://github.com/user-attachments/assets/3aaadbdc-e289-40f8-94fd-9f2a9001e723" />
+
 
 Your hostname should now be changed.
 
