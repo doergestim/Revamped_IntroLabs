@@ -209,16 +209,19 @@ Now, let’s edit the Message of the Day (MOTD).  Because the default one is not
 
 As before, we must download the file `/cowrie/cowrie-git/honeyfs/etc/motd` from the docker, adjust it and then update it in the docker.
 
-As root, run the following (with your own container ID):
+Terminate the Cowrie session with `Ctrl+C` and run as root the following (with your own container ID):
 
 ```bash
 docker cp <container ID>:/cowrie/cowrie-git/honeyfs/etc/motd .
 ```
 
+<img width="511" height="28" alt="docker_copy_motd" src="https://github.com/user-attachments/assets/03ea08d7-4811-43ac-8bd8-eae574f74a1e" />
+
 ```bash
 vim motd
 ```
-![image](https://github.com/user-attachments/assets/e60c8de7-1026-4507-9e03-fb0718799a4f)
+
+<img width="203" height="17" alt="vim_motd" src="https://github.com/user-attachments/assets/d3566bcf-d304-4133-9377-f9a4d9a4fb6c" />
 
 In the `motd` file, erase the previous message and change it to something better!
 
@@ -243,7 +246,7 @@ Or else I shall rend thee in the gobberwarts with my blurglecruncheon,
 See if I don’t
 ```
 
-![image](https://github.com/user-attachments/assets/a99a4447-c2a7-4eb5-bb6c-0bf2861abf8e)
+<img width="1259" height="533" alt="vim_motd_new_message" src="https://github.com/user-attachments/assets/a7186cd5-7e20-44fe-bdde-e6d3af6ab0e1" />
 
 When done, hit the following keys in the following order
 
@@ -261,13 +264,15 @@ Then update `motd` file in the docker with the adjusted one.
 docker cp motd <container ID>:/cowrie/cowrie-git/honeyfs/etc/motd
 ```
 
+<img width="530" height="29" alt="docker_copy_motd_adjusted" src="https://github.com/user-attachments/assets/5d3a336d-fd9f-48cf-bdc5-3526255762d4" />
+
 Now, let's restart and connect:
 
 ```bash
 docker start -a <container ID>
 ```
 
-![image](https://github.com/user-attachments/assets/9390fd7a-7468-44ef-aa70-d52160c6d005)
+<img width="1268" height="248" alt="docker_run" src="https://github.com/user-attachments/assets/ad4c25e1-c010-472e-83d9-4aa02030dd53" />
 
 Then, in another terminal connect with a password of 12345:
 
@@ -281,9 +286,7 @@ ssh -p 2222 root@localhost
 
 Then type `yes` on the key fingerprint verification.
 
-![image](https://github.com/user-attachments/assets/485efdb7-7cf9-4ee5-a59a-fc0375db817c)
-
-![image](https://github.com/user-attachments/assets/1a8b732b-2a04-413e-8039-dd7d04ac6360)
+<img width="688" height="437" alt="ssh_new_message" src="https://github.com/user-attachments/assets/5d931f8e-99b2-4bdc-9f7d-268b5f25beee" />
 
 
 There!
