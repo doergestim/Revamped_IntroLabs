@@ -107,7 +107,7 @@ First, we need to kill our Cowrie session.
 
 To do this, click into the first terminal with our log output and press `ctrl + c` at the same time.
 
-<img width="1262" height="167" alt="docker_shut_down" src="https://github.com/user-attachments/assets/71075ed1-ef82-42c7-9ce9-64319aaf9a4f" />
+<img width="1110" height="86" alt="docker_shut_down" src="https://github.com/user-attachments/assets/8065afec-043b-4c3b-ab77-7904344c658a" />
 
 >[!TIP] 
 >
