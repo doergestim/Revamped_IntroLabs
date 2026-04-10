@@ -39,7 +39,7 @@ cd \IntroLabs
 
 - It should look like this: 
 
-![](attachment/Clipboard_2021-03-12-11-16-35.png) 
+<img width="618" height="583" alt="event_viewer" src="https://github.com/user-attachments/assets/a21fca78-95fb-4598-91ac-357ffbbdf0ba" />
 
 - When in the **Event Viewer**, select `Windows Logs` > `Security` then `Create Custom View` on the far-right hand side. 
 
