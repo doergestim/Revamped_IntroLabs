@@ -218,7 +218,7 @@ python3 honeybadger.py -ik [IPSTACK_KEY] -gk [GOOGLE_KEY]
 
 - Using an agent, beacon into HoneyBadger, and refresh the beacons page to see a new beacon added to the list:
 
-If we execute the command from the terminal:
+If we execute the agent from the terminal:
 
 ```bash
 curl -X POST -H "Content-Type: application/json"  -d '{}'  "http://localhost:5000/api/beacon/aedc4c63-8d13-4a22-81c5-d52d32293867/HTML?lat=48.1351&lng=11.5820&acc=10"
