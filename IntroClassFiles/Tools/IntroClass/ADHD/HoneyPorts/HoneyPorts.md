@@ -13,6 +13,19 @@
 
 A Python based cross-platform HoneyPort solution, created by Paul Asadoorian.
 
+## Setup
+
+For the demonstration of this lab, we have to change iptables to `legancy`.
+
+```bash
+sudo update-alternatives --config iptables
+```
+
+Then select `1` and press Enter.
+
+<img width="737" height="179" alt="iptables" src="https://github.com/user-attachments/assets/d1a32fbe-0e0e-4af3-a465-1c2a78b15d40" />
+
+
 ## Install Location
 
 ```bash
