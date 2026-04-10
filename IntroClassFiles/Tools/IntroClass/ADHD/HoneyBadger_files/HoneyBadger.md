@@ -281,7 +281,7 @@ curl -X POST -H "Content-Type: application/json"  -d '{}'  "http://localhost:500
 
 ![](../HoneyBadger_files/hb_admin_userdeleted.png)
 
-- Example 8: Agents
+# Example 8: Agents
 
 ### 1. Demo Page
 
