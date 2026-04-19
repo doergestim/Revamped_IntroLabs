@@ -1,5 +1,13 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
+---
+
+This is a lab from **John Strand**'s **Information Security Core Skills** Course:
+
+https://www.antisyphontraining.com/product/information-security-core-skills-tm/
+
+---
+
 # Atomic Red Team And Bluespawn
 
 In this lab we will be using Bluespawn as a stand-in for an EDR system.  Normally full EDRs like Cylance and Crowdstrike are very expensive and tend not to show up in classes like this.  However, the folks at University of Virginia have done an outstanding job with BlueSpawn. 
