@@ -1,5 +1,13 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
+---
+
+This is a lab from **John Strand**'s **Active Defense and Cyber Deception** Course:
+
+https://www.antisyphontraining.com/product/active-defense-and-cyber-deception-with-john-strand/
+
+---
+
 ## File Audit Tripwires
 
 In this lab we will be creating an audit policy that watches for access to a specific file.  This can also apply to folders.  The thought process for this is that we create a honeyfile and want to set of triggers when the file is accessed on our internal network.  This is different from creating a CanaryToken.  With a CanaryToken we want a trigger when the file is opened.  CanaryTokens are also limited to documents and files that can trigger the token.  
