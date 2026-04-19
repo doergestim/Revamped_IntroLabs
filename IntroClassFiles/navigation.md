@@ -34,7 +34,7 @@
  - [Host Firewalls and Nmap](Tools/IntroClass/Nmap/Nmap.md)
  - [Password Cracking](Tools/IntroClass/PasswordCracking/PasswordCracking.md)
  - [Password Spraying](Tools/IntroClass/PasswordSpray/PasswordSpray.md)
- - [External Password Spraying](Tools/IntroClass/PasswordSpray/IntroClass/ExternalPasswordSpray.md)
+ - [External Password Spraying](Tools/IntroClass/ExternalPasswordSpray.md)
  - [Responder](Tools/IntroClass/Responder/Responder.md)
  - [RITA and AC Hunter](Tools/IntroClass/RITAIntroClass/RITA.md)
  - [Sysmon](Tools/IntroClass/Sysmon/Sysmon.md)
