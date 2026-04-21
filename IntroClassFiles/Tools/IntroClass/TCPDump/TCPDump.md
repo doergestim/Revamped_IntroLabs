@@ -1,5 +1,13 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
+---
+
+This is a lab from **John Strand**'s **SOC Core Skills** Course:
+
+https://www.antisyphontraining.com/product/soc-core-skills-with-john-strand/
+
+---
+
 # TCPDump
 
 In this lab, we will be looking at some basic **tcpdump** filters that every SOC and security analyst should know.
@@ -134,7 +142,7 @@ Here is a great resource to try some more options in **TCPDump**:
 
 ***                                                                 
 
-<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/WindowsCLI/WindowsCLI.md)</i></b>
+<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/WebLogReview/WebLogReview.md)</i></b>
 
 <b><i>Want to go back? </br>[Previous Lab](/IntroClassFiles/Tools/IntroClass/Memory/MemoryAnalysis(Volatility).md)</i></b>
 
@@ -147,6 +155,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 
 
 

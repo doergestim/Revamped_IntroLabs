@@ -1,5 +1,12 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
+---
+
+This is a lab from **John Strand**'s **SOC Core Skills** Course:
+
+https://www.antisyphontraining.com/product/soc-core-skills-with-john-strand/
+
+---
 
 # Velociraptor 
 
@@ -21,84 +28,94 @@ Let's get started.
 
 Open a **Windows command prompt**.
 
-![](attachment/openingcommandprompt%20-%20Copy.png)
+<img width="294" height="296" alt="2026-02-07_17-05" src="https://github.com/user-attachments/assets/8957ed22-91e0-4e05-903f-e93aefd6cb19" />
+
 
 When the terminal opens, navigate to the appropriate directory by using the following command:
 
-<pre>cd \IntroLabs</pre>
+```bash
+cd \IntroLabs
+```
 
 For this installation, we are going to set up **Velociraptor** as a standalone deployment.  This means the server and the client will be run on the same system.
 
 Within the command prompt, run the following command:
 
-<pre>velociraptor-v0.72.3-windows-amd64.exe config generate -i</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.exe config generate -i
+```
 
-When it asks about the OS, please choose **Windows**.  It should be the default.
+When it asks about the **Deployment Type**, choose **Self Signed SSL**
 
-![](attachment/velociraptor_chooseos.png)
+<img width="610" height="111" alt="2026-03-15_11-02" src="https://github.com/user-attachments/assets/e34c0e98-6fec-4b14-9d29-2a1abd949cd2" />
 
-When it asks about the Path to the datastore, **just hit enter**.  This will keep the default.
+When it asks about the **OS**, please choose **Windows**.
 
-![](attachment/velociraptor_datastorepath.png)
+<img width="557" height="120" alt="2026-03-15_11-04" src="https://github.com/user-attachments/assets/567ec56e-7ed2-403d-9d2c-10babf2d2661" />
 
-When it asks about the SSL certs, **just hit enter**.  It will choose the default of Self Signed SSL.
+When it asks about the **Path to the datastore**, **just hit enter**.  This will keep the default.
 
-![](attachment/velociraptor_sslcert.png)
+<img width="906" height="111" alt="2026-03-15_11-06" src="https://github.com/user-attachments/assets/c5a2adcf-6a82-43aa-a593-1826c4f536e4" />
 
+When it asks about the path to the **logs directory**, **just hit enter** to accept the default.
 
-When it asks about the DNS name, **just hit enter**.  It will set the default to localhost.  This will work fine as we are just running this locally.
+<img width="643" height="94" alt="2026-03-15_11-09" src="https://github.com/user-attachments/assets/2189706f-bc81-4734-afdf-f468a488964a" />
 
-![](attachment/velociraptor_publicdns.png)
+When it asks about the **PKI Certificate Expiration**, **just hit enter** to accept the default.
 
-For the default ports, once again, **just hit enter** to accept 8000 and 8889 as the defaults.
+<img width="606" height="171" alt="2026-03-15_11-10" src="https://github.com/user-attachments/assets/8acc7f0f-eb75-4c0e-b8f8-cd2b53d6d384" />
 
-![](attachment/velociraptor_frontendport.png)
+When it asks about the **Registry for Client Writeback**, **just hit enter** to accept the default.
 
-If prompted about using Websocket, enter **"No"**
+<img width="803" height="164" alt="2026-03-15_11-10" src="https://github.com/user-attachments/assets/930e3b8b-986c-42d1-8741-cc4d015169a7" />
 
-![](attachment/velociraptor_websocket.png)
+When it asks about the **DNS name**, **just hit enter**.  It will set the default to localhost.  This will work fine as we are just running this locally.
 
-If prompted about using the registry to store writeback files, please enter **"N"**
+<img width="581" height="77" alt="2026-03-15_11-14" src="https://github.com/user-attachments/assets/6a718c5c-e7a6-49b8-a42f-1c0162939c21" />
 
-![](attachment/velociraptor_registrywriteback.png)
+When asked about which **DNS Type** is used, select **None** and press enter.
 
-When asked about which **DynDNS** provider is used, select **None** and press enter.
+<img width="827" height="113" alt="2026-03-15_11-14" src="https://github.com/user-attachments/assets/12fa7d6c-4bfb-4f6f-ad32-eb9bd035a387" />
 
-![](attachment/velociraptor_dyndns.png)
+If prompted about using **Experimental Websocket**, enter **"No"**
 
-For the GUI username, please **just hit enter** to end.
+<img width="729" height="153" alt="2026-03-15_11-17" src="https://github.com/user-attachments/assets/db146be1-8ec6-4c29-bf86-ac1591dd12b3" />
 
-![](attachment/velociraptor_guiusername.png)
+For the **default ports**, once again, **just hit enter** twice to accept 8000 and 8889 as the defaults.
 
-When it asks about the path to the logs directory, **just hit enter** to accept the default.
+<img width="399" height="114" alt="2026-03-15_11-19" src="https://github.com/user-attachments/assets/fc2b01b0-e371-4866-b672-8dcc193b6bd8" />
 
-![](attachment/velociraptor_pathtologs.png)
+When it asks about the **Username and Password**, **just hit enter** twice to leave them empty.
 
-If it asks if you would to **"restrict VQL"** functionality on the server, please enter **"N"**
+<img width="435" height="143" alt="2026-03-15_11-19" src="https://github.com/user-attachments/assets/d01aaf37-bd18-4e19-b5b5-e6983fb741eb" />
 
-![](attachment/velociraptor_vqlfunct.png)
+When it asks about the **Name of file** of the config file, **just hit enter** to accept the default.
 
-When it asks where to write the server and client configs, **just hit enter** on both prompts to accept the defaults.
-
-![](attachment/velociraptor_configs.png)
+<img width="325" height="75" alt="2026-03-15_11-24" src="https://github.com/user-attachments/assets/b4bfd136-550c-4e14-9275-d227566984d0" />
 
 Let’s add a **GUI** user.
 
-<pre>velociraptor-v0.72.3-windows-amd64.exe --config server.config.yaml user add root --role administrator</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.exe --config server.config.yaml user add root --role administrator
+```
 
 When it asks for the password, please choose a password you will remember.
 
 When finished, it should look similar to 
 
-![](attachment/velociraptor_entergui.png)
+<img width="1063" height="239" alt="2026-03-15_11-24" src="https://github.com/user-attachments/assets/76c803ea-dc16-4f10-8184-385d1f121968" />
 
 Lets run the **msi** to load the proper files to the proper directories:
 
-<pre>velociraptor-v0.72.3-windows-amd64.msi</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.msi
+```
 
 Time to start the server.
 
-<pre>velociraptor-v0.72.3-windows-amd64.exe --config server.config.yaml frontend -v</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.exe --config server.config.yaml frontend -v
+```
 
 This will take some time, be patient.
 
@@ -130,21 +147,27 @@ Next, we need to start the client. Lucky for us, it is the same executable.
 
 We will need to open another **Windows Command Prompt**. Right click on the terminal icon in the task bar, and select **"command prompt"**:
 
-![](attachment/velociraptor_openanotherprompt.png)
+<img width="294" height="296" alt="2026-02-07_17-05" src="https://github.com/user-attachments/assets/8957ed22-91e0-4e05-903f-e93aefd6cb19" />
 
 Then Navigate to the **IntroLabs** directory.
 
-<pre>cd \IntroLabs</pre>
+```bash
+cd \IntroLabs
+```
 
 We will need to start the client.  To do this will need to run the **MSI** first.
 
-<pre>velociraptor-v0.72.3-windows-amd64.msi</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.msi
+```
 
 When you get the pop up, select Run.  This will install the proper libraries and files.
 
 Next, we will start the client.
 
-<pre>velociraptor-v0.72.3-windows-amd64.exe --config client.config.yaml client -v</pre>
+```bash
+velociraptor-v0.75.6-windows-amd64.exe --config server.config.yaml client -v
+```
 
 It will look something like this:
 
@@ -156,7 +179,7 @@ Now, let’s go back to the Velociraptor GUI and select the Home button in the u
 
 You should see **one** connected client.
 
-![](attachment/velociraptor_connectedclients.png)
+<img width="910" height="664" alt="2026-03-15_11-56" src="https://github.com/user-attachments/assets/e86d04c8-64a1-4ff4-9380-33e5f79ade88" />
 
 Now let’s look at what we can do with this.
 
@@ -186,16 +209,20 @@ Please click on the **PowerShell** box and select **Cmd**.
 
 ![](attachment/velociraptor_powershelldropdown.png)
 
-Now, enter **netstat -naob** in the cmd box and select **"Launch"**.
+Now, enter `netstat -naob` in the cmd box and select **"Launch"**.
 
 
 This will not display the results right away. To see the results, select the **"Eye"** icon:
 
 ![](attachment/velociraptor_eye.png)
 
-Now you can see the results:
+Now you can see the results, click **Active Connections**:
 
-![](attachment/velociraptor_seeresults.png)
+<img width="453" height="259" alt="2026-03-15_11-56" src="https://github.com/user-attachments/assets/8f3e9ae5-9eb5-491a-aa8b-435692cde8e8" />
+
+Now click the **Text** tab
+
+<img width="862" height="802" alt="2026-03-15_12-03" src="https://github.com/user-attachments/assets/4d9f5fb0-1aa6-4ab0-89b9-c1669ab93af4" />
 
 Let’s do a Hunt.   Please select the Hunt icon.
 
@@ -229,7 +256,7 @@ Please select our Hunt.  Now, we can run it.  Press the **Play** button above.
 
 ![](attachment/velociraptor_play.png)
 
-When you get the pop-up, select **Run it!**
+When you get the pop-up, select **Run them all!**
 
 >[!NOTE]
 >
@@ -257,7 +284,7 @@ Go ahead and open the **zip file**, navigate into the results folder.
 
 ![](attachment/velociraptor_opencsv.png)
 
-Then, open the csv file with **WordPad**.
+Then, open the csv file with **NotePad**.
 
 ![](attachment/velociraptor_wordpad.png)
 
@@ -283,4 +310,7 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
+
+
 

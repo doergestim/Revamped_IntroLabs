@@ -1,4 +1,65 @@
 
+![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
+
+# RITA and AC Hunter
+
+In this lab, we are going to look at detecting command and control traffic on a network.
+
+We will be using **Real Intelligence Threat Analytics** (RITA) for this lab.
+
+To start we first need to open Windows File Explorer and navigate to the tools directory.
+
+First, open File Explorer:
+
+<img width="534" height="48" alt="OpenFileExplorer" src="https://github.com/user-attachments/assets/bd5ac519-825a-4921-bed6-3b8baf52a4b7" />
+
+Then, select the IntroLabs directory:
+
+![](attachments/rita_navintrolabs.png)
+
+Then, select rita-html-report:
+
+<img width="1116" height="535" alt="2026-02-23_15-18" src="https://github.com/user-attachments/assets/8a35fc63-ff0f-4cda-92fe-2d658131d050" />
+
+Then, select **index.html**:
+
+![](attachments/rita_navindex.png)
+
+Let’s select **VSAGENT-2017-3-15**.
+
+![](attachments/rita_vsagent.png)
+
+The tabs across the top allow you to review the output for all the different analysis modules of RITA.
+For **VSAgent** we will be focusing on **Beacons**, **Blacklisted** and **User Agents**.
+
+Please select the **Beacons** tab.
+
+![](attachments/rita_beaconview.png)
+
+Some backdoors have a very strong **“heartbeat”**. This is where a backdoor will constantly reconnect to get commands from an attacker at a specific interval. The interval consistency of the **“heartbeat”** is the TS score where a value of **1** is perfect. The top value in this set is the **VSAgent** communication. We will talk about the other connections in a few moments.
+
+We also have the number of connections. While some beacons have a **“strong”** heartbeat, they are very short in nature. Our VSAgent connection had a very large number of connections which had very strong intervals, while some of the others (e.g. the 64.4.54.253 addresses) had a strong **"heartbeat"**, but not as many connections. We will also talk about TS Duration. This is detecting how consistent each connection duration is. For example, if every connection is 2 seconds and there are 8000+ it would have a very strong **TS Duration** score.
+
+The other fields are statistical analysis fields showing things like mode range and skew.
+
+Now, lets navigate back to the first menu by clicking the **RITA** tab. 
+
+![](attachments/rita_rita.png)
+
+Then, select **DNSCat-2017-03-21**. We are going to review a backdoor which does not quite fit the same mold as **VSAgent**.
+
+![](attachments/rita_dnscat.png)
+
+This does not beacon back to a specific IP address, but rather it beacons through a DNS server. It is very crafty and will highlight how we can review the RAR compressed Bro logs used to generate the RITA data.
+
+We are going to jump right to the DNS tab. It gives us the clearest look at this backdoor.
+
+![](attachments/rita_dns.png)
+
+![](attachments/rita_dnsview.png)
+
+A couple of things should jump out at an investigator straight away. First, there were over 40K requests for **cat.nanobotninjas.com.** This is an absurd number for a specific domain. Sure, there are lots of requests for com and org and net and uk, but that is to be expected.
+
 Now, let's play with AC Hunter!
 
 Please go to 
@@ -54,7 +115,9 @@ Now, using **AC Hunter**, answer the following questions:
 3. For the dnscat2-ja3-strobe-agent dataset, what domain has the highest lookup count?
 4. Who is doing the lookups?
 
+
 ***                                                                 
+
 <b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/nessus/Nessus.md)</i></b>
 
 <b><i>Want to go back? </br>[Previous Lab](/IntroClassFiles/Tools/IntroClass/Wireshark/Wireshark.md)</i></b>
@@ -68,4 +131,6 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
+
 

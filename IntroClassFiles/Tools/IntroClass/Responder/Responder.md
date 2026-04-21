@@ -1,50 +1,94 @@
+![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
+
+---
+
+This is a lab from **John Strand**'s **Information Security Core Skills** Course:
+
+https://www.antisyphontraining.com/product/information-security-core-skills-tm/
+
+---
+
+
+
 # Responder
 
 In this lab we are going to walk through how quickly an attacker can take advantage of a common misconfiguration to gain access to a system via a **weak** password.
 
 Specifically, we are looking to take advantage of **"LLMNR"**.  
 
-We will need to load our terminal and start responder.
+We will need to load our **linux terminal** and start responder.
 
-Let's get started by opening a **Kali** terminal.
 
-![](attachments/OpeningKaliInstance.png)
 
-Alternatively, you can click on the **Kali** icon in the taskbar.
 
-![](attachments/TaskbarKaliIcon.png)
+- **Double-click** `Ubuntu Shell` on Desktop
 
-Let’s become root:
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
-<pre>sudo su -</pre>
 
-Before we start, we need to remove the existing **Responder** database. Do so by running the following:
+Next, we will navigate to the **Responder** directory:
 
-<pre>rm /usr/share/responder/Responder.db</pre>
+```bash
+cd ~/Intro_To_Security/Responder/
+```
 
 Now let’s start **Responder**:
 
-<pre>responder -I eth0</pre>
+```bash
+responder -I ens5
+```
 
 You should see this:
 
-![](attachments/responderrunning.png)
+<img width="313" height="541" alt="resp" src="https://github.com/user-attachments/assets/ca8c62ef-e845-4ad2-8a2a-59102a1e5d6d" />
 
-Let's open **Windows File Explorer** and put in the string **"\\Noooo"** into the address bar at the top.
 
-![](attachments/OpeningFileExplorer.png)
+Let's open **Windows File Explorer** and put in the string ```\\Linux-IP\Noooo``` into the address bar at the top.
 
-![](attachments/noooaccessbar.png)
+<img width="502" height="55" alt="OpeningFileExplorer" src="https://github.com/user-attachments/assets/2de27ae0-5e58-4488-b7f3-ee6b313bec1e" />
 
-Switch back to your **Kali** terminal window.
+<img width="929" height="488" alt="file_exp" src="https://github.com/user-attachments/assets/002bd08e-5d6a-4b31-9593-1feb0d979d47" />
+
+
+It will pop up a windows to write the credentials. Fill them and switch back to your **Linux** terminal window.
+
+<img width="374" height="337" alt="creds" src="https://github.com/user-attachments/assets/27799627-9ed3-4313-bd39-e7c6a0f841b7" />
+
 
 After a few moments, you should see some captured data showing up.  
 
 **Please note there may be an error.  That is OK.**
 
-![](attachments/captureddata.png)
+<img width="911" height="323" alt="file_exp_logs" src="https://github.com/user-attachments/assets/d2e3df52-44a3-4d6f-9ae0-af49c87e3898" />
 
-[Return To Lab List](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/navigation.md)
+
+We can do the same thing from the Windows Terminal by running the following command:
+
+```bash
+net use * \\10.10.102.57\share
+```
+
+<img width="420" height="225" alt="term_attempt" src="https://github.com/user-attachments/assets/7caad37f-ad48-4bfe-9c01-83f456f3c98f" />
+
+As we can see we have the new captured data showing up.
+
+<img width="910" height="160" alt="testing_log" src="https://github.com/user-attachments/assets/19ba8e38-f46d-4e32-a402-1b036d9aee23" />
+
+
+***                                                                 
+<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/RITAIntroClass/RITA.md)</i></b>
+
+<b><i>Want to go back? </br>[Previous Lab](/IntroClassFiles/Tools/IntroClass/PasswordSpray/PasswordSpray.md)</i></b>
+
+<b><i>Looking for a different lab? </br>[Lab Directory](/IntroClassFiles/navigation.md)</i></b>
+
+***Finished with the Labs?***
+
+Please be sure to destroy the lab environment!
+
+[Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
+
+---
 
 
 
@@ -126,4 +170,10 @@ meterpreter >
 Now, you can see just how bad LLMNR is!!!!
 */
 -->
+
+
+
+
+
+
 

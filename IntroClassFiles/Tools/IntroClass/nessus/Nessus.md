@@ -1,5 +1,12 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
+---
+
+This is a lab from **John Strand**'s **SOC Core Skills** Course:
+
+https://www.antisyphontraining.com/product/soc-core-skills-with-john-strand/
+
+---
 
 # Nessus Lab
 
@@ -11,13 +18,13 @@ Specifically, look at service headers and files.
 
 To open this lab, start file explorer:
 
-![](attachments/OpeningFileExplorer.png)
+<img width="534" height="48" alt="OpenFileExplorer" src="https://github.com/user-attachments/assets/e185c888-7dfb-4add-ae73-55c4c9b4278f" />
 
 Then, navigate to the tools folder and open the **NessusLab** file:
 
 ![](attachments/Navintolabs.png)
 
-![](attachments/nessus_navtonessus.png)
+<img width="1118" height="555" alt="2026-02-23_12-43" src="https://github.com/user-attachments/assets/99d6da3e-9545-46b2-9427-e5ef7fa35bab" />
 
 When the file opens, please focus on service banners and files.
 
@@ -125,4 +132,5 @@ Please be sure to destroy the lab environment!
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
 
 ---
+
 

